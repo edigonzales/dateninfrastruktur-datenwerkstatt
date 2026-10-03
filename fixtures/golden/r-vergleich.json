@@ -1,0 +1,42 @@
+{
+  "synthetic": true,
+  "rowCount": "4",
+  "rows": [
+    {
+      "gemeinde_id": "002",
+      "gemeinde": "Bergtal",
+      "jahr": 2024,
+      "bevoelkerung": 2200,
+      "fahrzeuge": 1650,
+      "fahrzeuge_pro_1000": 750.0,
+      "klasse": "hoch"
+    },
+    {
+      "gemeinde_id": "001",
+      "gemeinde": "Auenried",
+      "jahr": 2024,
+      "bevoelkerung": 1100,
+      "fahrzeuge": 660,
+      "fahrzeuge_pro_1000": 600.0,
+      "klasse": "hoch"
+    },
+    {
+      "gemeinde_id": "003",
+      "gemeinde": "Lindenwil",
+      "jahr": 2024,
+      "bevoelkerung": 4400,
+      "fahrzeuge": 1760,
+      "fahrzeuge_pro_1000": 400.0,
+      "klasse": "niedrig"
+    },
+    {
+      "gemeinde_id": "004",
+      "gemeinde": "Seedorf",
+      "jahr": 2024,
+      "bevoelkerung": 0,
+      "fahrzeuge": 10,
+      "fahrzeuge_pro_1000": null,
+      "klasse": "nicht berechenbar"
+    }
+  ]
+}

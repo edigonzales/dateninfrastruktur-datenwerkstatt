@@ -1,0 +1,1010 @@
+[
+  {
+    "id": "AT-001",
+    "title": "Baseline und reproduzierbare Toolchain",
+    "requirements": [
+      "REQ-001",
+      "REQ-002",
+      "REQ-006",
+      "REQ-007"
+    ],
+    "phase": "P0",
+    "level": "Build/Integration",
+    "given": "Ein frischer Checkout ohne globale Projektdependencies.",
+    "when": "Lockfile installieren, Toolchain/Exports prüfen und Minimalbuild starten.",
+    "then": "Versions-/Commitnachweis liegt vor; keine latest-Dependencies, keine geratenen API-Imports; echte DuckDB-/webR-Smokes laufen oder sind ausdrücklich blockiert."
+  },
+  {
+    "id": "AT-002",
+    "title": "Modulgrenzen und genau ein Connector",
+    "requirements": [
+      "REQ-008",
+      "REQ-009",
+      "REQ-010",
+      "REQ-058",
+      "REQ-059"
+    ],
+    "phase": "P0",
+    "level": "Unit/Browser",
+    "given": "Instrumentierte Factory für Engine und WorkspaceStore.",
+    "when": "Workspace und mehrere SQL-/R-Seiten wiederholt öffnen, auch unter React StrictMode.",
+    "then": "Domain importiert keine UI-/Browseradapter; genau eine DuckDB-Factory pro aktiver Session, kein doppelter Queryspeicher; Dispose gibt Ressourcen frei."
+  },
+  {
+    "id": "AT-003",
+    "title": "Leeren Arbeitsbereich dauerhaft anlegen",
+    "requirements": [
+      "REQ-011",
+      "REQ-017",
+      "REQ-061"
+    ],
+    "phase": "P1",
+    "level": "E2E",
+    "given": "Leeres Browserprofil mit verfügbarer Persistenz.",
+    "when": "Projekt Beispielanalyse anlegen, Beschreibung ändern, Flush und Reload.",
+    "then": "Gleiche Workspace-ID, Namen/Beschreibung/Zeitstempel bleiben; keine Demo-Projekte, keine gestartete R-Runtime allein durch die Projektliste."
+  },
+  {
+    "id": "AT-004",
+    "title": "Namen und Referenzintegrität",
+    "requirements": [
+      "REQ-012",
+      "REQ-014"
+    ],
+    "phase": "P1",
+    "level": "Unit",
+    "given": "Gültige Workspace-Fixture.",
+    "when": "Leere Namen, fremde Workspace-IDs, falsch zugeordnete Versions-/Ergebnis-IDs, Schlüssel-ID-Mismatch und reservierte Aliase einsetzen.",
+    "then": "Strukturierte Validierungsfehler mit Feldpfad; kein Commit. Gültige Unicode-Anzeigenamen erlaubt; SQL-Aliase innerhalb vorgegebener Regeln."
+  },
+  {
+    "id": "AT-005",
+    "title": "Gespeicherte Analyse ist ein Projektobjekt",
+    "requirements": [
+      "REQ-011",
+      "REQ-034",
+      "REQ-035"
+    ],
+    "phase": "P1",
+    "level": "Unit/E2E",
+    "given": "Ein Projekt ohne Daten.",
+    "when": "SQL- und R-Analyse anlegen, bearbeiten, umbenennen, duplizieren und archivieren.",
+    "then": "Unabhängige IDs/Code-/Undo-Zustände, richtige Sprache/Engine; archivierter Code verschwindet aus aktiver Liste, historische Laufherkunft bleibt."
+  },
+  {
+    "id": "AT-006",
+    "title": "Revisionen und unveränderliche Snapshots",
+    "requirements": [
+      "REQ-011",
+      "REQ-013",
+      "REQ-036"
+    ],
+    "phase": "P1",
+    "level": "Unit",
+    "given": "Workspace mit DatasetVersion und abgeschlossener SQL-Ausführung.",
+    "when": "Anzeigenamen/Editor ändern und neue Datenversion erstellen.",
+    "then": "Formatversion bleibt 1; Repositoryrevision, Analyserevision und Versions-ID bleiben unterschiedliche Werte; alter Snapshot/Resultatinhalt unverändert."
+  },
+  {
+    "id": "AT-007",
+    "title": "Beschädigtes oder unbekanntes Projektformat",
+    "requirements": [
+      "REQ-016"
+    ],
+    "phase": "P1",
+    "level": "Unit/Browser",
+    "given": "Ein bestehender gültiger IndexedDB-Datensatz.",
+    "when": "Ungültige Referenz bzw. formatVersion 99 laden; separate Testmigration mit Fehler auslösen.",
+    "then": "Kontrollierte Meldung, keine leere Neuinitialisierung/Überschreibung; fehlgeschlagene Migration atomar zurückgerollt."
+  },
+  {
+    "id": "AT-008",
+    "title": "CSV mit Quotes, BOM, Zeilenumbrüchen und NULL",
+    "requirements": [
+      "REQ-024",
+      "REQ-025"
+    ],
+    "phase": "P2",
+    "level": "Integration",
+    "given": "fixtures/csv-edge-cases.csv, explizites bestätigtes Schema.",
+    "when": "Vorschau bestätigen, komplett importieren, Daten nach Reload abfragen.",
+    "then": "Führende Nullen, Umlaute, Semikolon im Feld, eingebetteter Newline, Leerstring und NULL bleiben unterscheidbar; UTF-8-BOM wird nicht Spalteninhalt."
+  },
+  {
+    "id": "AT-009",
+    "title": "Später CSV-Typfehler statt stiller NULL",
+    "requirements": [
+      "REQ-025",
+      "REQ-076"
+    ],
+    "phase": "P2",
+    "level": "Integration",
+    "given": "CSV mit gültiger 200-Zeilen-Vorschau und nicht numerischem Wert in Zeile 5000 einer INTEGER-Spalte.",
+    "when": "Vollständig importieren.",
+    "then": "Import scheitert mit Spalten-/Zeileninformation; keine Zeile still übersprungen, kein partielles Dataset publiziert, vorherige Daten intakt."
+  },
+  {
+    "id": "AT-010",
+    "title": "Parquet und persistente lokale Originaldaten",
+    "requirements": [
+      "REQ-017",
+      "REQ-024",
+      "REQ-026"
+    ],
+    "phase": "P2",
+    "level": "Integration/E2E",
+    "given": "Aus Fixtures mit Ziel-DuckDB erzeugte Parquetdatei.",
+    "when": "Importieren, ursprüngliche Nutzerdatei verschieben/entfernen, Browserkontext neu starten.",
+    "then": "Schema und Werte aus appverwalteten Bytes verfügbar; keine erneute Pfadfreigabe erforderlich; Nutzerdatei wurde nicht geändert."
+  },
+  {
+    "id": "AT-011",
+    "title": "Autosave-Race: ältere Speicherung",
+    "requirements": [
+      "REQ-019"
+    ],
+    "phase": "P1",
+    "level": "Unit/Browser",
+    "given": "Commit von Generation 4 ist künstlich verzögert.",
+    "when": "Währenddessen Generation 5 tippen; Commit 4 abschliessen, dann Flush.",
+    "then": "Editor bleibt Generation 5; Status nach Commit 4 weiterhin dirty; final gespeicherte Generation 5, keine verlorene Änderung; Debounce/Maxwait nachweisbar."
+  },
+  {
+    "id": "AT-012",
+    "title": "Zwei Tabs, exklusiver Writer und CAS",
+    "requirements": [
+      "REQ-020"
+    ],
+    "phase": "P6",
+    "level": "Browser",
+    "given": "Zwei Tabs derselben Origin öffnen dieselbe Workspace-ID.",
+    "when": "Tab A schreibt; B versucht Mutation. Anschliessend A schliessen und in B erneut Schreibrecht anfordern.",
+    "then": "B zuerst sichtbar read-only ohne Laufstart; nach Lockfreigabe Dokument neu geladen. Simulierter Revisionkonflikt überschreibt nichts."
+  },
+  {
+    "id": "AT-013",
+    "title": "OPFS voll während Import oder Keep",
+    "requirements": [
+      "REQ-018",
+      "REQ-022",
+      "REQ-076"
+    ],
+    "phase": "P2",
+    "level": "Fault/Browser",
+    "given": "Ein gültiger gespeicherter Workspace und injizierter QuotaExceededError.",
+    "when": "Neue Datei oder Resultat sichern.",
+    "then": "Kein falscher Erfolgsstatus und keine neue dauerhafte Referenz; alter Projektstand verwendbar; Retry/Export und persistenter Fehlerhinweis."
+  },
+  {
+    "id": "AT-014",
+    "title": "Absturz zwischen Datei und Metadaten",
+    "requirements": [
+      "REQ-018",
+      "REQ-021"
+    ],
+    "phase": "P2",
+    "level": "Fault/Browser",
+    "given": "Dateischreiben abgeschlossen, Metadatencommit absichtlich verhindert.",
+    "when": "Seite schliessen und wieder öffnen; Recovery/Bereinigung ausführen.",
+    "then": "Vorheriger Projektstand bleibt gültig. Neue Datei als Orphan erkannt und erst unter passendem exklusivem Lock bereinigt."
+  },
+  {
+    "id": "AT-015",
+    "title": "Neustart während eines Laufs",
+    "requirements": [
+      "REQ-021",
+      "REQ-037"
+    ],
+    "phase": "P6",
+    "level": "Browser",
+    "given": "Ein Run ist running bzw. cancelling im Dokument.",
+    "when": "Browserprozess/Tab beenden, Projekt neu öffnen.",
+    "then": "Lauf wird interrupted; keine automatische Wiederholung; temporäres Ergebnis unavailable, gesicherte ältere Resultate weiter erreichbar."
+  },
+  {
+    "id": "AT-016",
+    "title": "Fehlende Browserpersistenz",
+    "requirements": [
+      "REQ-022",
+      "REQ-073"
+    ],
+    "phase": "P2",
+    "level": "Browser",
+    "given": "Capability-Probe für OPFS oder IndexedDB schlägt fehl.",
+    "when": "App starten und einen Import versuchen.",
+    "then": "Deutlicher Sitzungsmodus erst nach Zustimmung; keine Aussage lokal gespeichert; eigener temporärer Store, Export möglich innerhalb Budgets."
+  },
+  {
+    "id": "AT-017",
+    "title": "Fehlendes Artefakt ohne Verlust des Codes",
+    "requirements": [
+      "REQ-021",
+      "REQ-044"
+    ],
+    "phase": "P6",
+    "level": "Browser",
+    "given": "Ein Keep-Resultat und gespeicherter SQL-Code.",
+    "when": "Artefaktdatei ausserhalb des regulären Ablaufs entfernen; neu öffnen.",
+    "then": "Code/Metadaten lesbar, Ergebnis als fehlend bezeichnet, keine automatische Neuberechnung und kein scheinbar leeres erfolgreiches Resultat."
+  },
+  {
+    "id": "AT-018",
+    "title": "SQL-Namen bei mehreren Imports",
+    "requirements": [
+      "REQ-014",
+      "REQ-024",
+      "REQ-027"
+    ],
+    "phase": "P2",
+    "level": "Integration",
+    "given": "Zwei Dateien mit gleichem Basisnamen und eine mit ungültigen Zeichen.",
+    "when": "Nacheinander importieren, Anzeigenamen später ändern.",
+    "then": "Eindeutige bestätigte Aliase mit Suffix; keine Überschreibung. Anzeigenamenänderung bricht gespeichertes SQL nicht."
+  },
+  {
+    "id": "AT-019",
+    "title": "Versionierter Datenersatz während Lauf",
+    "requirements": [
+      "REQ-013",
+      "REQ-027",
+      "REQ-036",
+      "REQ-038"
+    ],
+    "phase": "P2",
+    "level": "Unit/Integration",
+    "given": "Ein Datenstand v1 und eine laufende Abfrage.",
+    "when": "CSV v2 über Ersetzen bestätigen.",
+    "then": "Scheduler verhindert Änderung des aktiven Snapshots; alter Lauf nutzt v1; nächster Lauf v2; Schema-Diff sichtbar und Versionhistorie korrekt."
+  },
+  {
+    "id": "AT-020",
+    "title": "Grenzen und ungültige Importformate",
+    "requirements": [
+      "REQ-024",
+      "REQ-026",
+      "REQ-073"
+    ],
+    "phase": "P2",
+    "level": "Integration",
+    "given": "Header-only-CSV, Nullbyte-Datei, beschädigtes Parquet, XLSX und Datei über Defaultlimit.",
+    "when": "Jeweils importieren.",
+    "then": "Gültige 0-Zeilen-Tabelle zulässig; defekte/leere Inhalte/unsupported Formate/Grössenüberschreitung klar abgewiesen; keine stillen Formatkonversionen."
+  },
+  {
+    "id": "AT-021",
+    "title": "Golden-SQL über drei Datensätze",
+    "requirements": [
+      "REQ-025",
+      "REQ-039",
+      "REQ-041"
+    ],
+    "phase": "P3",
+    "level": "Echte DuckDB-WASM",
+    "given": "Fixtures Gemeinden, Bevölkerung und Fahrzeuge unter ihren vereinbarten Aliasen.",
+    "when": "fixtures/01-fahrzeuge-pro-1000.sql mit jahr=2024 ausführen.",
+    "then": "Genau vier Zeilen wie golden/sql-2024.json, Sortierung und NULL bei Bevölkerung 0 korrekt; Identifikatoren bleiben dreistellig."
+  },
+  {
+    "id": "AT-022",
+    "title": "SELECT ohne Daten",
+    "requirements": [
+      "REQ-011",
+      "REQ-034",
+      "REQ-040"
+    ],
+    "phase": "P3",
+    "level": "Echte DuckDB-WASM",
+    "given": "Leerer Workspace, gespeicherte neue SQL-Analyse.",
+    "when": "SELECT 1 AS wert ausführen.",
+    "then": "Ein erfolgreiches TableResult; kein erzwungener Dataset-Import und keine erfundene Eingabereferenz."
+  },
+  {
+    "id": "AT-023",
+    "title": "SQL-Guard mit Syntaxfällen",
+    "requirements": [
+      "REQ-040",
+      "REQ-071"
+    ],
+    "phase": "P3",
+    "level": "Parser/Integration",
+    "given": "Korpus erlaubter SELECT/WITH/Windowqueries und verbotener Statements/Funktionen.",
+    "when": "Kommentare, Semikolon in String, CTE, UNION; dazu mehrere Statements, COPY/ATTACH/INSTALL, externer Reader und dynamische SQL-Funktion prüfen.",
+    "then": "Erlaubte Querytypen funktionieren; verbotene Fälle vor Ausführung abgelehnt. Kein startsWith-Guard, keine regexbedingte Fehlinterpretation von Strings."
+  },
+  {
+    "id": "AT-024",
+    "title": "Workspace-Isolation",
+    "requirements": [
+      "REQ-009",
+      "REQ-012",
+      "REQ-039",
+      "REQ-059"
+    ],
+    "phase": "P2",
+    "level": "Browser",
+    "given": "A besitzt Tabelle geheim_in_a; B ist leer.",
+    "when": "Zwischen A und B wechseln; verspätete Antwort von A auslösen und in B nach Tabelle fragen.",
+    "then": "B enthält weder Tabelle noch Resultat von A; alte Antwort verworfen/freigegeben; keine zweite nebenläufige A-Session bleibt."
+  },
+  {
+    "id": "AT-025",
+    "title": "Gebundene Parameter statt Stringersetzung",
+    "requirements": [
+      "REQ-035",
+      "REQ-040"
+    ],
+    "phase": "P3",
+    "level": "Echte DuckDB-WASM",
+    "given": "Textparameter enthält Quote/Semikolon, Zahlparameter jahr=2024 und exakter int64-Text.",
+    "when": "Mit Prepared Binding ausführen, R-params entsprechend binden.",
+    "then": "Werte bleiben Werte; keine zweite Anweisung, int64 nicht in unsichere JS-Number umgewandelt. Fehlende/ungültige Parameter erhalten klare Fehler."
+  },
+  {
+    "id": "AT-026",
+    "title": "Editor ändern während Ausführung",
+    "requirements": [
+      "REQ-034",
+      "REQ-036",
+      "REQ-037"
+    ],
+    "phase": "P3",
+    "level": "Browser",
+    "given": "Langsam beantwortete Abfrage A ist gestartet.",
+    "when": "Editor auf Code B ändern, danach A fertigstellen.",
+    "then": "Run enthält Snapshot A, Editor B, Resultat eindeutig A zugeordnet; B wird weder ausgeführt noch überschrieben."
+  },
+  {
+    "id": "AT-027",
+    "title": "Stabile Ergebnisse trotz Paging/Sortierung",
+    "requirements": [
+      "REQ-041",
+      "REQ-046"
+    ],
+    "phase": "P3",
+    "level": "Echte DuckDB-WASM",
+    "given": "SELECT i, random() AS r FROM range(350) AS t(i) als einzelner Lauf.",
+    "when": "Seiten vor/zurück, Sortierung und Chart wechseln, danach exportieren.",
+    "then": "350 identische pro Zeile zugeordnete Randomwerte; ursprüngliches SQL nur einmal gestartet; Paging ohne verlorene/doppelte Zeilen."
+  },
+  {
+    "id": "AT-028",
+    "title": "App-Limit ist nicht tatsächliche Gesamtzahl",
+    "requirements": [
+      "REQ-042"
+    ],
+    "phase": "P3",
+    "level": "Echte DuckDB-WASM",
+    "given": "Testlimit 1000 Zeilen, Query über range(1500).",
+    "when": "Ausführen; zusätzlich Query mit eigenem LIMIT 10 prüfen.",
+    "then": "App-Limit: 1000 Zeilen mit coverage limited, keine erfundene 1500-Gesamtzahl/zweite COUNT-Abfrage. Eigenes LIMIT 10: vollständig bezüglich SQL."
+  },
+  {
+    "id": "AT-029",
+    "title": "Breite Daten und Bytebudget",
+    "requirements": [
+      "REQ-042",
+      "REQ-055"
+    ],
+    "phase": "P3",
+    "level": "Integration",
+    "given": "Wenige Zeilen mit sehr grossen Textwerten überschreiten Bytebudget.",
+    "when": "Query ausführen.",
+    "then": "Kontrollierter Limitfehler statt unbeschränkter Kopien; kein unvollständig veröffentlichtes TableResult, neue Handles freigegeben."
+  },
+  {
+    "id": "AT-030",
+    "title": "SQL-Abbruch beendet echte Berechnung",
+    "requirements": [
+      "REQ-037",
+      "REQ-038",
+      "REQ-043"
+    ],
+    "phase": "P3",
+    "level": "Echte DuckDB-WASM",
+    "given": "Nachweislich lange Query und aktiver Scheduler.",
+    "when": "Abbrechen, danach eine kleine Query ausführen.",
+    "then": "Alte Query ist settled/Runtime beendet; danach kleiner Lauf möglich. Nicht nur UI-Promise cancelled; Cancel trifft keinen fremden Lauf."
+  },
+  {
+    "id": "AT-031",
+    "title": "Timeout und Reset-Epoch",
+    "requirements": [
+      "REQ-037",
+      "REQ-043",
+      "REQ-059"
+    ],
+    "phase": "P3",
+    "level": "Echte DuckDB-WASM/Fault",
+    "given": "Timeouttest mit absichtlich kurzem Budget und simulierter nicht antwortender Cancel-API.",
+    "when": "Timeout überschreiten, Grace ablaufen lassen.",
+    "then": "Worker beendet, Epoch steigt, alte Handles ungültig; keine späte Erfolgsmeldung; erneute Initialisierung möglich."
+  },
+  {
+    "id": "AT-032",
+    "title": "Aufbewahren und vollständiger Ergebnisexport",
+    "requirements": [
+      "REQ-044",
+      "REQ-045",
+      "REQ-048"
+    ],
+    "phase": "P3",
+    "level": "E2E",
+    "given": "350-Zeilen-Resultat, aktuell nur erste Gridseite sichtbar.",
+    "when": "Aufbewahren, CSV/Parquet exportieren, Reload.",
+    "then": "350 Zeilen in Datei und nach Reopen; interne Ordinalspalte nicht exportiert; temporäres anderes Resultat nach Reload nicht fälschlich vorhanden."
+  },
+  {
+    "id": "AT-033",
+    "title": "Portal-Dataset-Kontext v4",
+    "requirements": [
+      "REQ-029",
+      "REQ-030"
+    ],
+    "phase": "P4",
+    "level": "HTTP/Browser",
+    "given": "Fixture-Portal liefert echten v4-DTO-Aufbau mit 2 Tabellen und absichtlich fremden Runtime-/Paketpfaden.",
+    "when": "Einzel-Dataset über ID auflösen.",
+    "then": "Titel/Schema/Lizenz/Tabellen übernommen, Nutzer wählt Tabellen. Fremde Runtimekonfiguration ignoriert; kein automatisches ATTACH von catalog.duckdb."
+  },
+  {
+    "id": "AT-034",
+    "title": "Current-Ausgabe auf konkrete ID binden",
+    "requirements": [
+      "REQ-029",
+      "REQ-036"
+    ],
+    "phase": "P4",
+    "level": "HTTP/Browser",
+    "given": "/issues/current liefert issue-2024; später liefert dieselbe URL issue-2025.",
+    "when": "2024 hinzufügen und speichern, später bestehenden Stand auflösen.",
+    "then": "Gespeicherte target.issueId bleibt issue-2024; canonicalUrl=current wird nicht als Versionsidentität benutzt. Neuer Stand nur ausdrücklich als neue Version."
+  },
+  {
+    "id": "AT-035",
+    "title": "Relative URLs und Provider-Origin",
+    "requirements": [
+      "REQ-029",
+      "REQ-033"
+    ],
+    "phase": "P4",
+    "level": "HTTP/Browser",
+    "given": "Werkstatt auf Port 4173, Fixture-Portal auf 4174; relative Parquet-URL im Context.",
+    "when": "Ressource auflösen und Query starten.",
+    "then": "Abruf erfolgt von Portalbasis 4174, nicht Werkstatt; keine Cookies. Unerlaubtes Origin, URL-Userinfo und gefährliches Schema werden abgelehnt."
+  },
+  {
+    "id": "AT-036",
+    "title": "CORS-, 404- und leere Portalantworten",
+    "requirements": [
+      "REQ-029",
+      "REQ-032",
+      "REQ-033",
+      "REQ-076"
+    ],
+    "phase": "P4",
+    "level": "HTTP/Browser",
+    "given": "Bestehendes Projekt; Testserver mit fehlendem CORS, 404, falschem MIME oder leerer Tabellenliste.",
+    "when": "Neue Portalquelle hinzufügen.",
+    "then": "Konkreter Fehler ohne Projektmutation; kein no-cors-Trick und kein Dummy-Datensatz; Retry nur bei sinnvoll behebbaren Fehlern."
+  },
+  {
+    "id": "AT-037",
+    "title": "Externe Version und lokaler Snapshot",
+    "requirements": [
+      "REQ-013",
+      "REQ-028",
+      "REQ-033",
+      "REQ-057"
+    ],
+    "phase": "P4",
+    "level": "HTTP/Integration",
+    "given": "Parquetreferenz ohne geprüften Hash, Testserver wechselt ETag/Schemastand.",
+    "when": "Referenz verwenden, lokal sichern und später Serverdaten ändern.",
+    "then": "Ungesicherte Referenz nicht als eingefroren dargestellt; erkannte Änderung SOURCE_CHANGED. Lokaler gesicherter Stand bleibt mit Hash unabhängig erhalten."
+  },
+  {
+    "id": "AT-038",
+    "title": "Deep Link ist idempotenter Einstieg",
+    "requirements": [
+      "REQ-032",
+      "REQ-060",
+      "REQ-071"
+    ],
+    "phase": "P4",
+    "level": "E2E",
+    "given": "/open mit gültigem Provider/Dataset/Table.",
+    "when": "Vorschau bestätigen; Zielseite reloaden und Back/Forward verwenden.",
+    "then": "Ein Import/Workspace statt Duplikaten; History ersetzt. Keine SQL-/R-Ausführung allein durch Öffnen."
+  },
+  {
+    "id": "AT-039",
+    "title": "Optionaler Suchindex",
+    "requirements": [
+      "REQ-031"
+    ],
+    "phase": "P4",
+    "level": "HTTP/E2E",
+    "given": "Provider einmal mit, einmal ohne CatalogIndex.",
+    "when": "Indexsuche bzw. direkte Portal-URL-/ID-Eingabe verwenden.",
+    "then": "Indexfilterung korrekt; ohne Index echter URL-/ID-Pfad weiterhin nutzbar, keine erfundene Katalogsuch-API und kein HTML-Scraping."
+  },
+  {
+    "id": "AT-040",
+    "title": "R lazy und unabhängig vom Panel",
+    "requirements": [
+      "REQ-049",
+      "REQ-058",
+      "REQ-059"
+    ],
+    "phase": "P5",
+    "level": "Echte webR",
+    "given": "Workspace geöffnet, R noch unbenutzt.",
+    "when": "SQL-Seite, dann R öffnen; zwischen beiden mehrfach wechseln.",
+    "then": "R genau einmal lazy gestartet, Objektzustand bleibt beim Seitenwechsel, Workspacewechsel beendet die Runtime."
+  },
+  {
+    "id": "AT-041",
+    "title": "Golden-R-Skript",
+    "requirements": [
+      "REQ-050",
+      "REQ-051",
+      "REQ-057"
+    ],
+    "phase": "P5",
+    "level": "Echte webR",
+    "given": "Golden-SQL-Ergebnis als daten in R gebunden.",
+    "when": "fixtures/02-vergleich.R ausführen.",
+    "then": "vergleich entspricht golden/r-vergleich.json, Klassifikation hoch/niedrig/nicht berechenbar korrekt; Konsole/Ergebnis diesem Lauf zugeordnet."
+  },
+  {
+    "id": "AT-042",
+    "title": "Transfer nicht auf Gridseite begrenzt",
+    "requirements": [
+      "REQ-045",
+      "REQ-052",
+      "REQ-055"
+    ],
+    "phase": "P5",
+    "level": "Echte DuckDB-WASM + webR",
+    "given": "350-Zeilen-SQL-Ergebnis bei 100 sichtbaren Gridzeilen.",
+    "when": "In gespeicherte R-Analyse übernehmen und nrow(daten) prüfen.",
+    "then": "350 Zeilen, Reihenfolge/Schema erhalten, Resultat vor dauerhafter Bindung gesichert; kein Auto-Run des R-Skripts."
+  },
+  {
+    "id": "AT-043",
+    "title": "Integer-/Decimal-/Identifier-Grenzen",
+    "requirements": [
+      "REQ-054"
+    ],
+    "phase": "P5",
+    "level": "Codec + echte Engines",
+    "given": "fixtures/04-typgrenzen.sql sowie erwartete Typregeln.",
+    "when": "SQL→R→SQL-Rundlauf und geänderten ungültigen DECIMAL-Text versuchen.",
+    "then": "−2147483648 bleibt Zahl statt NA; 2^53+1 bleibt exakt als Text; Identifier 001 bleibt 001; DECIMAL nicht still gerundet. Ungültiger Rückcast abgelehnt."
+  },
+  {
+    "id": "AT-044",
+    "title": "NULL/NA ist nicht NaN/Infinity/Leerstring",
+    "requirements": [
+      "REQ-054"
+    ],
+    "phase": "P5",
+    "level": "Codec + echte Engines",
+    "given": "Spalten mit NULL, NaN, ±Inf, leerem und literalem NULL-String.",
+    "when": "Beide Transferrichtungen durchlaufen, Masken prüfen.",
+    "then": "Alle semantisch unterscheidbaren Werte bleiben unterscheidbar; JSON-null-Abkürzung für nichtendliche Zahlen verboten."
+  },
+  {
+    "id": "AT-045",
+    "title": "Datum, Zeitzone, Faktoren und Unsupported-Typen",
+    "requirements": [
+      "REQ-054",
+      "REQ-057"
+    ],
+    "phase": "P5",
+    "level": "Codec + echte Engines",
+    "given": "Datum um Zeitumstellung, Mikro-/Nanosekundenzeit, factor mit unbenutztem Level, BLOB/Struct.",
+    "when": "Transfer in beiden Richtungen und bei fehlender Precision kontrollieren.",
+    "then": "Date taggenau, UTC explizit, nicht exakt abbildbare Timestamps als Text/Warnung; Faktorlevels erhalten; BLOB/Struct gezielt abgelehnt, nicht verstümmelt."
+  },
+  {
+    "id": "AT-046",
+    "title": "PostMessage-R-Abbruch und Reset",
+    "requirements": [
+      "REQ-049",
+      "REQ-056"
+    ],
+    "phase": "P0/P5",
+    "level": "Echte webR",
+    "given": "PostMessage-Kanal und lang laufendes R-Skript.",
+    "when": "Abbrechen oder kurzes Timeout auslösen.",
+    "then": "R-Worker tatsächlich beendet, alte Scopes/Epochrefs ungültig, Verlusthinweis sichtbar. Bei auto/SAB regulärer Interrupt als separater Test belegt."
+  },
+  {
+    "id": "AT-047",
+    "title": "Fresh-Environment und stale Scopes",
+    "requirements": [
+      "REQ-050",
+      "REQ-057"
+    ],
+    "phase": "P5",
+    "level": "Echte webR",
+    "given": "Sitzungsobjekt x, mehrere fresh-environment-Läufe.",
+    "when": "Variablen pro Scope verändern; alten RObjectRef nach Reset benutzen.",
+    "then": "Scopedaten eindeutig; alter Ref abgewiesen. Fresh-Modus behauptet keine Prozessisolation; Scope-Aufräumen zerstört kein aktiv ausgewähltes Objekt."
+  },
+  {
+    "id": "AT-048",
+    "title": "R-Objekt explizit zurück nach SQL",
+    "requirements": [
+      "REQ-051",
+      "REQ-053",
+      "REQ-057"
+    ],
+    "phase": "P5",
+    "level": "Echte Engines",
+    "given": "vergleich im aktiven RScope, danach bewusst geänderter Wert.",
+    "when": "Aktuellen Dataframe übernehmen und fixtures/03-klassifikation.sql ausführen.",
+    "then": "Neuer Capture-Lauf/Resultat/DatasetVersion beschreibt tatsächlichen Objektstand; Rück-SQL korrekt. Kein Wiederholen des ursprünglichen Skripts und keine heimliche Überschreibung."
+  },
+  {
+    "id": "AT-049",
+    "title": "Diagrammsemantik und Grenzen",
+    "requirements": [
+      "REQ-047",
+      "REQ-048"
+    ],
+    "phase": "P3",
+    "level": "Integration/UI",
+    "given": "TableResult mit NULL-Werten, sortierter Reihe und einmal >5000 Punkten.",
+    "when": "Bar/Line/Scatter wählen, speichern und PNG exportieren.",
+    "then": "Werte/Sortierung korrekt, NULL nicht 0, Quelle aufbewahrt. Bei zu vielen Punkten Aufforderung zur Aggregation, kein stilles Sampling."
+  },
+  {
+    "id": "AT-050",
+    "title": "Sicherung einer referenzierten temporären Tabelle",
+    "requirements": [
+      "REQ-018",
+      "REQ-044",
+      "REQ-045"
+    ],
+    "phase": "P6",
+    "level": "Fault/Integration",
+    "given": "Ein ungesichertes Resultat wird als gespeicherter R-Input oder Chartquelle gewählt.",
+    "when": "Sicherung einmal erfolgreich, einmal mit Quota-/Commitfehler ausführen.",
+    "then": "Nur erfolgreicher Pfad publiziert dauerhafte Referenz. Fehler lässt Input/Visualization unverändert; keine Bindung auf verlorene temporäre Bytes."
+  },
+  {
+    "id": "AT-051",
+    "title": "Archiv mit Daten in frischem Profil",
+    "requirements": [
+      "REQ-068",
+      "REQ-069"
+    ],
+    "phase": "P6",
+    "level": "E2E",
+    "given": "Workspace mit lokalen Daten, SQL/R, Runs, kept Resultat und Diagramm.",
+    "when": "With-data exportieren und in frischem Profil importieren.",
+    "then": "Neue IDs/gleiche technische Aliase; alle Referenzen remapped, echte Daten/Plots vorhanden; Code unverändert und nie automatisch ausgeführt."
+  },
+  {
+    "id": "AT-052",
+    "title": "Transferabbruch vor Publikation",
+    "requirements": [
+      "REQ-038",
+      "REQ-053",
+      "REQ-055",
+      "REQ-059"
+    ],
+    "phase": "P5/P6",
+    "level": "Fault/Browser",
+    "given": "Transferplan besteht; Quelle/Scope wird invalidiert oder Write unterbrochen.",
+    "when": "CommitToR/CommitFromR fortsetzen.",
+    "then": "Plan abgewiesen oder sauber abgebrochen, keine halbe Dateneinbindung/Variable als bestätigt; keine späte Mutation eines anderen Workspaces."
+  },
+  {
+    "id": "AT-053",
+    "title": "Referenzgraph schützt Herkunft",
+    "requirements": [
+      "REQ-015",
+      "REQ-021",
+      "REQ-045"
+    ],
+    "phase": "P6",
+    "level": "Unit/Browser",
+    "given": "Aufbewahrtes Resultat, davon abgeleitetes Dataset und archivierte ursprüngliche Analyse.",
+    "when": "Historie/Cache bereinigen und ursprüngliche Dateneinbindung entfernen.",
+    "then": "Benötigte Versionen/Artefakte/Run-Snapshot bleiben; Entfernen wirkt auf neue Nutzung, nicht auf historische Herkunft. Keine fremden OPFS-Dateien gelöscht."
+  },
+  {
+    "id": "AT-054",
+    "title": "Platzvertrag SQL und R",
+    "requirements": [
+      "REQ-065",
+      "REQ-066"
+    ],
+    "phase": "P7",
+    "level": "UI-Geometrie",
+    "given": "Viewport 1440×900 sowie 1280×800, Schema-/Info-Drawer geschlossen.",
+    "when": "Screens rendern, relevante bounding boxes messen.",
+    "then": "Arbeitsflächenhöhen/-breiten erfüllen REQ-066; kein Hero/Eyebrow/Info-Dauerpanel; collapsed Sidebar initial auf SQL/R; keine Überlappungen."
+  },
+  {
+    "id": "AT-055",
+    "title": "Tastatur, Fokus und Splitter",
+    "requirements": [
+      "REQ-062",
+      "REQ-063",
+      "REQ-067"
+    ],
+    "phase": "P3/P7",
+    "level": "E2E/A11y",
+    "given": "Workspace mit SQL/R und geöffnetem Dialog.",
+    "when": "Tastaturnavigation, Escape, Ctrl/Cmd+S/Enter, Pfeiltasten am Splitter.",
+    "then": "Fokus sichtbar/korrekt zurückgesetzt; Save/Run wie beschrieben; keine Browser-Speicherseite; Screenreader-Namen für Iconbuttons vorhanden."
+  },
+  {
+    "id": "AT-056",
+    "title": "Bösartige URL-/Metadateninhalte sind kein Code",
+    "requirements": [
+      "REQ-005",
+      "REQ-030",
+      "REQ-032",
+      "REQ-033",
+      "REQ-071",
+      "REQ-072"
+    ],
+    "phase": "P4",
+    "level": "Security/Browser",
+    "given": "Katalogtitel, Zellen und Archivcode enthalten harmlose Scriptmarker; Deep-Link enthält sql=/r=-Parameter.",
+    "when": "Daten laden/anzeigen und Projekt öffnen.",
+    "then": "Kein Scriptmarker ausgeführt, kein Auto-Run, keine fremden Runtimepfade übernommen. Vorgesehene R-Ausführung nur auf ausdrücklichen Run-Klick."
+  },
+  {
+    "id": "AT-057",
+    "title": "V1-Umfang und kleine Einstellungen",
+    "requirements": [
+      "REQ-003",
+      "REQ-004",
+      "REQ-061",
+      "REQ-064",
+      "REQ-065"
+    ],
+    "phase": "P1/P7",
+    "level": "UI/Review",
+    "given": "Produktionsprofil ohne Testseeds.",
+    "when": "Navigation, leere Zustände, Einstellungen und Originalbranding prüfen.",
+    "then": "Kein Loginavatar/Freigaben/KI/ClickHouse-Menü, keine doppelten Workspace-Listen; nur implementierte Settings; echtes Logo oder expliziter Releaseblocker."
+  },
+  {
+    "id": "AT-058",
+    "title": "Routen, Modelle und Viewzustand",
+    "requirements": [
+      "REQ-019",
+      "REQ-034",
+      "REQ-058",
+      "REQ-059",
+      "REQ-060"
+    ],
+    "phase": "P3/P7",
+    "level": "Browser",
+    "given": "Mehrere Analysen eines Workspaces.",
+    "when": "Back/Forward, Analyse-/SQL-R-Wechsel, Layout ändern und Reload.",
+    "then": "Richtige Analyse-/Workspace-Zugehörigkeit; Undo/Cursor bleiben beim Wechsel; Layoutsave ist keine fachliche Revision. Ungültige Routen kontrolliert."
+  },
+  {
+    "id": "AT-059",
+    "title": "Recipe-Archiv mit fehlenden Daten",
+    "requirements": [
+      "REQ-016",
+      "REQ-068",
+      "REQ-069"
+    ],
+    "phase": "P6",
+    "level": "E2E",
+    "given": "fixtures/sample.dwproj ohne Bytes.",
+    "when": "Importieren und enthaltene Analysen öffnen.",
+    "then": "Daten als fehlend markiert, Code bearbeitbar, keine stillen leeren Tabellen; IDs remapped und keine dangling Artefaktreferenzen."
+  },
+  {
+    "id": "AT-060",
+    "title": "Archivpfade, Zip-Bomb und Duplikate",
+    "requirements": [
+      "REQ-070",
+      "REQ-071"
+    ],
+    "phase": "P6",
+    "level": "Security/Integration",
+    "given": "Erzeugte kleine Archive mit Traversal, absolutem Pfad, doppeltem normalisiertem Eintrag, Symlink, exzessiver Expansion.",
+    "when": "Archivinspektion/import aufrufen.",
+    "then": "Alle unzulässigen Fälle vor Veröffentlichung abgelehnt; Streaminglimits tatsächlich durchgesetzt; keine Dateien ausserhalb des eigenen staging-Bereichs geschrieben."
+  },
+  {
+    "id": "AT-061",
+    "title": "Hashfehler eines Artefakts",
+    "requirements": [
+      "REQ-018",
+      "REQ-021",
+      "REQ-070"
+    ],
+    "phase": "P6",
+    "level": "Fault/Integration",
+    "given": "Artefakt mit korrektem Manifesthash, danach ein Byte verändert.",
+    "when": "Archiv importieren bzw. aufbewahrtes Resultat nach Reopen erstmalig nutzen.",
+    "then": "ARTIFACT_CORRUPT/ARCHIVE_INVALID; keine unzutreffend geprüfte/verwendete Tabelle; andere Projektinhalte lesbar."
+  },
+  {
+    "id": "AT-062",
+    "title": "R-Transfergrenzen und Typfreigabe",
+    "requirements": [
+      "REQ-052",
+      "REQ-054",
+      "REQ-055"
+    ],
+    "phase": "P5",
+    "level": "Integration",
+    "given": "Resultate knapp unter/über Warn-/Hardgrenze und mit Repräsentationswarnung.",
+    "when": "Plan und Commit durchführen, auch nach Sourceänderung.",
+    "then": "Warnung erfordert Bestätigung; Hardlimit blockiert ohne Sampling; Plan ist versionsgebunden. Keine genehmigungslose stille Konversion."
+  },
+  {
+    "id": "AT-063",
+    "title": "Duplizieren und Workspace löschen",
+    "requirements": [
+      "REQ-015",
+      "REQ-023",
+      "REQ-069"
+    ],
+    "phase": "P6",
+    "level": "E2E",
+    "given": "Zwei unabhängige Workspaces, einer mit kept Resultaten/History.",
+    "when": "Ersten duplizieren und Original nach Bestätigung löschen.",
+    "then": "Duplikat hat neue IDs/Dateien, bleibt funktionsfähig; zweiter Workspace unverändert. Keine globalen DB-Löschbefehle oder gemeinsame Artefaktlöschung."
+  },
+  {
+    "id": "AT-064",
+    "title": "Archivimport scheitert atomar",
+    "requirements": [
+      "REQ-018",
+      "REQ-069",
+      "REQ-070"
+    ],
+    "phase": "P6",
+    "level": "Fault/Browser",
+    "given": "Gültiges Archiv; Fehler nach Dateiextraktion vor Metadata-Commit injiziert.",
+    "when": "Importieren, danach Recovery ausführen.",
+    "then": "Kein halbes neues Projekt in Liste; bestehende Projekte unverändert; Stagingreste eindeutig und unter Lock bereinigbar."
+  },
+  {
+    "id": "AT-065",
+    "title": "Web Locks nicht verfügbar",
+    "requirements": [
+      "REQ-020",
+      "REQ-022"
+    ],
+    "phase": "P6",
+    "level": "Browser",
+    "given": "Web Locks im Capabilitytest deaktiviert, bestehender persistenter Workspace.",
+    "when": "Öffnen und bearbeiten/ausführen versuchen.",
+    "then": "Bestehendes Projekt lesend; kein unsicherer Writer-Fallback. Expliziter neuer Sitzungsmodus möglich, aber ohne falsche Dauerhaftigkeit."
+  },
+  {
+    "id": "AT-066",
+    "title": "Container mit OpenShift-artiger UID",
+    "requirements": [
+      "REQ-074"
+    ],
+    "phase": "P7",
+    "level": "Container",
+    "given": "Gebautes Image ohne privilegierte Laufzeit.",
+    "when": "Mit beliebiger nicht-root UID starten, Port 8080 prüfen, statische App abrufen.",
+    "then": "App ohne unerwartete Dateisystemrechte lauffähig; keine Runtimeinstallation von Nodepaketen oder versteckten Secrets."
+  },
+  {
+    "id": "AT-067",
+    "title": "Base-Path, MIME und echter 404",
+    "requirements": [
+      "REQ-060",
+      "REQ-073",
+      "REQ-074"
+    ],
+    "phase": "P7",
+    "level": "HTTP/E2E",
+    "given": "Build unter / und unter /lab/.",
+    "when": "Tiefe Workspace-Route reloaden; nicht existierendes JS/WASM und runtime-config.json abfragen.",
+    "then": "SPA-Routen funktionieren, fehlende Assets liefern 404 statt index.html; richtige MIME- und Cache-Regeln; ungültige Config nicht permissiv umgangen."
+  },
+  {
+    "id": "AT-068",
+    "title": "CSP, Netzverkehr und Kommunikationsprofile",
+    "requirements": [
+      "REQ-005",
+      "REQ-033",
+      "REQ-071",
+      "REQ-072",
+      "REQ-075"
+    ],
+    "phase": "P7",
+    "level": "HTTP/Browser",
+    "given": "PostMessage- und optional isoliertes auto-Deploymentprofil.",
+    "when": "Alle Kernabläufe samt Netzwerkaufzeichnung ausführen.",
+    "then": "Nur konfigurierte öffentliche Daten und lokale Runtimeassets geladen; keine Telemetrie/externe Fonts/Modelle. Worker/WASM funktionieren mit dokumentierter CSP; kein unerklärter Service Worker."
+  },
+  {
+    "id": "AT-069",
+    "title": "Fehlendes Runtimeasset oder Paket",
+    "requirements": [
+      "REQ-049",
+      "REQ-073",
+      "REQ-074",
+      "REQ-075",
+      "REQ-076"
+    ],
+    "phase": "P7",
+    "level": "HTTP/Browser",
+    "given": "Testserver liefert R-Paket oder WASM mit 404/falschem MIME.",
+    "when": "R/SQL initialisieren, danach Asset korrigieren und Retry.",
+    "then": "Konkrete Init-Meldung, keine Endlosschleife/Fakeresultate. Retry erzeugt genau eine gültige Runtime, Fehlerressourcen freigegeben."
+  },
+  {
+    "id": "AT-070",
+    "title": "Clean-Checkout-Verifikation und Browsermatrix",
+    "requirements": [
+      "REQ-007",
+      "REQ-077",
+      "REQ-078",
+      "REQ-079",
+      "REQ-080"
+    ],
+    "phase": "P8",
+    "level": "CI",
+    "given": "Frischer Checkout des freizugebenden Builds.",
+    "when": "Dokumentierte npm-/Browser-/Buildbefehle aufrufen.",
+    "then": "Verify beendet korrekt; echte Engine-Tests nicht geskippt; Browser-/Runtimeversionen/Exitcodes erfasst. Nicht ausgeführter Safari-Pilot nicht als bestanden deklariert."
+  },
+  {
+    "id": "AT-071",
+    "title": "Ressourcenzyklen und Pilotbudgets",
+    "requirements": [
+      "REQ-038",
+      "REQ-055",
+      "REQ-056",
+      "REQ-059",
+      "REQ-073",
+      "REQ-076",
+      "REQ-078",
+      "REQ-080"
+    ],
+    "phase": "P8",
+    "level": "Benchmark/Browser",
+    "given": "Kleine Goldenfixtures und erzeugte 10k/100k-Datensätze.",
+    "when": "20 Workspace-/R-Reset-/SQL-Zyklen, Timing/Worker-/Handlecounts messen.",
+    "then": "Kein linear wachsender Worker-/Handlebestand; Budgetabbrüche bedienbar; gemessene Zeiten/Umgebung dokumentiert, keine erfundenen Peak-RAM-Zusagen."
+  },
+  {
+    "id": "AT-072",
+    "title": "Vollständiger Golden Path nach Neustart",
+    "requirements": [
+      "REQ-001",
+      "REQ-003",
+      "REQ-017",
+      "REQ-029",
+      "REQ-041",
+      "REQ-045",
+      "REQ-048",
+      "REQ-052",
+      "REQ-053",
+      "REQ-068",
+      "REQ-069",
+      "REQ-077",
+      "REQ-078",
+      "REQ-079",
+      "REQ-080"
+    ],
+    "phase": "P8",
+    "level": "Echte Engines/E2E",
+    "given": "Frisches Profil; Bevölkerung aus Fixture-Portal, Fahrzeuge/Gemeinden als lokale CSV.",
+    "when": "Projekt anlegen, Golden-SQL speichern/ausführen, nach R, Golden-R ausführen, vergleich als Dataset übernehmen, Rück-SQL ausführen, Ergebnisse sichern, exportieren, Browser neu starten, Projekt prüfen.",
+    "then": "SQL: 4 Zeilen; R: hoch=2, niedrig=1, nicht berechenbar=1; Rück-SQL exakt golden/rueck-sql.json. Code, konkrete Herkunft und kept Daten bleiben; kein Auto-Run. Importiertes Archiv im zweiten frischen Profil ebenso nachvollziehbar."
+  }
+]

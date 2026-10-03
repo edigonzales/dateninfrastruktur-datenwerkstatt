@@ -1,0 +1,74 @@
+{
+  "version": 4,
+  "datasetId": "demo.issue-2024",
+  "title": "Bevölkerung — synthetische Abnahmefixture",
+  "description": "Keine amtlichen Daten; Testserver erzeugt die Parquetdatei aus bevoelkerung.csv.",
+  "canonicalUrl": "/series/demo.population/issues/current",
+  "updatedAt": "2026-10-03T12:00:00Z",
+  "license": "synthetic-test-fixture",
+  "execution": {
+    "engine": "duckdb-wasm",
+    "mode": "browser-local",
+    "maxPreviewRows": 100,
+    "maxResultRows": 100000,
+    "queryTimeoutMs": 30000
+  },
+  "catalogDatabase": {
+    "url": "/catalog/catalog.duckdb",
+    "database": "catalog",
+    "schema": "opendata"
+  },
+  "tables": [
+    {
+      "id": "population",
+      "name": "bevoelkerung",
+      "title": "Bevölkerung",
+      "parquetUrl": "/fixtures/bevoelkerung.parquet",
+      "rowCountEstimate": 8,
+      "primary": true,
+      "columns": [
+        {
+          "name": "gemeinde_id",
+          "type": "VARCHAR",
+          "nullable": false,
+          "roles": [
+            "identifier",
+            "municipality"
+          ]
+        },
+        {
+          "name": "jahr",
+          "type": "INTEGER",
+          "nullable": false,
+          "roles": [
+            "year"
+          ]
+        },
+        {
+          "name": "bevoelkerung",
+          "type": "INTEGER",
+          "nullable": false,
+          "roles": [
+            "measure"
+          ]
+        }
+      ]
+    }
+  ],
+  "recipes": [],
+  "chartsEnabled": true,
+  "webREnabled": true,
+  "rLaboratory": {
+    "dataFrameName": "daten",
+    "runtimeBaseUrl": "https://untrusted.example.invalid/webr/",
+    "packageRepoUrl": "https://untrusted.example.invalid/packages/",
+    "packages": [
+      "jsonlite"
+    ],
+    "recommendedRows": 10000,
+    "warningRows": 50000,
+    "hardRows": 100000,
+    "plotWidth": 900,
+    "plotHeight": 600
+  }
+}

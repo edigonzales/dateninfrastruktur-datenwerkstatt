@@ -1,0 +1,16 @@
+{
+  "formatVersion": 1,
+  "providerId": "fixture",
+  "generatedAt": "2026-10-03T12:00:00Z",
+  "entries": [
+    {
+      "key": "demo.population",
+      "title": "Bevölkerung (Testdaten)",
+      "target": {
+        "kind": "dataset",
+        "entryId": "demo.bevoelkerung"
+      },
+      "tableId": "population"
+    }
+  ]
+}

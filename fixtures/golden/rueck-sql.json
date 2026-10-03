@@ -1,0 +1,18 @@
+{
+  "synthetic": true,
+  "rowCount": "3",
+  "rows": [
+    {
+      "klasse": "hoch",
+      "anzahl": "2"
+    },
+    {
+      "klasse": "nicht berechenbar",
+      "anzahl": "1"
+    },
+    {
+      "klasse": "niedrig",
+      "anzahl": "1"
+    }
+  ]
+}

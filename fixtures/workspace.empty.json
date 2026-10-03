@@ -1,0 +1,18 @@
+{
+  "formatVersion": 1,
+  "revision": 0,
+  "workspace": {
+    "id": "e46cf222-eff5-5b24-887b-c4e7b797daf5",
+    "name": "Leerer Arbeitsbereich",
+    "description": "Leere gültige Fixture.",
+    "createdAt": "2026-10-03T12:00:00Z",
+    "updatedAt": "2026-10-03T12:00:00Z"
+  },
+  "datasets": {},
+  "datasetVersions": {},
+  "analyses": {},
+  "runs": {},
+  "results": {},
+  "visualizations": {},
+  "artifacts": {}
+}

@@ -1,0 +1,98 @@
+{
+  "gemeinden": {
+    "columns": [
+      {
+        "name": "gemeinde_id",
+        "logicalType": "VARCHAR",
+        "nullable": false,
+        "roles": [
+          "identifier",
+          "municipality"
+        ],
+        "metadata": {}
+      },
+      {
+        "name": "gemeinde",
+        "logicalType": "VARCHAR",
+        "nullable": false,
+        "roles": [
+          "label"
+        ],
+        "metadata": {}
+      }
+    ],
+    "metadata": {
+      "synthetic": "true"
+    }
+  },
+  "bevoelkerung": {
+    "columns": [
+      {
+        "name": "gemeinde_id",
+        "logicalType": "VARCHAR",
+        "nullable": false,
+        "roles": [
+          "identifier",
+          "municipality"
+        ],
+        "metadata": {}
+      },
+      {
+        "name": "jahr",
+        "logicalType": "INTEGER",
+        "nullable": false,
+        "roles": [
+          "year"
+        ],
+        "metadata": {}
+      },
+      {
+        "name": "bevoelkerung",
+        "logicalType": "INTEGER",
+        "nullable": false,
+        "roles": [
+          "measure"
+        ],
+        "metadata": {}
+      }
+    ],
+    "metadata": {
+      "synthetic": "true"
+    }
+  },
+  "fahrzeuge": {
+    "columns": [
+      {
+        "name": "gemeinde_id",
+        "logicalType": "VARCHAR",
+        "nullable": false,
+        "roles": [
+          "identifier",
+          "municipality"
+        ],
+        "metadata": {}
+      },
+      {
+        "name": "jahr",
+        "logicalType": "INTEGER",
+        "nullable": false,
+        "roles": [
+          "year"
+        ],
+        "metadata": {}
+      },
+      {
+        "name": "fahrzeuge",
+        "logicalType": "INTEGER",
+        "nullable": false,
+        "roles": [
+          "measure"
+        ],
+        "metadata": {}
+      }
+    ],
+    "metadata": {
+      "synthetic": "true"
+    }
+  }
+}

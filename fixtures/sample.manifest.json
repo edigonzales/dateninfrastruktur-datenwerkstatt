@@ -1,0 +1,315 @@
+{
+  "archiveFormat": "datenwerkstatt",
+  "archiveVersion": 1,
+  "exportedAt": "2026-10-03T12:00:00Z",
+  "mode": "recipe",
+  "project": {
+    "formatVersion": 1,
+    "revision": 0,
+    "workspace": {
+      "id": "907cc4f8-eeb2-5864-8347-289c2851abf0",
+      "name": "Synthetische Fahrzeuganalyse",
+      "description": "Fiktive Gemeinden und frei erfundene Testzahlen. Keine amtlichen Daten.",
+      "createdAt": "2026-10-03T12:00:00Z",
+      "updatedAt": "2026-10-03T12:00:00Z"
+    },
+    "datasets": {
+      "6823b6dc-0f20-5754-ac8f-5fb28468d4e8": {
+        "id": "6823b6dc-0f20-5754-ac8f-5fb28468d4e8",
+        "workspaceId": "907cc4f8-eeb2-5864-8347-289c2851abf0",
+        "name": "gemeinden",
+        "sqlName": "gemeinden",
+        "currentVersionId": "d94899d4-5606-563d-ad47-e7302f08c499",
+        "createdAt": "2026-10-03T12:00:00Z"
+      },
+      "9b0a830b-5dd4-5c20-b86d-34788f91ea31": {
+        "id": "9b0a830b-5dd4-5c20-b86d-34788f91ea31",
+        "workspaceId": "907cc4f8-eeb2-5864-8347-289c2851abf0",
+        "name": "bevoelkerung",
+        "sqlName": "bevoelkerung",
+        "currentVersionId": "f1b4d5f2-7a03-5d78-930f-33ba6a0cdb78",
+        "createdAt": "2026-10-03T12:00:00Z"
+      },
+      "3d7ee9fd-18f3-5e2b-85bf-4453ea0d8e94": {
+        "id": "3d7ee9fd-18f3-5e2b-85bf-4453ea0d8e94",
+        "workspaceId": "907cc4f8-eeb2-5864-8347-289c2851abf0",
+        "name": "fahrzeuge",
+        "sqlName": "fahrzeuge",
+        "currentVersionId": "b8c74306-82dc-50f7-a853-eadd30f08a5f",
+        "createdAt": "2026-10-03T12:00:00Z"
+      }
+    },
+    "datasetVersions": {
+      "d94899d4-5606-563d-ad47-e7302f08c499": {
+        "id": "d94899d4-5606-563d-ad47-e7302f08c499",
+        "workspaceId": "907cc4f8-eeb2-5864-8347-289c2851abf0",
+        "datasetId": "6823b6dc-0f20-5754-ac8f-5fb28468d4e8",
+        "origin": {
+          "kind": "file",
+          "fileName": "gemeinden.csv",
+          "format": "csv",
+          "csvOptions": {
+            "encoding": "utf-8",
+            "delimiter": ";",
+            "header": true,
+            "quote": "\"",
+            "escape": "\"",
+            "decimalSeparator": ".",
+            "nullStrings": [],
+            "emptyStringIsNull": true,
+            "columns": [
+              {
+                "sourceIndex": 0,
+                "name": "gemeinde_id",
+                "logicalType": "VARCHAR"
+              },
+              {
+                "sourceIndex": 1,
+                "name": "gemeinde",
+                "logicalType": "VARCHAR"
+              }
+            ]
+          }
+        },
+        "backing": {
+          "kind": "missing",
+          "reason": "recipe-import"
+        },
+        "evidence": {
+          "kind": "unverified"
+        },
+        "schema": {
+          "columns": [
+            {
+              "name": "gemeinde_id",
+              "logicalType": "VARCHAR",
+              "nullable": false,
+              "roles": [
+                "identifier",
+                "municipality"
+              ],
+              "metadata": {}
+            },
+            {
+              "name": "gemeinde",
+              "logicalType": "VARCHAR",
+              "nullable": false,
+              "roles": [
+                "label"
+              ],
+              "metadata": {}
+            }
+          ],
+          "metadata": {
+            "synthetic": "true"
+          }
+        },
+        "rowCount": "4",
+        "createdAt": "2026-10-03T12:00:00Z"
+      },
+      "f1b4d5f2-7a03-5d78-930f-33ba6a0cdb78": {
+        "id": "f1b4d5f2-7a03-5d78-930f-33ba6a0cdb78",
+        "workspaceId": "907cc4f8-eeb2-5864-8347-289c2851abf0",
+        "datasetId": "9b0a830b-5dd4-5c20-b86d-34788f91ea31",
+        "origin": {
+          "kind": "file",
+          "fileName": "bevoelkerung.csv",
+          "format": "csv",
+          "csvOptions": {
+            "encoding": "utf-8",
+            "delimiter": ";",
+            "header": true,
+            "quote": "\"",
+            "escape": "\"",
+            "decimalSeparator": ".",
+            "nullStrings": [],
+            "emptyStringIsNull": true,
+            "columns": [
+              {
+                "sourceIndex": 0,
+                "name": "gemeinde_id",
+                "logicalType": "VARCHAR"
+              },
+              {
+                "sourceIndex": 1,
+                "name": "jahr",
+                "logicalType": "INTEGER"
+              },
+              {
+                "sourceIndex": 2,
+                "name": "bevoelkerung",
+                "logicalType": "INTEGER"
+              }
+            ]
+          }
+        },
+        "backing": {
+          "kind": "missing",
+          "reason": "recipe-import"
+        },
+        "evidence": {
+          "kind": "unverified"
+        },
+        "schema": {
+          "columns": [
+            {
+              "name": "gemeinde_id",
+              "logicalType": "VARCHAR",
+              "nullable": false,
+              "roles": [
+                "identifier",
+                "municipality"
+              ],
+              "metadata": {}
+            },
+            {
+              "name": "jahr",
+              "logicalType": "INTEGER",
+              "nullable": false,
+              "roles": [
+                "year"
+              ],
+              "metadata": {}
+            },
+            {
+              "name": "bevoelkerung",
+              "logicalType": "INTEGER",
+              "nullable": false,
+              "roles": [
+                "measure"
+              ],
+              "metadata": {}
+            }
+          ],
+          "metadata": {
+            "synthetic": "true"
+          }
+        },
+        "rowCount": "8",
+        "createdAt": "2026-10-03T12:00:00Z"
+      },
+      "b8c74306-82dc-50f7-a853-eadd30f08a5f": {
+        "id": "b8c74306-82dc-50f7-a853-eadd30f08a5f",
+        "workspaceId": "907cc4f8-eeb2-5864-8347-289c2851abf0",
+        "datasetId": "3d7ee9fd-18f3-5e2b-85bf-4453ea0d8e94",
+        "origin": {
+          "kind": "file",
+          "fileName": "fahrzeuge.csv",
+          "format": "csv",
+          "csvOptions": {
+            "encoding": "utf-8",
+            "delimiter": ";",
+            "header": true,
+            "quote": "\"",
+            "escape": "\"",
+            "decimalSeparator": ".",
+            "nullStrings": [],
+            "emptyStringIsNull": true,
+            "columns": [
+              {
+                "sourceIndex": 0,
+                "name": "gemeinde_id",
+                "logicalType": "VARCHAR"
+              },
+              {
+                "sourceIndex": 1,
+                "name": "jahr",
+                "logicalType": "INTEGER"
+              },
+              {
+                "sourceIndex": 2,
+                "name": "fahrzeuge",
+                "logicalType": "INTEGER"
+              }
+            ]
+          }
+        },
+        "backing": {
+          "kind": "missing",
+          "reason": "recipe-import"
+        },
+        "evidence": {
+          "kind": "unverified"
+        },
+        "schema": {
+          "columns": [
+            {
+              "name": "gemeinde_id",
+              "logicalType": "VARCHAR",
+              "nullable": false,
+              "roles": [
+                "identifier",
+                "municipality"
+              ],
+              "metadata": {}
+            },
+            {
+              "name": "jahr",
+              "logicalType": "INTEGER",
+              "nullable": false,
+              "roles": [
+                "year"
+              ],
+              "metadata": {}
+            },
+            {
+              "name": "fahrzeuge",
+              "logicalType": "INTEGER",
+              "nullable": false,
+              "roles": [
+                "measure"
+              ],
+              "metadata": {}
+            }
+          ],
+          "metadata": {
+            "synthetic": "true"
+          }
+        },
+        "rowCount": "8",
+        "createdAt": "2026-10-03T12:00:00Z"
+      }
+    },
+    "analyses": {
+      "fd3af437-d8df-5cdf-b6b8-ef0a1e735cd5": {
+        "id": "fd3af437-d8df-5cdf-b6b8-ef0a1e735cd5",
+        "workspaceId": "907cc4f8-eeb2-5864-8347-289c2851abf0",
+        "name": "Fahrzeuge pro 1000",
+        "code": "SELECT\n  g.gemeinde_id,\n  g.gemeinde,\n  b.jahr,\n  b.bevoelkerung,\n  f.fahrzeuge,\n  ROUND(1000.0 * f.fahrzeuge / NULLIF(b.bevoelkerung, 0), 1)\n    AS fahrzeuge_pro_1000\nFROM data.bevoelkerung AS b\nJOIN data.fahrzeuge AS f\n  ON b.gemeinde_id = f.gemeinde_id AND b.jahr = f.jahr\nJOIN data.gemeinden AS g\n  ON g.gemeinde_id = b.gemeinde_id\nWHERE b.jahr = $jahr\nORDER BY fahrzeuge_pro_1000 DESC NULLS LAST, g.gemeinde_id;\n",
+        "revision": 1,
+        "inputs": [],
+        "parameters": {
+          "jahr": 2024
+        },
+        "createdAt": "2026-10-03T12:00:00Z",
+        "updatedAt": "2026-10-03T12:00:00Z",
+        "kind": "sql",
+        "engineId": "duckdb-local"
+      },
+      "649eb534-360a-55d6-b798-163da937082f": {
+        "id": "649eb534-360a-55d6-b798-163da937082f",
+        "workspaceId": "907cc4f8-eeb2-5864-8347-289c2851abf0",
+        "name": "Klassifikation",
+        "code": "# Ausschliesslich synthetische Abnahmefixtures, keine echten Gemeindedaten.\nstopifnot(is.data.frame(daten), nrow(daten) == 4L)\nvergleich <- daten\nvergleich$klasse <- ifelse(\n  is.na(vergleich$fahrzeuge_pro_1000),\n  \"nicht berechenbar\",\n  ifelse(vergleich$fahrzeuge_pro_1000 >= 600, \"hoch\", \"niedrig\")\n)\nvergleich\n",
+        "revision": 1,
+        "inputs": [],
+        "parameters": {},
+        "createdAt": "2026-10-03T12:00:00Z",
+        "updatedAt": "2026-10-03T12:00:00Z",
+        "kind": "r",
+        "engineId": "webr-local",
+        "environmentMode": "workspace-session"
+      }
+    },
+    "runs": {},
+    "results": {},
+    "visualizations": {},
+    "artifacts": {}
+  },
+  "files": [],
+  "omissions": [
+    {
+      "reason": "Drei Datenquellen sind bewusst nicht enthalten. Die CSV-Dateien liegen separat als Testfixtures vor."
+    }
+  ]
+}
