@@ -1,0 +1,48 @@
+
+ RUN  v4.1.9 /Users/stefan/sources/dateninfrastruktur-datenwerkstatt
+
+ ❯ tests/unit/archive-public-urls.test.ts (1 test | 1 failed) 15ms
+   × AT-060 REQ-033: archive URLs with credentials, tokens or executable schemes are rejected before publication/export 14ms
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  tests/unit/archive-public-urls.test.ts > AT-060 REQ-033: archive URLs with credentials, tokens or executable schemes are rejected before publication/export
+AssertionError: promise resolved "{ …(2) }" instead of rejecting
+
+- Expected
++ Received
+
+- Error {
+-   "message": "rejected promise",
++ {
++   "id": "d9e9e8b7-e638-4382-a9a8-b7f1bd178650",
++   "inspection": {
++     "analyses": 2,
++     "containsExecutableCode": true,
++     "datasets": 3,
++     "includedBytes": 0,
++     "missingSources": 3,
++     "warnings": [
++       "1 externe Datenstände benötigen weiterhin Netzwerkzugriff.",
++       "2 Datenstände fehlen; vorhandener Code bleibt bearbeitbar.",
++     ],
++     "workspaceName": "Synthetische Fahrzeuganalyse",
++   },
+  }
+
+ ❯ tests/unit/archive-public-urls.test.ts:20:47
+     18|     const manifest = {archiveFormat: 'datenwerkstatt', archiveVersion:…
+     19|     const zip = await codec.write(new Map([['manifest.json', new TextE…
+     20|     await expect(archive.inspect(zip, signal)).rejects.toMatchObject({…
+       |                                               ^
+     21|     await expect(archive.export(project, 'recipe', false, signal)).rej…
+     22|   }
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+
+ Test Files  1 failed (1)
+      Tests  1 failed (1)
+   Start at  10:14:25
+   Duration  168ms (transform 49ms, setup 0ms, import 92ms, tests 15ms, environment 0ms)
+

@@ -1,0 +1,17 @@
+[
+  {
+    "allowEval": false,
+    "outcome": "timeout",
+    "events": [
+      "CSP script-src eval",
+      "Exception"
+    ]
+  },
+  {
+    "allowEval": true,
+    "outcome": "initialized",
+    "events": [
+      "WebR is using `PostMessage` communication channel, nested R REPLs are not available."
+    ]
+  }
+]

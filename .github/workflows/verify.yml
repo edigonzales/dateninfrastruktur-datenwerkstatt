@@ -1,0 +1,61 @@
+name: Verify Datenwerkstatt
+on: [push, pull_request, workflow_dispatch]
+permissions:
+  contents: read
+jobs:
+  browser:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 45
+    strategy:
+      fail-fast: false
+      matrix:
+        browser: [chromium, firefox, webkit]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22.23.1
+          cache: npm
+      - run: npm install --global npm@11.18.0
+      - run: npm ci
+      - run: npx playwright install --with-deps ${{ matrix.browser }}
+      - run: npm run verify
+        if: matrix.browser == 'chromium'
+      - run: npm run test:resources
+        if: matrix.browser == 'chromium'
+      - run: npm run build && npx playwright test tests/integration tests/e2e --project=${{ matrix.browser }}
+        if: matrix.browser != 'chromium'
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: verification-${{ matrix.browser }}
+          path: |
+            playwright-report/
+            test-results/
+            docs/verification/
+            dist/.vite/manifest.json
+            dist/licenses/
+  deployment:
+    needs: browser
+    runs-on: ubuntu-24.04
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22.23.1
+          cache: npm
+      - run: npm install --global npm@11.18.0
+      - run: npm ci
+      - run: npm run assets:prepare
+      - run: npx playwright install --with-deps chromium firefox webkit
+      - run: npm run test:deployment -- --workers=3
+      - run: docker build -f deploy/Dockerfile -t datenwerkstatt:verified .
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: verification-deployment
+          path: |
+            playwright-report/
+            test-results-deployment/
+            docs/verification/

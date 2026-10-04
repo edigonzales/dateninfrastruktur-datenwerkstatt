@@ -1,0 +1,205 @@
+[WebServer] (node:34825) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] (node:34852) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] [plugin builtin:vite-reporter] 
+[WebServer] (!) Some chunks are larger than 500 kB after minification. Consider:
+[WebServer] - Using dynamic import() to code-split the application
+[WebServer] - Use build.rolldownOptions.output.codeSplitting to improve chunking: https://rolldown.rs/reference/OutputOptions.codeSplitting
+[WebServer] - Adjust chunk size limit for this warning via build.chunkSizeWarningLimit.
+[WebServer] #0 building with "desktop-linux" instance using docker driver
+[WebServer] 
+[WebServer] #1 [internal] load build definition from Dockerfile
+[WebServer] #1 transferring dockerfile: 491B done
+[WebServer] #1 DONE 0.0s
+[WebServer] 
+[WebServer] #2 [internal] load metadata for docker.io/library/caddy:2.11.4-alpine@sha256:5f5c8640aae01df9654968d946d8f1a56c497f1dd5c5cda4cf95ab7c14d58648
+[WebServer] #2 DONE 0.0s
+[WebServer] 
+[WebServer] #3 [internal] load .dockerignore
+[WebServer] #3 transferring context: 2B done
+[WebServer] #3 DONE 0.0s
+[WebServer] 
+[WebServer] #4 [1/4] FROM docker.io/library/caddy:2.11.4-alpine@sha256:5f5c8640aae01df9654968d946d8f1a56c497f1dd5c5cda4cf95ab7c14d58648
+[WebServer] #4 resolve docker.io/library/caddy:2.11.4-alpine@sha256:5f5c8640aae01df9654968d946d8f1a56c497f1dd5c5cda4cf95ab7c14d58648 done
+[WebServer] #4 DONE 0.0s
+[WebServer] 
+[WebServer] #5 [internal] load build context
+[WebServer] #5 transferring context: 237.27MB 3.1s done
+[WebServer] #5 DONE 3.1s
+[WebServer] 
+[WebServer] #4 [1/4] FROM docker.io/library/caddy:2.11.4-alpine@sha256:5f5c8640aae01df9654968d946d8f1a56c497f1dd5c5cda4cf95ab7c14d58648
+[WebServer] #4 CACHED
+[WebServer] 
+[WebServer] #6 [2/4] COPY dist /srv
+[WebServer] #6 DONE 0.4s
+[WebServer] 
+[WebServer] #7 [3/4] COPY Caddyfile /etc/caddy/Caddyfile
+[WebServer] #7 DONE 0.0s
+[WebServer] 
+[WebServer] #8 [4/4] RUN setcap -r /usr/bin/caddy
+[WebServer] #8 DONE 0.2s
+[WebServer] 
+[WebServer] #9 exporting to image
+[WebServer] #9 exporting layers
+[WebServer] #9 exporting layers 6.2s done
+[WebServer] #9 exporting manifest sha256:d0ca2e2efe6024be4f10cabc384beff7e172a59c4dc45ba7160ade52ac0753d1 done
+[WebServer] #9 exporting config sha256:04d4d7a8840bd58effb48594881eda2f5c65b4728f84c44f018e324063fc977d done
+[WebServer] #9 exporting attestation manifest sha256:93595a4dc2fca0af0f7338b29d428711809f6c6f97b938406c603703115c6a39 done
+[WebServer] #9 exporting manifest list sha256:239d6f6cc7b397d3586548c3271a64e7eee8d02a47528c19ad96759ac71bf005 done
+[WebServer] #9 naming to docker.io/library/datenwerkstatt-p7-test:0 done
+[WebServer] #9 unpacking to docker.io/library/datenwerkstatt-p7-test:0
+[WebServer] #9 unpacking to docker.io/library/datenwerkstatt-p7-test:0 1.0s done
+[WebServer] #9 DONE 7.2s
+[WebServer] (node:34985) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] (node:35012) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] [plugin builtin:vite-reporter] 
+[WebServer] (!) Some chunks are larger than 500 kB after minification. Consider:
+[WebServer] - Using dynamic import() to code-split the application
+[WebServer] - Use build.rolldownOptions.output.codeSplitting to improve chunking: https://rolldown.rs/reference/OutputOptions.codeSplitting
+[WebServer] - Adjust chunk size limit for this warning via build.chunkSizeWarningLimit.
+[WebServer] #0 building with "desktop-linux" instance using docker driver
+[WebServer] 
+[WebServer] #1 [internal] load build definition from Dockerfile
+[WebServer] #1 transferring dockerfile: 491B done
+[WebServer] #1 DONE 0.0s
+[WebServer] 
+[WebServer] #2 [internal] load metadata for docker.io/library/caddy:2.11.4-alpine@sha256:5f5c8640aae01df9654968d946d8f1a56c497f1dd5c5cda4cf95ab7c14d58648
+[WebServer] #2 DONE 0.0s
+[WebServer] 
+[WebServer] #3 [internal] load .dockerignore
+[WebServer] #3 transferring context: 2B done
+[WebServer] #3 DONE 0.0s
+[WebServer] 
+[WebServer] #4 [1/4] FROM docker.io/library/caddy:2.11.4-alpine@sha256:5f5c8640aae01df9654968d946d8f1a56c497f1dd5c5cda4cf95ab7c14d58648
+[WebServer] #4 resolve docker.io/library/caddy:2.11.4-alpine@sha256:5f5c8640aae01df9654968d946d8f1a56c497f1dd5c5cda4cf95ab7c14d58648 0.0s done
+[WebServer] #4 DONE 0.0s
+[WebServer] 
+[WebServer] #5 [internal] load build context
+[WebServer] #5 transferring context: 237.27MB 2.7s done
+[WebServer] #5 DONE 2.7s
+[WebServer] 
+[WebServer] #4 [1/4] FROM docker.io/library/caddy:2.11.4-alpine@sha256:5f5c8640aae01df9654968d946d8f1a56c497f1dd5c5cda4cf95ab7c14d58648
+[WebServer] #4 CACHED
+[WebServer] 
+[WebServer] #6 [2/4] COPY dist /srv
+[WebServer] #6 DONE 0.4s
+[WebServer] 
+[WebServer] #7 [3/4] COPY Caddyfile /etc/caddy/Caddyfile
+[WebServer] #7 DONE 0.0s
+[WebServer] 
+[WebServer] #8 [4/4] RUN setcap -r /usr/bin/caddy
+[WebServer] #8 DONE 0.2s
+[WebServer] 
+[WebServer] #9 exporting to image
+[WebServer] #9 exporting layers
+[WebServer] #9 exporting layers 6.2s done
+[WebServer] #9 exporting manifest sha256:21eab39ee667ffee8572ffca9fc460b327207d3eb8b2fd1ee10990f1d1094086 0.0s done
+[WebServer] #9 exporting config sha256:3b49db7d089946bfecacde86b46b2d35e71fa1b70f27f944d440cc94b3025350 done
+[WebServer] #9 exporting attestation manifest sha256:accf63884ff950f645da8c0784b51744b0afac06910f1c7652f1c945e1fc814c done
+[WebServer] #9 exporting manifest list sha256:91b9373c6576c7b5794c7f300e04db0b3ee86fb4a82d82c49639d48b58110102 done
+[WebServer] #9 naming to docker.io/library/datenwerkstatt-p7-test:1 done
+[WebServer] #9 unpacking to docker.io/library/datenwerkstatt-p7-test:1
+[WebServer] #9 unpacking to docker.io/library/datenwerkstatt-p7-test:1 1.0s done
+[WebServer] #9 DONE 7.4s
+[WebServer] #0 building with "desktop-linux" instance using docker driver
+[WebServer] 
+[WebServer] #1 [internal] load build definition from Dockerfile
+[WebServer] #1 transferring dockerfile: 491B done
+[WebServer] #1 DONE 0.0s
+[WebServer] 
+[WebServer] #2 [internal] load metadata for docker.io/library/caddy:2.11.4-alpine@sha256:5f5c8640aae01df9654968d946d8f1a56c497f1dd5c5cda4cf95ab7c14d58648
+[WebServer] #2 DONE 0.0s
+[WebServer] 
+[WebServer] #3 [internal] load .dockerignore
+[WebServer] #3 transferring context: 2B done
+[WebServer] #3 DONE 0.0s
+[WebServer] 
+[WebServer] #4 [1/4] FROM docker.io/library/caddy:2.11.4-alpine@sha256:5f5c8640aae01df9654968d946d8f1a56c497f1dd5c5cda4cf95ab7c14d58648
+[WebServer] #4 resolve docker.io/library/caddy:2.11.4-alpine@sha256:5f5c8640aae01df9654968d946d8f1a56c497f1dd5c5cda4cf95ab7c14d58648 done
+[WebServer] #4 DONE 0.0s
+[WebServer] 
+[WebServer] #5 [internal] load build context
+[WebServer] #5 transferring context: 237.27MB 2.9s done
+[WebServer] #5 DONE 2.9s
+[WebServer] 
+[WebServer] #4 [1/4] FROM docker.io/library/caddy:2.11.4-alpine@sha256:5f5c8640aae01df9654968d946d8f1a56c497f1dd5c5cda4cf95ab7c14d58648
+[WebServer] #4 CACHED
+[WebServer] 
+[WebServer] #6 [2/4] COPY dist /srv
+[WebServer] #6 DONE 0.5s
+[WebServer] 
+[WebServer] #7 [3/4] COPY Caddyfile /etc/caddy/Caddyfile
+[WebServer] #7 DONE 0.0s
+[WebServer] 
+[WebServer] #8 [4/4] RUN setcap -r /usr/bin/caddy
+[WebServer] #8 DONE 0.1s
+[WebServer] 
+[WebServer] #9 exporting to image
+[WebServer] #9 exporting layers
+[WebServer] #9 exporting layers 6.2s done
+[WebServer] #9 exporting manifest sha256:d802d4bcaafd33f493833a8126eaaec1d6d0036507c66c69fb8a4d0ad304d926 done
+[WebServer] #9 exporting config sha256:5fb3b4a6c0f3a85a9ae195d5785503b32691a3cd216a52ac04d4fc6e8bea21db done
+[WebServer] #9 exporting attestation manifest sha256:1636d47998c23ef60ba0976307f76837bbff2a28e875c1b1c2a0377267922638 0.0s done
+[WebServer] #9 exporting manifest list sha256:e1cec8a30e9fde366f9dfd1d0ff2893202e4aa5566a9b6e405e39723fa32d516 done
+[WebServer] #9 naming to docker.io/library/datenwerkstatt-p7-test:2 done
+[WebServer] #9 unpacking to docker.io/library/datenwerkstatt-p7-test:2
+[WebServer] #9 unpacking to docker.io/library/datenwerkstatt-p7-test:2 1.0s done
+[WebServer] #9 DONE 7.3s
+[WebServer] (node:35201) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 1 test using 1 worker
+
+(node:35202) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  1 [chromium-0] › tests/deployment/static.spec.ts:9:1 › P7 AT-066–068: arbitrary UID static container, deep routes, MIME/cache/CSP and real SQL/R (19.3s)
+
+
+  1) [chromium-0] › tests/deployment/static.spec.ts:9:1 › P7 AT-066–068: arbitrary UID static container, deep routes, MIME/cache/CSP and real SQL/R 
+
+    Error: expect(locator).toHaveText(expected) failed
+
+    Locator: locator('.result-grid tbody td')
+    Timeout: 15000ms
+    - Expected  - 3
+    + Received  + 1
+
+    - Array [
+    -   "42",
+    - ]
+    + Array []
+
+    Call log:
+      - Expect "toHaveText" locator('.result-grid tbody td') with timeout 15000ms
+      - waiting for locator('.result-grid tbody td')
+        34 × locator resolved to 0 elements
+
+
+      63 |   const url = page.url();
+      64 |   await page.reload();
+    > 65 |   await expect(page.locator('.result-grid tbody td')).toHaveText(['42']);
+         |                                                       ^
+      66 |   expect(page.url()).toBe(url);
+      67 |   await page.getByRole('link', {name: 'Projektübersicht', exact: true}).click();
+      68 |   await page.getByRole('button', {name: 'Neues R-Skript', exact: true}).click();
+        at /Users/stefan/sources/dateninfrastruktur-datenwerkstatt/tests/deployment/static.spec.ts:65:55
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/static-P7-AT-066–068-arbit-5dac8-ME-cache-CSP-and-real-SQL-R-chromium-0/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/static-P7-AT-066–068-arbit-5dac8-ME-cache-CSP-and-real-SQL-R-chromium-0/error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/static-P7-AT-066–068-arbit-5dac8-ME-cache-CSP-and-real-SQL-R-chromium-0/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/static-P7-AT-066–068-arbit-5dac8-ME-cache-CSP-and-real-SQL-R-chromium-0/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  1 failed
+    [chromium-0] › tests/deployment/static.spec.ts:9:1 › P7 AT-066–068: arbitrary UID static container, deep routes, MIME/cache/CSP and real SQL/R 

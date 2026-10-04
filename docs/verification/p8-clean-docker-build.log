@@ -1,0 +1,109 @@
+#0 building with "desktop-linux" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 977B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/caddy:2.11.4-alpine@sha256:5f5c8640aae01df9654968d946d8f1a56c497f1dd5c5cda4cf95ab7c14d58648
+#2 ...
+
+#3 [internal] load metadata for docker.io/library/node:22.23.1-bookworm-slim@sha256:6c74791e557ce11fc957704f6d4fe134a7bc8d6f5ca4403205b2966bd488f6b3
+#3 DONE 0.9s
+
+#2 [internal] load metadata for docker.io/library/caddy:2.11.4-alpine@sha256:5f5c8640aae01df9654968d946d8f1a56c497f1dd5c5cda4cf95ab7c14d58648
+#2 DONE 0.9s
+
+#4 [internal] load .dockerignore
+#4 transferring context: 176B done
+#4 DONE 0.0s
+
+#5 [runtime 1/4] FROM docker.io/library/caddy:2.11.4-alpine@sha256:5f5c8640aae01df9654968d946d8f1a56c497f1dd5c5cda4cf95ab7c14d58648
+#5 resolve docker.io/library/caddy:2.11.4-alpine@sha256:5f5c8640aae01df9654968d946d8f1a56c497f1dd5c5cda4cf95ab7c14d58648 0.0s done
+#5 DONE 0.0s
+
+#6 [build 1/8] FROM docker.io/library/node:22.23.1-bookworm-slim@sha256:6c74791e557ce11fc957704f6d4fe134a7bc8d6f5ca4403205b2966bd488f6b3
+#6 resolve docker.io/library/node:22.23.1-bookworm-slim@sha256:6c74791e557ce11fc957704f6d4fe134a7bc8d6f5ca4403205b2966bd488f6b3 0.0s done
+#6 DONE 0.0s
+
+#7 [internal] load build context
+#7 transferring context: 1.49MB 0.1s done
+#7 DONE 0.1s
+
+#8 [build 2/8] WORKDIR /build
+#8 CACHED
+
+#9 [build 3/8] RUN npm install --global npm@11.18.0
+#9 CACHED
+
+#10 [build 4/8] COPY package.json package-lock.json .npmrc ./
+#10 CACHED
+
+#11 [build 5/8] COPY scripts/patch-sqlrooms.mjs scripts/patch-sqlrooms.mjs
+#11 CACHED
+
+#12 [build 6/8] RUN npm ci
+#12 CACHED
+
+#13 [build 7/8] COPY . .
+#13 DONE 0.2s
+
+#14 [build 8/8] RUN npm run build && WEBR_CHANNEL=post-message BUILD_ID=p8-f044f1ef node scripts/deployment.mjs
+#14 0.547 
+#14 0.547 > datenwerkstatt@0.1.0 build
+#14 0.547 > npm run assets:prepare && vite build && node scripts/license-inventory.mjs
+#14 0.547 
+#14 0.716 
+#14 0.716 > datenwerkstatt@0.1.0 assets:prepare
+#14 0.716 > node scripts/prepare-assets.mjs
+#14 0.716 
+#14 2.200 Local webR 0.6.0 and 4 DuckDB extensions prepared.
+#14 4.539 Mirrored 40 WebR packages to public/vendor/webr-packages/bin/emscripten/contrib/4.6.
+#14 4.643 Pinned local R package mirror verified.
+#14 4.949 vite v8.1.2 building client environment for production...
+#14 4.962 [2Ktransforming...✓ 1408 modules transformed.
+#14 6.641 rendering chunks...
+#14 7.772 computing gzip size...
+#14 7.844 dist/index.html                                0.36 kB │ gzip:   0.26 kB
+#14 7.844 dist/.vite/manifest.json                       1.36 kB │ gzip:   0.41 kB
+#14 7.844 dist/assets/kanton-solothurn-DOpJ_x8i.svg      4.52 kB │ gzip:   1.75 kB
+#14 7.844 dist/assets/codicon-ngg6Pgfi.ttf             121.97 kB
+#14 7.844 dist/licenses/npm-bundle.json                161.40 kB │ gzip:  25.79 kB
+#14 7.844 dist/assets/editor.worker-Cn2oRESe.js        279.94 kB
+#14 7.844 dist/assets/index-DgF0yz54.css                 9.38 kB │ gzip:   2.64 kB
+#14 7.844 dist/assets/CodeEditorImpl-B3IiO00J.css      145.99 kB │ gzip:  22.62 kB
+#14 7.844 dist/assets/sql-NEE52Syq.js                    8.84 kB │ gzip:   3.73 kB
+#14 7.844 dist/assets/index-Bk7_G-T_.js                913.82 kB │ gzip: 268.44 kB
+#14 7.844 dist/assets/CodeEditorImpl-BFt9ajWb.js     3,629.58 kB │ gzip: 925.10 kB
+#14 7.844 
+#14 7.845 ✓ built in 2.89s
+#14 7.845 [plugin builtin:vite-reporter] 
+#14 7.845 (!) Some chunks are larger than 500 kB after minification. Consider:
+#14 7.845 - Using dynamic import() to code-split the application
+#14 7.845 - Use build.rolldownOptions.output.codeSplitting to improve chunking: https://rolldown.rs/reference/OutputOptions.codeSplitting
+#14 7.845 - Adjust chunk size limit for this warning via build.chunkSizeWarningLimit.
+#14 11.71 License inventory: 400 npm entries, 40 pinned R packages; original notices copied.
+#14 DONE 11.9s
+
+#5 [runtime 1/4] FROM docker.io/library/caddy:2.11.4-alpine@sha256:5f5c8640aae01df9654968d946d8f1a56c497f1dd5c5cda4cf95ab7c14d58648
+#5 CACHED
+
+#15 [runtime 2/4] COPY --from=build /build/dist /srv
+#15 DONE 0.8s
+
+#16 [runtime 3/4] COPY --from=build /build/deploy/generated/Caddyfile /etc/caddy/Caddyfile
+#16 DONE 0.0s
+
+#17 [runtime 4/4] RUN setcap -r /usr/bin/caddy
+#17 DONE 0.2s
+
+#18 exporting to image
+#18 exporting layers
+#18 exporting layers 8.9s done
+#18 exporting manifest sha256:2c944e34ee036a023cbe80ff9b5340e9e18462502c5b6ceaa9d72420a5348111 done
+#18 exporting config sha256:0fc2d4059e9553e2a222131472393baa957e1392876c8561234859a7c5a15b5e done
+#18 exporting attestation manifest sha256:6399b3e724b85f155966339edac188bc9690ea8f0aeed089f47d7166788fe301 0.0s done
+#18 exporting manifest list sha256:690098f7010ca608e1896c32bdc0c9059b52a1f8d3964e3b194fdfa646ef99b2 done
+#18 naming to docker.io/library/datenwerkstatt-p8:verified done
+#18 unpacking to docker.io/library/datenwerkstatt-p8:verified
+#18 unpacking to docker.io/library/datenwerkstatt-p8:verified 1.6s done
+#18 DONE 10.5s

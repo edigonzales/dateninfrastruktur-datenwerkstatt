@@ -1,0 +1,128 @@
+[WebServer] (node:33099) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] (node:33126) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] [plugin builtin:vite-reporter] 
+[WebServer] (!) Some chunks are larger than 500 kB after minification. Consider:
+[WebServer] - Using dynamic import() to code-split the application
+[WebServer] - Use build.rolldownOptions.output.codeSplitting to improve chunking: https://rolldown.rs/reference/OutputOptions.codeSplitting
+[WebServer] - Adjust chunk size limit for this warning via build.chunkSizeWarningLimit.
+[WebServer] #0 building with "desktop-linux" instance using docker driver
+[WebServer] 
+[WebServer] #1 [internal] load build definition from Dockerfile
+[WebServer] #1 transferring dockerfile: 462B done
+[WebServer] #1 DONE 0.0s
+[WebServer] 
+[WebServer] #2 [internal] load metadata for docker.io/library/caddy:2.11.4-alpine@sha256:5f5c8640aae01df9654968d946d8f1a56c497f1dd5c5cda4cf95ab7c14d58648
+[WebServer] #2 DONE 0.0s
+[WebServer] 
+[WebServer] #3 [internal] load .dockerignore
+[WebServer] #3 transferring context: 2B done
+[WebServer] #3 DONE 0.0s
+[WebServer] 
+[WebServer] #4 [1/3] FROM docker.io/library/caddy:2.11.4-alpine@sha256:5f5c8640aae01df9654968d946d8f1a56c497f1dd5c5cda4cf95ab7c14d58648
+[WebServer] #4 resolve docker.io/library/caddy:2.11.4-alpine@sha256:5f5c8640aae01df9654968d946d8f1a56c497f1dd5c5cda4cf95ab7c14d58648 0.0s done
+[WebServer] #4 DONE 0.0s
+[WebServer] 
+[WebServer] #5 [internal] load build context
+[WebServer] #5 transferring context: 237.26MB 2.7s done
+[WebServer] #5 DONE 2.7s
+[WebServer] 
+[WebServer] #6 [2/3] COPY dist /srv
+[WebServer] #6 CACHED
+[WebServer] 
+[WebServer] #7 [3/3] COPY Caddyfile /etc/caddy/Caddyfile
+[WebServer] #7 CACHED
+[WebServer] 
+[WebServer] #8 exporting to image
+[WebServer] #8 exporting layers done
+[WebServer] #8 exporting manifest sha256:93eac5efe27bca8ee5214125699d1a245a3602f8e8477358333a3728803915bf done
+[WebServer] #8 exporting config sha256:8181295d632ec115a727d810328ed763b8214ce899ee08de3d2cdbca3b86a0af done
+[WebServer] #8 exporting attestation manifest sha256:39cf6cca750ec0ba14d9e888462f52cfbbcc7037f3dbaf9435c6b28715aa3c3f done
+[WebServer] #8 exporting manifest list sha256:d97d93a889613160958179b722f5ca4130015b83bed0baad0add7a04b7e8a772 done
+[WebServer] #8 naming to docker.io/library/datenwerkstatt-p7-test:0 done
+[WebServer] #8 unpacking to docker.io/library/datenwerkstatt-p7-test:0 done
+[WebServer] #8 DONE 0.1s
+[WebServer] (node:33226) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] (node:33253) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] [plugin builtin:vite-reporter] 
+[WebServer] (!) Some chunks are larger than 500 kB after minification. Consider:
+[WebServer] - Using dynamic import() to code-split the application
+[WebServer] - Use build.rolldownOptions.output.codeSplitting to improve chunking: https://rolldown.rs/reference/OutputOptions.codeSplitting
+[WebServer] - Adjust chunk size limit for this warning via build.chunkSizeWarningLimit.
+[WebServer] #0 building with "desktop-linux" instance using docker driver
+[WebServer] 
+[WebServer] #1 [internal] load build definition from Dockerfile
+[WebServer] #1 transferring dockerfile: 462B done
+[WebServer] #1 DONE 0.0s
+[WebServer] 
+[WebServer] #2 [internal] load metadata for docker.io/library/caddy:2.11.4-alpine@sha256:5f5c8640aae01df9654968d946d8f1a56c497f1dd5c5cda4cf95ab7c14d58648
+[WebServer] #2 DONE 0.0s
+[WebServer] 
+[WebServer] #3 [internal] load .dockerignore
+[WebServer] #3 transferring context: 2B done
+[WebServer] #3 DONE 0.0s
+[WebServer] 
+[WebServer] #4 [1/3] FROM docker.io/library/caddy:2.11.4-alpine@sha256:5f5c8640aae01df9654968d946d8f1a56c497f1dd5c5cda4cf95ab7c14d58648
+[WebServer] #4 resolve docker.io/library/caddy:2.11.4-alpine@sha256:5f5c8640aae01df9654968d946d8f1a56c497f1dd5c5cda4cf95ab7c14d58648 0.0s done
+[WebServer] #4 DONE 0.0s
+[WebServer] 
+[WebServer] #5 [internal] load build context
+[WebServer] #5 transferring context: 237.26MB 3.0s done
+[WebServer] #5 DONE 3.0s
+[WebServer] 
+[WebServer] #6 [2/3] COPY dist /srv
+[WebServer] #6 CACHED
+[WebServer] 
+[WebServer] #7 [3/3] COPY Caddyfile /etc/caddy/Caddyfile
+[WebServer] #7 CACHED
+[WebServer] 
+[WebServer] #8 exporting to image
+[WebServer] #8 exporting layers done
+[WebServer] #8 exporting manifest sha256:3cdbe8e317d8cb2f67ac36043a76f8c8448f314b4ffb97bddf47b9feca1ae909 done
+[WebServer] #8 exporting config sha256:4ce066a3b740af29e8c0211aed86fba5aebe95e4f1528d6b2d87c819a38fa194 done
+[WebServer] #8 exporting attestation manifest sha256:d5c426c641ec5b07310719fcf03b065f2785341893ae0f3bb78284360d0e5810 done
+[WebServer] #8 exporting manifest list sha256:83f9861baf2245640b3522ed331b693b6fb805628c11409874763e19ef0a4aeb done
+[WebServer] #8 naming to docker.io/library/datenwerkstatt-p7-test:1 done
+[WebServer] #8 unpacking to docker.io/library/datenwerkstatt-p7-test:1 done
+[WebServer] #8 DONE 0.1s
+[WebServer] #0 building with "desktop-linux" instance using docker driver
+[WebServer] 
+[WebServer] #1 [internal] load build definition from Dockerfile
+[WebServer] #1 transferring dockerfile: 462B done
+[WebServer] #1 DONE 0.0s
+[WebServer] 
+[WebServer] #2 [internal] load metadata for docker.io/library/caddy:2.11.4-alpine@sha256:5f5c8640aae01df9654968d946d8f1a56c497f1dd5c5cda4cf95ab7c14d58648
+[WebServer] #2 DONE 0.0s
+[WebServer] 
+[WebServer] #3 [internal] load .dockerignore
+[WebServer] #3 transferring context: 2B done
+[WebServer] #3 DONE 0.0s
+[WebServer] 
+[WebServer] #4 [1/3] FROM docker.io/library/caddy:2.11.4-alpine@sha256:5f5c8640aae01df9654968d946d8f1a56c497f1dd5c5cda4cf95ab7c14d58648
+[WebServer] #4 resolve docker.io/library/caddy:2.11.4-alpine@sha256:5f5c8640aae01df9654968d946d8f1a56c497f1dd5c5cda4cf95ab7c14d58648 0.0s done
+[WebServer] #4 DONE 0.0s
+[WebServer] 
+[WebServer] #5 [internal] load build context
+[WebServer] #5 transferring context: 237.26MB 2.8s done
+[WebServer] #5 DONE 2.8s
+[WebServer] 
+[WebServer] #6 [2/3] COPY dist /srv
+[WebServer] #6 CACHED
+[WebServer] 
+[WebServer] #7 [3/3] COPY Caddyfile /etc/caddy/Caddyfile
+[WebServer] #7 CACHED
+[WebServer] 
+[WebServer] #8 exporting to image
+[WebServer] #8 exporting layers done
+[WebServer] #8 exporting manifest sha256:5c704f23cb57c80dd10c117a48805e725b4c347f02c3216b1e010c17f802382b done
+[WebServer] #8 exporting config sha256:143639a85de1bc70f73efaa72e8e71009b692fd29af8b306ff628d2b4fc186ad done
+[WebServer] #8 exporting attestation manifest sha256:2ca0d30fb449bea3f6b48ac8e709cbdbd616176ad854d733714a6607f8ba3511 done
+[WebServer] #8 exporting manifest list sha256:bcace2aa84e9a5b4eb7e84be61fe879452168f896fa0b6407dccef0696c2bb75 done
+[WebServer] #8 naming to docker.io/library/datenwerkstatt-p7-test:2 done
+[WebServer] #8 unpacking to docker.io/library/datenwerkstatt-p7-test:2 done
+[WebServer] #8 DONE 0.0s
+Error: Process from config.webServer exited early.
+

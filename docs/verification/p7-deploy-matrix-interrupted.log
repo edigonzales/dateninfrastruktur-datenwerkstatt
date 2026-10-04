@@ -1,0 +1,107 @@
+[WebServer] (node:61959) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] (node:61989) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] [plugin builtin:vite-reporter] 
+[WebServer] (!) Some chunks are larger than 500 kB after minification. Consider:
+[WebServer] - Using dynamic import() to code-split the application
+[WebServer] - Use build.rolldownOptions.output.codeSplitting to improve chunking: https://rolldown.rs/reference/OutputOptions.codeSplitting
+[WebServer] - Adjust chunk size limit for this warning via build.chunkSizeWarningLimit.
+[WebServer] #0 building with "desktop-linux" instance using docker driver
+[WebServer] 
+[WebServer] #1 [internal] load build definition from Dockerfile
+[WebServer] #1 transferring dockerfile: 491B done
+[WebServer] #1 DONE 0.0s
+[WebServer] 
+[WebServer] #2 [internal] load metadata for docker.io/library/caddy:2.11.4-alpine@sha256:5f5c8640aae01df9654968d946d8f1a56c497f1dd5c5cda4cf95ab7c14d58648
+[WebServer] #2 DONE 0.0s
+[WebServer] 
+[WebServer] #3 [internal] load .dockerignore
+[WebServer] #3 transferring context: 2B done
+[WebServer] #3 DONE 0.0s
+[WebServer] 
+[WebServer] #4 [1/4] FROM docker.io/library/caddy:2.11.4-alpine@sha256:5f5c8640aae01df9654968d946d8f1a56c497f1dd5c5cda4cf95ab7c14d58648
+[WebServer] #4 resolve docker.io/library/caddy:2.11.4-alpine@sha256:5f5c8640aae01df9654968d946d8f1a56c497f1dd5c5cda4cf95ab7c14d58648 done
+[WebServer] #4 DONE 0.0s
+[WebServer] 
+[WebServer] #5 [internal] load build context
+[WebServer] #5 transferring context: 238.75MB 3.0s done
+[WebServer] #5 DONE 3.1s
+[WebServer] 
+[WebServer] #4 [1/4] FROM docker.io/library/caddy:2.11.4-alpine@sha256:5f5c8640aae01df9654968d946d8f1a56c497f1dd5c5cda4cf95ab7c14d58648
+[WebServer] #4 CACHED
+[WebServer] 
+[WebServer] #6 [2/4] COPY dist /srv
+[WebServer] #6 DONE 0.8s
+[WebServer] 
+[WebServer] #7 [3/4] COPY Caddyfile /etc/caddy/Caddyfile
+[WebServer] #7 DONE 0.0s
+[WebServer] 
+[WebServer] #8 [4/4] RUN setcap -r /usr/bin/caddy
+[WebServer] #8 DONE 0.2s
+[WebServer] 
+[WebServer] #9 exporting to image
+[WebServer] #9 exporting layers
+[WebServer] #9 exporting layers 6.8s done
+[WebServer] #9 exporting manifest sha256:31dfab9b1c80266c30fcb8938c501e01b216a14eb076d9681220e38d62cf3e96 0.0s done
+[WebServer] #9 exporting config sha256:770091d084d29bda1e2a73bffdad6de310f17f8e666c06fd00dde8f8f74b8c3b done
+[WebServer] #9 exporting attestation manifest sha256:17b68c486aee65689de8d9461529c708af53e804c9a50d0a70f50e77e1629072 done
+[WebServer] #9 exporting manifest list sha256:3d60fe6a2146b5a94e9a374801af793878d36573df5c7cf2370688fe1b363271 done
+[WebServer] #9 naming to docker.io/library/datenwerkstatt-p7-test:0 done
+[WebServer] #9 unpacking to docker.io/library/datenwerkstatt-p7-test:0
+[WebServer] #9 unpacking to docker.io/library/datenwerkstatt-p7-test:0 1.4s done
+[WebServer] #9 DONE 8.2s
+[WebServer] (node:64356) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] (node:64383) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] [plugin builtin:vite-reporter] 
+[WebServer] (!) Some chunks are larger than 500 kB after minification. Consider:
+[WebServer] - Using dynamic import() to code-split the application
+[WebServer] - Use build.rolldownOptions.output.codeSplitting to improve chunking: https://rolldown.rs/reference/OutputOptions.codeSplitting
+[WebServer] - Adjust chunk size limit for this warning via build.chunkSizeWarningLimit.
+[WebServer] #0 building with "desktop-linux" instance using docker driver
+[WebServer] 
+[WebServer] #1 [internal] load build definition from Dockerfile
+[WebServer] #1 transferring dockerfile: 491B done
+[WebServer] #1 DONE 0.0s
+[WebServer] 
+[WebServer] #2 [internal] load metadata for docker.io/library/caddy:2.11.4-alpine@sha256:5f5c8640aae01df9654968d946d8f1a56c497f1dd5c5cda4cf95ab7c14d58648
+[WebServer] #2 DONE 0.0s
+[WebServer] 
+[WebServer] #3 [internal] load .dockerignore
+[WebServer] #3 transferring context: 2B done
+[WebServer] #3 DONE 0.0s
+[WebServer] 
+[WebServer] #4 [1/4] FROM docker.io/library/caddy:2.11.4-alpine@sha256:5f5c8640aae01df9654968d946d8f1a56c497f1dd5c5cda4cf95ab7c14d58648
+[WebServer] #4 resolve docker.io/library/caddy:2.11.4-alpine@sha256:5f5c8640aae01df9654968d946d8f1a56c497f1dd5c5cda4cf95ab7c14d58648 0.0s done
+[WebServer] #4 DONE 0.0s
+[WebServer] 
+[WebServer] #5 [internal] load build context
+[WebServer] #5 transferring context: 238.75MB 3.3s done
+[WebServer] #5 DONE 3.3s
+[WebServer] 
+[WebServer] #4 [1/4] FROM docker.io/library/caddy:2.11.4-alpine@sha256:5f5c8640aae01df9654968d946d8f1a56c497f1dd5c5cda4cf95ab7c14d58648
+[WebServer] #4 CACHED
+[WebServer] 
+[WebServer] #6 [2/4] COPY dist /srv
+[WebServer] #6 DONE 0.7s
+[WebServer] 
+[WebServer] #7 [3/4] COPY Caddyfile /etc/caddy/Caddyfile
+[WebServer] #7 DONE 0.0s
+[WebServer] 
+[WebServer] #8 [4/4] RUN setcap -r /usr/bin/caddy
+[WebServer] #8 DONE 0.2s
+[WebServer] 
+[WebServer] #9 exporting to image
+[WebServer] #9 exporting layers
+[WebServer] #9 exporting layers 2.2s done
+[WebServer] #9 CANCELED
+[WebServer] ERROR: failed to build: failed to solve: Canceled: context canceled
+[WebServer] Error: docker failed: 130
+[WebServer]     at run (file:///Users/stefan/sources/dateninfrastruktur-datenwerkstatt/scripts/test-deployment.mjs:7:34)
+[WebServer]     at file:///Users/stefan/sources/dateninfrastruktur-datenwerkstatt/scripts/test-deployment.mjs:47:5
+[WebServer] (node:61949) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+Error: Process from config.webServer exited early.
+

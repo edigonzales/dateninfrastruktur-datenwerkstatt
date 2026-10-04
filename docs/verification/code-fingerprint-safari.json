@@ -1,0 +1,13 @@
+{
+  "createdAt": "2026-10-04T15:40:15.320853+00:00",
+  "gitBase": "0535d2fd54f14e347cb3b488c3d47767923d1b2f",
+  "productionCandidateTree": "f044f1ef6142a3d1121fa93829e0c784d5232c46",
+  "previouslyVerifiedFilesUnchanged": 193,
+  "additionalTestFiles": {
+    "tests/safari/assert-report.mjs": "1586d32ab1928fdaab3382ac2faae2c805a611b81e37471d7e5fc89b51c00af3",
+    "tests/safari/index.html": "0d0688bf6926df0e0cd594d0ab1db08d424d404a7209f04322dc289091e58403",
+    "tests/safari/pilot.ts": "c7daea8f136462019b4797639e328c008f0e9eae7f5cbe85aa1948369fa9179d",
+    "tests/safari/server.mjs": "78e7c95587fe015311656e3fca41cd1546667ad369f410762b50f7d4a9b87148"
+  },
+  "note": "Only new test harness and documentation added; product, earlier tests, fixtures and dependencies unchanged."
+}

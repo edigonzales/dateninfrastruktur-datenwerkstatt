@@ -1,0 +1,25 @@
+5:28:33 PM [vite] (client) page reload tests/safari/pilot.ts
+5:28:33 PM [vite] (client) page reload tests/safari/pilot.ts
+5:28:49 PM [vite] (client) [console.warn] WebR is using `PostMessage` communication channel, nested R REPLs are not available.
+5:29:31 PM [vite] (client) [console.warn] WebR is using `PostMessage` communication channel, nested R REPLs are not available.
+5:29:39 PM [vite] (client) [console.error]   ERR write@[native code]
+handler@http://127.0.0.1:4184/node_modules/.vite/deps/editor.api2-DCT-GyFS.js:114775:47
+5:29:56 PM [vite] (client) [console.error]   ERR write@[native code]
+handler@http://127.0.0.1:4184/node_modules/.vite/deps/editor.api2-DCT-GyFS.js:114775:47
+5:29:56 PM [vite] (client) [Unhandled rejection] Canceled: Canceled
+ > cancel node_modules/monaco-editor/esm/vs/base/common/async.js:686:48
+    684 |      }
+    685 |      cancel() {
+    686 |          return this.error(new CancellationError());
+        |                                                  ^
+    687 |      }
+    688 |  }
+ > handler node_modules/monaco-editor/esm/vs/platform/clipboard/browser/clipboardService.js:74:63
+
+5:30:17 PM [vite] (client) [console.warn] WebR is using `PostMessage` communication channel, nested R REPLs are not available.
+5:30:29 PM [vite] (client) [console.warn] WebR is using `PostMessage` communication channel, nested R REPLs are not available.
+5:32:11 PM [vite] (client) page reload tests/safari/index.html
+5:32:11 PM [vite] (client) page reload tests/safari/pilot.ts
+5:32:11 PM [vite] (client) page reload tests/safari/pilot.ts
+5:33:10 PM [vite] (client) page reload tests/safari/pilot.ts
+5:33:10 PM [vite] (client) page reload tests/safari/pilot.ts

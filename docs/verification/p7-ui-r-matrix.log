@@ -1,0 +1,84 @@
+[WebServer] (node:81081) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 15 tests using 3 workers
+
+(node:81090) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:81089) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:81091) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] 12:53:53 PM [vite] (client) [console.warn] WebR is using `PostMessage` communication channel, nested R REPLs are not available.
+[WebServer] 12:54:00 PM [vite] (client) [console.warn] WebR is using `PostMessage` communication channel, nested R REPLs are not available.
+[WebServer] 12:54:03 PM [vite] (client) [console.warn] WebR is using `PostMessage` communication channel, nested R REPLs are not available.
+  ✓   2 [chromium] › tests/integration/r.spec.ts:4:1 › P5 AT-042–045: full typed SQL → R → SQL including NA/NaN, exact decimals, dates, factor and rejected casts (33.0s)
+[WebServer] 12:54:26 PM [vite] (client) [console.warn] WebR is using `PostMessage` communication channel, nested R REPLs are not available.
+  ✓   1 [chromium] › tests/e2e/p7-ui.spec.ts:16:1 › P7 AT-054–055 AT-058: measured SQL/R geometry, keyboard splitters, layout reset and reload (43.0s)
+  ✓   3 [firefox] › tests/e2e/p7-ui.spec.ts:16:1 › P7 AT-054–055 AT-058: measured SQL/R geometry, keyboard splitters, layout reset and reload (46.9s)
+  ✓   5 [chromium] › tests/e2e/p7-ui.spec.ts:116:1 › P7 AT-055–057: native focus trap/return, settings, storage cleanup and data-free diagnostics (5.1s)
+  ✓   7 [chromium] › tests/e2e/p7-ui.spec.ts:162:1 › P7 AT-025 AT-055 AT-056: selected SQL is snapshotted and cell markup remains text (7.0s)
+(node:86024) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓   6 [firefox] › tests/e2e/p7-ui.spec.ts:116:1 › P7 AT-055–057: native focus trap/return, settings, storage cleanup and data-free diagnostics (9.0s)
+[WebServer] 12:54:52 PM [vite] (client) [console.warn] WebR is using `PostMessage` communication channel, nested R REPLs are not available.
+  ✓   9 [firefox] › tests/e2e/p7-ui.spec.ts:162:1 › P7 AT-025 AT-055 AT-056: selected SQL is snapshotted and cell markup remains text (9.0s)
+(node:86063) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] 12:54:57 PM [vite] (client) [console.warn] WebR is using `PostMessage` communication channel, nested R REPLs are not available.
+[WebServer] 12:55:07 PM [vite] (client) [console.warn] WebR is using `PostMessage` communication channel, nested R REPLs are not available.
+[WebServer] 12:55:23 PM [vite] (client) [console.warn] WebR is using `PostMessage` communication channel, nested R REPLs are not available.
+  ✓   4 [chromium] › tests/integration/r.spec.ts:91:1 › P5 AT-040 AT-042 AT-047 AT-052: 350 rows, stale plans, five inactive fresh scopes and genuine R worker stop (1.4m)
+(node:86336) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  10 [webkit] › tests/e2e/p7-ui.spec.ts:16:1 › P7 AT-054–055 AT-058: measured SQL/R geometry, keyboard splitters, layout reset and reload (53.8s)
+[WebServer] 12:55:53 PM [vite] (client) [console.warn] WebR is using `PostMessage` communication channel, nested R REPLs are not available.
+  ✓   8 [firefox] › tests/integration/r.spec.ts:4:1 › P5 AT-042–045: full typed SQL → R → SQL including NA/NaN, exact decimals, dates, factor and rejected casts (1.1m)
+  ✘  12 [webkit] › tests/e2e/p7-ui.spec.ts:116:1 › P7 AT-055–057: native focus trap/return, settings, storage cleanup and data-free diagnostics (5.2s)
+(node:86395) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] 12:56:01 PM [vite] (client) [console.warn] WebR is using `PostMessage` communication channel, nested R REPLs are not available.
+  ✓  14 [webkit] › tests/e2e/p7-ui.spec.ts:162:1 › P7 AT-025 AT-055 AT-056: selected SQL is snapshotted and cell markup remains text (6.6s)
+  ✓  11 [webkit] › tests/integration/r.spec.ts:4:1 › P5 AT-042–045: full typed SQL → R → SQL including NA/NaN, exact decimals, dates, factor and rejected casts (30.4s)
+[WebServer] 12:56:19 PM [vite] (client) [console.warn] WebR is using `PostMessage` communication channel, nested R REPLs are not available.
+[WebServer] 12:56:20 PM [vite] (client) [console.warn] WebR is using `PostMessage` communication channel, nested R REPLs are not available.
+[WebServer] 12:56:40 PM [vite] (client) [console.warn] WebR is using `PostMessage` communication channel, nested R REPLs are not available.
+[WebServer] 12:56:40 PM [vite] (client) [console.warn] WebR is using `PostMessage` communication channel, nested R REPLs are not available.
+  ✓  13 [firefox] › tests/integration/r.spec.ts:91:1 › P5 AT-040 AT-042 AT-047 AT-052: 350 rows, stale plans, five inactive fresh scopes and genuine R worker stop (1.1m)
+[WebServer] 12:57:00 PM [vite] (client) [console.warn] WebR is using `PostMessage` communication channel, nested R REPLs are not available.
+  ✓  15 [webkit] › tests/integration/r.spec.ts:91:1 › P5 AT-040 AT-042 AT-047 AT-052: 350 rows, stale plans, five inactive fresh scopes and genuine R worker stop (1.1m)
+
+
+  1) [webkit] › tests/e2e/p7-ui.spec.ts:116:1 › P7 AT-055–057: native focus trap/return, settings, storage cleanup and data-free diagnostics 
+
+    Error: expect(received).toBe(expected) // Object.is equality
+
+    Expected: true
+    Received: false
+
+      124 |   for (let i = 0; i < 25; i++) {
+      125 |     await page.keyboard.press('Tab');
+    > 126 |     expect(await dialog.evaluate((d) => d.contains(document.activeElement))).toBe(true);
+          |                                                                              ^
+      127 |   }
+      128 |   await page.keyboard.press('Escape');
+      129 |   await expect(dialog).toHaveCount(0);
+        at /Users/stefan/sources/dateninfrastruktur-datenwerkstatt/tests/e2e/p7-ui.spec.ts:126:78
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/e2e-p7-ui-P7-AT-055–057-na-3b970-p-and-data-free-diagnostics-webkit/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/e2e-p7-ui-P7-AT-055–057-na-3b970-p-and-data-free-diagnostics-webkit/error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/e2e-p7-ui-P7-AT-055–057-na-3b970-p-and-data-free-diagnostics-webkit/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/e2e-p7-ui-P7-AT-055–057-na-3b970-p-and-data-free-diagnostics-webkit/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  1 failed
+    [webkit] › tests/e2e/p7-ui.spec.ts:116:1 › P7 AT-055–057: native focus trap/return, settings, storage cleanup and data-free diagnostics 
+  14 passed (3.5m)

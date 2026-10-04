@@ -1,0 +1,180 @@
+
+Running 124 tests using 2 workers
+
+(node:4567) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:4568) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓    2 [firefox] › tests/e2e/imports.spec.ts:20:1 › P2 / AT-008 AT-010 AT-018: confirmed import, reload, data preview, independent alias and complete Parquet download (10.4s)
+  ✓    3 [firefox] › tests/e2e/imports.spec.ts:53:1 › P2 / AT-016: denied OPFS requires explicit temporary mode and never claims local persistence (6.7s)
+  ✓    4 [firefox] › tests/e2e/imports.spec.ts:79:1 › P2 / AT-013: real import surfaces OPFS quota failure without publishing partial metadata (11.3s)
+  ✓    5 [firefox] › tests/e2e/imports.spec.ts:105:1 › P2 / AT-002 AT-024 partial: one import worker survives routes and closes before another workspace opens (7.8s)
+  ✓    6 [firefox] › tests/e2e/multitab.spec.ts:2:1 › P6 AT-065: absent Web Locks permits existing project only as reader, archive export remains possible (4.6s)
+  ✓    1 [firefox] › tests/e2e/archive.spec.ts:6:1 › P6 AT-051 AT-053 AT-063: Golden archive in fresh profile, graph remap, real SQL/PNG, duplicate and independent deletion (51.0s)
+  ✓    8 [firefox] › tests/e2e/archive.spec.ts:141:1 › P6 AT-059: recipe inspection/confirmation without engine or empty fake tables (4.0s)
+  ✓    7 [firefox] › tests/e2e/p7-ui.spec.ts:16:1 › P7 AT-054–055 AT-058: measured SQL/R geometry, keyboard splitters, layout reset and reload (37.1s)
+  ✓   10 [firefox] › tests/e2e/p7-ui.spec.ts:116:1 › P7 AT-055–057: native focus trap/return, settings, storage cleanup and data-free diagnostics (5.4s)
+  ✓   11 [firefox] › tests/e2e/p7-ui.spec.ts:162:1 › P7 AT-025 AT-055 AT-056: selected SQL is snapshotted and cell markup remains text (6.8s)
+  ✓   12 [firefox] › tests/e2e/p7-ui.spec.ts:189:1 › P7 AT-058: browser history restores the analysis cursor and layout does not edit the domain (6.7s)
+  ✓   13 [firefox] › tests/e2e/p8-imports.spec.ts:7:1 › P8 AT-019 AT-020: XLSX invalidates old preview, real over-limit file and visible replacement schema (12.1s)
+  ✓    9 [firefox] › tests/e2e/p8-golden.spec.ts:63:1 › P8 AT-072: portal population + local CSV, unchanged Golden SQL/R, process restart and second fresh archive profile (1.0m)
+  ✓   15 [firefox] › tests/e2e/sql.spec.ts:18:1 › P3 / AT-022 AT-027 AT-032 AT-049 AT-055 AT-058: SQL, paging, keep, exports, chart, resize and reload (11.8s)
+  ✓   16 [firefox] › tests/e2e/sql.spec.ts:77:1 › P3 / AT-025 AT-030: parameters, explicit cancel and failed runs never show a previous output (14.0s)
+  ✓   17 [firefox] › tests/e2e/sql.spec.ts:109:1 › P3 / AT-049: rendered bars and line gaps preserve NULL, PNG contains actual pixels (7.3s)
+  ✓   18 [firefox] › tests/e2e/workspaces.spec.ts:9:1 › AT-003: workspace metadata persists across reload without engine startup (5.3s)
+  ✓   19 [firefox] › tests/e2e/workspaces.spec.ts:28:1 › AT-005 AT-058: saved SQL and R, separate models, duplicate, archive, no code auto-run (7.9s)
+  ✓   20 [firefox] › tests/e2e/workspaces.spec.ts:90:1 › AT-012: another tab opens read-only and explicitly reacquires after writer closes (4.6s)
+  ✓   21 [firefox] › tests/e2e/workspaces.spec.ts:109:1 › AT-054 AT-057 partial: compact chrome and implemented settings persist (8.8s)
+  ✓   22 [firefox] › tests/e2e/workspaces.spec.ts:142:1 › AT-058 / REQ-060: invalid workspace/analysis route is controlled (9.5s)
+  ✓   23 [firefox] › tests/integration/imports.spec.ts:7:1 › P2 / AT-008 AT-010: strict CSV → hashed OPFS → fresh DuckDB retains values, NULL and empty strings (8.8s)
+  ✓   14 [firefox] › tests/e2e/r.spec.ts:10:1 › P5 AT-040 AT-042 AT-046 AT-048: complete UI transfer, lazy worker survives routes, capture, reset and cancel (1.4m)
+  ✓   24 [firefox] › tests/integration/imports.spec.ts:63:1 › P2 / AT-009 AT-020: late conversion error, header-only CSV and invalid bytes (6.7s)
+  ✓   25 [firefox] › tests/integration/init-failure.spec.ts:3:1 › AT-069: corrupt DuckDB WASM frees its actual worker before retry (12.3s)
+  ✓   26 [firefox] › tests/integration/imports.spec.ts:123:1 › P2 / AT-014 AT-017: reload finds true orphans, writer cleanup preserves referenced and foreign bytes (7.7s)
+  ✓   27 [firefox] › tests/integration/p0.spec.ts:6:1 › P0 / AT-001 AT-002: one connector, Arrow, CSV → Parquet and stable materialization (8.6s)
+  ✓   29 [firefox] › tests/integration/p0.spec.ts:33:1 › P0: DuckDB parser returns SELECT AST and rejects non-SELECT serialization (7.9s)
+  ✓   28 [firefox] › tests/integration/imports.spec.ts:193:1 › P2 / AT-010: imported file survives browser process restart and removal of input file (25.1s)
+  ✓   30 [firefox] › tests/integration/p0.spec.ts:73:1 › P0 / AT-030: running SQL ends or worker terminates, fresh query works (9.9s)
+  ✓   31 [firefox] › tests/integration/imports.spec.ts:262:1 › P2 / AT-061 partial: changed byte is rejected as ARTIFACT_CORRUPT before use (3.6s)
+  ✓   32 [firefox] › tests/integration/p0.spec.ts:102:1 › P0 / AT-046: local webR dataframe, real plot, PostMessage worker reset (6.1s)
+  ✓   33 [firefox] › tests/integration/p8-acceptance.spec.ts:4:1 › P8 AT-007: separate predecessor upgrade rolls back schema and data, then migrates atomically (3.5s)
+  ✓   34 [firefox] › tests/integration/p0.spec.ts:136:1 › P0: real OPFS read/write/delete and IndexedDB transaction (3.5s)
+  ✓   35 [firefox] › tests/integration/p8-acceptance.spec.ts:21:1 › P8 AT-019: replacement is rejected during real SQL; old snapshot stays v1, next run reads v2 (6.7s)
+  ✓   36 [firefox] › tests/integration/p0.spec.ts:144:1 › P0 / AT-012: Web Lock callback holds writer lease across tabs (4.5s)
+  ✓   38 [firefox] › tests/integration/p0.spec.ts:160:1 › P0 / AT-023: guard allows analysis and blocks external/dynamic SQL without execution (6.6s)
+  ✓   37 [firefox] › tests/integration/p8-acceptance.spec.ts:128:3 › P8 AT-024: delayed real sql response is discarded on workspace switch and resources close (10.0s)
+  ✓   39 [firefox] › tests/integration/profile-isolation.spec.ts:6:1 › P6 test storage: fresh native OPFS scopes are disjoint across profiles and survive reload (7.7s)
+browser: [vite] connecting...
+browser: [vite] connected.
+browser: [JavaScript Warning: "The WebAssembly exception handling 'try' instruction is deprecated and should no longer be used. Please recompile to use the 'try_table' instruction instead."]
+browser: WebR is using `PostMessage` communication channel, nested R REPLs are not available.
+{"encoded":["NA","NaN","Infinity","-Infinity","-2147483648"],"missing":[true,false,false,false,false],"outputs":[{"type":"stdout","text":"out"},{"type":"warning","text":"warn"},{"type":"message","text":"msg\n"}],"classes":["data.frame"],"nativeMissing":[false,false,false,false,false]}
+  ✓   41 [firefox] › tests/integration/r-api.spec.ts:2:1 › P5 native webR vectors, NA/NaN, Date, attributes and captured conditions (4.9s)
+  ✓   42 [firefox] › tests/integration/r-date-proof.spec.ts:2:1 › P5 runtime gzip files stay opaque and native R Date parser works (4.4s)
+  ✓   40 [firefox] › tests/integration/p8-acceptance.spec.ts:128:3 › P8 AT-024: delayed real r response is discarded on workspace switch and resources close (40.2s)
+  ✓   43 [firefox] › tests/integration/r-faults.spec.ts:3:1 › P5 AT-045 AT-052 AT-062: approvals, unsupported columns, stale edits, write/commit failure, console and plot limits (39.8s)
+  ✓   44 [firefox] › tests/integration/r-golden.spec.ts:4:1 › P5 AT-041 AT-048: unchanged Golden SQL → R script → explicit capture → Golden SQL, real plot and reopen (43.6s)
+  ✓   45 [firefox] › tests/integration/r-packages.spec.ts:3:1 › P5 pinned local R packages installed and used (43.2s)
+  ✓   46 [firefox] › tests/integration/r-snapshots.spec.ts:3:1 › P5/P6 AT-025 AT-048: native R parameters, selection snapshot, seed and capture of a later object mutation (44.1s)
+  ✓   48 [firefox] › tests/integration/recovery.spec.ts:3:1 › P6 AT-060: native browser decompressor enforces actual expansion with forged ZIP sizes (6.1s)
+  ✓   49 [firefox] › tests/integration/recovery.spec.ts:30:1 › P6 AT-014 AT-064: failed import leaves recoverable OPFS staging; cleanup preserves another project and foreign files (8.0s)
+  ✓   47 [firefox] › tests/integration/r.spec.ts:4:1 › P5 AT-042–045: full typed SQL → R → SQL including NA/NaN, exact decimals, dates, factor and rejected casts (48.3s)
+  ✓   50 [firefox] › tests/integration/recovery.spec.ts:132:1 › P6 AT-012 AT-015 AT-017 AT-061: tab death interrupts real query, saved results remain, missing/corrupt bytes preserve code (13.8s)
+  ✓   52 [firefox] › tests/integration/repository.spec.ts:6:1 › AT-007 AT-012: actual IndexedDB CAS, invalid load, transaction rollback (1.5s)
+  ✓   53 [firefox] › tests/integration/repository.spec.ts:76:1 › P0: persistent browser profile OPFS read/write/delete (3.6s)
+  ✓   54 [firefox] › tests/integration/sql-lifecycle.spec.ts:2:1 › P3 / AT-031 AT-032: 350-row user Parquet export and a nonresponding cancel API (10.7s)
+  ✓   55 [firefox] › tests/integration/sql-lifecycle.spec.ts:149:1 › P3 / AT-030: cancellation after CTAS settling releases unpublished private relation (8.2s)
+{"ast":{"error":false,"statements":[{"node":{"type":"SELECT_NODE","modifiers":[],"cte_map":{"map":[]},"select_list":[{"class":"PARAMETER","type":"VALUE_PARAMETER","alias":"a","query_location":18446744073709552000,"identifier":"text"},{"class":"CAST","type":"OPERATOR_CAST","alias":"b","query_location":19,"child":{"class":"PARAMETER","type":"VALUE_PARAMETER","alias":"","query_location":18446744073709552000,"identifier":"exact"},"cast_type":{"id":"BIGINT","type_info":null},"try_cast":false},{"class":"PARAMETER","type":"VALUE_PARAMETER","alias":"c","query_location":18446744073709552000,"identifier":"text"}],"from_table":{"type":"EMPTY","alias":"","sample":null,"query_location":18446744073709552000},"where_clause":null,"group_expressions":[],"group_sets":[],"aggregate_handling":"STANDARD_HANDLING","having":null,"sample":null,"qualify":null},"named_param_map":[{"key":"text","value":1},{"key":"exact","value":2}]}]},"bound":{"code":"SELECT $1 AS a, CAST($2 AS BIGINT) AS b, $1 AS c","values":["x'; SELECT 9; --","9007199254740993"]},"rows":[{"a":"x'; SELECT 9; --","b":"9007199254740993","c":"x'; SELECT 9; --"}]}
+  ✓   56 [firefox] › tests/integration/sql.spec.ts:3:1 › P3 installed prepared CTAS and AST parameter mapping (7.5s)
+  ✓   57 [firefox] › tests/integration/sql.spec.ts:58:1 › P3 / AT-022 AT-025 AT-027 AT-028 AT-029: real SQL result limits, bindings, stability and exact display (6.1s)
+  ✓   58 [firefox] › tests/integration/sql.spec.ts:181:1 › P3 / AT-021 AT-026 AT-032: CSV datasets → frozen Golden SQL → kept result → reopen/export (8.0s)
+  ✓   59 [firefox] › tests/integration/sql.spec.ts:280:1 › P3 / AT-030 AT-031: actual worker termination, epoch invalidation, no late success and fresh small query (10.9s)
+  ✓   60 [firefox] › tests/integration/sql.spec.ts:338:1 › P3 / AT-023: analytic syntax allowed, indirect external/internal sources rejected before execution (6.6s)
+  ✓   61 [firefox] › tests/integration/sql.spec.ts:403:1 › P3 / AT-049 AT-050: chart boundaries and atomic keep failure with real result (6.9s)
+  ✓   62 [firefox] › tests/integration/transfer-recovery.spec.ts:3:1 › P6 AT-013 AT-050 AT-052: quota blocks persistent R input; workspace change aborts real capture after OPFS write without late publication (44.2s)
+  ✘   51 [firefox] › tests/integration/r.spec.ts:91:1 › P5 AT-040 AT-042 AT-047 AT-052: 350 rows, stale plans, five inactive fresh scopes and genuine R worker stop (2.1m)
+(node:12560) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:12561) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓   63 [webkit] › tests/e2e/imports.spec.ts:20:1 › P2 / AT-008 AT-010 AT-018: confirmed import, reload, data preview, independent alias and complete Parquet download (12.7s)
+  ✓   65 [webkit] › tests/e2e/imports.spec.ts:53:1 › P2 / AT-016: denied OPFS requires explicit temporary mode and never claims local persistence (7.2s)
+  ✓   66 [webkit] › tests/e2e/imports.spec.ts:79:1 › P2 / AT-013: real import surfaces OPFS quota failure without publishing partial metadata (11.1s)
+  ✓   67 [webkit] › tests/e2e/imports.spec.ts:105:1 › P2 / AT-002 AT-024 partial: one import worker survives routes and closes before another workspace opens (7.9s)
+  ✓   68 [webkit] › tests/e2e/multitab.spec.ts:2:1 › P6 AT-065: absent Web Locks permits existing project only as reader, archive export remains possible (4.8s)
+  ✓   64 [webkit] › tests/e2e/archive.spec.ts:6:1 › P6 AT-051 AT-053 AT-063: Golden archive in fresh profile, graph remap, real SQL/PNG, duplicate and independent deletion (57.9s)
+  ✓   70 [webkit] › tests/e2e/archive.spec.ts:141:1 › P6 AT-059: recipe inspection/confirmation without engine or empty fake tables (2.5s)
+  ✓   69 [webkit] › tests/e2e/p7-ui.spec.ts:16:1 › P7 AT-054–055 AT-058: measured SQL/R geometry, keyboard splitters, layout reset and reload (48.6s)
+  ✓   72 [webkit] › tests/e2e/p7-ui.spec.ts:116:1 › P7 AT-055–057: native focus trap/return, settings, storage cleanup and data-free diagnostics (6.0s)
+  ✓   73 [webkit] › tests/e2e/p7-ui.spec.ts:162:1 › P7 AT-025 AT-055 AT-056: selected SQL is snapshotted and cell markup remains text (7.8s)
+  ✓   74 [webkit] › tests/e2e/p7-ui.spec.ts:189:1 › P7 AT-058: browser history restores the analysis cursor and layout does not edit the domain (5.7s)
+  ✓   75 [webkit] › tests/e2e/p8-imports.spec.ts:7:1 › P8 AT-019 AT-020: XLSX invalidates old preview, real over-limit file and visible replacement schema (12.5s)
+  ✓   71 [webkit] › tests/e2e/p8-golden.spec.ts:63:1 › P8 AT-072: portal population + local CSV, unchanged Golden SQL/R, process restart and second fresh archive profile (1.6m)
+  ✓   77 [webkit] › tests/e2e/sql.spec.ts:18:1 › P3 / AT-022 AT-027 AT-032 AT-049 AT-055 AT-058: SQL, paging, keep, exports, chart, resize and reload (18.0s)
+  ✓   78 [webkit] › tests/e2e/sql.spec.ts:77:1 › P3 / AT-025 AT-030: parameters, explicit cancel and failed runs never show a previous output (14.3s)
+  ✓   79 [webkit] › tests/e2e/sql.spec.ts:109:1 › P3 / AT-049: rendered bars and line gaps preserve NULL, PNG contains actual pixels (7.5s)
+  ✓   80 [webkit] › tests/e2e/workspaces.spec.ts:9:1 › AT-003: workspace metadata persists across reload without engine startup (2.9s)
+  ✓   81 [webkit] › tests/e2e/workspaces.spec.ts:28:1 › AT-005 AT-058: saved SQL and R, separate models, duplicate, archive, no code auto-run (9.2s)
+  ✓   82 [webkit] › tests/e2e/workspaces.spec.ts:90:1 › AT-012: another tab opens read-only and explicitly reacquires after writer closes (5.3s)
+  ✓   83 [webkit] › tests/e2e/workspaces.spec.ts:109:1 › AT-054 AT-057 partial: compact chrome and implemented settings persist (7.3s)
+  ✓   76 [webkit] › tests/e2e/r.spec.ts:10:1 › P5 AT-040 AT-042 AT-046 AT-048: complete UI transfer, lazy worker survives routes, capture, reset and cancel (1.6m)
+  ✓   84 [webkit] › tests/e2e/workspaces.spec.ts:142:1 › AT-058 / REQ-060: invalid workspace/analysis route is controlled (4.8s)
+  ✓   85 [webkit] › tests/integration/imports.spec.ts:7:1 › P2 / AT-008 AT-010: strict CSV → hashed OPFS → fresh DuckDB retains values, NULL and empty strings (11.0s)
+  ✓   86 [webkit] › tests/integration/init-failure.spec.ts:3:1 › AT-069: corrupt DuckDB WASM frees its actual worker before retry (13.2s)
+  ✓   87 [webkit] › tests/integration/imports.spec.ts:63:1 › P2 / AT-009 AT-020: late conversion error, header-only CSV and invalid bytes (8.3s)
+  ✓   88 [webkit] › tests/integration/p0.spec.ts:6:1 › P0 / AT-001 AT-002: one connector, Arrow, CSV → Parquet and stable materialization (6.5s)
+  ✓   89 [webkit] › tests/integration/imports.spec.ts:123:1 › P2 / AT-014 AT-017: reload finds true orphans, writer cleanup preserves referenced and foreign bytes (8.8s)
+  ✓   90 [webkit] › tests/integration/p0.spec.ts:33:1 › P0: DuckDB parser returns SELECT AST and rejects non-SELECT serialization (5.1s)
+  ✓   92 [webkit] › tests/integration/p0.spec.ts:73:1 › P0 / AT-030: running SQL ends or worker terminates, fresh query works (13.5s)
+  ✓   93 [webkit] › tests/integration/p0.spec.ts:102:1 › P0 / AT-046: local webR dataframe, real plot, PostMessage worker reset (6.2s)
+  ✓   94 [webkit] › tests/integration/p0.spec.ts:136:1 › P0: real OPFS read/write/delete and IndexedDB transaction (2.7s)
+  ✓   95 [webkit] › tests/integration/p0.spec.ts:144:1 › P0 / AT-012: Web Lock callback holds writer lease across tabs (3.4s)
+  ✓   91 [webkit] › tests/integration/imports.spec.ts:193:1 › P2 / AT-010: imported file survives browser process restart and removal of input file (29.8s)
+  ✓   96 [webkit] › tests/integration/p0.spec.ts:160:1 › P0 / AT-023: guard allows analysis and blocks external/dynamic SQL without execution (5.0s)
+  ✓   97 [webkit] › tests/integration/imports.spec.ts:262:1 › P2 / AT-061 partial: changed byte is rejected as ARTIFACT_CORRUPT before use (2.8s)
+  ✓   98 [webkit] › tests/integration/p8-acceptance.spec.ts:4:1 › P8 AT-007: separate predecessor upgrade rolls back schema and data, then migrates atomically (2.5s)
+  ✓   99 [webkit] › tests/integration/profile-isolation.spec.ts:6:1 › P6 test storage: fresh native OPFS scopes are disjoint across profiles and survive reload (5.3s)
+browser: [vite] connecting...
+browser: [vite] connected.
+browser: WebR is using `PostMessage` communication channel, nested R REPLs are not available.
+{"encoded":["NA","NaN","Infinity","-Infinity","-2147483648"],"missing":[true,false,false,false,false],"outputs":[{"type":"stdout","text":"out"},{"type":"warning","text":"warn"},{"type":"message","text":"msg\n"}],"classes":["data.frame"],"nativeMissing":[false,false,false,false,false]}
+  ✓  100 [webkit] › tests/integration/p8-acceptance.spec.ts:21:1 › P8 AT-019: replacement is rejected during real SQL; old snapshot stays v1, next run reads v2 (7.0s)
+  ✓  101 [webkit] › tests/integration/r-api.spec.ts:2:1 › P5 native webR vectors, NA/NaN, Date, attributes and captured conditions (4.2s)
+  ✓  103 [webkit] › tests/integration/r-date-proof.spec.ts:2:1 › P5 runtime gzip files stay opaque and native R Date parser works (4.6s)
+  ✓  102 [webkit] › tests/integration/p8-acceptance.spec.ts:128:3 › P8 AT-024: delayed real sql response is discarded on workspace switch and resources close (10.0s)
+  ✓  104 [webkit] › tests/integration/r-faults.spec.ts:3:1 › P5 AT-045 AT-052 AT-062: approvals, unsupported columns, stale edits, write/commit failure, console and plot limits (53.2s)
+  ✓  105 [webkit] › tests/integration/p8-acceptance.spec.ts:128:3 › P8 AT-024: delayed real r response is discarded on workspace switch and resources close (49.9s)
+  ✓  106 [webkit] › tests/integration/r-golden.spec.ts:4:1 › P5 AT-041 AT-048: unchanged Golden SQL → R script → explicit capture → Golden SQL, real plot and reopen (37.3s)
+  ✓  107 [webkit] › tests/integration/r-packages.spec.ts:3:1 › P5 pinned local R packages installed and used (37.3s)
+  ✓  108 [webkit] › tests/integration/r-snapshots.spec.ts:3:1 › P5/P6 AT-025 AT-048: native R parameters, selection snapshot, seed and capture of a later object mutation (41.0s)
+  ✓  110 [webkit] › tests/integration/recovery.spec.ts:3:1 › P6 AT-060: native browser decompressor enforces actual expansion with forged ZIP sizes (2.1s)
+  ✓  109 [webkit] › tests/integration/r.spec.ts:4:1 › P5 AT-042–045: full typed SQL → R → SQL including NA/NaN, exact decimals, dates, factor and rejected casts (44.0s)
+  ✓  111 [webkit] › tests/integration/recovery.spec.ts:30:1 › P6 AT-014 AT-064: failed import leaves recoverable OPFS staging; cleanup preserves another project and foreign files (6.2s)
+  ✓  113 [webkit] › tests/integration/recovery.spec.ts:132:1 › P6 AT-012 AT-015 AT-017 AT-061: tab death interrupts real query, saved results remain, missing/corrupt bytes preserve code (17.4s)
+  ✓  114 [webkit] › tests/integration/repository.spec.ts:6:1 › AT-007 AT-012: actual IndexedDB CAS, invalid load, transaction rollback (1.1s)
+  ✓  115 [webkit] › tests/integration/repository.spec.ts:76:1 › P0: persistent browser profile OPFS read/write/delete (2.6s)
+  ✓  116 [webkit] › tests/integration/sql-lifecycle.spec.ts:2:1 › P3 / AT-031 AT-032: 350-row user Parquet export and a nonresponding cancel API (8.3s)
+  ✓  117 [webkit] › tests/integration/sql-lifecycle.spec.ts:149:1 › P3 / AT-030: cancellation after CTAS settling releases unpublished private relation (4.7s)
+{"ast":{"error":false,"statements":[{"node":{"type":"SELECT_NODE","modifiers":[],"cte_map":{"map":[]},"select_list":[{"class":"PARAMETER","type":"VALUE_PARAMETER","alias":"a","query_location":18446744073709552000,"identifier":"text"},{"class":"CAST","type":"OPERATOR_CAST","alias":"b","query_location":19,"child":{"class":"PARAMETER","type":"VALUE_PARAMETER","alias":"","query_location":18446744073709552000,"identifier":"exact"},"cast_type":{"id":"BIGINT","type_info":null},"try_cast":false},{"class":"PARAMETER","type":"VALUE_PARAMETER","alias":"c","query_location":18446744073709552000,"identifier":"text"}],"from_table":{"type":"EMPTY","alias":"","sample":null,"query_location":18446744073709552000},"where_clause":null,"group_expressions":[],"group_sets":[],"aggregate_handling":"STANDARD_HANDLING","having":null,"sample":null,"qualify":null},"named_param_map":[{"key":"text","value":1},{"key":"exact","value":2}]}]},"bound":{"code":"SELECT $1 AS a, CAST($2 AS BIGINT) AS b, $1 AS c","values":["x'; SELECT 9; --","9007199254740993"]},"rows":[{"a":"x'; SELECT 9; --","b":"9007199254740993","c":"x'; SELECT 9; --"}]}
+  ✓  118 [webkit] › tests/integration/sql.spec.ts:3:1 › P3 installed prepared CTAS and AST parameter mapping (4.2s)
+  ✓  119 [webkit] › tests/integration/sql.spec.ts:58:1 › P3 / AT-022 AT-025 AT-027 AT-028 AT-029: real SQL result limits, bindings, stability and exact display (5.1s)
+  ✓  120 [webkit] › tests/integration/sql.spec.ts:181:1 › P3 / AT-021 AT-026 AT-032: CSV datasets → frozen Golden SQL → kept result → reopen/export (8.7s)
+  ✓  121 [webkit] › tests/integration/sql.spec.ts:280:1 › P3 / AT-030 AT-031: actual worker termination, epoch invalidation, no late success and fresh small query (10.8s)
+  ✓  122 [webkit] › tests/integration/sql.spec.ts:338:1 › P3 / AT-023: analytic syntax allowed, indirect external/internal sources rejected before execution (4.5s)
+  ✓  123 [webkit] › tests/integration/sql.spec.ts:403:1 › P3 / AT-049 AT-050: chart boundaries and atomic keep failure with real result (4.9s)
+  ✓  112 [webkit] › tests/integration/r.spec.ts:91:1 › P5 AT-040 AT-042 AT-047 AT-052: 350 rows, stale plans, five inactive fresh scopes and genuine R worker stop (1.9m)
+  ✓  124 [webkit] › tests/integration/transfer-recovery.spec.ts:3:1 › P6 AT-013 AT-050 AT-052: quota blocks persistent R input; workspace change aborts real capture after OPFS write without late publication (41.1s)
+
+
+  1) [firefox] › tests/integration/r.spec.ts:91:1 › P5 AT-040 AT-042 AT-047 AT-052: 350 rows, stale plans, five inactive fresh scopes and genuine R worker stop 
+
+    Test timeout of 120000ms exceeded.
+
+    Error: page.evaluate: Target page, context or browser has been closed
+
+      93 | }) => {
+      94 |   await page.goto('/tests/spike/index.html');
+    > 95 |   const result = await page.evaluate(async (raw) => {
+         |                             ^
+      96 |     const hp = '/tests/spike/sqlHarness.ts';
+      97 |     const {sqlHarness} = (await import(hp)) as typeof import('../spike/sqlHarness');
+      98 |     const config = raw as unknown as import('../../contracts/runtime-config').RuntimeConfig;
+        at /private/var/folders/0z/1lwhf37x0h9858xcm889mbz80000gn/T/datenwerkstatt-clean-TOe8ue/source/tests/integration/r.spec.ts:95:29
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ../../../../../../../../var/folders/0z/1lwhf37x0h9858xcm889mbz80000gn/T/datenwerkstatt-clean-TOe8ue/matrix-results/integration-r-P5-AT-040-AT-b51c2-s-and-genuine-R-worker-stop-firefox/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ../../../../../../../../var/folders/0z/1lwhf37x0h9858xcm889mbz80000gn/T/datenwerkstatt-clean-TOe8ue/matrix-results/integration-r-P5-AT-040-AT-b51c2-s-and-genuine-R-worker-stop-firefox/error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    ../../../../../../../../var/folders/0z/1lwhf37x0h9858xcm889mbz80000gn/T/datenwerkstatt-clean-TOe8ue/matrix-results/integration-r-P5-AT-040-AT-b51c2-s-and-genuine-R-worker-stop-firefox/trace.zip
+    Usage:
+
+        npx playwright show-trace ../../../../../../../../var/folders/0z/1lwhf37x0h9858xcm889mbz80000gn/T/datenwerkstatt-clean-TOe8ue/matrix-results/integration-r-P5-AT-040-AT-b51c2-s-and-genuine-R-worker-stop-firefox/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  1 failed
+    [firefox] › tests/integration/r.spec.ts:91:1 › P5 AT-040 AT-042 AT-047 AT-052: 350 rows, stale plans, five inactive fresh scopes and genuine R worker stop 
+  123 passed (18.0m)

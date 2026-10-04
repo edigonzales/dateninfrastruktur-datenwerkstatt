@@ -1,0 +1,160 @@
+[WebServer] (node:2938) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 15 tests using 3 workers
+
+(node:2939) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:2940) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:2941) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓   3 [chromium] › tests/integration/p8-acceptance.spec.ts:4:1 › P8 AT-007: separate predecessor upgrade rolls back schema and data, then migrates atomically (550ms)
+  ✓   4 [chromium] › tests/integration/p8-acceptance.spec.ts:21:1 › P8 AT-019: replacement is rejected during real SQL; old snapshot stays v1, next run reads v2 (2.3s)
+  ✓   5 [chromium] › tests/integration/p8-acceptance.spec.ts:128:3 › P8 AT-024: delayed real sql response is discarded on workspace switch and resources close (2.8s)
+[WebServer] 1:23:22 PM [vite] (client) [console.warn] WebR is using `PostMessage` communication channel, nested R REPLs are not available.
+  ✘   1 [chromium] › tests/e2e/p8-imports.spec.ts:7:1 › P8 AT-019 AT-020: XLSX invalidates old preview, real over-limit file and visible replacement schema (13.2s)
+(node:2995) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓   7 [firefox] › tests/integration/p8-acceptance.spec.ts:4:1 › P8 AT-007: separate predecessor upgrade rolls back schema and data, then migrates atomically (2.4s)
+  ✘   2 [firefox] › tests/e2e/p8-imports.spec.ts:7:1 › P8 AT-019 AT-020: XLSX invalidates old preview, real over-limit file and visible replacement schema (16.4s)
+(node:3010) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓   8 [firefox] › tests/integration/p8-acceptance.spec.ts:21:1 › P8 AT-019: replacement is rejected during real SQL; old snapshot stays v1, next run reads v2 (5.6s)
+  ✓  10 [firefox] › tests/integration/p8-acceptance.spec.ts:128:3 › P8 AT-024: delayed real sql response is discarded on workspace switch and resources close (5.4s)
+  ✓   6 [chromium] › tests/integration/p8-acceptance.spec.ts:128:3 › P8 AT-024: delayed real r response is discarded on workspace switch and resources close (23.4s)
+(node:3051) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] 1:23:45 PM [vite] (client) [console.warn] Dexie.delete('dw-test-predecessor-149c4e18-8643-408c-8a5f-6602475adf3e') was blocked
+  ✓  12 [webkit] › tests/integration/p8-acceptance.spec.ts:4:1 › P8 AT-007: separate predecessor upgrade rolls back schema and data, then migrates atomically (1.4s)
+[WebServer] 1:23:46 PM [vite] (client) [console.warn] WebR is using `PostMessage` communication channel, nested R REPLs are not available.
+  ✘   9 [webkit] › tests/e2e/p8-imports.spec.ts:7:1 › P8 AT-019 AT-020: XLSX invalidates old preview, real over-limit file and visible replacement schema (16.1s)
+  ✓  13 [webkit] › tests/integration/p8-acceptance.spec.ts:21:1 › P8 AT-019: replacement is rejected during real SQL; old snapshot stays v1, next run reads v2 (3.8s)
+  ✓  14 [webkit] › tests/integration/p8-acceptance.spec.ts:128:3 › P8 AT-024: delayed real sql response is discarded on workspace switch and resources close (4.7s)
+[WebServer] 1:23:57 PM [vite] (client) [console.warn] WebR is using `PostMessage` communication channel, nested R REPLs are not available.
+  ✓  11 [firefox] › tests/integration/p8-acceptance.spec.ts:128:3 › P8 AT-024: delayed real r response is discarded on workspace switch and resources close (27.1s)
+  ✓  15 [webkit] › tests/integration/p8-acceptance.spec.ts:128:3 › P8 AT-024: delayed real r response is discarded on workspace switch and resources close (23.6s)
+
+
+  1) [chromium] › tests/e2e/p8-imports.spec.ts:7:1 › P8 AT-019 AT-020: XLSX invalidates old preview, real over-limit file and visible replacement schema 
+
+    Error: expect(locator).toHaveCount(expected) failed
+
+    Locator:  getByRole('button', { name: 'Import bestätigen', exact: true })
+    Expected: 0
+    Received: 1
+    Timeout:  10000ms
+
+    Call log:
+      - Expect "toHaveCount" getByRole('button', { name: 'Import bestätigen', exact: true }) with timeout 10000ms
+      - waiting for getByRole('button', { name: 'Import bestätigen', exact: true })
+        24 × locator resolved to 1 element
+           - unexpected value "1"
+
+
+      43 |     });
+      44 |     await expect(page.getByRole('alert')).toContainText('Unterstützt sind CSV und Parquet');
+    > 45 |     await expect(page.getByRole('button', {name: 'Import bestätigen', exact: true})).toHaveCount(0);
+         |                                                                                      ^
+      46 |     await expect(page.getByRole('button', {name: 'Vorschau laden', exact: true})).toBeDisabled();
+      47 |     await input.setInputFiles(tooLarge);
+      48 |     await page.getByRole('button', {name: 'Vorschau laden', exact: true}).click();
+        at /Users/stefan/sources/dateninfrastruktur-datenwerkstatt/tests/e2e/p8-imports.spec.ts:45:86
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/e2e-p8-imports-P8-AT-019-A-82544--visible-replacement-schema-chromium/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/e2e-p8-imports-P8-AT-019-A-82544--visible-replacement-schema-chromium/error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/e2e-p8-imports-P8-AT-019-A-82544--visible-replacement-schema-chromium/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/e2e-p8-imports-P8-AT-019-A-82544--visible-replacement-schema-chromium/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  2) [firefox] › tests/e2e/p8-imports.spec.ts:7:1 › P8 AT-019 AT-020: XLSX invalidates old preview, real over-limit file and visible replacement schema 
+
+    Error: expect(locator).toHaveCount(expected) failed
+
+    Locator:  getByRole('button', { name: 'Import bestätigen', exact: true })
+    Expected: 0
+    Received: 1
+    Timeout:  10000ms
+
+    Call log:
+      - Expect "toHaveCount" getByRole('button', { name: 'Import bestätigen', exact: true }) with timeout 10000ms
+      - waiting for getByRole('button', { name: 'Import bestätigen', exact: true })
+        24 × locator resolved to 1 element
+           - unexpected value "1"
+
+
+      43 |     });
+      44 |     await expect(page.getByRole('alert')).toContainText('Unterstützt sind CSV und Parquet');
+    > 45 |     await expect(page.getByRole('button', {name: 'Import bestätigen', exact: true})).toHaveCount(0);
+         |                                                                                      ^
+      46 |     await expect(page.getByRole('button', {name: 'Vorschau laden', exact: true})).toBeDisabled();
+      47 |     await input.setInputFiles(tooLarge);
+      48 |     await page.getByRole('button', {name: 'Vorschau laden', exact: true}).click();
+        at /Users/stefan/sources/dateninfrastruktur-datenwerkstatt/tests/e2e/p8-imports.spec.ts:45:86
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/e2e-p8-imports-P8-AT-019-A-82544--visible-replacement-schema-firefox/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/e2e-p8-imports-P8-AT-019-A-82544--visible-replacement-schema-firefox/error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/e2e-p8-imports-P8-AT-019-A-82544--visible-replacement-schema-firefox/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/e2e-p8-imports-P8-AT-019-A-82544--visible-replacement-schema-firefox/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  3) [webkit] › tests/e2e/p8-imports.spec.ts:7:1 › P8 AT-019 AT-020: XLSX invalidates old preview, real over-limit file and visible replacement schema 
+
+    Error: expect(locator).toHaveCount(expected) failed
+
+    Locator:  getByRole('button', { name: 'Import bestätigen', exact: true })
+    Expected: 0
+    Received: 1
+    Timeout:  10000ms
+
+    Call log:
+      - Expect "toHaveCount" getByRole('button', { name: 'Import bestätigen', exact: true }) with timeout 10000ms
+      - waiting for getByRole('button', { name: 'Import bestätigen', exact: true })
+        24 × locator resolved to 1 element
+           - unexpected value "1"
+
+
+      43 |     });
+      44 |     await expect(page.getByRole('alert')).toContainText('Unterstützt sind CSV und Parquet');
+    > 45 |     await expect(page.getByRole('button', {name: 'Import bestätigen', exact: true})).toHaveCount(0);
+         |                                                                                      ^
+      46 |     await expect(page.getByRole('button', {name: 'Vorschau laden', exact: true})).toBeDisabled();
+      47 |     await input.setInputFiles(tooLarge);
+      48 |     await page.getByRole('button', {name: 'Vorschau laden', exact: true}).click();
+        at /Users/stefan/sources/dateninfrastruktur-datenwerkstatt/tests/e2e/p8-imports.spec.ts:45:86
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/e2e-p8-imports-P8-AT-019-A-82544--visible-replacement-schema-webkit/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/e2e-p8-imports-P8-AT-019-A-82544--visible-replacement-schema-webkit/error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/e2e-p8-imports-P8-AT-019-A-82544--visible-replacement-schema-webkit/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/e2e-p8-imports-P8-AT-019-A-82544--visible-replacement-schema-webkit/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  3 failed
+    [chromium] › tests/e2e/p8-imports.spec.ts:7:1 › P8 AT-019 AT-020: XLSX invalidates old preview, real over-limit file and visible replacement schema 
+    [firefox] › tests/e2e/p8-imports.spec.ts:7:1 › P8 AT-019 AT-020: XLSX invalidates old preview, real over-limit file and visible replacement schema 
+    [webkit] › tests/e2e/p8-imports.spec.ts:7:1 › P8 AT-019 AT-020: XLSX invalidates old preview, real over-limit file and visible replacement schema 
+  12 passed (1.1m)

@@ -1,0 +1,160 @@
+{
+  "config": {
+    "argv": [
+      "/Users/stefan/Library/Application Support/fnm/node-versions/v22.23.1/installation/bin/node",
+      "/private/var/folders/0z/1lwhf37x0h9858xcm889mbz80000gn/T/datenwerkstatt-clean-TOe8ue/source/node_modules/.bin/playwright",
+      "test",
+      "tests/integration/r.spec.ts",
+      "--project=firefox",
+      "--grep",
+      "350 rows",
+      "--workers=1",
+      "--output=/var/folders/0z/1lwhf37x0h9858xcm889mbz80000gn/T/datenwerkstatt-clean-TOe8ue/r-repeat-results",
+      "--reporter=list,json"
+    ],
+    "configFile": "/private/var/folders/0z/1lwhf37x0h9858xcm889mbz80000gn/T/datenwerkstatt-clean-TOe8ue/source/playwright.config.ts",
+    "rootDir": "/private/var/folders/0z/1lwhf37x0h9858xcm889mbz80000gn/T/datenwerkstatt-clean-TOe8ue/source/tests",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "/var/folders/0z/1lwhf37x0h9858xcm889mbz80000gn/T/datenwerkstatt-clean-TOe8ue/r-repeat-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "chromium",
+        "name": "chromium",
+        "testDir": "/private/var/folders/0z/1lwhf37x0h9858xcm889mbz80000gn/T/datenwerkstatt-clean-TOe8ue/source/tests",
+        "testIgnore": [
+          "**/deployment/**"
+        ],
+        "testMatch": [
+          "**/*.spec.ts"
+        ],
+        "timeout": 120000
+      },
+      {
+        "outputDir": "/var/folders/0z/1lwhf37x0h9858xcm889mbz80000gn/T/datenwerkstatt-clean-TOe8ue/r-repeat-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "firefox",
+        "name": "firefox",
+        "testDir": "/private/var/folders/0z/1lwhf37x0h9858xcm889mbz80000gn/T/datenwerkstatt-clean-TOe8ue/source/tests",
+        "testIgnore": [
+          "**/deployment/**"
+        ],
+        "testMatch": [
+          "**/*.spec.ts"
+        ],
+        "timeout": 120000
+      },
+      {
+        "outputDir": "/var/folders/0z/1lwhf37x0h9858xcm889mbz80000gn/T/datenwerkstatt-clean-TOe8ue/r-repeat-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "webkit",
+        "name": "webkit",
+        "testDir": "/private/var/folders/0z/1lwhf37x0h9858xcm889mbz80000gn/T/datenwerkstatt-clean-TOe8ue/source/tests",
+        "testIgnore": [
+          "**/deployment/**"
+        ],
+        "testMatch": [
+          "**/*.spec.ts"
+        ],
+        "timeout": 120000
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "list"
+      ],
+      [
+        "json"
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "missing",
+    "updateSourceMethod": "patch",
+    "version": "1.63.0",
+    "workers": 1,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "integration/r.spec.ts",
+      "file": "integration/r.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "P5 AT-040 AT-042 AT-047 AT-052: 350 rows, stale plans, five inactive fresh scopes and genuine R worker stop",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "firefox",
+              "projectName": "firefox",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 32397,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-04T12:02:05.650Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "7640a0a1d4823a269000-37a73ec3d9325d43b110",
+          "file": "integration/r.spec.ts",
+          "line": 91,
+          "column": 1
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-10-04T12:02:05.476Z",
+    "duration": 32596.989000000005,
+    "expected": 1,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  }
+}

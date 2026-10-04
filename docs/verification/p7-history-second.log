@@ -1,0 +1,16 @@
+[WebServer] (node:1909) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 3 tests using 3 workers
+
+(node:1920) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:1921) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:1919) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  3 [chromium] › tests/e2e/p7-ui.spec.ts:189:1 › P7 AT-058: browser history restores the analysis cursor and layout does not edit the domain (7.2s)
+  ✓  2 [webkit] › tests/e2e/p7-ui.spec.ts:189:1 › P7 AT-058: browser history restores the analysis cursor and layout does not edit the domain (9.8s)
+  ✓  1 [firefox] › tests/e2e/p7-ui.spec.ts:189:1 › P7 AT-058: browser history restores the analysis cursor and layout does not edit the domain (12.7s)
+
+  3 passed (14.2s)

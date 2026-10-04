@@ -1,0 +1,22 @@
+[WebServer] (node:28332) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] (node:28333) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 10 tests using 1 worker
+
+(node:28334) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] 10:32:32 AM [vite] (client) [console.warn] WebR is using `PostMessage` communication channel, nested R REPLs are not available.
+  ✓   1 [webkit] › tests/e2e/archive.spec.ts:6:1 › P6 AT-051 AT-053 AT-063: Golden archive in fresh profile, graph remap, real SQL/PNG, duplicate and independent deletion (19.1s)
+  ✓   2 [webkit] › tests/e2e/archive.spec.ts:141:1 › P6 AT-059: recipe inspection/confirmation without engine or empty fake tables (1.2s)
+  ✓   3 [webkit] › tests/e2e/imports.spec.ts:20:1 › P2 / AT-008 AT-010 AT-018: confirmed import, reload, data preview, independent alias and complete Parquet download (4.0s)
+  ✓   4 [webkit] › tests/e2e/imports.spec.ts:53:1 › P2 / AT-016: denied OPFS requires explicit temporary mode and never claims local persistence (2.6s)
+  ✓   5 [webkit] › tests/e2e/imports.spec.ts:79:1 › P2 / AT-013: real import surfaces OPFS quota failure without publishing partial metadata (3.9s)
+  ✓   6 [webkit] › tests/e2e/imports.spec.ts:105:1 › P2 / AT-002 AT-024 partial: one import worker survives routes and closes before another workspace opens (2.8s)
+  ✓   7 [webkit] › tests/integration/profile-isolation.spec.ts:6:1 › P6 test storage: fresh native OPFS scopes are disjoint across profiles and survive reload (1.5s)
+  ✓   8 [webkit] › tests/integration/recovery.spec.ts:3:1 › P6 AT-060: native browser decompressor enforces actual expansion with forged ZIP sizes (748ms)
+  ✓   9 [webkit] › tests/integration/recovery.spec.ts:30:1 › P6 AT-014 AT-064: failed import leaves recoverable OPFS staging; cleanup preserves another project and foreign files (1.8s)
+  ✓  10 [webkit] › tests/integration/recovery.spec.ts:132:1 › P6 AT-012 AT-015 AT-017 AT-061: tab death interrupts real query, saved results remain, missing/corrupt bytes preserve code (4.8s)
+
+  10 passed (43.2s)

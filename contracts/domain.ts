@@ -237,6 +237,8 @@ export interface WorkspaceViewState {
   sqlEditorFraction: number;
   rEditorFraction: number;
   rConsoleFraction: number;
+  rConsoleVisible: boolean;
+  rObjectsVisible: boolean;
 }
 export interface AppSettings {
   id: 'default';

@@ -1,0 +1,29 @@
+{
+  "candidateTree": "f044f1ef6142a3d1121fa93829e0c784d5232c46",
+  "codeSha256": "4537f64c4b0acea0c763d52ca73b10172f5ebaa80b4bf294651e6495f12996f3",
+  "scope": [
+    "src/app/services.ts",
+    "src/application/",
+    "src/domain/",
+    "src/infrastructure/",
+    "src/features/",
+    "tests/",
+    "deploy/",
+    "scripts/"
+  ],
+  "findings": [],
+  "checks": [
+    "Session factory supplies one shared DuckDbRuntime to SQL and file adapters; R lazy through session factory.",
+    "Domain module boundaries checked by strict typecheck and boundary lint.",
+    "Immutable run/version/source and publish-before-reference covered by failure and lifecycle browser cases.",
+    "No TODO, throw-not-implemented, TS ignore, disabled acceptance test or production fake found in targeted source scan.",
+    "No document innerHTML/eval execution; bounded diagnostics exclude code unless explicitly selected, and omit cell/parameter/source URL values.",
+    "Native cancel/init failure, stale response, ID remap and type boundary assertions exercise real DuckDB/webR.",
+    "Source portal unchanged; fixture/golden values unchanged; runtime source hashes match P7 except DataSection selection invalidation.",
+    "SQL/R screenshot inspection at 1280/1440 agrees with automated geometry; Golden result displays counts 2/1/1 after archive import."
+  ],
+  "limits": [
+    "Targeted implementation review, not a comprehensive security audit.",
+    "Safari pilot blocked; remote Linux browser CI and productive portal/ingress not executed."
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "id": "08155c51-6874-4c17-b209-afaced0047da",
+  "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/27.0.1 Safari/605.1.15",
+  "startedAt": "2026-10-04T15:21:19.654Z",
+  "status": "failed",
+  "checks": [
+    {
+      "name": "native-browser-and-persistent-storage",
+      "at": "2026-10-04T15:21:24.552Z",
+      "evidence": {
+        "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/27.0.1 Safari/605.1.15",
+        "origin": "http://127.0.0.1:4184",
+        "opfs": true,
+        "locks": true
+      }
+    },
+    {
+      "name": "failure",
+      "at": "2026-10-04T15:21:26.572Z",
+      "evidence": "assert@http://127.0.0.1:4184/tests/safari/pilot.ts:35:25\nequal@http://127.0.0.1:4184/tests/safari/pilot.ts:38:8\nstart@http://127.0.0.1:4184/tests/safari/pilot.ts:168:7\nasync run@http://127.0.0.1:4184/tests/safari/pilot.ts:336:13"
+    }
+  ],
+  "error": "assert@http://127.0.0.1:4184/tests/safari/pilot.ts:35:25\nequal@http://127.0.0.1:4184/tests/safari/pilot.ts:38:8\nstart@http://127.0.0.1:4184/tests/safari/pilot.ts:168:7\nasync run@http://127.0.0.1:4184/tests/safari/pilot.ts:336:13"
+}

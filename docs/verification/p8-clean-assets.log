@@ -1,0 +1,7 @@
+
+> datenwerkstatt@0.1.0 assets:prepare
+> node scripts/prepare-assets.mjs
+
+Local webR 0.6.0 and 4 DuckDB extensions prepared.
+Mirrored 40 WebR packages to public/vendor/webr-packages/bin/emscripten/contrib/4.6.
+Pinned local R package mirror verified.

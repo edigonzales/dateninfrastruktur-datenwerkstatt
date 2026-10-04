@@ -1,0 +1,38 @@
+{
+  "date": "2026-10-04T05:33:11.419384+00:00",
+  "gitBase": "0535d2fd54f14e347cb3b488c3d47767923d1b2f",
+  "codeSha256": "7e74e6f81eeb7f678990f851b7fe3f148f2968c2f738729fc2c9ec4879cb9c3c",
+  "verifiedFiles": 108,
+  "fingerprintUnchanged": true,
+  "sourcePortalClean": true,
+  "commands": [
+    {
+      "command": "cmp webr/DuckDbToWebRTypeMapper.ts",
+      "exit": 0
+    },
+    {
+      "command": "cmp webr/DuckDbToWebRTypeMapper.test.ts",
+      "exit": 0
+    },
+    {
+      "command": "cmp duckdb/executeDuckDbQuery.ts",
+      "exit": 0
+    },
+    {
+      "command": "cmp duckdb/executeDuckDbQuery.test.ts",
+      "exit": 0
+    }
+  ],
+  "verifyExit": 0,
+  "unitTests": 30,
+  "chromiumIntegrationTests": 22,
+  "chromiumE2ETests": 12,
+  "browserMatrix": {
+    "startTime": "2026-10-04T05:22:49.903Z",
+    "duration": 405416.773,
+    "expected": 102,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  }
+}

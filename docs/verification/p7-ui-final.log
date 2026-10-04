@@ -1,0 +1,153 @@
+[WebServer] (node:96207) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 12 tests using 3 workers
+
+(node:96215) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:96217) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:96216) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] 1:11:56 PM [vite] (client) [console.warn] WebR is using `PostMessage` communication channel, nested R REPLs are not available.
+[WebServer] 1:11:56 PM [vite] (client) [console.warn] WebR is using `PostMessage` communication channel, nested R REPLs are not available.
+[WebServer] 1:12:04 PM [vite] (client) [console.warn] WebR is using `PostMessage` communication channel, nested R REPLs are not available.
+  ✓   1 [webkit] › tests/e2e/p7-ui.spec.ts:16:1 › P7 AT-054–055 AT-058: measured SQL/R geometry, keyboard splitters, layout reset and reload (46.6s)
+  ✓   3 [chromium] › tests/e2e/p7-ui.spec.ts:16:1 › P7 AT-054–055 AT-058: measured SQL/R geometry, keyboard splitters, layout reset and reload (47.2s)
+  ✓   4 [webkit] › tests/e2e/p7-ui.spec.ts:116:1 › P7 AT-055–057: native focus trap/return, settings, storage cleanup and data-free diagnostics (4.9s)
+  ✓   5 [chromium] › tests/e2e/p7-ui.spec.ts:116:1 › P7 AT-055–057: native focus trap/return, settings, storage cleanup and data-free diagnostics (4.7s)
+  ✓   2 [firefox] › tests/e2e/p7-ui.spec.ts:16:1 › P7 AT-054–055 AT-058: measured SQL/R geometry, keyboard splitters, layout reset and reload (55.3s)
+  ✓   7 [chromium] › tests/e2e/p7-ui.spec.ts:162:1 › P7 AT-025 AT-055 AT-056: selected SQL is snapshotted and cell markup remains text (5.4s)
+  ✓   6 [webkit] › tests/e2e/p7-ui.spec.ts:162:1 › P7 AT-025 AT-055 AT-056: selected SQL is snapshotted and cell markup remains text (6.7s)
+[WebServer] 1:12:45 PM [vite] (client) [console.warn] WebR is using `PostMessage` communication channel, nested R REPLs are not available.
+  ✓   8 [firefox] › tests/e2e/p7-ui.spec.ts:116:1 › P7 AT-055–057: native focus trap/return, settings, storage cleanup and data-free diagnostics (7.4s)
+[WebServer] 1:12:46 PM [vite] (client) [console.warn] WebR is using `PostMessage` communication channel, nested R REPLs are not available.
+  ✓  11 [firefox] › tests/e2e/p7-ui.spec.ts:162:1 › P7 AT-025 AT-055 AT-056: selected SQL is snapshotted and cell markup remains text (6.9s)
+  ✘   9 [chromium] › tests/e2e/p7-ui.spec.ts:189:1 › P7 AT-058: browser history restores the analysis cursor and layout does not edit the domain (14.0s)
+[WebServer] 1:12:57 PM [vite] (client) [console.warn] WebR is using `PostMessage` communication channel, nested R REPLs are not available.
+  ✘  10 [webkit] › tests/e2e/p7-ui.spec.ts:189:1 › P7 AT-058: browser history restores the analysis cursor and layout does not edit the domain (15.7s)
+  ✘  12 [firefox] › tests/e2e/p7-ui.spec.ts:189:1 › P7 AT-058: browser history restores the analysis cursor and layout does not edit the domain (15.0s)
+
+
+  1) [chromium] › tests/e2e/p7-ui.spec.ts:189:1 › P7 AT-058: browser history restores the analysis cursor and layout does not edit the domain 
+
+    Error: expect(locator).toContainText(expected) failed
+
+    Locator: locator('.view-lines')
+    Expected pattern: /SELECT\s+911\s+AS\s+wert/
+    Received string:  "SELECT 11 AS wert9"
+    Timeout: 10000ms
+
+    Call log:
+      - Expect "toContainText" locator('.view-lines') with timeout 10000ms
+      - waiting for locator('.view-lines')
+        24 × locator resolved to <div data-mprt="8" aria-hidden="true" role="presentation" class="view-lines monaco-mouse-cursor-text">…</div>
+           - unexpected value "SELECT 11 AS wert9"
+
+
+      204 |   await expect(editor).toBeFocused();
+      205 |   await page.keyboard.insertText('9');
+    > 206 |   await expect(page.locator('.view-lines')).toContainText(/SELECT\s+911\s+AS\s+wert/);
+          |                                             ^
+      207 |   await editor.press('ControlOrMeta+z');
+      208 |   await expect(page.locator('.view-lines')).toContainText(/SELECT\s+11\s+AS\s+wert/);
+      209 |   await editor.press('ControlOrMeta+s');
+        at /Users/stefan/sources/dateninfrastruktur-datenwerkstatt/tests/e2e/p7-ui.spec.ts:206:45
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/e2e-p7-ui-P7-AT-058-browse-c587b-ut-does-not-edit-the-domain-chromium/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/e2e-p7-ui-P7-AT-058-browse-c587b-ut-does-not-edit-the-domain-chromium/error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/e2e-p7-ui-P7-AT-058-browse-c587b-ut-does-not-edit-the-domain-chromium/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/e2e-p7-ui-P7-AT-058-browse-c587b-ut-does-not-edit-the-domain-chromium/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  2) [firefox] › tests/e2e/p7-ui.spec.ts:189:1 › P7 AT-058: browser history restores the analysis cursor and layout does not edit the domain 
+
+    Error: expect(locator).toContainText(expected) failed
+
+    Locator: locator('.view-lines')
+    Expected pattern: /SELECT\s+911\s+AS\s+wert/
+    Received string:  "SELECT 11 AS wert9"
+    Timeout: 10000ms
+
+    Call log:
+      - Expect "toContainText" locator('.view-lines') with timeout 10000ms
+      - waiting for locator('.view-lines')
+        24 × locator resolved to <div data-mprt="8" aria-hidden="true" role="presentation" class="view-lines monaco-mouse-cursor-text">…</div>
+           - unexpected value "SELECT 11 AS wert9"
+
+
+      204 |   await expect(editor).toBeFocused();
+      205 |   await page.keyboard.insertText('9');
+    > 206 |   await expect(page.locator('.view-lines')).toContainText(/SELECT\s+911\s+AS\s+wert/);
+          |                                             ^
+      207 |   await editor.press('ControlOrMeta+z');
+      208 |   await expect(page.locator('.view-lines')).toContainText(/SELECT\s+11\s+AS\s+wert/);
+      209 |   await editor.press('ControlOrMeta+s');
+        at /Users/stefan/sources/dateninfrastruktur-datenwerkstatt/tests/e2e/p7-ui.spec.ts:206:45
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/e2e-p7-ui-P7-AT-058-browse-c587b-ut-does-not-edit-the-domain-firefox/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/e2e-p7-ui-P7-AT-058-browse-c587b-ut-does-not-edit-the-domain-firefox/error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/e2e-p7-ui-P7-AT-058-browse-c587b-ut-does-not-edit-the-domain-firefox/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/e2e-p7-ui-P7-AT-058-browse-c587b-ut-does-not-edit-the-domain-firefox/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  3) [webkit] › tests/e2e/p7-ui.spec.ts:189:1 › P7 AT-058: browser history restores the analysis cursor and layout does not edit the domain 
+
+    Error: expect(locator).toContainText(expected) failed
+
+    Locator: locator('.view-lines')
+    Expected pattern: /SELECT\s+911\s+AS\s+wert/
+    Received string:  "SELECT 11 AS wert9"
+    Timeout: 10000ms
+
+    Call log:
+      - Expect "toContainText" locator('.view-lines') with timeout 10000ms
+      - waiting for locator('.view-lines')
+        23 × locator resolved to <div data-mprt="8" aria-hidden="true" role="presentation" class="view-lines monaco-mouse-cursor-text">…</div>
+           - unexpected value "SELECT 11 AS wert9"
+
+
+      204 |   await expect(editor).toBeFocused();
+      205 |   await page.keyboard.insertText('9');
+    > 206 |   await expect(page.locator('.view-lines')).toContainText(/SELECT\s+911\s+AS\s+wert/);
+          |                                             ^
+      207 |   await editor.press('ControlOrMeta+z');
+      208 |   await expect(page.locator('.view-lines')).toContainText(/SELECT\s+11\s+AS\s+wert/);
+      209 |   await editor.press('ControlOrMeta+s');
+        at /Users/stefan/sources/dateninfrastruktur-datenwerkstatt/tests/e2e/p7-ui.spec.ts:206:45
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/e2e-p7-ui-P7-AT-058-browse-c587b-ut-does-not-edit-the-domain-webkit/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/e2e-p7-ui-P7-AT-058-browse-c587b-ut-does-not-edit-the-domain-webkit/error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/e2e-p7-ui-P7-AT-058-browse-c587b-ut-does-not-edit-the-domain-webkit/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/e2e-p7-ui-P7-AT-058-browse-c587b-ut-does-not-edit-the-domain-webkit/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  3 failed
+    [chromium] › tests/e2e/p7-ui.spec.ts:189:1 › P7 AT-058: browser history restores the analysis cursor and layout does not edit the domain 
+    [firefox] › tests/e2e/p7-ui.spec.ts:189:1 › P7 AT-058: browser history restores the analysis cursor and layout does not edit the domain 
+    [webkit] › tests/e2e/p7-ui.spec.ts:189:1 › P7 AT-058: browser history restores the analysis cursor and layout does not edit the domain 
+  9 passed (1.4m)

@@ -1,0 +1,440 @@
+{
+  "config": {
+    "argv": [
+      "/Users/stefan/Library/Application Support/fnm/node-versions/v22.23.1/installation/bin/node",
+      "/Users/stefan/sources/dateninfrastruktur-datenwerkstatt/node_modules/.bin/playwright",
+      "test",
+      "tests/e2e/p8-golden.spec.ts",
+      "tests/e2e/p8-imports.spec.ts",
+      "--workers=3",
+      "--reporter=list,json"
+    ],
+    "configFile": "/Users/stefan/sources/dateninfrastruktur-datenwerkstatt/playwright.config.ts",
+    "rootDir": "/Users/stefan/sources/dateninfrastruktur-datenwerkstatt/tests",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 3
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "/Users/stefan/sources/dateninfrastruktur-datenwerkstatt/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 3
+        },
+        "id": "chromium",
+        "name": "chromium",
+        "testDir": "/Users/stefan/sources/dateninfrastruktur-datenwerkstatt/tests",
+        "testIgnore": [
+          "**/deployment/**"
+        ],
+        "testMatch": [
+          "**/*.spec.ts"
+        ],
+        "timeout": 120000
+      },
+      {
+        "outputDir": "/Users/stefan/sources/dateninfrastruktur-datenwerkstatt/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 3
+        },
+        "id": "firefox",
+        "name": "firefox",
+        "testDir": "/Users/stefan/sources/dateninfrastruktur-datenwerkstatt/tests",
+        "testIgnore": [
+          "**/deployment/**"
+        ],
+        "testMatch": [
+          "**/*.spec.ts"
+        ],
+        "timeout": 120000
+      },
+      {
+        "outputDir": "/Users/stefan/sources/dateninfrastruktur-datenwerkstatt/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 3
+        },
+        "id": "webkit",
+        "name": "webkit",
+        "testDir": "/Users/stefan/sources/dateninfrastruktur-datenwerkstatt/tests",
+        "testIgnore": [
+          "**/deployment/**"
+        ],
+        "testMatch": [
+          "**/*.spec.ts"
+        ],
+        "timeout": 120000
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "list"
+      ],
+      [
+        "json"
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "missing",
+    "updateSourceMethod": "patch",
+    "version": "1.63.0",
+    "workers": 3,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "e2e/p8-golden.spec.ts",
+      "file": "e2e/p8-golden.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "P8 AT-072: portal population + local CSV, unchanged Golden SQL/R, process restart and second fresh archive profile",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 240000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 34689,
+                  "error": {
+                    "message": "Error: Ungültiger verwalteter Artefaktpfad.",
+                    "stack": "Error: Ungültiger verwalteter Artefaktpfad.\n    at fail (/Users/stefan/sources/dateninfrastruktur-datenwerkstatt/src/domain/workspace.ts:373:11)\n    at parseWorkspace (/Users/stefan/sources/dateninfrastruktur-datenwerkstatt/src/domain/workspace.ts:474:7)\n    at /Users/stefan/sources/dateninfrastruktur-datenwerkstatt/tests/e2e/p8-golden.spec.ts:227:22",
+                    "location": {
+                      "file": "/Users/stefan/sources/dateninfrastruktur-datenwerkstatt/src/domain/workspace.ts",
+                      "column": 11,
+                      "line": 373
+                    },
+                    "snippet": "\u001b[90m   at \u001b[39m../src/domain/workspace.ts:373\n\n  371 |   const d = parsed.data as WorkspaceDocument;\n  372 |   const fail = (path: string, message: string): never => {\n> 373 |     throw new WorkspaceValidationError('REFERENCE_INVALID', message, path);\n      |           ^\n  374 |   };\n  375 |   for (const collection of [\n  376 |     'datasets',"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/Users/stefan/sources/dateninfrastruktur-datenwerkstatt/src/domain/workspace.ts",
+                        "column": 11,
+                        "line": 373
+                      },
+                      "message": "Error: Ungültiger verwalteter Artefaktpfad.\n\n   at ../src/domain/workspace.ts:373\n\n  371 |   const d = parsed.data as WorkspaceDocument;\n  372 |   const fail = (path: string, message: string): never => {\n> 373 |     throw new WorkspaceValidationError('REFERENCE_INVALID', message, path);\n      |           ^\n  374 |   };\n  375 |   for (const collection of [\n  376 |     'datasets',\n    at fail (/Users/stefan/sources/dateninfrastruktur-datenwerkstatt/src/domain/workspace.ts:373:11)\n    at parseWorkspace (/Users/stefan/sources/dateninfrastruktur-datenwerkstatt/src/domain/workspace.ts:474:7)\n    at /Users/stefan/sources/dateninfrastruktur-datenwerkstatt/tests/e2e/p8-golden.spec.ts:227:22"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-04T11:31:58.315Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/Users/stefan/sources/dateninfrastruktur-datenwerkstatt/test-results/e2e-p8-golden-P8-AT-072-po-00a3a-econd-fresh-archive-profile-chromium/error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/Users/stefan/sources/dateninfrastruktur-datenwerkstatt/test-results/e2e-p8-golden-P8-AT-072-po-00a3a-econd-fresh-archive-profile-chromium/trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/Users/stefan/sources/dateninfrastruktur-datenwerkstatt/src/domain/workspace.ts",
+                    "column": 11,
+                    "line": 373
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "b96c46058b17e453e215-bc11a408836af470838b",
+          "file": "e2e/p8-golden.spec.ts",
+          "line": 62,
+          "column": 1
+        },
+        {
+          "title": "P8 AT-072: portal population + local CSV, unchanged Golden SQL/R, process restart and second fresh archive profile",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 240000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "firefox",
+              "projectName": "firefox",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 2,
+                  "status": "failed",
+                  "duration": 42478,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\n\u001b[32m- Expected  - 16\u001b[39m\n\u001b[31m+ Received  +  1\u001b[39m\n\n\u001b[32m- SELECT\u001b[39m\n\u001b[32m-   g.gemeinde_id,\u001b[39m\n\u001b[32m-   g.gemeinde,\u001b[39m\n\u001b[32m-   b.jahr,\u001b[39m\n\u001b[32m-   b.bevoelkerung,\u001b[39m\n\u001b[32m-   f.fahrzeuge,\u001b[39m\n\u001b[32m-   ROUND(1000.0 * f.fahrzeuge / NULLIF(b.bevoelkerung, 0), 1)\u001b[39m\n\u001b[32m-     AS fahrzeuge_pro_1000\u001b[39m\n\u001b[32m- FROM data.bevoelkerung AS b\u001b[39m\n\u001b[32m- JOIN data.fahrzeuge AS f\u001b[39m\n\u001b[32m-   ON b.gemeinde_id = f.gemeinde_id AND b.jahr = f.jahr\u001b[39m\n\u001b[32m- JOIN data.gemeinden AS g\u001b[39m\n\u001b[32m-   ON g.gemeinde_id = b.gemeinde_id\u001b[39m\n\u001b[32m- WHERE b.jahr = $jahr\u001b[39m\n\u001b[32m- ORDER BY fahrzeuge_pro_1000 DESC NULLS LAST, g.gemeinde_id;\u001b[39m\n\u001b[32m-\u001b[39m\n\u001b[31m+ SELECT\u001b[7m 1 AS wert;\u001b[27m\u001b[39m",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\n\u001b[32m- Expected  - 16\u001b[39m\n\u001b[31m+ Received  +  1\u001b[39m\n\n\u001b[32m- SELECT\u001b[39m\n\u001b[32m-   g.gemeinde_id,\u001b[39m\n\u001b[32m-   g.gemeinde,\u001b[39m\n\u001b[32m-   b.jahr,\u001b[39m\n\u001b[32m-   b.bevoelkerung,\u001b[39m\n\u001b[32m-   f.fahrzeuge,\u001b[39m\n\u001b[32m-   ROUND(1000.0 * f.fahrzeuge / NULLIF(b.bevoelkerung, 0), 1)\u001b[39m\n\u001b[32m-     AS fahrzeuge_pro_1000\u001b[39m\n\u001b[32m- FROM data.bevoelkerung AS b\u001b[39m\n\u001b[32m- JOIN data.fahrzeuge AS f\u001b[39m\n\u001b[32m-   ON b.gemeinde_id = f.gemeinde_id AND b.jahr = f.jahr\u001b[39m\n\u001b[32m- JOIN data.gemeinden AS g\u001b[39m\n\u001b[32m-   ON g.gemeinde_id = b.gemeinde_id\u001b[39m\n\u001b[32m- WHERE b.jahr = $jahr\u001b[39m\n\u001b[32m- ORDER BY fahrzeuge_pro_1000 DESC NULLS LAST, g.gemeinde_id;\u001b[39m\n\u001b[32m-\u001b[39m\n\u001b[31m+ SELECT\u001b[7m 1 AS wert;\u001b[27m\u001b[39m\n    at editor (/Users/stefan/sources/dateninfrastruktur-datenwerkstatt/tests/e2e/p8-golden.spec.ts:32:5)\n    at /Users/stefan/sources/dateninfrastruktur-datenwerkstatt/tests/e2e/p8-golden.spec.ts:159:5",
+                    "location": {
+                      "file": "/Users/stefan/sources/dateninfrastruktur-datenwerkstatt/tests/e2e/p8-golden.spec.ts",
+                      "column": 5,
+                      "line": 32
+                    },
+                    "snippet": "  30 |       return monaco.editor.getEditors()[0]!.getModel()!.getValue();\n  31 |     }),\n> 32 |   ).toBe(code);\n     |     ^\n  33 |   await page.getByRole('textbox', {name: 'Analysecode'}).press('ControlOrMeta+s');\n  34 | }\n  35 | async function documentOf(page: Page) {"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/Users/stefan/sources/dateninfrastruktur-datenwerkstatt/tests/e2e/p8-golden.spec.ts",
+                        "column": 5,
+                        "line": 32
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\n\u001b[32m- Expected  - 16\u001b[39m\n\u001b[31m+ Received  +  1\u001b[39m\n\n\u001b[32m- SELECT\u001b[39m\n\u001b[32m-   g.gemeinde_id,\u001b[39m\n\u001b[32m-   g.gemeinde,\u001b[39m\n\u001b[32m-   b.jahr,\u001b[39m\n\u001b[32m-   b.bevoelkerung,\u001b[39m\n\u001b[32m-   f.fahrzeuge,\u001b[39m\n\u001b[32m-   ROUND(1000.0 * f.fahrzeuge / NULLIF(b.bevoelkerung, 0), 1)\u001b[39m\n\u001b[32m-     AS fahrzeuge_pro_1000\u001b[39m\n\u001b[32m- FROM data.bevoelkerung AS b\u001b[39m\n\u001b[32m- JOIN data.fahrzeuge AS f\u001b[39m\n\u001b[32m-   ON b.gemeinde_id = f.gemeinde_id AND b.jahr = f.jahr\u001b[39m\n\u001b[32m- JOIN data.gemeinden AS g\u001b[39m\n\u001b[32m-   ON g.gemeinde_id = b.gemeinde_id\u001b[39m\n\u001b[32m- WHERE b.jahr = $jahr\u001b[39m\n\u001b[32m- ORDER BY fahrzeuge_pro_1000 DESC NULLS LAST, g.gemeinde_id;\u001b[39m\n\u001b[32m-\u001b[39m\n\u001b[31m+ SELECT\u001b[7m 1 AS wert;\u001b[27m\u001b[39m\n\n  30 |       return monaco.editor.getEditors()[0]!.getModel()!.getValue();\n  31 |     }),\n> 32 |   ).toBe(code);\n     |     ^\n  33 |   await page.getByRole('textbox', {name: 'Analysecode'}).press('ControlOrMeta+s');\n  34 | }\n  35 | async function documentOf(page: Page) {\n    at editor (/Users/stefan/sources/dateninfrastruktur-datenwerkstatt/tests/e2e/p8-golden.spec.ts:32:5)\n    at /Users/stefan/sources/dateninfrastruktur-datenwerkstatt/tests/e2e/p8-golden.spec.ts:159:5"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-04T11:31:58.324Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/Users/stefan/sources/dateninfrastruktur-datenwerkstatt/test-results/e2e-p8-golden-P8-AT-072-po-00a3a-econd-fresh-archive-profile-firefox/error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/Users/stefan/sources/dateninfrastruktur-datenwerkstatt/test-results/e2e-p8-golden-P8-AT-072-po-00a3a-econd-fresh-archive-profile-firefox/trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/Users/stefan/sources/dateninfrastruktur-datenwerkstatt/tests/e2e/p8-golden.spec.ts",
+                    "column": 5,
+                    "line": 32
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "b96c46058b17e453e215-a521bd6083019824131c",
+          "file": "e2e/p8-golden.spec.ts",
+          "line": 62,
+          "column": 1
+        },
+        {
+          "title": "P8 AT-072: portal population + local CSV, unchanged Golden SQL/R, process restart and second fresh archive profile",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 240000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "webkit",
+              "projectName": "webkit",
+              "results": [
+                {
+                  "workerIndex": 4,
+                  "parallelIndex": 1,
+                  "status": "failed",
+                  "duration": 36726,
+                  "error": {
+                    "message": "Error: Ungültiger verwalteter Artefaktpfad.",
+                    "stack": "Error: Ungültiger verwalteter Artefaktpfad.\n    at fail (/Users/stefan/sources/dateninfrastruktur-datenwerkstatt/src/domain/workspace.ts:373:11)\n    at parseWorkspace (/Users/stefan/sources/dateninfrastruktur-datenwerkstatt/src/domain/workspace.ts:474:7)\n    at /Users/stefan/sources/dateninfrastruktur-datenwerkstatt/tests/e2e/p8-golden.spec.ts:227:22",
+                    "location": {
+                      "file": "/Users/stefan/sources/dateninfrastruktur-datenwerkstatt/src/domain/workspace.ts",
+                      "column": 11,
+                      "line": 373
+                    },
+                    "snippet": "\u001b[90m   at \u001b[39m../src/domain/workspace.ts:373\n\n  371 |   const d = parsed.data as WorkspaceDocument;\n  372 |   const fail = (path: string, message: string): never => {\n> 373 |     throw new WorkspaceValidationError('REFERENCE_INVALID', message, path);\n      |           ^\n  374 |   };\n  375 |   for (const collection of [\n  376 |     'datasets',"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/Users/stefan/sources/dateninfrastruktur-datenwerkstatt/src/domain/workspace.ts",
+                        "column": 11,
+                        "line": 373
+                      },
+                      "message": "Error: Ungültiger verwalteter Artefaktpfad.\n\n   at ../src/domain/workspace.ts:373\n\n  371 |   const d = parsed.data as WorkspaceDocument;\n  372 |   const fail = (path: string, message: string): never => {\n> 373 |     throw new WorkspaceValidationError('REFERENCE_INVALID', message, path);\n      |           ^\n  374 |   };\n  375 |   for (const collection of [\n  376 |     'datasets',\n    at fail (/Users/stefan/sources/dateninfrastruktur-datenwerkstatt/src/domain/workspace.ts:373:11)\n    at parseWorkspace (/Users/stefan/sources/dateninfrastruktur-datenwerkstatt/src/domain/workspace.ts:474:7)\n    at /Users/stefan/sources/dateninfrastruktur-datenwerkstatt/tests/e2e/p8-golden.spec.ts:227:22"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-04T11:32:14.137Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/Users/stefan/sources/dateninfrastruktur-datenwerkstatt/test-results/e2e-p8-golden-P8-AT-072-po-00a3a-econd-fresh-archive-profile-webkit/error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/Users/stefan/sources/dateninfrastruktur-datenwerkstatt/test-results/e2e-p8-golden-P8-AT-072-po-00a3a-econd-fresh-archive-profile-webkit/trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/Users/stefan/sources/dateninfrastruktur-datenwerkstatt/src/domain/workspace.ts",
+                    "column": 11,
+                    "line": 373
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "b96c46058b17e453e215-98e3f2cf6c488b56d196",
+          "file": "e2e/p8-golden.spec.ts",
+          "line": 62,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "e2e/p8-imports.spec.ts",
+      "file": "e2e/p8-imports.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "P8 AT-019 AT-020: XLSX invalidates old preview, real over-limit file and visible replacement schema",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 5782,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-04T11:31:58.276Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "03196fcb7dba6afaccde-bb974a13d89aae4b82d5",
+          "file": "e2e/p8-imports.spec.ts",
+          "line": 7,
+          "column": 1
+        },
+        {
+          "title": "P8 AT-019 AT-020: XLSX invalidates old preview, real over-limit file and visible replacement schema",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "firefox",
+              "projectName": "firefox",
+              "results": [
+                {
+                  "workerIndex": 3,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 9278,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-04T11:32:04.486Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "03196fcb7dba6afaccde-cb4e6a078baf3c9ff91d",
+          "file": "e2e/p8-imports.spec.ts",
+          "line": 7,
+          "column": 1
+        },
+        {
+          "title": "P8 AT-019 AT-020: XLSX invalidates old preview, real over-limit file and visible replacement schema",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "webkit",
+              "projectName": "webkit",
+              "results": [
+                {
+                  "workerIndex": 5,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 6880,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-04T11:32:35.109Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "03196fcb7dba6afaccde-3fb3422cebf21e3f71e7",
+          "file": "e2e/p8-imports.spec.ts",
+          "line": 7,
+          "column": 1
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-10-04T11:31:57.242Z",
+    "duration": 56739.117,
+    "expected": 3,
+    "skipped": 0,
+    "unexpected": 3,
+    "flaky": 0
+  }
+}

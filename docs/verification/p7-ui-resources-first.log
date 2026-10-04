@@ -1,0 +1,37 @@
+[WebServer] (node:61819) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] (node:61833) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 5 tests using 1 worker
+
+(node:61834) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] 12:37:15 PM [vite] (client) [console.warn] WebR is using `PostMessage` communication channel, nested R REPLs are not available.
+  ✓  1 [chromium] › tests/e2e/p7-ui.spec.ts:16:1 › P7 AT-054–055 AT-058: measured SQL/R geometry, keyboard splitters, layout reset and reload (29.2s)
+  ✓  2 [chromium] › tests/e2e/p7-ui.spec.ts:112:1 › P7 AT-055–057: native focus trap/return, settings, storage cleanup and data-free diagnostics (3.9s)
+  ✓  3 [chromium] › tests/e2e/p7-ui.spec.ts:158:1 › P7 AT-025 AT-055 AT-056: selected SQL is snapshotted and cell markup remains text (4.5s)
+  ✓  4 [chromium] › tests/integration/init-failure.spec.ts:3:1 › AT-069: corrupt DuckDB WASM frees its actual worker before retry (6.7s)
+[WebServer] 12:37:54 PM [vite] (client) [console.warn] WebR is using `PostMessage` communication channel, nested R REPLs are not available.
+[WebServer] 12:38:15 PM [vite] (client) [console.warn] WebR is using `PostMessage` communication channel, nested R REPLs are not available.
+[WebServer] 12:38:32 PM [vite] (client) [console.warn] WebR is using `PostMessage` communication channel, nested R REPLs are not available.
+[WebServer] 12:38:46 PM [vite] (client) [console.warn] WebR is using `PostMessage` communication channel, nested R REPLs are not available.
+[WebServer] 12:38:59 PM [vite] (client) [console.warn] WebR is using `PostMessage` communication channel, nested R REPLs are not available.
+[WebServer] 12:39:13 PM [vite] (client) [console.warn] WebR is using `PostMessage` communication channel, nested R REPLs are not available.
+[WebServer] 12:39:27 PM [vite] (client) [console.warn] WebR is using `PostMessage` communication channel, nested R REPLs are not available.
+[WebServer] 12:39:41 PM [vite] (client) [console.warn] WebR is using `PostMessage` communication channel, nested R REPLs are not available.
+[WebServer] 12:39:55 PM [vite] (client) [console.warn] WebR is using `PostMessage` communication channel, nested R REPLs are not available.
+[WebServer] 12:40:14 PM [vite] (client) [console.warn] WebR is using `PostMessage` communication channel, nested R REPLs are not available.
+[WebServer] 12:40:34 PM [vite] (client) [console.warn] WebR is using `PostMessage` communication channel, nested R REPLs are not available.
+[WebServer] 12:40:50 PM [vite] (client) [console.warn] WebR is using `PostMessage` communication channel, nested R REPLs are not available.
+[WebServer] 12:41:03 PM [vite] (client) [console.warn] WebR is using `PostMessage` communication channel, nested R REPLs are not available.
+[WebServer] 12:41:16 PM [vite] (client) [console.warn] WebR is using `PostMessage` communication channel, nested R REPLs are not available.
+[WebServer] 12:41:29 PM [vite] (client) [console.warn] WebR is using `PostMessage` communication channel, nested R REPLs are not available.
+[WebServer] 12:41:42 PM [vite] (client) [console.warn] WebR is using `PostMessage` communication channel, nested R REPLs are not available.
+[WebServer] 12:41:55 PM [vite] (client) [console.warn] WebR is using `PostMessage` communication channel, nested R REPLs are not available.
+[WebServer] 12:42:08 PM [vite] (client) [console.warn] WebR is using `PostMessage` communication channel, nested R REPLs are not available.
+[WebServer] 12:42:22 PM [vite] (client) [console.warn] WebR is using `PostMessage` communication channel, nested R REPLs are not available.
+[WebServer] 12:42:35 PM [vite] (client) [console.warn] WebR is using `PostMessage` communication channel, nested R REPLs are not available.
+  ✓  5 [chromium] › tests/integration/resources.spec.ts:4:1 › AT-071 P7 prerequisite: 20 workspace/SQL/R-reset cycles and measured 10k/100k transfers (4.9m)
+
+  5 passed (5.7m)

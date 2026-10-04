@@ -1,0 +1,13 @@
+
+> datenwerkstatt@0.1.0 test:unit
+> vitest run
+
+
+ RUN  v4.1.11 /Users/stefan/sources/dateninfrastruktur-datenwerkstatt
+
+
+ Test Files  9 passed (9)
+      Tests  40 passed (40)
+   Start at  12:13:42
+   Duration  788ms (transform 1.13s, setup 0ms, import 2.26s, tests 432ms, environment 1ms)
+

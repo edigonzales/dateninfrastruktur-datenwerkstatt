@@ -1,0 +1,39 @@
+{
+  "id": "199dad27-4394-4105-bb98-4212c6839af2",
+  "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/27.0.1 Safari/605.1.15",
+  "startedAt": "2026-10-04T15:37:15.113Z",
+  "status": "passed",
+  "checks": [
+    {
+      "name": "persisted-state-after-operator-confirmed-restart",
+      "at": "2026-10-04T15:37:31.445Z",
+      "evidence": {
+        "sourcePilotId": "9cc4eeae-dba7-4c6c-a870-909e0bad5595",
+        "workspaceId": "f2337dea-faba-4b4c-8d3c-bf025458478d",
+        "rows": [
+          [
+            "hoch",
+            "2"
+          ],
+          [
+            "nicht berechenbar",
+            "1"
+          ],
+          [
+            "niedrig",
+            "1"
+          ]
+        ],
+        "pngBytes": 53679,
+        "runs": 5,
+        "workers": [
+          {
+            "url": "blob:http://127.0.0.1:4184/d5e17b82-e5e9-45cc-85d9-dc7a87f11d5a",
+            "terminated": true
+          }
+        ],
+        "note": "The test validates persistence; actual Safari process exit/relaunch must be documented by the operator separately."
+      }
+    }
+  ]
+}

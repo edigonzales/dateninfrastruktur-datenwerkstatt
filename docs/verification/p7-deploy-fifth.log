@@ -1,0 +1,296 @@
+[WebServer] (node:35629) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] (node:35656) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] [plugin builtin:vite-reporter] 
+[WebServer] (!) Some chunks are larger than 500 kB after minification. Consider:
+[WebServer] - Using dynamic import() to code-split the application
+[WebServer] - Use build.rolldownOptions.output.codeSplitting to improve chunking: https://rolldown.rs/reference/OutputOptions.codeSplitting
+[WebServer] - Adjust chunk size limit for this warning via build.chunkSizeWarningLimit.
+[WebServer] #0 building with "desktop-linux" instance using docker driver
+[WebServer] 
+[WebServer] #1 [internal] load build definition from Dockerfile
+[WebServer] #1 transferring dockerfile: 491B done
+[WebServer] #1 DONE 0.0s
+[WebServer] 
+[WebServer] #2 [internal] load metadata for docker.io/library/caddy:2.11.4-alpine@sha256:5f5c8640aae01df9654968d946d8f1a56c497f1dd5c5cda4cf95ab7c14d58648
+[WebServer] #2 DONE 0.0s
+[WebServer] 
+[WebServer] #3 [internal] load .dockerignore
+[WebServer] #3 transferring context: 2B done
+[WebServer] #3 DONE 0.0s
+[WebServer] 
+[WebServer] #4 [1/4] FROM docker.io/library/caddy:2.11.4-alpine@sha256:5f5c8640aae01df9654968d946d8f1a56c497f1dd5c5cda4cf95ab7c14d58648
+[WebServer] #4 resolve docker.io/library/caddy:2.11.4-alpine@sha256:5f5c8640aae01df9654968d946d8f1a56c497f1dd5c5cda4cf95ab7c14d58648 0.0s done
+[WebServer] #4 DONE 0.0s
+[WebServer] 
+[WebServer] #5 [internal] load build context
+[WebServer] #5 transferring context: 237.27MB 2.6s done
+[WebServer] #5 DONE 2.6s
+[WebServer] 
+[WebServer] #4 [1/4] FROM docker.io/library/caddy:2.11.4-alpine@sha256:5f5c8640aae01df9654968d946d8f1a56c497f1dd5c5cda4cf95ab7c14d58648
+[WebServer] #4 CACHED
+[WebServer] 
+[WebServer] #6 [2/4] COPY dist /srv
+[WebServer] #6 DONE 0.4s
+[WebServer] 
+[WebServer] #7 [3/4] COPY Caddyfile /etc/caddy/Caddyfile
+[WebServer] #7 DONE 0.0s
+[WebServer] 
+[WebServer] #8 [4/4] RUN setcap -r /usr/bin/caddy
+[WebServer] #8 DONE 0.2s
+[WebServer] 
+[WebServer] #9 exporting to image
+[WebServer] #9 exporting layers
+[WebServer] #9 exporting layers 6.3s done
+[WebServer] #9 exporting manifest sha256:b4d1680c999dd4cdea7c75149aabe03eb5bc5b2b5c06ae87fc590f379f76f954 0.0s done
+[WebServer] #9 exporting config sha256:b8820c22f64b74e4fa22dff6c7ed77bd285a0715877dd3ef56cc6deec290b3d7 done
+[WebServer] #9 exporting attestation manifest sha256:a1ceb4000048d77436281a88aadfec72025209e5d06e24d9145f63798de2a9de done
+[WebServer] #9 exporting manifest list sha256:00f17d9b90c3e827dcd2d5be02a86ce7fac48221ddf9b94a523189b2393d0dc7 done
+[WebServer] #9 naming to docker.io/library/datenwerkstatt-p7-test:0 done
+[WebServer] #9 unpacking to docker.io/library/datenwerkstatt-p7-test:0
+[WebServer] #9 unpacking to docker.io/library/datenwerkstatt-p7-test:0 1.1s done
+[WebServer] #9 DONE 7.5s
+[WebServer] (node:35772) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] (node:35799) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] [plugin builtin:vite-reporter] 
+[WebServer] (!) Some chunks are larger than 500 kB after minification. Consider:
+[WebServer] - Using dynamic import() to code-split the application
+[WebServer] - Use build.rolldownOptions.output.codeSplitting to improve chunking: https://rolldown.rs/reference/OutputOptions.codeSplitting
+[WebServer] - Adjust chunk size limit for this warning via build.chunkSizeWarningLimit.
+[WebServer] #0 building with "desktop-linux" instance using docker driver
+[WebServer] 
+[WebServer] #1 [internal] load build definition from Dockerfile
+[WebServer] #1 transferring dockerfile: 491B done
+[WebServer] #1 DONE 0.0s
+[WebServer] 
+[WebServer] #2 [internal] load metadata for docker.io/library/caddy:2.11.4-alpine@sha256:5f5c8640aae01df9654968d946d8f1a56c497f1dd5c5cda4cf95ab7c14d58648
+[WebServer] #2 DONE 0.9s
+[WebServer] 
+[WebServer] #3 [internal] load .dockerignore
+[WebServer] #3 transferring context: 2B done
+[WebServer] #3 DONE 0.0s
+[WebServer] 
+[WebServer] #4 [1/4] FROM docker.io/library/caddy:2.11.4-alpine@sha256:5f5c8640aae01df9654968d946d8f1a56c497f1dd5c5cda4cf95ab7c14d58648
+[WebServer] #4 resolve docker.io/library/caddy:2.11.4-alpine@sha256:5f5c8640aae01df9654968d946d8f1a56c497f1dd5c5cda4cf95ab7c14d58648 0.0s done
+[WebServer] #4 DONE 0.0s
+[WebServer] 
+[WebServer] #5 [internal] load build context
+[WebServer] #5 transferring context: 237.27MB 2.9s done
+[WebServer] #5 DONE 2.9s
+[WebServer] 
+[WebServer] #4 [1/4] FROM docker.io/library/caddy:2.11.4-alpine@sha256:5f5c8640aae01df9654968d946d8f1a56c497f1dd5c5cda4cf95ab7c14d58648
+[WebServer] #4 CACHED
+[WebServer] 
+[WebServer] #6 [2/4] COPY dist /srv
+[WebServer] #6 DONE 0.5s
+[WebServer] 
+[WebServer] #7 [3/4] COPY Caddyfile /etc/caddy/Caddyfile
+[WebServer] #7 DONE 0.0s
+[WebServer] 
+[WebServer] #8 [4/4] RUN setcap -r /usr/bin/caddy
+[WebServer] #8 DONE 0.2s
+[WebServer] 
+[WebServer] #9 exporting to image
+[WebServer] #9 exporting layers
+[WebServer] #9 exporting layers 6.6s done
+[WebServer] #9 exporting manifest sha256:f84f0a7b855bf98c76663d0102e92ff908dc1582fdb15ff9f80faeff5f260a13 0.0s done
+[WebServer] #9 exporting config sha256:8d8ca5d24b762a4f56664dbb8d407bdad64d6d885c86765f37a35d02b4b8a51e done
+[WebServer] #9 exporting attestation manifest sha256:5903e42151299c51cfc74e1e2824895d6bc7e159cc60a84fadb980e5fd252e2e done
+[WebServer] #9 exporting manifest list sha256:a26fd5ae83e353840f8555f7e3a1791feb1ae4dce1b190ee9e8d3788a399cc23 done
+[WebServer] #9 naming to docker.io/library/datenwerkstatt-p7-test:1 done
+[WebServer] #9 unpacking to docker.io/library/datenwerkstatt-p7-test:1
+[WebServer] #9 unpacking to docker.io/library/datenwerkstatt-p7-test:1 1.1s done
+[WebServer] #9 DONE 7.7s
+[WebServer] #0 building with "desktop-linux" instance using docker driver
+[WebServer] 
+[WebServer] #1 [internal] load build definition from Dockerfile
+[WebServer] #1 transferring dockerfile: 491B done
+[WebServer] #1 DONE 0.0s
+[WebServer] 
+[WebServer] #2 [internal] load metadata for docker.io/library/caddy:2.11.4-alpine@sha256:5f5c8640aae01df9654968d946d8f1a56c497f1dd5c5cda4cf95ab7c14d58648
+[WebServer] #2 DONE 0.0s
+[WebServer] 
+[WebServer] #3 [internal] load .dockerignore
+[WebServer] #3 transferring context: 2B done
+[WebServer] #3 DONE 0.0s
+[WebServer] 
+[WebServer] #4 [1/4] FROM docker.io/library/caddy:2.11.4-alpine@sha256:5f5c8640aae01df9654968d946d8f1a56c497f1dd5c5cda4cf95ab7c14d58648
+[WebServer] #4 resolve docker.io/library/caddy:2.11.4-alpine@sha256:5f5c8640aae01df9654968d946d8f1a56c497f1dd5c5cda4cf95ab7c14d58648 done
+[WebServer] #4 DONE 0.0s
+[WebServer] 
+[WebServer] #5 [internal] load build context
+[WebServer] #5 transferring context: 237.27MB 3.1s done
+[WebServer] #5 DONE 3.1s
+[WebServer] 
+[WebServer] #4 [1/4] FROM docker.io/library/caddy:2.11.4-alpine@sha256:5f5c8640aae01df9654968d946d8f1a56c497f1dd5c5cda4cf95ab7c14d58648
+[WebServer] #4 CACHED
+[WebServer] 
+[WebServer] #6 [2/4] COPY dist /srv
+[WebServer] #6 DONE 0.4s
+[WebServer] 
+[WebServer] #7 [3/4] COPY Caddyfile /etc/caddy/Caddyfile
+[WebServer] #7 DONE 0.0s
+[WebServer] 
+[WebServer] #8 [4/4] RUN setcap -r /usr/bin/caddy
+[WebServer] #8 DONE 0.2s
+[WebServer] 
+[WebServer] #9 exporting to image
+[WebServer] #9 exporting layers
+[WebServer] #9 exporting layers 7.1s done
+[WebServer] #9 exporting manifest sha256:e447f5b01d692acdae866d555dd6b079e9cfb6440006d6a4f37b550f8eb404b2 done
+[WebServer] #9 exporting config sha256:3229581beaec9bb30ee6c3d52ac3c4a5e1adc8eb4406ff5cdcfa89568ff7a187 done
+[WebServer] #9 exporting attestation manifest sha256:b09a407d751156f13bdfa17657e92ba90abca0749e5aa2df489191fcd596bc9d done
+[WebServer] #9 exporting manifest list sha256:a8041139681db894ed1ec473c0ef2b3e888241796a3d1f540eb94ff9279d9c97 done
+[WebServer] #9 naming to docker.io/library/datenwerkstatt-p7-test:2 done
+[WebServer] #9 unpacking to docker.io/library/datenwerkstatt-p7-test:2
+[WebServer] #9 unpacking to docker.io/library/datenwerkstatt-p7-test:2 1.3s done
+[WebServer] #9 DONE 8.4s
+[WebServer] (node:36059) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 3 tests using 1 worker
+
+(node:36061) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  1 [chromium-0] › tests/deployment/static.spec.ts:9:1 › P7 AT-066–068: arbitrary UID static container, deep routes, MIME/cache/CSP and real SQL/R (1.6m)
+(node:36211) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  2 [chromium-1] › tests/deployment/static.spec.ts:9:1 › P7 AT-066–068: arbitrary UID static container, deep routes, MIME/cache/CSP and real SQL/R (1.6m)
+(node:36280) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  3 [chromium-2] › tests/deployment/static.spec.ts:9:1 › P7 AT-066–068: arbitrary UID static container, deep routes, MIME/cache/CSP and real SQL/R (1.6m)
+
+
+  1) [chromium-0] › tests/deployment/static.spec.ts:9:1 › P7 AT-066–068: arbitrary UID static container, deep routes, MIME/cache/CSP and real SQL/R 
+
+    Error: expect(locator).toContainText(expected) failed
+
+    Locator: locator('.run-status')
+    Expected substring: "Bereit"
+    Received string:    "R-LaufLetzter LaufR initialisieren · R-Epoche 0"
+    Timeout: 90000ms
+
+    Call log:
+      - Expect "toContainText" locator('.run-status') with timeout 90000ms
+      - waiting for locator('.run-status')
+        182 × locator resolved to <div role="status" class="run-status">…</div>
+            - unexpected value "R-LaufLetzter LaufR initialisieren · R-Epoche 0"
+
+
+      72 |     'x <- data.frame(n=42L); stopifnot(as.Date("2024-01-01")==as.Date(19723,origin="1970-01-01")); plot(1:4); cat("R bereit")',
+      73 |   );
+    > 74 |   await expect(page.locator('.run-status')).toContainText('Bereit', {timeout: 90000});
+         |                                             ^
+      75 |   await page.getByRole('button', {name: 'Ausführen', exact: true}).click();
+      76 |   await expect(page.locator('.r-plot img')).toBeVisible({timeout: 90000});
+      77 |   await expect(page.getByRole('log')).toContainText('R bereit');
+        at /Users/stefan/sources/dateninfrastruktur-datenwerkstatt/tests/deployment/static.spec.ts:74:45
+
+    Error: apiRequestContext._wrapApiCall: ENOENT: no such file or directory, copyfile '/Users/stefan/sources/dateninfrastruktur-datenwerkstatt/test-results/.playwright-artifacts-0/traces/4852420a3ed5ea40b1af-f1129d96e70c3bce2a2e-recording2.network' -> '/Users/stefan/sources/dateninfrastruktur-datenwerkstatt/test-results/.playwright-artifacts-0/traces/4852420a3ed5ea40b1af-f1129d96e70c3bce2a2e-recording2-pwnetcopy-1.network'
+
+    Error: apiRequestContext._wrapApiCall: ENOENT: no such file or directory, copyfile '/Users/stefan/sources/dateninfrastruktur-datenwerkstatt/test-results/.playwright-artifacts-0/traces/4852420a3ed5ea40b1af-f1129d96e70c3bce2a2e-recording1.network' -> '/Users/stefan/sources/dateninfrastruktur-datenwerkstatt/test-results/.playwright-artifacts-0/traces/4852420a3ed5ea40b1af-f1129d96e70c3bce2a2e-recording1-pwnetcopy-1.network'
+
+       at fixture.ts:25
+
+      23 |         await cleanup();
+      24 |       } finally {
+    > 25 |         await context.close();
+         |                       ^
+      26 |         await rm(directory, {recursive: true, force: true});
+      27 |       }
+      28 |     }
+        at Object.context (/Users/stefan/sources/dateninfrastruktur-datenwerkstatt/tests/deployment/fixture.ts:25:23)
+
+    Error: browserContext._wrapApiCall: ENOENT: no such file or directory, open '/Users/stefan/sources/dateninfrastruktur-datenwerkstatt/test-results/.playwright-artifacts-0/traces/4852420a3ed5ea40b1af-f1129d96e70c3bce2a2e.trace'
+
+    Error: ENOENT: no such file or directory, open '/Users/stefan/sources/dateninfrastruktur-datenwerkstatt/test-results/.playwright-artifacts-0/62256c2a8c6b93d43bbecc04983f3720.zip'
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/static-P7-AT-066–068-arbit-5dac8-ME-cache-CSP-and-real-SQL-R-chromium-0/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  2) [chromium-1] › tests/deployment/static.spec.ts:9:1 › P7 AT-066–068: arbitrary UID static container, deep routes, MIME/cache/CSP and real SQL/R 
+
+    Error: expect(locator).toContainText(expected) failed
+
+    Locator: locator('.run-status')
+    Expected substring: "Bereit"
+    Received string:    "R-LaufLetzter LaufR initialisieren · R-Epoche 0"
+    Timeout: 90000ms
+
+    Call log:
+      - Expect "toContainText" locator('.run-status') with timeout 90000ms
+      - waiting for locator('.run-status')
+        182 × locator resolved to <div role="status" class="run-status">…</div>
+            - unexpected value "R-LaufLetzter LaufR initialisieren · R-Epoche 0"
+
+
+      72 |     'x <- data.frame(n=42L); stopifnot(as.Date("2024-01-01")==as.Date(19723,origin="1970-01-01")); plot(1:4); cat("R bereit")',
+      73 |   );
+    > 74 |   await expect(page.locator('.run-status')).toContainText('Bereit', {timeout: 90000});
+         |                                             ^
+      75 |   await page.getByRole('button', {name: 'Ausführen', exact: true}).click();
+      76 |   await expect(page.locator('.r-plot img')).toBeVisible({timeout: 90000});
+      77 |   await expect(page.getByRole('log')).toContainText('R bereit');
+        at /Users/stefan/sources/dateninfrastruktur-datenwerkstatt/tests/deployment/static.spec.ts:74:45
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/static-P7-AT-066–068-arbit-5dac8-ME-cache-CSP-and-real-SQL-R-chromium-1/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/static-P7-AT-066–068-arbit-5dac8-ME-cache-CSP-and-real-SQL-R-chromium-1/error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/static-P7-AT-066–068-arbit-5dac8-ME-cache-CSP-and-real-SQL-R-chromium-1/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/static-P7-AT-066–068-arbit-5dac8-ME-cache-CSP-and-real-SQL-R-chromium-1/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  3) [chromium-2] › tests/deployment/static.spec.ts:9:1 › P7 AT-066–068: arbitrary UID static container, deep routes, MIME/cache/CSP and real SQL/R 
+
+    Error: expect(locator).toContainText(expected) failed
+
+    Locator: locator('.run-status')
+    Expected substring: "Bereit"
+    Received string:    "R-LaufLetzter LaufR initialisieren · R-Epoche 0"
+    Timeout: 90000ms
+
+    Call log:
+      - Expect "toContainText" locator('.run-status') with timeout 90000ms
+      - waiting for locator('.run-status')
+        182 × locator resolved to <div role="status" class="run-status">…</div>
+            - unexpected value "R-LaufLetzter LaufR initialisieren · R-Epoche 0"
+
+
+      72 |     'x <- data.frame(n=42L); stopifnot(as.Date("2024-01-01")==as.Date(19723,origin="1970-01-01")); plot(1:4); cat("R bereit")',
+      73 |   );
+    > 74 |   await expect(page.locator('.run-status')).toContainText('Bereit', {timeout: 90000});
+         |                                             ^
+      75 |   await page.getByRole('button', {name: 'Ausführen', exact: true}).click();
+      76 |   await expect(page.locator('.r-plot img')).toBeVisible({timeout: 90000});
+      77 |   await expect(page.getByRole('log')).toContainText('R bereit');
+        at /Users/stefan/sources/dateninfrastruktur-datenwerkstatt/tests/deployment/static.spec.ts:74:45
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/static-P7-AT-066–068-arbit-5dac8-ME-cache-CSP-and-real-SQL-R-chromium-2/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/static-P7-AT-066–068-arbit-5dac8-ME-cache-CSP-and-real-SQL-R-chromium-2/error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/static-P7-AT-066–068-arbit-5dac8-ME-cache-CSP-and-real-SQL-R-chromium-2/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/static-P7-AT-066–068-arbit-5dac8-ME-cache-CSP-and-real-SQL-R-chromium-2/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  3 failed
+    [chromium-0] › tests/deployment/static.spec.ts:9:1 › P7 AT-066–068: arbitrary UID static container, deep routes, MIME/cache/CSP and real SQL/R 
+    [chromium-1] › tests/deployment/static.spec.ts:9:1 › P7 AT-066–068: arbitrary UID static container, deep routes, MIME/cache/CSP and real SQL/R 
+    [chromium-2] › tests/deployment/static.spec.ts:9:1 › P7 AT-066–068: arbitrary UID static container, deep routes, MIME/cache/CSP and real SQL/R 

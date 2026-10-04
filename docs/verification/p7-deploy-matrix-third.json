@@ -1,0 +1,1093 @@
+{
+  "config": {
+    "argv": [
+      "/Users/stefan/Library/Application Support/fnm/node-versions/v22.23.1/installation/bin/node",
+      "/Users/stefan/sources/dateninfrastruktur-datenwerkstatt/node_modules/.bin/playwright",
+      "test",
+      "-c",
+      "playwright.deploy.config.ts",
+      "--workers=3",
+      "--max-failures=1",
+      "--reporter=list,json"
+    ],
+    "configFile": "/Users/stefan/sources/dateninfrastruktur-datenwerkstatt/playwright.deploy.config.ts",
+    "rootDir": "/Users/stefan/sources/dateninfrastruktur-datenwerkstatt/tests/deployment",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 1,
+    "metadata": {
+      "actualWorkers": 3
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "/Users/stefan/sources/dateninfrastruktur-datenwerkstatt/test-results-deployment",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "profile": 0
+        },
+        "id": "chromium-0",
+        "name": "chromium-0",
+        "testDir": "/Users/stefan/sources/dateninfrastruktur-datenwerkstatt/tests/deployment",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 240000
+      },
+      {
+        "outputDir": "/Users/stefan/sources/dateninfrastruktur-datenwerkstatt/test-results-deployment",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "profile": 1
+        },
+        "id": "chromium-1",
+        "name": "chromium-1",
+        "testDir": "/Users/stefan/sources/dateninfrastruktur-datenwerkstatt/tests/deployment",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 240000
+      },
+      {
+        "outputDir": "/Users/stefan/sources/dateninfrastruktur-datenwerkstatt/test-results-deployment",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "profile": 2
+        },
+        "id": "chromium-2",
+        "name": "chromium-2",
+        "testDir": "/Users/stefan/sources/dateninfrastruktur-datenwerkstatt/tests/deployment",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 240000
+      },
+      {
+        "outputDir": "/Users/stefan/sources/dateninfrastruktur-datenwerkstatt/test-results-deployment",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "profile": 0
+        },
+        "id": "firefox-0",
+        "name": "firefox-0",
+        "testDir": "/Users/stefan/sources/dateninfrastruktur-datenwerkstatt/tests/deployment",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 240000
+      },
+      {
+        "outputDir": "/Users/stefan/sources/dateninfrastruktur-datenwerkstatt/test-results-deployment",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "profile": 1
+        },
+        "id": "firefox-1",
+        "name": "firefox-1",
+        "testDir": "/Users/stefan/sources/dateninfrastruktur-datenwerkstatt/tests/deployment",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 240000
+      },
+      {
+        "outputDir": "/Users/stefan/sources/dateninfrastruktur-datenwerkstatt/test-results-deployment",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "profile": 2
+        },
+        "id": "firefox-2",
+        "name": "firefox-2",
+        "testDir": "/Users/stefan/sources/dateninfrastruktur-datenwerkstatt/tests/deployment",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 240000
+      },
+      {
+        "outputDir": "/Users/stefan/sources/dateninfrastruktur-datenwerkstatt/test-results-deployment",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "profile": 0
+        },
+        "id": "webkit-0",
+        "name": "webkit-0",
+        "testDir": "/Users/stefan/sources/dateninfrastruktur-datenwerkstatt/tests/deployment",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 240000
+      },
+      {
+        "outputDir": "/Users/stefan/sources/dateninfrastruktur-datenwerkstatt/test-results-deployment",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "profile": 1
+        },
+        "id": "webkit-1",
+        "name": "webkit-1",
+        "testDir": "/Users/stefan/sources/dateninfrastruktur-datenwerkstatt/tests/deployment",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 240000
+      },
+      {
+        "outputDir": "/Users/stefan/sources/dateninfrastruktur-datenwerkstatt/test-results-deployment",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "profile": 2
+        },
+        "id": "webkit-2",
+        "name": "webkit-2",
+        "testDir": "/Users/stefan/sources/dateninfrastruktur-datenwerkstatt/tests/deployment",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 240000
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "list"
+      ],
+      [
+        "json"
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "missing",
+    "updateSourceMethod": "patch",
+    "version": "1.63.0",
+    "workers": 3,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "faults.spec.ts",
+      "file": "faults.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "P7 AT-069: missing/wrong MIME runtime assets fail explicitly; retry owns one valid worker",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 240000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium-0",
+              "projectName": "chromium-0",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 46252,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-04T10:55:03.535Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "0c44c28aff2fc4851b91-4b43d16897c225af64bb",
+          "file": "faults.spec.ts",
+          "line": 13,
+          "column": 1
+        },
+        {
+          "title": "P7 AT-046 AT-068–069: R worker CSP failure times out, corrected retry and genuine loop cancellation",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 240000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium-0",
+              "projectName": "chromium-0",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "interrupted",
+                  "duration": 5467,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-04T10:55:49.824Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/Users/stefan/sources/dateninfrastruktur-datenwerkstatt/test-results-deployment/faults-P7-AT-046-AT-068–06-25cc8-d-genuine-loop-cancellation-chromium-0/test-failed-1.png"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/Users/stefan/sources/dateninfrastruktur-datenwerkstatt/test-results-deployment/faults-P7-AT-046-AT-068–06-25cc8-d-genuine-loop-cancellation-chromium-0/error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/Users/stefan/sources/dateninfrastruktur-datenwerkstatt/test-results-deployment/faults-P7-AT-046-AT-068–06-25cc8-d-genuine-loop-cancellation-chromium-0/trace.zip"
+                    }
+                  ]
+                }
+              ],
+              "status": "skipped"
+            }
+          ],
+          "id": "0c44c28aff2fc4851b91-c387de21a4882ae451d5",
+          "file": "faults.spec.ts",
+          "line": 63,
+          "column": 1
+        },
+        {
+          "title": "P7 AT-069: missing/wrong MIME runtime assets fail explicitly; retry owns one valid worker",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 240000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium-1",
+              "projectName": "chromium-1",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 2,
+                  "status": "passed",
+                  "duration": 45982,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-04T10:55:03.540Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "0c44c28aff2fc4851b91-c998d16e39516d0ba38a",
+          "file": "faults.spec.ts",
+          "line": 13,
+          "column": 1
+        },
+        {
+          "title": "P7 AT-046 AT-068–069: R worker CSP failure times out, corrected retry and genuine loop cancellation",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 240000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium-1",
+              "projectName": "chromium-1",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 2,
+                  "status": "interrupted",
+                  "duration": 5714,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-04T10:55:49.566Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/Users/stefan/sources/dateninfrastruktur-datenwerkstatt/test-results-deployment/faults-P7-AT-046-AT-068–06-25cc8-d-genuine-loop-cancellation-chromium-1/test-failed-1.png"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/Users/stefan/sources/dateninfrastruktur-datenwerkstatt/test-results-deployment/faults-P7-AT-046-AT-068–06-25cc8-d-genuine-loop-cancellation-chromium-1/error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/Users/stefan/sources/dateninfrastruktur-datenwerkstatt/test-results-deployment/faults-P7-AT-046-AT-068–06-25cc8-d-genuine-loop-cancellation-chromium-1/trace.zip"
+                    }
+                  ]
+                }
+              ],
+              "status": "skipped"
+            }
+          ],
+          "id": "0c44c28aff2fc4851b91-be83656f6e6d60227e12",
+          "file": "faults.spec.ts",
+          "line": 63,
+          "column": 1
+        },
+        {
+          "title": "P7 AT-069: missing/wrong MIME runtime assets fail explicitly; retry owns one valid worker",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 240000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium-2",
+              "projectName": "chromium-2",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "0c44c28aff2fc4851b91-d581711a1a6a6b2cb2cb",
+          "file": "faults.spec.ts",
+          "line": 13,
+          "column": 1
+        },
+        {
+          "title": "P7 AT-046 AT-068–069: R worker CSP failure times out, corrected retry and genuine loop cancellation",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 240000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium-2",
+              "projectName": "chromium-2",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "0c44c28aff2fc4851b91-cd36bc15b91188988640",
+          "file": "faults.spec.ts",
+          "line": 63,
+          "column": 1
+        },
+        {
+          "title": "P7 AT-069: missing/wrong MIME runtime assets fail explicitly; retry owns one valid worker",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 240000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "firefox-0",
+              "projectName": "firefox-0",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "0c44c28aff2fc4851b91-82494362ebe1a1dd5f3f",
+          "file": "faults.spec.ts",
+          "line": 13,
+          "column": 1
+        },
+        {
+          "title": "P7 AT-046 AT-068–069: R worker CSP failure times out, corrected retry and genuine loop cancellation",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 240000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "firefox-0",
+              "projectName": "firefox-0",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "0c44c28aff2fc4851b91-ccf1a6124f816ed3156c",
+          "file": "faults.spec.ts",
+          "line": 63,
+          "column": 1
+        },
+        {
+          "title": "P7 AT-069: missing/wrong MIME runtime assets fail explicitly; retry owns one valid worker",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 240000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "firefox-1",
+              "projectName": "firefox-1",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "0c44c28aff2fc4851b91-041ede5fdc87601d48be",
+          "file": "faults.spec.ts",
+          "line": 13,
+          "column": 1
+        },
+        {
+          "title": "P7 AT-046 AT-068–069: R worker CSP failure times out, corrected retry and genuine loop cancellation",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 240000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "firefox-1",
+              "projectName": "firefox-1",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "0c44c28aff2fc4851b91-652b319a0e5059935df7",
+          "file": "faults.spec.ts",
+          "line": 63,
+          "column": 1
+        },
+        {
+          "title": "P7 AT-069: missing/wrong MIME runtime assets fail explicitly; retry owns one valid worker",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 240000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "firefox-2",
+              "projectName": "firefox-2",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "0c44c28aff2fc4851b91-f2dbef095855b5bf6f68",
+          "file": "faults.spec.ts",
+          "line": 13,
+          "column": 1
+        },
+        {
+          "title": "P7 AT-046 AT-068–069: R worker CSP failure times out, corrected retry and genuine loop cancellation",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 240000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "firefox-2",
+              "projectName": "firefox-2",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "0c44c28aff2fc4851b91-752a8bf35698941e73cb",
+          "file": "faults.spec.ts",
+          "line": 63,
+          "column": 1
+        },
+        {
+          "title": "P7 AT-069: missing/wrong MIME runtime assets fail explicitly; retry owns one valid worker",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 240000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "webkit-0",
+              "projectName": "webkit-0",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "0c44c28aff2fc4851b91-da7a3c54c7486e00b6b8",
+          "file": "faults.spec.ts",
+          "line": 13,
+          "column": 1
+        },
+        {
+          "title": "P7 AT-046 AT-068–069: R worker CSP failure times out, corrected retry and genuine loop cancellation",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 240000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "webkit-0",
+              "projectName": "webkit-0",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "0c44c28aff2fc4851b91-965bc88d355cf7b2f1c8",
+          "file": "faults.spec.ts",
+          "line": 63,
+          "column": 1
+        },
+        {
+          "title": "P7 AT-069: missing/wrong MIME runtime assets fail explicitly; retry owns one valid worker",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 240000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "webkit-1",
+              "projectName": "webkit-1",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "0c44c28aff2fc4851b91-4b8b76c706cafaac0949",
+          "file": "faults.spec.ts",
+          "line": 13,
+          "column": 1
+        },
+        {
+          "title": "P7 AT-046 AT-068–069: R worker CSP failure times out, corrected retry and genuine loop cancellation",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 240000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "webkit-1",
+              "projectName": "webkit-1",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "0c44c28aff2fc4851b91-d489e15640a6f57eefec",
+          "file": "faults.spec.ts",
+          "line": 63,
+          "column": 1
+        },
+        {
+          "title": "P7 AT-069: missing/wrong MIME runtime assets fail explicitly; retry owns one valid worker",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 240000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "webkit-2",
+              "projectName": "webkit-2",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "0c44c28aff2fc4851b91-720d411665123e84b6fd",
+          "file": "faults.spec.ts",
+          "line": 13,
+          "column": 1
+        },
+        {
+          "title": "P7 AT-046 AT-068–069: R worker CSP failure times out, corrected retry and genuine loop cancellation",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 240000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "webkit-2",
+              "projectName": "webkit-2",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "0c44c28aff2fc4851b91-220bdb222c8b3a7d5e85",
+          "file": "faults.spec.ts",
+          "line": 63,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "static.spec.ts",
+      "file": "static.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "P7 AT-066–068: arbitrary UID static container, deep routes, MIME/cache/CSP and real SQL/R",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 240000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium-0",
+              "projectName": "chromium-0",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 1,
+                  "status": "failed",
+                  "duration": 50889,
+                  "error": {
+                    "message": "Error: page.evaluate: NoModificationAllowedError: Failed to execute 'removeEntry' on 'FileSystemDirectoryHandle': An attempt was made to modify an object where modifications are not allowed.",
+                    "stack": "Error: page.evaluate: NoModificationAllowedError: Failed to execute 'removeEntry' on 'FileSystemDirectoryHandle': An attempt was made to modify an object where modifications are not allowed.\n    at /Users/stefan/sources/dateninfrastruktur-datenwerkstatt/tests/isolateOpfs.ts:33:21\n    at Object.context (/Users/stefan/sources/dateninfrastruktur-datenwerkstatt/tests/deployment/fixture.ts:23:9)",
+                    "location": {
+                      "file": "/Users/stefan/sources/dateninfrastruktur-datenwerkstatt/tests/isolateOpfs.ts",
+                      "column": 21,
+                      "line": 33
+                    },
+                    "snippet": "\u001b[90m   at \u001b[39m../isolateOpfs.ts:33\n\n  31 |     try {\n  32 |       await cleanup.goto(cleanupUrl);\n> 33 |       await cleanup.evaluate(async () => {\n     |                     ^\n  34 |         const cleanup: unknown = Reflect.get(globalThis, '__datenwerkstattTestCleanup');\n  35 |         if (typeof cleanup === 'function') await cleanup();\n  36 |       });"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/Users/stefan/sources/dateninfrastruktur-datenwerkstatt/tests/isolateOpfs.ts",
+                        "column": 21,
+                        "line": 33
+                      },
+                      "message": "Error: page.evaluate: NoModificationAllowedError: Failed to execute 'removeEntry' on 'FileSystemDirectoryHandle': An attempt was made to modify an object where modifications are not allowed.\n\n   at ../isolateOpfs.ts:33\n\n  31 |     try {\n  32 |       await cleanup.goto(cleanupUrl);\n> 33 |       await cleanup.evaluate(async () => {\n     |                     ^\n  34 |         const cleanup: unknown = Reflect.get(globalThis, '__datenwerkstattTestCleanup');\n  35 |         if (typeof cleanup === 'function') await cleanup();\n  36 |       });\n    at /Users/stefan/sources/dateninfrastruktur-datenwerkstatt/tests/isolateOpfs.ts:33:21\n    at Object.context (/Users/stefan/sources/dateninfrastruktur-datenwerkstatt/tests/deployment/fixture.ts:23:9)"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-04T10:55:03.536Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "network",
+                      "contentType": "application/json",
+                      "body": "WwogICJodHRwOi8vMTI3LjAuMC4xOjQxODAvd29ya3NwYWNlcyIsCiAgImh0dHA6Ly8xMjcuMC4wLjE6NDE4MC9hc3NldHMvaW5kZXgtQlpSM0tzWVcuanMiLAogICJodHRwOi8vMTI3LjAuMC4xOjQxODAvYXNzZXRzL2luZGV4LURnRjB5ejU0LmNzcyIsCiAgImh0dHA6Ly8xMjcuMC4wLjE6NDE4MC9ydW50aW1lLWNvbmZpZy5qc29uIiwKICAiaHR0cDovLzEyNy4wLjAuMTo0MTgwL2Fzc2V0cy9rYW50b24tc29sb3RodXJuLURPcEpfeDhpLnN2ZyIsCiAgImh0dHA6Ly8xMjcuMC4wLjE6NDE4MC9hc3NldHMvQ29kZUVkaXRvckltcGwtQ1hHSnFSX0UuanMiLAogICJodHRwOi8vMTI3LjAuMC4xOjQxODAvYXNzZXRzL0NvZGVFZGl0b3JJbXBsLXY1cmZLY1ZzLmNzcyIsCiAgImh0dHA6Ly8xMjcuMC4wLjE6NDE4MC9hc3NldHMvc3FsLU5FRTUyU3lxLmpzIiwKICAiaHR0cDovLzEyNy4wLjAuMTo0MTgwL2Fzc2V0cy9lZGl0b3Iud29ya2VyLUNuMm9SRVNlLmpzIiwKICAiaHR0cDovLzEyNy4wLjAuMTo0MTgwL3ZlbmRvci9kdWNrZGIvMS4zMy4xLWRldjU3LjAvZHVja2RiLW12cC53YXNtIiwKICAiaHR0cDovLzEyNy4wLjAuMTo0MTgwL3ZlbmRvci9kdWNrZGIvMS4zMy4xLWRldjU3LjAvZHVja2RiLWJyb3dzZXItbXZwLndvcmtlci5qcyIsCiAgImh0dHA6Ly8xMjcuMC4wLjE6NDE4MC92ZW5kb3IvZHVja2RiLzEuMzMuMS1kZXY1Ny4wL2R1Y2tkYi1laC53YXNtIiwKICAiaHR0cDovLzEyNy4wLjAuMTo0MTgwL3ZlbmRvci9kdWNrZGIvMS4zMy4xLWRldjU3LjAvZHVja2RiLWJyb3dzZXItZWgud29ya2VyLmpzIiwKICAiaHR0cDovLzEyNy4wLjAuMTo0MTgwL3ZlbmRvci9kdWNrZGIvMS4zMy4xLWRldjU3LjAvZHVja2RiLWJyb3dzZXItZWgud29ya2VyLmpzIiwKICAiaHR0cDovLzEyNy4wLjAuMTo0MTgwL3ZlbmRvci9kdWNrZGIvMS4zMy4xLWRldjU3LjAvZHVja2RiLWVoLndhc20iLAogICJodHRwOi8vMTI3LjAuMC4xOjQxODAvdmVuZG9yL2R1Y2tkYi1leHRlbnNpb25zL3YxLjUuNC93YXNtX2VoL2ljdS5kdWNrZGJfZXh0ZW5zaW9uLndhc20iLAogICJodHRwOi8vMTI3LjAuMC4xOjQxODAvdmVuZG9yL2R1Y2tkYi1leHRlbnNpb25zL3YxLjUuNC93YXNtX2VoL2pzb24uZHVja2RiX2V4dGVuc2lvbi53YXNtIiwKICAiaHR0cDovLzEyNy4wLjAuMTo0MTgwL3ZlbmRvci9kdWNrZGItZXh0ZW5zaW9ucy92MS41LjQvd2FzbV9laC9wYXJxdWV0LmR1Y2tkYl9leHRlbnNpb24ud2FzbSIsCiAgImh0dHA6Ly8xMjcuMC4wLjE6NDE4MC93b3Jrc3BhY2VzL2JhNGI1MzliLWY0ZTUtNDdkNi1hZDM1LTQyYzY4ZDFjNTlkNy9zcWwvYzg0Zjc3ZDMtYTUzZC00MDc4LTkzNTItNDgxNGYyM2FiMGFmIiwKICAiaHR0cDovLzEyNy4wLjAuMTo0MTgwL2Fzc2V0cy9pbmRleC1CWlIzS3NZVy5qcyIsCiAgImh0dHA6Ly8xMjcuMC4wLjE6NDE4MC9hc3NldHMvaW5kZXgtRGdGMHl6NTQuY3NzIiwKICAiaHR0cDovLzEyNy4wLjAuMTo0MTgwL3J1bnRpbWUtY29uZmlnLmpzb24iLAogICJodHRwOi8vMTI3LjAuMC4xOjQxODAvYXNzZXRzL2thbnRvbi1zb2xvdGh1cm4tRE9wSl94OGkuc3ZnIiwKICAiaHR0cDovLzEyNy4wLjAuMTo0MTgwL2Fzc2V0cy9Db2RlRWRpdG9ySW1wbC1DWEdKcVJfRS5qcyIsCiAgImh0dHA6Ly8xMjcuMC4wLjE6NDE4MC9hc3NldHMvQ29kZUVkaXRvckltcGwtdjVyZktjVnMuY3NzIiwKICAiaHR0cDovLzEyNy4wLjAuMTo0MTgwL2Fzc2V0cy9zcWwtTkVFNTJTeXEuanMiLAogICJodHRwOi8vMTI3LjAuMC4xOjQxODAvYXNzZXRzL2VkaXRvci53b3JrZXItQ24yb1JFU2UuanMiLAogICJodHRwOi8vMTI3LjAuMC4xOjQxODAvdmVuZG9yL2R1Y2tkYi8xLjMzLjEtZGV2NTcuMC9kdWNrZGItbXZwLndhc20iLAogICJodHRwOi8vMTI3LjAuMC4xOjQxODAvdmVuZG9yL2R1Y2tkYi8xLjMzLjEtZGV2NTcuMC9kdWNrZGItYnJvd3Nlci1tdnAud29ya2VyLmpzIiwKICAiaHR0cDovLzEyNy4wLjAuMTo0MTgwL3ZlbmRvci9kdWNrZGIvMS4zMy4xLWRldjU3LjAvZHVja2RiLWVoLndhc20iLAogICJodHRwOi8vMTI3LjAuMC4xOjQxODAvdmVuZG9yL2R1Y2tkYi8xLjMzLjEtZGV2NTcuMC9kdWNrZGItYnJvd3Nlci1laC53b3JrZXIuanMiLAogICJodHRwOi8vMTI3LjAuMC4xOjQxODAvdmVuZG9yL2R1Y2tkYi8xLjMzLjEtZGV2NTcuMC9kdWNrZGItYnJvd3Nlci1laC53b3JrZXIuanMiLAogICJodHRwOi8vMTI3LjAuMC4xOjQxODAvdmVuZG9yL2R1Y2tkYi8xLjMzLjEtZGV2NTcuMC9kdWNrZGItZWgud2FzbSIsCiAgImh0dHA6Ly8xMjcuMC4wLjE6NDE4MC92ZW5kb3IvZHVja2RiLWV4dGVuc2lvbnMvdjEuNS40L3dhc21fZWgvaWN1LmR1Y2tkYl9leHRlbnNpb24ud2FzbSIsCiAgImh0dHA6Ly8xMjcuMC4wLjE6NDE4MC92ZW5kb3IvZHVja2RiLWV4dGVuc2lvbnMvdjEuNS40L3dhc21fZWgvcGFycXVldC5kdWNrZGJfZXh0ZW5zaW9uLndhc20iLAogICJodHRwOi8vMTI3LjAuMC4xOjQxODAvdmVuZG9yL3dlYnIvMC42LjAvd2Vici5qcyIsCiAgImh0dHA6Ly8xMjcuMC4wLjE6NDE4MC92ZW5kb3Ivd2Vici8wLjYuMC9SLndhc20iLAogICJodHRwOi8vMTI3LjAuMC4xOjQxODAvdmVuZG9yL3dlYnIvMC42LjAvd2Vici5qcyIsCiAgImh0dHA6Ly8xMjcuMC4wLjE6NDE4MC92ZW5kb3Ivd2Vici8wLjYuMC93ZWJyLXdvcmtlci5qcyIsCiAgImh0dHA6Ly8xMjcuMC4wLjE6NDE4MC92ZW5kb3Ivd2Vici8wLjYuMC9SLmpzIiwKICAiaHR0cDovLzEyNy4wLjAuMTo0MTgwL3ZlbmRvci93ZWJyLzAuNi4wL1Iud2FzbSIsCiAgImh0dHA6Ly8xMjcuMC4wLjE6NDE4MC92ZW5kb3Ivd2Vici8wLjYuMC9saWJSYmxhcy5zbyIsCiAgImh0dHA6Ly8xMjcuMC4wLjE6NDE4MC92ZW5kb3Ivd2Vici8wLjYuMC92ZnMvdXNyL2xpYi9SL2xpYnJhcnkvdHJhbnNsYXRpb25zL0RFU0NSSVBUSU9OIiwKICAiaHR0cDovLzEyNy4wLjAuMTo0MTgwL3ZlbmRvci93ZWJyLzAuNi4wL2xpYlJsYXBhY2suc28iLAogICJodHRwOi8vMTI3LjAuMC4xOjQxODAvdmVuZG9yL3dlYnItcGFja2FnZXMvbG9jay5qc29uIiwKICAiaHR0cDovLzEyNy4wLjAuMTo0MTgwL3ZlbmRvci93ZWJyLXBhY2thZ2VzL2Jpbi9lbXNjcmlwdGVuL2NvbnRyaWIvNC42L1BBQ0tBR0VTLnJkcyIsCiAgImh0dHA6Ly8xMjcuMC4wLjE6NDE4MC92ZW5kb3Ivd2Vici1wYWNrYWdlcy9iaW4vZW1zY3JpcHRlbi9jb250cmliLzQuNi9iaXRfNC42LjAudGd6IiwKICAiaHR0cDovLzEyNy4wLjAuMTo0MTgwL3ZlbmRvci93ZWJyLzAuNi4wL3Zmcy91c3IvbGliL1Ivc2hhcmUuanMubWV0YWRhdGEiLAogICJodHRwOi8vMTI3LjAuMC4xOjQxODAvdmVuZG9yL3dlYnIvMC42LjAvdmZzL3Vzci9saWIvUi9zaGFyZS5kYXRhLmd6IiwKICAiaHR0cDovLzEyNy4wLjAuMTo0MTgwL3ZlbmRvci93ZWJyLXBhY2thZ2VzL2Jpbi9lbXNjcmlwdGVuL2NvbnRyaWIvNC42L2NsaV8zLjYuNi50Z3oiLAogICJodHRwOi8vMTI3LjAuMC4xOjQxODAvdmVuZG9yL3dlYnItcGFja2FnZXMvYmluL2Vtc2NyaXB0ZW4vY29udHJpYi80LjYvZ2VuZXJpY3NfMC4xLjQudGd6IiwKICAiaHR0cDovLzEyNy4wLjAuMTo0MTgwL3ZlbmRvci93ZWJyLXBhY2thZ2VzL2Jpbi9lbXNjcmlwdGVuL2NvbnRyaWIvNC42L2dsdWVfMS44LjEudGd6IiwKICAiaHR0cDovLzEyNy4wLjAuMTo0MTgwL3ZlbmRvci93ZWJyLXBhY2thZ2VzL2Jpbi9lbXNjcmlwdGVuL2NvbnRyaWIvNC42L3JsYW5nXzEuMi4wLnRneiIsCiAgImh0dHA6Ly8xMjcuMC4wLjE6NDE4MC92ZW5kb3Ivd2Vici1wYWNrYWdlcy9iaW4vZW1zY3JpcHRlbi9jb250cmliLzQuNi9saWZlY3ljbGVfMS4wLjUudGd6IiwKICAiaHR0cDovLzEyNy4wLjAuMTo0MTgwL3ZlbmRvci93ZWJyLXBhY2thZ2VzL2Jpbi9lbXNjcmlwdGVuL2NvbnRyaWIvNC42L21hZ3JpdHRyXzIuMC41LnRneiIsCiAgImh0dHA6Ly8xMjcuMC4wLjE6NDE4MC92ZW5kb3Ivd2Vici1wYWNrYWdlcy9iaW4vZW1zY3JpcHRlbi9jb250cmliLzQuNi91dGY4XzEuMi42LnRneiIsCiAgImh0dHA6Ly8xMjcuMC4wLjE6NDE4MC92ZW5kb3Ivd2Vici1wYWNrYWdlcy9iaW4vZW1zY3JpcHRlbi9jb250cmliLzQuNi92Y3Ryc18wLjcuMy50Z3oiLAogICJodHRwOi8vMTI3LjAuMC4xOjQxODAvdmVuZG9yL3dlYnItcGFja2FnZXMvYmluL2Vtc2NyaXB0ZW4vY29udHJpYi80LjYvcGlsbGFyXzEuMTEuMS50Z3oiLAogICJodHRwOi8vMTI3LjAuMC4xOjQxODAvdmVuZG9yL3dlYnItcGFja2FnZXMvYmluL2Vtc2NyaXB0ZW4vY29udHJpYi80LjYvUjZfMi42LjEudGd6IiwKICAiaHR0cDovLzEyNy4wLjAuMTo0MTgwL3ZlbmRvci93ZWJyLXBhY2thZ2VzL2Jpbi9lbXNjcmlwdGVuL2NvbnRyaWIvNC42L3BrZ2NvbmZpZ18yLjAuMy50Z3oiLAogICJodHRwOi8vMTI3LjAuMC4xOjQxODAvdmVuZG9yL3dlYnItcGFja2FnZXMvYmluL2Vtc2NyaXB0ZW4vY29udHJpYi80LjYvdGliYmxlXzMuMy4xLnRneiIsCiAgImh0dHA6Ly8xMjcuMC4wLjE6NDE4MC92ZW5kb3Ivd2Vici1wYWNrYWdlcy9iaW4vZW1zY3JpcHRlbi9jb250cmliLzQuNi93aXRocl8zLjAuMi50Z3oiLAogICJodHRwOi8vMTI3LjAuMC4xOjQxODAvdmVuZG9yL3dlYnItcGFja2FnZXMvYmluL2Vtc2NyaXB0ZW4vY29udHJpYi80LjYvdGlkeXNlbGVjdF8xLjIuMS50Z3oiLAogICJodHRwOi8vMTI3LjAuMC4xOjQxODAvdmVuZG9yL3dlYnItcGFja2FnZXMvYmluL2Vtc2NyaXB0ZW4vY29udHJpYi80LjYvZ3RhYmxlXzAuMy42LnRneiIsCiAgImh0dHA6Ly8xMjcuMC4wLjE6NDE4MC92ZW5kb3Ivd2Vici1wYWNrYWdlcy9iaW4vZW1zY3JpcHRlbi9jb250cmliLzQuNi9pc29iYW5kXzAuMy4wLnRneiIsCiAgImh0dHA6Ly8xMjcuMC4wLjE6NDE4MC92ZW5kb3Ivd2Vici1wYWNrYWdlcy9iaW4vZW1zY3JpcHRlbi9jb250cmliLzQuNi9TN18wLjIuMi50Z3oiLAogICJodHRwOi8vMTI3LjAuMC4xOjQxODAvdmVuZG9yL3dlYnItcGFja2FnZXMvYmluL2Vtc2NyaXB0ZW4vY29udHJpYi80LjYvZmFydmVyXzIuMS4yLnRneiIsCiAgImh0dHA6Ly8xMjcuMC4wLjE6NDE4MC92ZW5kb3Ivd2Vici1wYWNrYWdlcy9iaW4vZW1zY3JpcHRlbi9jb250cmliLzQuNi9sYWJlbGluZ18wLjQuMy50Z3oiLAogICJodHRwOi8vMTI3LjAuMC4xOjQxODAvdmVuZG9yL3dlYnItcGFja2FnZXMvYmluL2Vtc2NyaXB0ZW4vY29udHJpYi80LjYvUkNvbG9yQnJld2VyXzEuMS0zLnRneiIsCiAgImh0dHA6Ly8xMjcuMC4wLjE6NDE4MC92ZW5kb3Ivd2Vici1wYWNrYWdlcy9iaW4vZW1zY3JpcHRlbi9jb250cmliLzQuNi92aXJpZGlzTGl0ZV8wLjQuMy50Z3oiLAogICJodHRwOi8vMTI3LjAuMC4xOjQxODAvdmVuZG9yL3dlYnItcGFja2FnZXMvYmluL2Vtc2NyaXB0ZW4vY29udHJpYi80LjYvc2NhbGVzXzEuNC4wLnRneiIsCiAgImh0dHA6Ly8xMjcuMC4wLjE6NDE4MC92ZW5kb3Ivd2Vici1wYWNrYWdlcy9iaW4vZW1zY3JpcHRlbi9jb250cmliLzQuNi9jcmF5b25fMS41LjMudGd6IiwKICAiaHR0cDovLzEyNy4wLjAuMTo0MTgwL3ZlbmRvci93ZWJyLXBhY2thZ2VzL2Jpbi9lbXNjcmlwdGVuL2NvbnRyaWIvNC42L2htc18xLjEuNC50Z3oiLAogICJodHRwOi8vMTI3LjAuMC4xOjQxODAvdmVuZG9yL3dlYnItcGFja2FnZXMvYmluL2Vtc2NyaXB0ZW4vY29udHJpYi80LjYvcHJldHR5dW5pdHNfMS4yLjAudGd6IiwKICAiaHR0cDovLzEyNy4wLjAuMTo0MTgwL3ZlbmRvci93ZWJyLXBhY2thZ2VzL2Jpbi9lbXNjcmlwdGVuL2NvbnRyaWIvNC42L2NsaXByXzAuOC4xLnRneiIsCiAgImh0dHA6Ly8xMjcuMC4wLjE6NDE4MC92ZW5kb3Ivd2Vici1wYWNrYWdlcy9iaW4vZW1zY3JpcHRlbi9jb250cmliLzQuNi9iaXQ2NF80LjguMi50Z3oiLAogICJodHRwOi8vMTI3LjAuMC4xOjQxODAvdmVuZG9yL3dlYnItcGFja2FnZXMvYmluL2Vtc2NyaXB0ZW4vY29udHJpYi80LjYvdHpkYl8wLjUuMC50Z3oiLAogICJodHRwOi8vMTI3LjAuMC4xOjQxODAvdmVuZG9yL3dlYnItcGFja2FnZXMvYmluL2Vtc2NyaXB0ZW4vY29udHJpYi80LjYvdnJvb21fMS43LjEuOTAwMC50Z3oiLAogICJodHRwOi8vMTI3LjAuMC4xOjQxODAvdmVuZG9yL3dlYnItcGFja2FnZXMvYmluL2Vtc2NyaXB0ZW4vY29udHJpYi80LjYvc3RyaW5naV8xLjguNy50Z3oiLAogICJodHRwOi8vMTI3LjAuMC4xOjQxODAvdmVuZG9yL3dlYnItcGFja2FnZXMvYmluL2Vtc2NyaXB0ZW4vY29udHJpYi80LjYvZHBseXJfMS4yLjEudGd6IiwKICAiaHR0cDovLzEyNy4wLjAuMTo0MTgwL3ZlbmRvci93ZWJyLXBhY2thZ2VzL2Jpbi9lbXNjcmlwdGVuL2NvbnRyaWIvNC42L3B1cnJyXzEuMi4yLnRneiIsCiAgImh0dHA6Ly8xMjcuMC4wLjE6NDE4MC92ZW5kb3Ivd2Vici1wYWNrYWdlcy9iaW4vZW1zY3JpcHRlbi9jb250cmliLzQuNi9zdHJpbmdyXzEuNi4wLnRneiIsCiAgImh0dHA6Ly8xMjcuMC4wLjE6NDE4MC92ZW5kb3Ivd2Vici1wYWNrYWdlcy9iaW4vZW1zY3JpcHRlbi9jb250cmliLzQuNi9jcHAxMV8wLjUuNS50Z3oiLAogICJodHRwOi8vMTI3LjAuMC4xOjQxODAvdmVuZG9yL3dlYnItcGFja2FnZXMvYmluL2Vtc2NyaXB0ZW4vY29udHJpYi80LjYvZ2dwbG90Ml80LjAuMy50Z3oiLAogICJodHRwOi8vMTI3LjAuMC4xOjQxODAvdmVuZG9yL3dlYnItcGFja2FnZXMvYmluL2Vtc2NyaXB0ZW4vY29udHJpYi80LjYvanNvbmxpdGVfMi4wLjAudGd6IiwKICAiaHR0cDovLzEyNy4wLjAuMTo0MTgwL3ZlbmRvci93ZWJyLXBhY2thZ2VzL2Jpbi9lbXNjcmlwdGVuL2NvbnRyaWIvNC42L3Byb2dyZXNzXzEuMi4zLnRneiIsCiAgImh0dHA6Ly8xMjcuMC4wLjE6NDE4MC92ZW5kb3Ivd2Vici1wYWNrYWdlcy9iaW4vZW1zY3JpcHRlbi9jb250cmliLzQuNi9yZWFkcl8yLjIuMC50Z3oiLAogICJodHRwOi8vMTI3LjAuMC4xOjQxODAvdmVuZG9yL3dlYnItcGFja2FnZXMvYmluL2Vtc2NyaXB0ZW4vY29udHJpYi80LjYvdGlkeXJfMS4zLjIudGd6Igpd"
+                    },
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/Users/stefan/sources/dateninfrastruktur-datenwerkstatt/test-results-deployment/static-P7-AT-066–068-arbit-5dac8-ME-cache-CSP-and-real-SQL-R-chromium-0/test-failed-1.png"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/Users/stefan/sources/dateninfrastruktur-datenwerkstatt/test-results-deployment/static-P7-AT-066–068-arbit-5dac8-ME-cache-CSP-and-real-SQL-R-chromium-0/error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/Users/stefan/sources/dateninfrastruktur-datenwerkstatt/test-results-deployment/static-P7-AT-066–068-arbit-5dac8-ME-cache-CSP-and-real-SQL-R-chromium-0/trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/Users/stefan/sources/dateninfrastruktur-datenwerkstatt/tests/isolateOpfs.ts",
+                    "column": 21,
+                    "line": 33
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "4852420a3ed5ea40b1af-f1129d96e70c3bce2a2e",
+          "file": "static.spec.ts",
+          "line": 9,
+          "column": 1
+        },
+        {
+          "title": "P7 AT-067: invalid operator config fails closed before any runtime",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 240000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium-0",
+              "projectName": "chromium-0",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "4852420a3ed5ea40b1af-794abd95d04a60da6ea5",
+          "file": "static.spec.ts",
+          "line": 94,
+          "column": 1
+        },
+        {
+          "title": "P7 AT-066–068: arbitrary UID static container, deep routes, MIME/cache/CSP and real SQL/R",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 240000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium-1",
+              "projectName": "chromium-1",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "4852420a3ed5ea40b1af-b808e8b8c45f3b9c3fde",
+          "file": "static.spec.ts",
+          "line": 9,
+          "column": 1
+        },
+        {
+          "title": "P7 AT-067: invalid operator config fails closed before any runtime",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 240000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium-1",
+              "projectName": "chromium-1",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "4852420a3ed5ea40b1af-605cbc6d7d6e6662e49f",
+          "file": "static.spec.ts",
+          "line": 94,
+          "column": 1
+        },
+        {
+          "title": "P7 AT-066–068: arbitrary UID static container, deep routes, MIME/cache/CSP and real SQL/R",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 240000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium-2",
+              "projectName": "chromium-2",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "4852420a3ed5ea40b1af-961cf2e1ed3525742c40",
+          "file": "static.spec.ts",
+          "line": 9,
+          "column": 1
+        },
+        {
+          "title": "P7 AT-067: invalid operator config fails closed before any runtime",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 240000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium-2",
+              "projectName": "chromium-2",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "4852420a3ed5ea40b1af-b06f366ad0290cb86593",
+          "file": "static.spec.ts",
+          "line": 94,
+          "column": 1
+        },
+        {
+          "title": "P7 AT-066–068: arbitrary UID static container, deep routes, MIME/cache/CSP and real SQL/R",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 240000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "firefox-0",
+              "projectName": "firefox-0",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "4852420a3ed5ea40b1af-c8a333811eb7746900f6",
+          "file": "static.spec.ts",
+          "line": 9,
+          "column": 1
+        },
+        {
+          "title": "P7 AT-067: invalid operator config fails closed before any runtime",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 240000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "firefox-0",
+              "projectName": "firefox-0",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "4852420a3ed5ea40b1af-5049f3671282f7fde108",
+          "file": "static.spec.ts",
+          "line": 94,
+          "column": 1
+        },
+        {
+          "title": "P7 AT-066–068: arbitrary UID static container, deep routes, MIME/cache/CSP and real SQL/R",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 240000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "firefox-1",
+              "projectName": "firefox-1",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "4852420a3ed5ea40b1af-3b491423a1ed976d2fdc",
+          "file": "static.spec.ts",
+          "line": 9,
+          "column": 1
+        },
+        {
+          "title": "P7 AT-067: invalid operator config fails closed before any runtime",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 240000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "firefox-1",
+              "projectName": "firefox-1",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "4852420a3ed5ea40b1af-2505b3ec728e7d617bdb",
+          "file": "static.spec.ts",
+          "line": 94,
+          "column": 1
+        },
+        {
+          "title": "P7 AT-066–068: arbitrary UID static container, deep routes, MIME/cache/CSP and real SQL/R",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 240000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "firefox-2",
+              "projectName": "firefox-2",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "4852420a3ed5ea40b1af-435d3c40659e538931c8",
+          "file": "static.spec.ts",
+          "line": 9,
+          "column": 1
+        },
+        {
+          "title": "P7 AT-067: invalid operator config fails closed before any runtime",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 240000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "firefox-2",
+              "projectName": "firefox-2",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "4852420a3ed5ea40b1af-76e7733604d9ab5c3f55",
+          "file": "static.spec.ts",
+          "line": 94,
+          "column": 1
+        },
+        {
+          "title": "P7 AT-066–068: arbitrary UID static container, deep routes, MIME/cache/CSP and real SQL/R",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 240000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "webkit-0",
+              "projectName": "webkit-0",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "4852420a3ed5ea40b1af-d1b964c18b33699ee93f",
+          "file": "static.spec.ts",
+          "line": 9,
+          "column": 1
+        },
+        {
+          "title": "P7 AT-067: invalid operator config fails closed before any runtime",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 240000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "webkit-0",
+              "projectName": "webkit-0",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "4852420a3ed5ea40b1af-72b61c085ed49cc413aa",
+          "file": "static.spec.ts",
+          "line": 94,
+          "column": 1
+        },
+        {
+          "title": "P7 AT-066–068: arbitrary UID static container, deep routes, MIME/cache/CSP and real SQL/R",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 240000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "webkit-1",
+              "projectName": "webkit-1",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "4852420a3ed5ea40b1af-90c6d1a215a88656bbf6",
+          "file": "static.spec.ts",
+          "line": 9,
+          "column": 1
+        },
+        {
+          "title": "P7 AT-067: invalid operator config fails closed before any runtime",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 240000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "webkit-1",
+              "projectName": "webkit-1",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "4852420a3ed5ea40b1af-6ffbbb0ef670ac2c9ad7",
+          "file": "static.spec.ts",
+          "line": 94,
+          "column": 1
+        },
+        {
+          "title": "P7 AT-066–068: arbitrary UID static container, deep routes, MIME/cache/CSP and real SQL/R",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 240000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "webkit-2",
+              "projectName": "webkit-2",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "4852420a3ed5ea40b1af-2b84788eee2bd2285839",
+          "file": "static.spec.ts",
+          "line": 9,
+          "column": 1
+        },
+        {
+          "title": "P7 AT-067: invalid operator config fails closed before any runtime",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 240000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "webkit-2",
+              "projectName": "webkit-2",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "4852420a3ed5ea40b1af-80af37e0734e00558d56",
+          "file": "static.spec.ts",
+          "line": 94,
+          "column": 1
+        }
+      ]
+    }
+  ],
+  "errors": [
+    {
+      "message": "\u001b[31mTesting stopped early after 1 maximum allowed failures.\u001b[39m"
+    }
+  ],
+  "stats": {
+    "startTime": "2026-10-04T10:53:47.718Z",
+    "duration": 128859.095,
+    "expected": 2,
+    "skipped": 33,
+    "unexpected": 1,
+    "flaky": 0
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "userApproval": "Ja, Safari jetzt neu starten",
+  "beforePid": 51578,
+  "quitMethod": "Native Safari Command-Q via cua",
+  "quitObservedAt": "2026-10-04T15:36:47.881944+00:00",
+  "processLookupExitCodeAfterQuit": 1,
+  "processLookupOutputAfterQuit": "",
+  "nativeObservation": "Computer Use server error -10005: App quit",
+  "afterPid": 26040,
+  "relaunchedAt": "2026-10-04T15:37:04.964668+00:00",
+  "relaunchMethod": "cua.getApp(Safari)",
+  "processRestartVerified": true
+}

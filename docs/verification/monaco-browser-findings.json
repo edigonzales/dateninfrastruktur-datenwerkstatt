@@ -1,0 +1,25 @@
+{
+  "date": "2026-10-03",
+  "webkit": {
+    "version": "26.6",
+    "method": "Real Playwright keyboard.insertText plus public Monaco onDidChangeContent/model values",
+    "input": "SELECT 42 AS wert;",
+    "inputEvents": 18,
+    "undoSequence": [
+      "SELECT 42 AS",
+      "SELECT 42",
+      "SELECT",
+      "SELECT 1 AS wert;"
+    ],
+    "isUndoingForEveryUndo": true,
+    "conclusion": "History survives route changes. Test must not assume one whole-string insertion event across browsers. Final expected code unchanged."
+  },
+  "firefox": {
+    "version": "155.0",
+    "finding": "Monaco paints the visible editor separately from its zero-area internal textarea. Screenshot shows the full editor. Geometry assertions now wait for the editor container and rendered SELECT; keyboard-edit test remains separate.",
+    "keyboardFinding": "Playwright Desktop Firefox descriptor supplies a Windows user-agent on this macOS runner. Monaco selects Ctrl bindings while ControlOrMeta sends Meta. Native browser projects remove this artificial mismatch; all four targeted Firefox/WebKit tests then passed."
+  },
+  "webLocks": {
+    "finding": "Page close and WebKit lock release are asynchronous. A bounded expect.poll verifies eventual release without stealing a lock."
+  }
+}

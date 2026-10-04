@@ -1,0 +1,313 @@
+
+> datenwerkstatt@0.1.0 dev
+> vite --host 127.0.0.1
+
+
+  VITE v8.1.2  ready in 473 ms
+
+  ➜  Local:   http://127.0.0.1:4173/
+1:42:03 PM [vite] (client) [console.warn] WebR is using `PostMessage` communication channel, nested R REPLs are not available.
+1:42:46 PM [vite] (client) [console.warn] WebR is using `PostMessage` communication channel, nested R REPLs are not available.
+1:42:49 PM [vite] (client) [console.warn] WebR is using `PostMessage` communication channel, nested R REPLs are not available.
+1:42:51 PM [vite] (client) [console.warn] WebR is using `PostMessage` communication channel, nested R REPLs are not available.
+1:43:02 PM [vite] (client) [console.warn] WebR is using `PostMessage` communication channel, nested R REPLs are not available.
+1:43:04 PM [vite] (client) [console.warn] WebR is using `PostMessage` communication channel, nested R REPLs are not available.
+1:43:35 PM [vite] (client) [console.warn] WebR is using `PostMessage` communication channel, nested R REPLs are not available.
+1:43:37 PM [vite] (client) [console.warn] WebR is using `PostMessage` communication channel, nested R REPLs are not available.
+1:43:41 PM [vite] (client) [console.warn] WebR is using `PostMessage` communication channel, nested R REPLs are not available.
+1:43:44 PM [vite] (client) page reload deploy/generated/test-0/dist/index.html
+1:43:55 PM [vite] (client) [console.warn] WebR is using `PostMessage` communication channel, nested R REPLs are not available.
+1:44:08 PM [vite] (client) page reload deploy/generated/test-1/dist/index.html
+1:44:08 PM [vite] (client) page reload deploy/generated/test-1/dist/index.html
+1:44:16 PM [vite] (client) [console.warn] WebR is using `PostMessage` communication channel, nested R REPLs are not available.
+1:44:27 PM [vite] (client) page reload deploy/generated/test-2/dist/index.html
+1:44:27 PM [vite] (client) page reload deploy/generated/test-2/dist/index.html
+1:44:31 PM [vite] (client) [console.warn] WebR is using `PostMessage` communication channel, nested R REPLs are not available.
+1:44:48 PM [vite] (client) [console.warn] WebR is using `PostMessage` communication channel, nested R REPLs are not available.
+1:44:48 PM [vite] (client) page reload test-results-deployment/.playwright-artifacts-0/traces/resources/0cdc469386f4b026cb777695847eab947ee83b5a.html
+1:44:48 PM [vite] (client) page reload test-results-deployment/.playwright-artifacts-1/traces/resources/0cdc469386f4b026cb777695847eab947ee83b5a.html
+1:44:48 PM [vite] (client) page reload test-results-deployment/.playwright-artifacts-2/traces/resources/0cdc469386f4b026cb777695847eab947ee83b5a.html
+1:44:49 PM [vite] (client) page reload test-results-deployment/.playwright-artifacts-0/traces/resources/54b75d41eee38c892be935d7f49c6e2ee2426d12.html
+1:44:53 PM [vite] (client) page reload test-results-deployment/.playwright-artifacts-0/traces/resources/0549029c83dfa72de13ce7cd8302eec198956ee2.html
+1:45:00 PM [vite] (client) [console.error] checkedId@http://127.0.0.1:4173/src/domain/workspace.ts:4:20
+open@http://127.0.0.1:4173/src/application/workspaceService.ts:386:23
+loader@http://127.0.0.1:4173/src/app/router.tsx:91:46
+loadResource/flight<@http://127.0.0.1:4173/node_modules/.vite/deps/@tanstack_react-router.js?v=63bea521:3174:40
+promise callback*loadResource@http://127.0.0.1:4173/node_modules/.vite/deps/@tanstack_react-router.js?v=63bea521:3174:23
+createLoaderTask$1@http://127.0.0.1:4173/node_modules/.vite/deps/@tanstack_react-router.js?v=63bea521:3279:47
+planSuccessfulLane@http://127.0.0.1:4173/node_modules/.vite/deps/@tanstack_react-router.js?v=63bea521:3549:22
+contextualize$1@http://127.0.0.1:4173/node_modules/.vite/deps/@tanstack_react-router.js?v=63bea521:3095:2
+executeClientLane@http://127.0.0.1:4173/node_modules/.vite/deps/@tanstack_react-router.js?v=63bea521:3552:25
+runClientTransaction@http://127.0.0.1:4173/node_modules/.vite/deps/@tanstack_react-router.js?v=63bea521:3796:23
+run@http://127.0.0.1:4173/node_modules/.vite/deps/@tanstack_react-router.js?v=63bea521:3924:40
+loadClientRoute@http://127.0.0.1:4173/node_modules/.vite/deps/@tanstack_react-router.js?v=63bea521:3959:11
+RouterCore/this.load@http://127.0.0.1:4173/node_modules/.vite/deps/@tanstack_react-router.js?v=63bea521:2450:10
+Transitioner/<@http://127.0.0.1:4173/node_modules/.vite/deps/@tanstack_react-router.js?v=63bea521:6852:32
+react_stack_bottom_frame@http://127.0.0.1:4173/node_modules/.vite/deps/react-dom_client.js?v=870a67d6:12902:13
+runWithFiberInDEV@http://127.0.0.1:4173/node_modules/.vite/deps/react-dom_client.js?v=870a67d6:851:123
+commitHookEffectListMount@http://127.0.0.1:4173/node_modules/.vite/deps/react-dom_client.js?v=870a67d6:6617:153
+commitHookLayoutEffects@http://127.0.0.1:4173/node_modules/.vite/deps/react-dom_client.js?v=870a67d6:6605:55
+commitLayoutEffectOnFiber@http://127.0.0.1:4173/node_modules/.vite/deps/react-dom_client.js?v=870a67d6:6959:19
+recursivelyTraverseLayoutEffects@http://127.0.0.1:4173/node_modules/.vite/deps/react-dom_client.js?v=870a67d6:7479:127
+commitLayoutEffectOnFiber@http://127.0.0.1:4173/node_modules/.vite/deps/react-dom_client.js?v=870a67d6:6958:38
+recursivelyTraverseLayoutEffects@http://127.0.0.1:4173/node_modules/.vite/deps/react-dom_client.js?v=870a67d6:7479:127
+commitLayoutEffectOnFiber@http://127.0.0.1:4173/node_modules/.vite/deps/react-dom_client.js?v=870a67d6:7047:46
+recursivelyTraverseLayoutEffects@http://127.0.0.1:4173/node_modules/.vite/deps/react-dom_client.js?v=870a67d6:7479:127
+commitLayoutEffectOnFiber@http://127.0.0.1:4173/node_modules/.vite/deps/react-dom_client.js?v=870a67d6:6958:38
+recursivelyTraverseLayoutEffects@http://127.0.0.1:4173/node_modules/.vite/deps/react-dom_client.js?v=870a67d6:7479:127
+commitLayoutEffectOnFiber@http://127.0.0.1:4173/node_modules/.vite/deps/react-dom_client.js?v=870a67d6:6958:38
+recursivelyTraverseLayoutEffects@http://127.0.0.1:4173/node_modules/.vite/deps/react-dom_client.js?v=870a67d6:7479:127
+commitLayoutEffectOnFiber@http://127.0.0.1:4173/node_modules/.vite/deps/react-dom_client.js?v=870a67d6:6958:38
+recursivelyTraverseLayoutEffects@http://127.0.0.1:4173/node_modules/.vite/deps/react-dom_client.js?v=870a67d6:7479:127
+commitLayoutEffectOnFiber@http://127.0.0.1:4173/node_modules/.vite/deps/react-dom_client.js?v=870a67d6:7047:46
+recursivelyTraverseLayoutEffects@http://127.0.0.1:4173/node_modules/.vite/deps/react-dom_client.js?v=870a67d6:7479:127
+commitLayoutEffectOnFiber@http://127.0.0.1:4173/node_modules/.vite/deps/react-dom_client.js?v=870a67d6:6975:38
+flushLayoutEffects@http://127.0.0.1:4173/node_modules/.vite/deps/react-dom_client.js?v=870a67d6:8671:112
+commitRoot@http://127.0.0.1:4173/node_modules/.vite/deps/react-dom_client.js?v=870a67d6:8584:5
+commitRootWhenReady@http://127.0.0.1:4173/node_modules/.vite/deps/react-dom_client.js?v=870a67d6:8079:14
+performWorkOnRoot@http://127.0.0.1:4173/node_modules/.vite/deps/react-dom_client.js?v=870a67d6:8051:27
+performWorkOnRootViaSchedulerTask@http://127.0.0.1:4173/node_modules/.vite/deps/react-dom_client.js?v=870a67d6:9059:21
+performWorkUntilDeadline@http://127.0.0.1:4173/node_modules/.vite/deps/react-dom_client.js?v=870a67d6:36:46
+EventHandlerNonNull*require_scheduler_development</<@http://127.0.0.1:4173/node_modules/.vite/deps/react-dom_client.js?v=870a67d6:141:4
+require_scheduler_development<@http://127.0.0.1:4173/node_modules/.vite/deps/react-dom_client.js?v=870a67d6:244:4
+__commonJSMin/<@http://127.0.0.1:4173/node_modules/.vite/deps/rolldown-runtime-B-1-B7_t.js?v=8c1a32c3:8:49
+require_scheduler<@http://127.0.0.1:4173/node_modules/.vite/deps/react-dom_client.js?v=870a67d6:249:19
+__commonJSMin/<@http://127.0.0.1:4173/node_modules/.vite/deps/rolldown-runtime-B-1-B7_t.js?v=8c1a32c3:8:49
+require_react_dom_client_development</<@http://127.0.0.1:4173/node_modules/.vite/deps/react-dom_client.js?v=870a67d6:11672:19
+require_react_dom_client_development<@http://127.0.0.1:4173/node_modules/.vite/deps/react-dom_client.js?v=870a67d6:14373:4
+__commonJSMin/<@http://127.0.0.1:4173/node_modules/.vite/deps/rolldown-runtime-B-1-B7_t.js?v=8c1a32c3:8:49
+require_client<@http://127.0.0.1:4173/node_modules/.vite/deps/react-dom_client.js?v=870a67d6:14378:19
+__commonJSMin/<@http://127.0.0.1:4173/node_modules/.vite/deps/rolldown-runtime-B-1-B7_t.js?v=8c1a32c3:8:49
+@http://127.0.0.1:4173/node_modules/.vite/deps/react-dom_client.js?v=870a67d6:14381:16
+
+
+The above error occurred in the <MatchInnerImpl> component.
+
+React will try to recreate this component tree from scratch using the error boundary you provided, CatchBoundary.
+
+1:45:00 PM [vite] (client) [console.warn] Warning: Error in route match: __root__/
+1:45:27 PM [vite] (client) [console.warn] WebR is using `PostMessage` communication channel, nested R REPLs are not available.
+1:45:28 PM [vite] (client) page reload test-results-deployment/.playwright-artifacts-0/traces/resources/e0649cda3795ff1b2055c821feef313e93790118.html
+1:45:31 PM [vite] (client) page reload test-results-deployment/.playwright-artifacts-2/traces/resources/e0649cda3795ff1b2055c821feef313e93790118.html
+1:45:32 PM [vite] (client) page reload test-results-deployment/.playwright-artifacts-2/traces/resources/0cdc469386f4b026cb777695847eab947ee83b5a.html
+1:45:32 PM [vite] (client) page reload test-results-deployment/.playwright-artifacts-2/traces/resources/e0649cda3795ff1b2055c821feef313e93790118.html
+1:45:33 PM [vite] (client) page reload test-results-deployment/.playwright-artifacts-3/traces/resources/2f276df00e1d24a3e47d3da6757bc465efd380d4.html
+1:45:33 PM [vite] (client) page reload test-results-deployment/.playwright-artifacts-1/traces/resources/e0649cda3795ff1b2055c821feef313e93790118.html
+1:45:33 PM [vite] (client) page reload test-results-deployment/.playwright-artifacts-1/traces/resources/0cdc469386f4b026cb777695847eab947ee83b5a.html
+1:45:33 PM [vite] (client) page reload test-results-deployment/.playwright-artifacts-1/traces/resources/e0649cda3795ff1b2055c821feef313e93790118.html
+1:45:34 PM [vite] (client) page reload test-results-deployment/.playwright-artifacts-3/traces/resources/54b75d41eee38c892be935d7f49c6e2ee2426d12.html
+1:45:35 PM [vite] (client) page reload test-results-deployment/.playwright-artifacts-4/traces/resources/2f276df00e1d24a3e47d3da6757bc465efd380d4.html
+1:45:38 PM [vite] (client) page reload test-results-deployment/.playwright-artifacts-3/traces/resources/0549029c83dfa72de13ce7cd8302eec198956ee2.html
+1:45:54 PM [vite] (client) [console.warn] WebR is using `PostMessage` communication channel, nested R REPLs are not available.
+1:45:56 PM [vite] (client) [console.warn] WebR is using `PostMessage` communication channel, nested R REPLs are not available.
+1:46:05 PM [vite] (client) [console.warn] WebR is using `PostMessage` communication channel, nested R REPLs are not available.
+1:46:11 PM [vite] (client) page reload test-results-deployment/.playwright-artifacts-3/traces/resources/e0649cda3795ff1b2055c821feef313e93790118.html
+1:46:17 PM [vite] (client) page reload test-results-deployment/.playwright-artifacts-4/traces/resources/e0649cda3795ff1b2055c821feef313e93790118.html
+1:46:20 PM [vite] (client) [console.warn] WebR is using `PostMessage` communication channel, nested R REPLs are not available.
+1:46:23 PM [vite] (client) [console.warn] WebR is using `PostMessage` communication channel, nested R REPLs are not available.
+1:46:27 PM [vite] (client) [console.warn] WebR is using `PostMessage` communication channel, nested R REPLs are not available.
+1:46:34 PM [vite] (client) [console.warn] WebR is using `PostMessage` communication channel, nested R REPLs are not available.
+1:46:39 PM [vite] (client) [console.warn] WebR is using `PostMessage` communication channel, nested R REPLs are not available.
+1:46:54 PM [vite] (client) page reload test-results-deployment/.playwright-artifacts-4/traces/resources/2f276df00e1d24a3e47d3da6757bc465efd380d4.html
+1:46:54 PM [vite] (client) page reload test-results-deployment/.playwright-artifacts-4/traces/resources/e0649cda3795ff1b2055c821feef313e93790118.html
+1:46:54 PM [vite] (client) page reload test-results-deployment/.playwright-artifacts-5/traces/resources/2f276df00e1d24a3e47d3da6757bc465efd380d4.html
+1:46:55 PM [vite] (client) page reload test-results-deployment/.playwright-artifacts-5/traces/resources/54b75d41eee38c892be935d7f49c6e2ee2426d12.html
+1:46:58 PM [vite] (client) page reload test-results-deployment/.playwright-artifacts-5/traces/resources/0549029c83dfa72de13ce7cd8302eec198956ee2.html
+1:47:01 PM [vite] (client) [console.warn] WebR is using `PostMessage` communication channel, nested R REPLs are not available.
+1:47:07 PM [vite] (client) [console.warn] WebR is using `PostMessage` communication channel, nested R REPLs are not available.
+1:47:12 PM [vite] (client) [console.warn] WebR is using `PostMessage` communication channel, nested R REPLs are not available.
+1:47:27 PM [vite] (client) [console.warn] WebR is using `PostMessage` communication channel, nested R REPLs are not available.
+1:47:29 PM [vite] (client) page reload test-results-deployment/.playwright-artifacts-5/traces/resources/e0649cda3795ff1b2055c821feef313e93790118.html
+1:47:36 PM [vite] (client) page reload test-results-deployment/.playwright-artifacts-0/traces/resources/0549029c83dfa72de13ce7cd8302eec198956ee2.html
+1:47:36 PM [vite] (client) page reload test-results-deployment/.playwright-artifacts-0/traces/resources/0cdc469386f4b026cb777695847eab947ee83b5a.html
+1:47:36 PM [vite] (client) page reload test-results-deployment/.playwright-artifacts-0/traces/resources/54b75d41eee38c892be935d7f49c6e2ee2426d12.html
+1:47:36 PM [vite] (client) page reload test-results-deployment/.playwright-artifacts-0/traces/resources/e0649cda3795ff1b2055c821feef313e93790118.html
+1:47:37 PM [vite] (client) page reload test-results-deployment/.playwright-artifacts-6/traces/resources/2f276df00e1d24a3e47d3da6757bc465efd380d4.html
+1:47:42 PM [vite] (client) [console.warn] WebR is using `PostMessage` communication channel, nested R REPLs are not available.
+1:47:59 PM [vite] (client) [console.warn] WebR is using `PostMessage` communication channel, nested R REPLs are not available.
+1:48:18 PM [vite] (client) page reload test-results-deployment/.playwright-artifacts-6/traces/resources/e0649cda3795ff1b2055c821feef313e93790118.html
+1:48:21 PM [vite] (client) page reload test-results-deployment/.playwright-artifacts-3/traces/resources/0549029c83dfa72de13ce7cd8302eec198956ee2.html
+1:48:21 PM [vite] (client) page reload test-results-deployment/.playwright-artifacts-3/traces/resources/2f276df00e1d24a3e47d3da6757bc465efd380d4.html
+1:48:21 PM [vite] (client) page reload test-results-deployment/.playwright-artifacts-3/traces/resources/54b75d41eee38c892be935d7f49c6e2ee2426d12.html
+1:48:21 PM [vite] (client) page reload test-results-deployment/.playwright-artifacts-3/traces/resources/e0649cda3795ff1b2055c821feef313e93790118.html
+1:48:25 PM [vite] (client) page reload test-results-deployment/.playwright-artifacts-7/traces/resources/0cdc469386f4b026cb777695847eab947ee83b5a.html
+1:48:26 PM [vite] (client) page reload test-results-deployment/.playwright-artifacts-7/traces/resources/54b75d41eee38c892be935d7f49c6e2ee2426d12.html
+1:48:30 PM [vite] (client) page reload test-results-deployment/.playwright-artifacts-7/traces/resources/0549029c83dfa72de13ce7cd8302eec198956ee2.html
+1:48:31 PM [vite] (client) [console.warn] WebR is using `PostMessage` communication channel, nested R REPLs are not available.
+1:48:47 PM [vite] (client) [console.warn] WebR is using `PostMessage` communication channel, nested R REPLs are not available.
+1:49:00 PM [vite] (client) page reload test-results-deployment/.playwright-artifacts-6/traces/resources/2f276df00e1d24a3e47d3da6757bc465efd380d4.html
+1:49:00 PM [vite] (client) page reload test-results-deployment/.playwright-artifacts-6/traces/resources/e0649cda3795ff1b2055c821feef313e93790118.html
+1:49:04 PM [vite] (client) page reload test-results-deployment/.playwright-artifacts-8/traces/resources/0cdc469386f4b026cb777695847eab947ee83b5a.html
+1:49:06 PM [vite] (client) page reload playwright-report/index.html
+1:49:07 PM [vite] (client) page reload test-results-deployment/.playwright-artifacts-5/traces/resources/0549029c83dfa72de13ce7cd8302eec198956ee2.html
+1:49:07 PM [vite] (client) page reload test-results-deployment/.playwright-artifacts-5/traces/resources/2f276df00e1d24a3e47d3da6757bc465efd380d4.html
+1:49:07 PM [vite] (client) page reload test-results-deployment/.playwright-artifacts-5/traces/resources/54b75d41eee38c892be935d7f49c6e2ee2426d12.html
+1:49:07 PM [vite] (client) page reload test-results-deployment/.playwright-artifacts-5/traces/resources/e0649cda3795ff1b2055c821feef313e93790118.html
+1:49:11 PM [vite] (client) page reload test-results-deployment/.playwright-artifacts-9/traces/resources/0cdc469386f4b026cb777695847eab947ee83b5a.html
+1:49:13 PM [vite] (client) [console.warn] WebR is using `PostMessage` communication channel, nested R REPLs are not available.
+1:49:16 PM [vite] (client) page reload test-results-deployment/.playwright-artifacts-7/traces/resources/e0649cda3795ff1b2055c821feef313e93790118.html
+1:49:29 PM [vite] (client) [console.warn] WebR is using `PostMessage` communication channel, nested R REPLs are not available.
+1:49:55 PM [vite] (client) page reload test-results-deployment/.playwright-artifacts-8/traces/resources/e0649cda3795ff1b2055c821feef313e93790118.html
+1:49:55 PM [vite] (client) page reload test-results-deployment/.playwright-artifacts-8/traces/resources/0cdc469386f4b026cb777695847eab947ee83b5a.html
+1:49:55 PM [vite] (client) page reload test-results-deployment/.playwright-artifacts-8/traces/resources/e0649cda3795ff1b2055c821feef313e93790118.html
+1:49:56 PM [vite] (client) page reload test-results-deployment/.playwright-artifacts-9/traces/resources/e0649cda3795ff1b2055c821feef313e93790118.html
+1:49:59 PM [vite] (client) page reload test-results-deployment/.playwright-artifacts-10/traces/resources/2f276df00e1d24a3e47d3da6757bc465efd380d4.html
+1:50:00 PM [vite] (client) page reload test-results-deployment/.playwright-artifacts-10/traces/resources/54b75d41eee38c892be935d7f49c6e2ee2426d12.html
+1:50:01 PM [vite] (client) page reload test-results-deployment/.playwright-artifacts-9/traces/resources/0cdc469386f4b026cb777695847eab947ee83b5a.html
+1:50:01 PM [vite] (client) page reload test-results-deployment/.playwright-artifacts-9/traces/resources/e0649cda3795ff1b2055c821feef313e93790118.html
+1:50:04 PM [vite] (client) page reload test-results-deployment/.playwright-artifacts-10/traces/resources/0549029c83dfa72de13ce7cd8302eec198956ee2.html
+1:50:05 PM [vite] (client) page reload test-results-deployment/.playwright-artifacts-11/traces/resources/2f276df00e1d24a3e47d3da6757bc465efd380d4.html
+1:50:07 PM [vite] (client) [console.warn] WebR is using `PostMessage` communication channel, nested R REPLs are not available.
+1:50:08 PM [vite] (client) [console.warn] WebR is using `PostMessage` communication channel, nested R REPLs are not available.
+1:50:29 PM [vite] (client) [console.warn] WebR is using `PostMessage` communication channel, nested R REPLs are not available.
+1:50:39 PM [vite] (client) page reload test-results-deployment/.playwright-artifacts-10/traces/resources/e0649cda3795ff1b2055c821feef313e93790118.html
+1:50:54 PM [vite] (client) page reload test-results-deployment/.playwright-artifacts-11/traces/resources/e0649cda3795ff1b2055c821feef313e93790118.html
+1:50:54 PM [vite] (client) [console.warn] WebR is using `PostMessage` communication channel, nested R REPLs are not available.
+1:51:35 PM [vite] (client) [console.warn] WebR is using `PostMessage` communication channel, nested R REPLs are not available.
+1:51:41 PM [vite] (client) [console.warn] WebR is using `PostMessage` communication channel, nested R REPLs are not available.
+1:51:49 PM [vite] (client) page reload test-results-deployment/.playwright-artifacts-7/traces/resources/0549029c83dfa72de13ce7cd8302eec198956ee2.html
+1:51:49 PM [vite] (client) page reload test-results-deployment/.playwright-artifacts-7/traces/resources/0cdc469386f4b026cb777695847eab947ee83b5a.html
+1:51:49 PM [vite] (client) page reload test-results-deployment/.playwright-artifacts-7/traces/resources/54b75d41eee38c892be935d7f49c6e2ee2426d12.html
+1:51:49 PM [vite] (client) page reload test-results-deployment/.playwright-artifacts-7/traces/resources/e0649cda3795ff1b2055c821feef313e93790118.html
+1:51:54 PM [vite] (client) page reload test-results-deployment/.playwright-artifacts-12/traces/resources/2f276df00e1d24a3e47d3da6757bc465efd380d4.html
+1:51:55 PM [vite] (client) page reload test-results-deployment/.playwright-artifacts-12/traces/resources/54b75d41eee38c892be935d7f49c6e2ee2426d12.html
+1:51:59 PM [vite] (client) page reload test-results-deployment/.playwright-artifacts-12/traces/resources/0549029c83dfa72de13ce7cd8302eec198956ee2.html
+1:52:02 PM [vite] (client) page reload test-results-deployment/.playwright-artifacts-11/traces/resources/2f276df00e1d24a3e47d3da6757bc465efd380d4.html
+1:52:02 PM [vite] (client) page reload test-results-deployment/.playwright-artifacts-11/traces/resources/e0649cda3795ff1b2055c821feef313e93790118.html
+1:52:03 PM [vite] (client) [console.warn] WebR is using `PostMessage` communication channel, nested R REPLs are not available.
+1:52:06 PM [vite] (client) page reload test-results-deployment/.playwright-artifacts-13/traces/resources/2f276df00e1d24a3e47d3da6757bc465efd380d4.html
+1:52:48 PM [vite] (client) page reload test-results-deployment/.playwright-artifacts-12/traces/resources/e0649cda3795ff1b2055c821feef313e93790118.html
+1:53:04 PM [vite] (client) [console.warn] WebR is using `PostMessage` communication channel, nested R REPLs are not available.
+1:53:08 PM [vite] (client) [console.warn] WebR is using `PostMessage` communication channel, nested R REPLs are not available.
+1:53:51 PM [vite] (client) [console.warn] WebR is using `PostMessage` communication channel, nested R REPLs are not available.
+1:53:53 PM [vite] (client) [console.warn] WebR is using `PostMessage` communication channel, nested R REPLs are not available.
+1:54:13 PM [vite] (client) [console.warn] WebR is using `PostMessage` communication channel, nested R REPLs are not available.
+1:54:14 PM [vite] (client) page reload test-results-deployment/.playwright-artifacts-10/traces/resources/0549029c83dfa72de13ce7cd8302eec198956ee2.html
+1:54:14 PM [vite] (client) page reload test-results-deployment/.playwright-artifacts-10/traces/resources/2f276df00e1d24a3e47d3da6757bc465efd380d4.html
+1:54:14 PM [vite] (client) page reload test-results-deployment/.playwright-artifacts-10/traces/resources/54b75d41eee38c892be935d7f49c6e2ee2426d12.html
+1:54:14 PM [vite] (client) page reload test-results-deployment/.playwright-artifacts-10/traces/resources/e0649cda3795ff1b2055c821feef313e93790118.html
+1:54:20 PM [vite] (client) page reload test-results-deployment/.playwright-artifacts-14/traces/resources/2f276df00e1d24a3e47d3da6757bc465efd380d4.html
+1:54:33 PM [vite] (client) [console.error] ZodError: [
+  {
+    "origin": "string",
+    "code": "invalid_format",
+    "format": "uuid",
+    "pattern": "/^([0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[1-8][0-9a-fA-F]{3}-[89abAB][0-9a-fA-F]{3}-[0-9a-fA-F]{12}|00000000-0000-0000-0000-000000000000|ffffffff-ffff-ffff-ffff-ffffffffffff)$/",
+    "path": [],
+    "message": "Invalid UUID"
+  }
+]
+
+The above error occurred in the <MatchInnerImpl> component.
+
+React will try to recreate this component tree from scratch using the error boundary you provided, CatchBoundary.
+
+1:54:33 PM [vite] (client) [console.warn] Warning: Error in route match: __root__/
+1:55:06 PM [vite] (client) [console.warn] WebR is using `PostMessage` communication channel, nested R REPLs are not available.
+1:55:16 PM [vite] (client) [console.warn] WebR is using `PostMessage` communication channel, nested R REPLs are not available.
+1:55:17 PM [vite] (client) [console.warn] WebR is using `PostMessage` communication channel, nested R REPLs are not available.
+1:55:20 PM [vite] (client) [console.warn] Dexie.delete('probe-probe-7a41a554-5f40-446b-8ca0-03ec68052ac6') was blocked
+1:55:21 PM [vite] (client) [console.error] ZodError
+    at checkedId (http://127.0.0.1:4173/src/domain/workspace.ts:4:20)
+    at WorkspaceService.open (http://127.0.0.1:4173/src/application/workspaceService.ts:386:14)
+    at loader (http://127.0.0.1:4173/src/app/router.tsx:91:46)
+    at http://127.0.0.1:4173/node_modules/.vite/deps/@tanstack_react-router.js?v=63bea521:3174:34
+    at async loadResource (http://127.0.0.1:4173/node_modules/.vite/deps/@tanstack_react-router.js?v=63bea521:3188:53)
+
+The above error occurred in the <MatchInnerImpl> component.
+
+React will try to recreate this component tree from scratch using the error boundary you provided, CatchBoundary.
+
+1:55:21 PM [vite] (client) [console.warn] Warning: Error in route match: __root__/
+1:55:22 PM [vite] (client) page reload playwright-report/index.html
+1:55:22 PM [vite] (client) page reload playwright-report/index.html
+1:55:31 PM [vite] (client) [console.warn] Dexie.delete('dw-test-predecessor-654e6129-86b7-4191-b62a-124276e0bcd9') was blocked
+1:55:32 PM [vite] (client) page reload test-results-deployment/.playwright-artifacts-12/traces/resources/0549029c83dfa72de13ce7cd8302eec198956ee2.html
+1:55:32 PM [vite] (client) page reload test-results-deployment/.playwright-artifacts-12/traces/resources/2f276df00e1d24a3e47d3da6757bc465efd380d4.html
+1:55:32 PM [vite] (client) page reload test-results-deployment/.playwright-artifacts-12/traces/resources/54b75d41eee38c892be935d7f49c6e2ee2426d12.html
+1:55:32 PM [vite] (client) page reload test-results-deployment/.playwright-artifacts-12/traces/resources/e0649cda3795ff1b2055c821feef313e93790118.html
+1:55:36 PM [vite] (client) page reload test-results-deployment/.playwright-artifacts-15/traces/resources/0cdc469386f4b026cb777695847eab947ee83b5a.html
+1:55:37 PM [vite] (client) page reload test-results-deployment/.playwright-artifacts-15/traces/resources/54b75d41eee38c892be935d7f49c6e2ee2426d12.html
+1:55:39 PM [vite] (client) [console.warn] WebR is using `PostMessage` communication channel, nested R REPLs are not available.
+1:55:42 PM [vite] (client) page reload test-results-deployment/.playwright-artifacts-15/traces/resources/0549029c83dfa72de13ce7cd8302eec198956ee2.html
+1:55:43 PM [vite] (client) page reload test-results-deployment/.playwright-artifacts-15/traces/resources/0549029c83dfa72de13ce7cd8302eec198956ee2.html
+1:55:43 PM [vite] (client) [console.warn] WebR is using `PostMessage` communication channel, nested R REPLs are not available.
+1:55:51 PM [vite] (client) [console.warn] WebR is using `PostMessage` communication channel, nested R REPLs are not available.
+1:55:55 PM [vite] (client) [console.warn] WebR is using `PostMessage` communication channel, nested R REPLs are not available.
+1:56:04 PM [vite] (client) page reload test-results-deployment/.playwright-artifacts-13/traces/resources/e0649cda3795ff1b2055c821feef313e93790118.html
+1:56:04 PM [vite] (client) page reload test-results-deployment/.playwright-artifacts-13/traces/resources/e0649cda3795ff1b2055c821feef313e93790118.html
+1:56:17 PM [vite] (client) page reload test-results-deployment/.playwright-artifacts-13/traces/resources/2f276df00e1d24a3e47d3da6757bc465efd380d4.html
+1:56:17 PM [vite] (client) page reload test-results-deployment/.playwright-artifacts-13/traces/resources/e0649cda3795ff1b2055c821feef313e93790118.html
+1:56:21 PM [vite] (client) page reload test-results-deployment/.playwright-artifacts-16/traces/resources/0cdc469386f4b026cb777695847eab947ee83b5a.html
+1:56:27 PM [vite] (client) page reload test-results-deployment/.playwright-artifacts-15/traces/resources/e0649cda3795ff1b2055c821feef313e93790118.html
+1:56:43 PM [vite] (client) [console.warn] WebR is using `PostMessage` communication channel, nested R REPLs are not available.
+1:56:45 PM [vite] (client) [console.warn] WebR is using `PostMessage` communication channel, nested R REPLs are not available.
+1:57:10 PM [vite] (client) page reload test-results-deployment/.playwright-artifacts-14/traces/resources/e0649cda3795ff1b2055c821feef313e93790118.html
+1:57:13 PM [vite] (client) page reload test-results-deployment/.playwright-artifacts-16/traces/resources/e0649cda3795ff1b2055c821feef313e93790118.html
+1:57:13 PM [vite] (client) page reload test-results-deployment/.playwright-artifacts-16/traces/resources/e0649cda3795ff1b2055c821feef313e93790118.html
+1:57:18 PM [vite] (client) [console.warn] WebR is using `PostMessage` communication channel, nested R REPLs are not available.
+1:57:20 PM [vite] (client) page reload test-results-deployment/.playwright-artifacts-14/traces/resources/2f276df00e1d24a3e47d3da6757bc465efd380d4.html
+1:57:20 PM [vite] (client) page reload test-results-deployment/.playwright-artifacts-14/traces/resources/e0649cda3795ff1b2055c821feef313e93790118.html
+1:57:22 PM [vite] (client) [console.warn] WebR is using `PostMessage` communication channel, nested R REPLs are not available.
+1:57:25 PM [vite] (client) page reload test-results-deployment/.playwright-artifacts-17/traces/resources/2f276df00e1d24a3e47d3da6757bc465efd380d4.html
+1:57:25 PM [vite] (client) page reload test-results-deployment/.playwright-artifacts-17/traces/resources/e0649cda3795ff1b2055c821feef313e93790118.html
+1:57:26 PM [vite] (client) page reload test-results-deployment/.playwright-artifacts-17/traces/resources/2f276df00e1d24a3e47d3da6757bc465efd380d4.html
+1:57:26 PM [vite] (client) page reload test-results-deployment/.playwright-artifacts-17/traces/resources/e0649cda3795ff1b2055c821feef313e93790118.html
+1:57:28 PM [vite] (client) page reload test-results-deployment/.playwright-artifacts-18/traces/resources/2f276df00e1d24a3e47d3da6757bc465efd380d4.html
+1:57:29 PM [vite] (client) page reload test-results-deployment/.playwright-artifacts-18/traces/resources/54b75d41eee38c892be935d7f49c6e2ee2426d12.html
+1:57:35 PM [vite] (client) page reload test-results-deployment/.playwright-artifacts-18/traces/resources/0549029c83dfa72de13ce7cd8302eec198956ee2.html
+1:58:08 PM [vite] (client) [console.warn] WebR is using `PostMessage` communication channel, nested R REPLs are not available.
+1:58:08 PM [vite] (client) page reload test-results-deployment/.playwright-artifacts-16/traces/resources/0cdc469386f4b026cb777695847eab947ee83b5a.html
+1:58:08 PM [vite] (client) page reload test-results-deployment/.playwright-artifacts-16/traces/resources/e0649cda3795ff1b2055c821feef313e93790118.html
+1:58:10 PM [vite] (client) page reload test-results-deployment/.playwright-artifacts-19/traces/resources/2f276df00e1d24a3e47d3da6757bc465efd380d4.html
+1:58:14 PM [vite] (client) page reload test-results-deployment/.playwright-artifacts-18/traces/resources/e0649cda3795ff1b2055c821feef313e93790118.html
+1:58:19 PM [vite] (client) [console.error] TypeError: Importing a module script failed.
+
+The above error occurred in one of your React components.
+
+React will try to recreate this component tree from scratch using the error boundary you provided, CatchBoundary.
+
+1:58:19 PM [vite] (client) [console.warn] Warning: Error in route match: __root__/
+1:58:23 PM [vite] (client) [console.warn] Dexie.delete('test-a9e5c102-6a48-4672-a64b-0aec5837acfa') was blocked
+1:58:25 PM [vite] (client) [console.warn] Dexie.delete('probe-probe-ae523cb3-543e-4c48-9eec-fc685aa25f1a') was blocked
+1:58:48 PM [vite] (client) [console.warn] WebR is using `PostMessage` communication channel, nested R REPLs are not available.
+1:58:52 PM [vite] (client) page reload test-results-deployment/.playwright-artifacts-15/traces/resources/0549029c83dfa72de13ce7cd8302eec198956ee2.html
+1:58:52 PM [vite] (client) page reload test-results-deployment/.playwright-artifacts-15/traces/resources/0cdc469386f4b026cb777695847eab947ee83b5a.html
+1:58:52 PM [vite] (client) page reload test-results-deployment/.playwright-artifacts-15/traces/resources/54b75d41eee38c892be935d7f49c6e2ee2426d12.html
+1:58:52 PM [vite] (client) page reload test-results-deployment/.playwright-artifacts-15/traces/resources/e0649cda3795ff1b2055c821feef313e93790118.html
+1:58:54 PM [vite] (client) page reload test-results-deployment/.playwright-artifacts-20/traces/resources/2f276df00e1d24a3e47d3da6757bc465efd380d4.html
+1:58:55 PM [vite] (client) page reload test-results-deployment/.playwright-artifacts-20/traces/resources/2f276df00e1d24a3e47d3da6757bc465efd380d4.html
+1:59:07 PM [vite] (client) page reload test-results-deployment/.playwright-artifacts-19/traces/resources/e0649cda3795ff1b2055c821feef313e93790118.html
+1:59:07 PM [vite] (client) page reload test-results-deployment/.playwright-artifacts-19/traces/resources/2f276df00e1d24a3e47d3da6757bc465efd380d4.html
+1:59:07 PM [vite] (client) page reload test-results-deployment/.playwright-artifacts-19/traces/resources/e0649cda3795ff1b2055c821feef313e93790118.html
+1:59:10 PM [vite] (client) page reload test-results-deployment/.playwright-artifacts-21/traces/resources/2f276df00e1d24a3e47d3da6757bc465efd380d4.html
+1:59:11 PM [vite] (client) page reload test-results-deployment/.playwright-artifacts-21/traces/resources/54b75d41eee38c892be935d7f49c6e2ee2426d12.html
+1:59:15 PM [vite] (client) page reload test-results-deployment/.playwright-artifacts-21/traces/resources/0549029c83dfa72de13ce7cd8302eec198956ee2.html
+1:59:23 PM [vite] (client) [console.warn] WebR is using `PostMessage` communication channel, nested R REPLs are not available.
+1:59:26 PM [vite] (client) [console.warn] WebR is using `PostMessage` communication channel, nested R REPLs are not available.
+1:59:41 PM [vite] (client) page reload test-results-deployment/.playwright-artifacts-20/traces/resources/e0649cda3795ff1b2055c821feef313e93790118.html
+1:59:43 PM [vite] (client) page reload test-results-deployment/.playwright-artifacts-20/traces/resources/2f276df00e1d24a3e47d3da6757bc465efd380d4.html
+1:59:43 PM [vite] (client) page reload test-results-deployment/.playwright-artifacts-20/traces/resources/e0649cda3795ff1b2055c821feef313e93790118.html
+1:59:45 PM [vite] (client) page reload test-results-deployment/.playwright-artifacts-22/traces/resources/2f276df00e1d24a3e47d3da6757bc465efd380d4.html
+1:59:50 PM [vite] (client) page reload test-results-deployment/.playwright-artifacts-21/traces/resources/e0649cda3795ff1b2055c821feef313e93790118.html
+2:00:16 PM [vite] (client) page reload test-results-deployment/.playwright-artifacts-18/traces/resources/0549029c83dfa72de13ce7cd8302eec198956ee2.html
+2:00:16 PM [vite] (client) page reload test-results-deployment/.playwright-artifacts-18/traces/resources/2f276df00e1d24a3e47d3da6757bc465efd380d4.html
+2:00:16 PM [vite] (client) page reload test-results-deployment/.playwright-artifacts-18/traces/resources/54b75d41eee38c892be935d7f49c6e2ee2426d12.html
+2:00:16 PM [vite] (client) page reload test-results-deployment/.playwright-artifacts-18/traces/resources/e0649cda3795ff1b2055c821feef313e93790118.html
+2:00:18 PM [vite] (client) page reload test-results-deployment/.playwright-artifacts-23/traces/resources/2f276df00e1d24a3e47d3da6757bc465efd380d4.html
+2:00:20 PM [vite] (client) page reload test-results-deployment/.playwright-artifacts-22/traces/resources/e0649cda3795ff1b2055c821feef313e93790118.html
+2:00:20 PM [vite] (client) page reload test-results-deployment/.playwright-artifacts-22/traces/resources/2f276df00e1d24a3e47d3da6757bc465efd380d4.html
+2:00:20 PM [vite] (client) page reload test-results-deployment/.playwright-artifacts-22/traces/resources/e0649cda3795ff1b2055c821feef313e93790118.html
+2:00:45 PM [vite] (client) page reload test-results-deployment/.playwright-artifacts-23/traces/resources/e0649cda3795ff1b2055c821feef313e93790118.html
+2:00:46 PM [vite] (client) page reload test-results-deployment/.playwright-artifacts-23/traces/resources/2f276df00e1d24a3e47d3da6757bc465efd380d4.html
+2:00:46 PM [vite] (client) page reload test-results-deployment/.playwright-artifacts-23/traces/resources/e0649cda3795ff1b2055c821feef313e93790118.html
+2:01:15 PM [vite] (client) page reload test-results-deployment/.playwright-artifacts-21/traces/resources/0549029c83dfa72de13ce7cd8302eec198956ee2.html
+2:01:15 PM [vite] (client) page reload test-results-deployment/.playwright-artifacts-21/traces/resources/2f276df00e1d24a3e47d3da6757bc465efd380d4.html
+2:01:15 PM [vite] (client) page reload test-results-deployment/.playwright-artifacts-21/traces/resources/54b75d41eee38c892be935d7f49c6e2ee2426d12.html
+2:01:15 PM [vite] (client) page reload test-results-deployment/.playwright-artifacts-21/traces/resources/e0649cda3795ff1b2055c821feef313e93790118.html
+2:02:08 PM [vite] (client) [console.warn] WebR is using `PostMessage` communication channel, nested R REPLs are not available.
+2:02:17 PM [vite] (client) [console.warn] WebR is using `PostMessage` communication channel, nested R REPLs are not available.
+2:02:28 PM [vite] (client) [console.warn] WebR is using `PostMessage` communication channel, nested R REPLs are not available.
+2:02:52 PM [vite] (client) page reload deploy/generated/test-0/dist/index.html
+2:02:57 PM [vite] (client) page reload deploy/generated/test-1/dist/index.html
+2:02:59 PM [vite] (client) page reload deploy/generated/test-2/dist/index.html

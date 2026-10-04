@@ -1,0 +1,6 @@
+{
+  "status": "passed",
+  "pilot": "docs/verification/p8-safari-native-9cc4eeae-dba7-4c6c-a870-909e0bad5595.json",
+  "restart": "not checked",
+  "note": "Validates browser receipts. Actual app restart and native UI observations require a separate operator record."
+}

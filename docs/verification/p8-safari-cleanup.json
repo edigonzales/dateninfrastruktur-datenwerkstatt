@@ -1,0 +1,24 @@
+{
+  "at": "2026-10-04T15:41:34.942395+00:00",
+  "ownServers": {
+    "4174": {
+      "listenerPresent": false,
+      "lsofExitCode": 1
+    },
+    "4184": {
+      "listenerPresent": false,
+      "lsofExitCode": 1
+    },
+    "4191": {
+      "listenerPresent": false,
+      "lsofExitCode": 1
+    }
+  },
+  "userDevServer": {
+    "port": 4173,
+    "pid": 20217,
+    "preserved": true
+  },
+  "sourcePortalUnchanged": true,
+  "previouslyVerifiedFilesUnchanged": 193
+}

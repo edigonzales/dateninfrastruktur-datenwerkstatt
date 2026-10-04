@@ -1,0 +1,99 @@
+[WebServer] (node:12173) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] (node:12190) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 9 tests using 1 worker
+
+(node:12191) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  1 [chromium] › tests/e2e/portal.spec.ts:3:1 › P4 AT-038 AT-056: explicit deep-link preview, replacement history and no autorun (16.9s)
+(node:12267) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  2 [chromium] › tests/integration/portal.spec.ts:4:1 › P4 AT-033–037: real v4, concrete issue, public/local join, changed ETag, kept snapshot (2.6s)
+  ✓  3 [chromium] › tests/integration/portal.spec.ts:112:1 › P4 AT-035–036 AT-039 AT-056: errors, URL security, optional index and no foreign configuration (1.4s)
+(node:12278) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  4 [firefox] › tests/e2e/portal.spec.ts:3:1 › P4 AT-038 AT-056: explicit deep-link preview, replacement history and no autorun (3.5s)
+(node:12313) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  5 [firefox] › tests/integration/portal.spec.ts:4:1 › P4 AT-033–037: real v4, concrete issue, public/local join, changed ETag, kept snapshot (5.3s)
+  ✓  6 [firefox] › tests/integration/portal.spec.ts:112:1 › P4 AT-035–036 AT-039 AT-056: errors, URL security, optional index and no foreign configuration (3.7s)
+(node:12340) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  7 [webkit] › tests/e2e/portal.spec.ts:3:1 › P4 AT-038 AT-056: explicit deep-link preview, replacement history and no autorun (14.1s)
+  ✓  8 [webkit] › tests/integration/portal.spec.ts:4:1 › P4 AT-033–037: real v4, concrete issue, public/local join, changed ETag, kept snapshot (4.6s)
+  ✓  9 [webkit] › tests/integration/portal.spec.ts:112:1 › P4 AT-035–036 AT-039 AT-056: errors, URL security, optional index and no foreign configuration (2.7s)
+
+
+  1) [chromium] › tests/e2e/portal.spec.ts:3:1 › P4 AT-038 AT-056: explicit deep-link preview, replacement history and no autorun 
+
+    Error: expect(page).toHaveURL(expected) failed
+
+    Expected pattern: /\/workspaces\/[^/]+\/data$/
+    Received string:  "http://127.0.0.1:4173/open?provider=fixture&series=serie&issue=current&table=main"
+    Timeout: 10000ms
+
+    Call log:
+      - Expect "toHaveURL" with timeout 10000ms
+        24 × locator resolved to <html lang="de-CH">…</html>
+           - unexpected value "http://127.0.0.1:4173/open?provider=fixture&series=serie&issue=current&table=main"
+
+
+      18 |   expect(await page.evaluate(() => Reflect.get(globalThis, 'marker'))).toBeUndefined();
+      19 |   await page.getByRole('button', {name: 'Portalimport bestätigen'}).click();
+    > 20 |   await expect(page).toHaveURL(/\/workspaces\/[^/]+\/data$/);
+         |                      ^
+      21 |   await expect(page.getByText('data.portal_daten', {exact: true})).toHaveCount(1);
+      22 |   await page.reload();
+      23 |   await expect(page.getByText('data.portal_daten', {exact: true})).toHaveCount(1);
+        at /Users/stefan/sources/dateninfrastruktur-datenwerkstatt/tests/e2e/portal.spec.ts:20:22
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/e2e-portal-P4-AT-038-AT-05-e046e-ment-history-and-no-autorun-chromium/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/e2e-portal-P4-AT-038-AT-05-e046e-ment-history-and-no-autorun-chromium/error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/e2e-portal-P4-AT-038-AT-05-e046e-ment-history-and-no-autorun-chromium/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/e2e-portal-P4-AT-038-AT-05-e046e-ment-history-and-no-autorun-chromium/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  2) [firefox] › tests/e2e/portal.spec.ts:3:1 › P4 AT-038 AT-056: explicit deep-link preview, replacement history and no autorun 
+
+    Error: page.evaluate: Execution context was destroyed, most likely because of a navigation.
+
+       at portal/setup.ts:19
+
+      17 |   await request.post('http://127.0.0.1:4174/__reset');
+      18 |   await page.goto('/tests/spike/index.html');
+    > 19 |   await page.evaluate(async () => {
+         |              ^
+      20 |     const path = '/src/infrastructure/sqlrooms/fileImportEngine.ts';
+      21 |     const {DuckDbFileImportEngine} = (await import(
+      22 |       path
+        at setupPortal (/Users/stefan/sources/dateninfrastruktur-datenwerkstatt/tests/portal/setup.ts:19:14)
+        at /Users/stefan/sources/dateninfrastruktur-datenwerkstatt/tests/e2e/portal.spec.ts:8:3
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/e2e-portal-P4-AT-038-AT-05-e046e-ment-history-and-no-autorun-firefox/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/e2e-portal-P4-AT-038-AT-05-e046e-ment-history-and-no-autorun-firefox/error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/e2e-portal-P4-AT-038-AT-05-e046e-ment-history-and-no-autorun-firefox/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/e2e-portal-P4-AT-038-AT-05-e046e-ment-history-and-no-autorun-firefox/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  2 failed
+    [chromium] › tests/e2e/portal.spec.ts:3:1 › P4 AT-038 AT-056: explicit deep-link preview, replacement history and no autorun 
+    [firefox] › tests/e2e/portal.spec.ts:3:1 › P4 AT-038 AT-056: explicit deep-link preview, replacement history and no autorun 
+  7 passed (57.2s)

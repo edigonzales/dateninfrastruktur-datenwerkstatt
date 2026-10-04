@@ -1,0 +1,90 @@
+{
+  "createdAt": "2026-10-04T12:07:04.269811+00:00",
+  "candidateTree": "f044f1ef6142a3d1121fa93829e0c784d5232c46",
+  "gitBase": "0535d2fd54f14e347cb3b488c3d47767923d1b2f",
+  "status": "P0-P8 technical acceptance passed for documented test configuration; production release prerequisites remain external",
+  "verify": {
+    "exitCode": 0,
+    "unitPassed": 40,
+    "integrationPassed": 43,
+    "e2ePassed": 23,
+    "log": "p8-clean-verify.log"
+  },
+  "commands": [
+    {
+      "report": "p8-browser-matrix.json",
+      "exitCode": 1,
+      "startTime": "2026-10-04T11:41:55.796Z",
+      "duration": 1082976.366,
+      "expected": 123,
+      "skipped": 0,
+      "unexpected": 1,
+      "flaky": 0
+    },
+    {
+      "report": "p8-browser-portal.json",
+      "exitCode": 0,
+      "startTime": "2026-10-04T11:54:10.367Z",
+      "duration": 159805.63999999998,
+      "expected": 8,
+      "skipped": 0,
+      "unexpected": 0,
+      "flaky": 0
+    },
+    {
+      "report": "p8-browser-r-repeat.json",
+      "exitCode": 0,
+      "startTime": "2026-10-04T12:02:05.476Z",
+      "duration": 32596.989000000005,
+      "expected": 1,
+      "skipped": 0,
+      "unexpected": 0,
+      "flaky": 0
+    },
+    {
+      "report": "p8-deploy-matrix.json",
+      "exitCode": 1,
+      "startTime": "2026-10-04T11:43:38.353Z",
+      "duration": 1057535.359,
+      "expected": 41,
+      "skipped": 0,
+      "unexpected": 4,
+      "flaky": 0
+    },
+    {
+      "report": "p8-deploy-firefox-repeat.json",
+      "exitCode": 0,
+      "startTime": "2026-10-04T12:02:51.084Z",
+      "duration": 155428.378,
+      "expected": 15,
+      "skipped": 0,
+      "unexpected": 0,
+      "flaky": 0
+    }
+  ],
+  "functionalDistinctPassed": 198,
+  "deploymentDistinctPassed": 45,
+  "skips": 0,
+  "runnerRetries": 0,
+  "sourcePortal": "unchanged at 6b45fc4e22116fba8fc00bd48175e347aa740562",
+  "safari": "p8-safari-status.json",
+  "remoteCIExecuted": false,
+  "published": false,
+  "currentCodeMatchesVerifiedCandidate": true,
+  "cleanup": {
+    "testServiceListeners": "",
+    "testContainers": "",
+    "sourcePortalStatus": ""
+  },
+  "updatedAt": "2026-10-04T15:40:15.320853+00:00",
+  "safariAdditionalChecks": {
+    "receiptValidationExitCode": 0,
+    "typecheckExitCode": 0,
+    "lintExitCode": 0,
+    "specificationCheckExitCode": 0,
+    "productionCandidateFilesUnchanged": 193,
+    "newTestHarness": "tests/safari/",
+    "fullSafariRestartPassed": true
+  },
+  "safariCleanup": "p8-safari-cleanup.json"
+}

@@ -1,0 +1,10 @@
+[
+  {
+    "command": "npm run verify",
+    "exitCode": 0
+  },
+  {
+    "command": "npx playwright test tests/integration/portal.spec.ts tests/e2e/portal.spec.ts --reporter=list,json",
+    "exitCode": 1
+  }
+]

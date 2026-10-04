@@ -1,0 +1,42 @@
+[WebServer] (node:24350) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] (node:24351) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 3 tests using 1 worker
+
+(node:24362) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] 10:01:45 AM [vite] (client) [console.warn] WebR is using `PostMessage` communication channel, nested R REPLs are not available.
+  ✓  1 [chromium] › tests/e2e/archive.spec.ts:5:1 › P6 AT-051 AT-053 AT-063: Golden archive in fresh profile, graph remap, real SQL/PNG, duplicate and independent deletion (17.0s)
+  ✓  2 [chromium] › tests/e2e/archive.spec.ts:135:1 › P6 AT-059: recipe inspection/confirmation without engine or empty fake tables (1.2s)
+[WebServer] 10:02:02 AM [vite] (client) [console.warn] WebR is using `PostMessage` communication channel, nested R REPLs are not available.
+  ✘  3 [chromium] › tests/integration/r-snapshots.spec.ts:3:1 › P5/P6 AT-025 AT-048: native R parameters, selection snapshot, seed and capture of a later object mutation (10.8s)
+
+
+  1) [chromium] › tests/integration/r-snapshots.spec.ts:3:1 › P5/P6 AT-025 AT-048: native R parameters, selection snapshot, seed and capture of a later object mutation 
+
+    Error: page.evaluate: Error: {"code":"R_ERROR","message":"is.null(params$missing) is not TRUE"}
+        at eval (eval at evaluate (:311:30), <anonymous>:43:70)
+        at async <anonymous>:337:30
+        at eval (eval at evaluate (:311:30), <anonymous>:43:70)
+        at async <anonymous>:337:30
+        at /Users/stefan/sources/dateninfrastruktur-datenwerkstatt/tests/integration/r-snapshots.spec.ts:7:28
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/integration-r-snapshots-P5-4d714--of-a-later-object-mutation-chromium/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/integration-r-snapshots-P5-4d714--of-a-later-object-mutation-chromium/error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/integration-r-snapshots-P5-4d714--of-a-later-object-mutation-chromium/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/integration-r-snapshots-P5-4d714--of-a-later-object-mutation-chromium/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  1 failed
+    [chromium] › tests/integration/r-snapshots.spec.ts:3:1 › P5/P6 AT-025 AT-048: native R parameters, selection snapshot, seed and capture of a later object mutation 
+  2 passed (30.4s)

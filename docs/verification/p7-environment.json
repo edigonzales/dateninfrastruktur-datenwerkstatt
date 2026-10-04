@@ -1,0 +1,8 @@
+{
+  "cpu": "Apple M5",
+  "physicalMemoryBytes": 25769803776,
+  "os": "ProductName:\t\tmacOS\nProductVersion:\t\t27.0.1\nBuildVersion:\t\t26A434\n",
+  "node": "v22.23.1",
+  "npm": "11.18.0",
+  "resourceNotes": "Browser wall-clock timings; some cycles overlapped independent static container tests/builds. No peak-RAM or single-user performance guarantee."
+}

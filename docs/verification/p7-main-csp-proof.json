@@ -1,0 +1,9 @@
+[
+  {
+    "blocked": "eval",
+    "directive": "script-src",
+    "file": "http://127.0.0.1:4183/lab/assets/index-DZcr9B4G.js",
+    "line": 11,
+    "column": 49243
+  }
+]

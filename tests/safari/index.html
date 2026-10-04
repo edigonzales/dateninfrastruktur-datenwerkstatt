@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Datenwerkstatt · echter Safari-Pilot</title>
+    <style>
+      body {
+        font: 16px system-ui;
+        margin: 2rem;
+        max-width: 75rem;
+      }
+      button,
+      a {
+        margin: 0.4rem;
+        padding: 0.5rem;
+      }
+      pre {
+        white-space: pre-wrap;
+      }
+      li {
+        margin: 0.5rem;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Echter Safari-Pilot · synthetische Testdaten</h1>
+    <p>
+      Eigene Test-Origin auf Port 4184. Persistente Produktionsadapter und unveränderte
+      Golden-Fixtures. Kein Zugriff auf Projekte auf Port 4173.
+    </p>
+    <button id="start">Golden Path starten</button
+    ><button id="resume">Persistenz, Archiv und Cancel prüfen</button>
+    <button id="restart">Nach vollständigem Safari-Neustart prüfen</button>
+    <div id="links"></div>
+    <pre id="status" role="status">Bereit für tatsächliche Prüfung</pre>
+    <script type="module" src="./pilot.ts"></script>
+  </body>
+</html>

@@ -1,0 +1,28 @@
+{
+  "formatVersion": 1,
+  "appBasePath": "/",
+  "buildId": "local-development-not-accepted",
+  "portalProviders": [],
+  "allowedDataOrigins": [],
+  "runtimes": {
+    "webRBaseUrl": "vendor/webr/0.6.0/",
+    "webRPackageRepoUrl": "vendor/webr-packages/",
+    "webRChannel": "post-message",
+    "packageLockUrl": "vendor/webr-packages/lock.json"
+  },
+  "limits": {
+    "importFileBytes": 134217728,
+    "resultRows": 100000,
+    "resultBytes": 67108864,
+    "sqlTimeoutMs": 30000,
+    "rTimeoutMs": 60000,
+    "cancelGraceMs": 2000,
+    "rWarningRows": 10000,
+    "rHardRows": 100000,
+    "transferBytes": 67108864,
+    "archiveCompressedBytes": 134217728,
+    "archiveExpandedBytes": 536870912,
+    "archiveEntryBytes": 134217728,
+    "archiveEntries": 4096
+  }
+}

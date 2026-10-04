@@ -1,0 +1,1678 @@
+{
+  "command": "npx playwright test --reporter=list,json",
+  "exitCode": 0,
+  "stats": {
+    "startTime": "2026-10-03T21:04:05.359Z",
+    "duration": 144536.90999999997,
+    "expected": 69,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  },
+  "tests": [
+    {
+      "file": "e2e/imports.spec.ts",
+      "title": "P2 / AT-008 AT-010 AT-018: confirmed import, reload, data preview, independent alias and complete Parquet download",
+      "browser": "chromium",
+      "status": "passed",
+      "durationMs": 4012
+    },
+    {
+      "file": "e2e/imports.spec.ts",
+      "title": "P2 / AT-016: denied OPFS requires explicit temporary mode and never claims local persistence",
+      "browser": "chromium",
+      "status": "passed",
+      "durationMs": 2214
+    },
+    {
+      "file": "e2e/imports.spec.ts",
+      "title": "P2 / AT-013: real import surfaces OPFS quota failure without publishing partial metadata",
+      "browser": "chromium",
+      "status": "passed",
+      "durationMs": 3809
+    },
+    {
+      "file": "e2e/imports.spec.ts",
+      "title": "P2 / AT-002 AT-024 partial: one import worker survives routes and closes before another workspace opens",
+      "browser": "chromium",
+      "status": "passed",
+      "durationMs": 2627
+    },
+    {
+      "file": "e2e/imports.spec.ts",
+      "title": "P2 / AT-008 AT-010 AT-018: confirmed import, reload, data preview, independent alias and complete Parquet download",
+      "browser": "firefox",
+      "status": "passed",
+      "durationMs": 4201
+    },
+    {
+      "file": "e2e/imports.spec.ts",
+      "title": "P2 / AT-016: denied OPFS requires explicit temporary mode and never claims local persistence",
+      "browser": "firefox",
+      "status": "passed",
+      "durationMs": 2826
+    },
+    {
+      "file": "e2e/imports.spec.ts",
+      "title": "P2 / AT-013: real import surfaces OPFS quota failure without publishing partial metadata",
+      "browser": "firefox",
+      "status": "passed",
+      "durationMs": 4017
+    },
+    {
+      "file": "e2e/imports.spec.ts",
+      "title": "P2 / AT-002 AT-024 partial: one import worker survives routes and closes before another workspace opens",
+      "browser": "firefox",
+      "status": "passed",
+      "durationMs": 3076
+    },
+    {
+      "file": "e2e/imports.spec.ts",
+      "title": "P2 / AT-008 AT-010 AT-018: confirmed import, reload, data preview, independent alias and complete Parquet download",
+      "browser": "webkit",
+      "status": "passed",
+      "durationMs": 3841
+    },
+    {
+      "file": "e2e/imports.spec.ts",
+      "title": "P2 / AT-016: denied OPFS requires explicit temporary mode and never claims local persistence",
+      "browser": "webkit",
+      "status": "passed",
+      "durationMs": 2330
+    },
+    {
+      "file": "e2e/imports.spec.ts",
+      "title": "P2 / AT-013: real import surfaces OPFS quota failure without publishing partial metadata",
+      "browser": "webkit",
+      "status": "passed",
+      "durationMs": 3651
+    },
+    {
+      "file": "e2e/imports.spec.ts",
+      "title": "P2 / AT-002 AT-024 partial: one import worker survives routes and closes before another workspace opens",
+      "browser": "webkit",
+      "status": "passed",
+      "durationMs": 2739
+    },
+    {
+      "file": "e2e/workspaces.spec.ts",
+      "title": "AT-003: workspace metadata persists across reload without engine startup",
+      "browser": "chromium",
+      "status": "passed",
+      "durationMs": 1816
+    },
+    {
+      "file": "e2e/workspaces.spec.ts",
+      "title": "AT-005 AT-058: saved SQL and R, separate models, duplicate, archive, no code auto-run",
+      "browser": "chromium",
+      "status": "passed",
+      "durationMs": 2913
+    },
+    {
+      "file": "e2e/workspaces.spec.ts",
+      "title": "AT-012: another tab opens read-only and explicitly reacquires after writer closes",
+      "browser": "chromium",
+      "status": "passed",
+      "durationMs": 1905
+    },
+    {
+      "file": "e2e/workspaces.spec.ts",
+      "title": "AT-054 AT-057 partial: compact chrome and implemented settings persist",
+      "browser": "chromium",
+      "status": "passed",
+      "durationMs": 2031
+    },
+    {
+      "file": "e2e/workspaces.spec.ts",
+      "title": "AT-058 / REQ-060: invalid workspace/analysis route is controlled",
+      "browser": "chromium",
+      "status": "passed",
+      "durationMs": 2357
+    },
+    {
+      "file": "e2e/workspaces.spec.ts",
+      "title": "AT-003: workspace metadata persists across reload without engine startup",
+      "browser": "firefox",
+      "status": "passed",
+      "durationMs": 1906
+    },
+    {
+      "file": "e2e/workspaces.spec.ts",
+      "title": "AT-005 AT-058: saved SQL and R, separate models, duplicate, archive, no code auto-run",
+      "browser": "firefox",
+      "status": "passed",
+      "durationMs": 3006
+    },
+    {
+      "file": "e2e/workspaces.spec.ts",
+      "title": "AT-012: another tab opens read-only and explicitly reacquires after writer closes",
+      "browser": "firefox",
+      "status": "passed",
+      "durationMs": 2053
+    },
+    {
+      "file": "e2e/workspaces.spec.ts",
+      "title": "AT-054 AT-057 partial: compact chrome and implemented settings persist",
+      "browser": "firefox",
+      "status": "passed",
+      "durationMs": 2118
+    },
+    {
+      "file": "e2e/workspaces.spec.ts",
+      "title": "AT-058 / REQ-060: invalid workspace/analysis route is controlled",
+      "browser": "firefox",
+      "status": "passed",
+      "durationMs": 2127
+    },
+    {
+      "file": "e2e/workspaces.spec.ts",
+      "title": "AT-003: workspace metadata persists across reload without engine startup",
+      "browser": "webkit",
+      "status": "passed",
+      "durationMs": 1214
+    },
+    {
+      "file": "e2e/workspaces.spec.ts",
+      "title": "AT-005 AT-058: saved SQL and R, separate models, duplicate, archive, no code auto-run",
+      "browser": "webkit",
+      "status": "passed",
+      "durationMs": 2671
+    },
+    {
+      "file": "e2e/workspaces.spec.ts",
+      "title": "AT-012: another tab opens read-only and explicitly reacquires after writer closes",
+      "browser": "webkit",
+      "status": "passed",
+      "durationMs": 1503
+    },
+    {
+      "file": "e2e/workspaces.spec.ts",
+      "title": "AT-054 AT-057 partial: compact chrome and implemented settings persist",
+      "browser": "webkit",
+      "status": "passed",
+      "durationMs": 1421
+    },
+    {
+      "file": "e2e/workspaces.spec.ts",
+      "title": "AT-058 / REQ-060: invalid workspace/analysis route is controlled",
+      "browser": "webkit",
+      "status": "passed",
+      "durationMs": 1411
+    },
+    {
+      "file": "integration/imports.spec.ts",
+      "title": "P2 / AT-008 AT-010: strict CSV → hashed OPFS → fresh DuckDB retains values, NULL and empty strings",
+      "browser": "chromium",
+      "status": "passed",
+      "durationMs": 1289
+    },
+    {
+      "file": "integration/imports.spec.ts",
+      "title": "P2 / AT-009 AT-020: late conversion error, header-only CSV and invalid bytes",
+      "browser": "chromium",
+      "status": "passed",
+      "durationMs": 775
+    },
+    {
+      "file": "integration/imports.spec.ts",
+      "title": "P2 / AT-014 AT-017: reload finds true orphans, writer cleanup preserves referenced and foreign bytes",
+      "browser": "chromium",
+      "status": "passed",
+      "durationMs": 1777
+    },
+    {
+      "file": "integration/imports.spec.ts",
+      "title": "P2 / AT-010: imported file survives browser process restart and removal of input file",
+      "browser": "chromium",
+      "status": "passed",
+      "durationMs": 4807
+    },
+    {
+      "file": "integration/imports.spec.ts",
+      "title": "P2 / AT-061 partial: changed byte is rejected as ARTIFACT_CORRUPT before use",
+      "browser": "chromium",
+      "status": "passed",
+      "durationMs": 250
+    },
+    {
+      "file": "integration/imports.spec.ts",
+      "title": "P2 / AT-008 AT-010: strict CSV → hashed OPFS → fresh DuckDB retains values, NULL and empty strings",
+      "browser": "firefox",
+      "status": "passed",
+      "durationMs": 2764
+    },
+    {
+      "file": "integration/imports.spec.ts",
+      "title": "P2 / AT-009 AT-020: late conversion error, header-only CSV and invalid bytes",
+      "browser": "firefox",
+      "status": "passed",
+      "durationMs": 1971
+    },
+    {
+      "file": "integration/imports.spec.ts",
+      "title": "P2 / AT-014 AT-017: reload finds true orphans, writer cleanup preserves referenced and foreign bytes",
+      "browser": "firefox",
+      "status": "passed",
+      "durationMs": 2601
+    },
+    {
+      "file": "integration/imports.spec.ts",
+      "title": "P2 / AT-010: imported file survives browser process restart and removal of input file",
+      "browser": "firefox",
+      "status": "passed",
+      "durationMs": 7192
+    },
+    {
+      "file": "integration/imports.spec.ts",
+      "title": "P2 / AT-061 partial: changed byte is rejected as ARTIFACT_CORRUPT before use",
+      "browser": "firefox",
+      "status": "passed",
+      "durationMs": 1127
+    },
+    {
+      "file": "integration/imports.spec.ts",
+      "title": "P2 / AT-008 AT-010: strict CSV → hashed OPFS → fresh DuckDB retains values, NULL and empty strings",
+      "browser": "webkit",
+      "status": "passed",
+      "durationMs": 2525
+    },
+    {
+      "file": "integration/imports.spec.ts",
+      "title": "P2 / AT-009 AT-020: late conversion error, header-only CSV and invalid bytes",
+      "browser": "webkit",
+      "status": "passed",
+      "durationMs": 1588
+    },
+    {
+      "file": "integration/imports.spec.ts",
+      "title": "P2 / AT-014 AT-017: reload finds true orphans, writer cleanup preserves referenced and foreign bytes",
+      "browser": "webkit",
+      "status": "passed",
+      "durationMs": 2143
+    },
+    {
+      "file": "integration/imports.spec.ts",
+      "title": "P2 / AT-010: imported file survives browser process restart and removal of input file",
+      "browser": "webkit",
+      "status": "passed",
+      "durationMs": 6791
+    },
+    {
+      "file": "integration/imports.spec.ts",
+      "title": "P2 / AT-061 partial: changed byte is rejected as ARTIFACT_CORRUPT before use",
+      "browser": "webkit",
+      "status": "passed",
+      "durationMs": 613
+    },
+    {
+      "file": "integration/p0.spec.ts",
+      "title": "P0 / AT-001 AT-002: one connector, Arrow, CSV → Parquet and stable materialization",
+      "browser": "chromium",
+      "status": "passed",
+      "durationMs": 658
+    },
+    {
+      "file": "integration/p0.spec.ts",
+      "title": "P0: DuckDB parser returns SELECT AST and rejects non-SELECT serialization",
+      "browser": "chromium",
+      "status": "passed",
+      "durationMs": 546
+    },
+    {
+      "file": "integration/p0.spec.ts",
+      "title": "P0 / AT-030: running SQL ends or worker terminates, fresh query works",
+      "browser": "chromium",
+      "status": "passed",
+      "durationMs": 2841
+    },
+    {
+      "file": "integration/p0.spec.ts",
+      "title": "P0 / AT-046: local webR dataframe, real plot, PostMessage worker reset",
+      "browser": "chromium",
+      "status": "passed",
+      "durationMs": 1287
+    },
+    {
+      "file": "integration/p0.spec.ts",
+      "title": "P0: real OPFS read/write/delete and IndexedDB transaction",
+      "browser": "chromium",
+      "status": "passed",
+      "durationMs": 261
+    },
+    {
+      "file": "integration/p0.spec.ts",
+      "title": "P0 / AT-012: Web Lock callback holds writer lease across tabs",
+      "browser": "chromium",
+      "status": "passed",
+      "durationMs": 330
+    },
+    {
+      "file": "integration/p0.spec.ts",
+      "title": "P0 / AT-023: guard allows analysis and blocks external/dynamic SQL without execution",
+      "browser": "chromium",
+      "status": "passed",
+      "durationMs": 591
+    },
+    {
+      "file": "integration/p0.spec.ts",
+      "title": "P0 / AT-001 AT-002: one connector, Arrow, CSV → Parquet and stable materialization",
+      "browser": "firefox",
+      "status": "passed",
+      "durationMs": 1864
+    },
+    {
+      "file": "integration/p0.spec.ts",
+      "title": "P0: DuckDB parser returns SELECT AST and rejects non-SELECT serialization",
+      "browser": "firefox",
+      "status": "passed",
+      "durationMs": 1780
+    },
+    {
+      "file": "integration/p0.spec.ts",
+      "title": "P0 / AT-030: running SQL ends or worker terminates, fresh query works",
+      "browser": "firefox",
+      "status": "passed",
+      "durationMs": 4483
+    },
+    {
+      "file": "integration/p0.spec.ts",
+      "title": "P0 / AT-046: local webR dataframe, real plot, PostMessage worker reset",
+      "browser": "firefox",
+      "status": "passed",
+      "durationMs": 2079
+    },
+    {
+      "file": "integration/p0.spec.ts",
+      "title": "P0: real OPFS read/write/delete and IndexedDB transaction",
+      "browser": "firefox",
+      "status": "passed",
+      "durationMs": 1107
+    },
+    {
+      "file": "integration/p0.spec.ts",
+      "title": "P0 / AT-012: Web Lock callback holds writer lease across tabs",
+      "browser": "firefox",
+      "status": "passed",
+      "durationMs": 1221
+    },
+    {
+      "file": "integration/p0.spec.ts",
+      "title": "P0 / AT-023: guard allows analysis and blocks external/dynamic SQL without execution",
+      "browser": "firefox",
+      "status": "passed",
+      "durationMs": 1794
+    },
+    {
+      "file": "integration/p0.spec.ts",
+      "title": "P0 / AT-001 AT-002: one connector, Arrow, CSV → Parquet and stable materialization",
+      "browser": "webkit",
+      "status": "passed",
+      "durationMs": 1400
+    },
+    {
+      "file": "integration/p0.spec.ts",
+      "title": "P0: DuckDB parser returns SELECT AST and rejects non-SELECT serialization",
+      "browser": "webkit",
+      "status": "passed",
+      "durationMs": 1262
+    },
+    {
+      "file": "integration/p0.spec.ts",
+      "title": "P0 / AT-030: running SQL ends or worker terminates, fresh query works",
+      "browser": "webkit",
+      "status": "passed",
+      "durationMs": 3999
+    },
+    {
+      "file": "integration/p0.spec.ts",
+      "title": "P0 / AT-046: local webR dataframe, real plot, PostMessage worker reset",
+      "browser": "webkit",
+      "status": "passed",
+      "durationMs": 1384
+    },
+    {
+      "file": "integration/p0.spec.ts",
+      "title": "P0: real OPFS read/write/delete and IndexedDB transaction",
+      "browser": "webkit",
+      "status": "passed",
+      "durationMs": 575
+    },
+    {
+      "file": "integration/p0.spec.ts",
+      "title": "P0 / AT-012: Web Lock callback holds writer lease across tabs",
+      "browser": "webkit",
+      "status": "passed",
+      "durationMs": 744
+    },
+    {
+      "file": "integration/p0.spec.ts",
+      "title": "P0 / AT-023: guard allows analysis and blocks external/dynamic SQL without execution",
+      "browser": "webkit",
+      "status": "passed",
+      "durationMs": 1302
+    },
+    {
+      "file": "integration/repository.spec.ts",
+      "title": "AT-007 AT-012: actual IndexedDB CAS, invalid load, transaction rollback",
+      "browser": "chromium",
+      "status": "passed",
+      "durationMs": 143
+    },
+    {
+      "file": "integration/repository.spec.ts",
+      "title": "P0: persistent browser profile OPFS read/write/delete",
+      "browser": "chromium",
+      "status": "passed",
+      "durationMs": 273
+    },
+    {
+      "file": "integration/repository.spec.ts",
+      "title": "AT-007 AT-012: actual IndexedDB CAS, invalid load, transaction rollback",
+      "browser": "firefox",
+      "status": "passed",
+      "durationMs": 548
+    },
+    {
+      "file": "integration/repository.spec.ts",
+      "title": "P0: persistent browser profile OPFS read/write/delete",
+      "browser": "firefox",
+      "status": "passed",
+      "durationMs": 1214
+    },
+    {
+      "file": "integration/repository.spec.ts",
+      "title": "AT-007 AT-012: actual IndexedDB CAS, invalid load, transaction rollback",
+      "browser": "webkit",
+      "status": "passed",
+      "durationMs": 289
+    },
+    {
+      "file": "integration/repository.spec.ts",
+      "title": "P0: persistent browser profile OPFS read/write/delete",
+      "browser": "webkit",
+      "status": "passed",
+      "durationMs": 682
+    }
+  ],
+  "engineProofs": {
+    "chromium": {
+      "duckdb-proof": {
+        "initializationCount": 1,
+        "rows": [
+          {
+            "id": "001",
+            "wert": 4
+          },
+          {
+            "id": "002",
+            "wert": 7
+          }
+        ],
+        "bytes": 308,
+        "arrow": "Table",
+        "stableRows": 350,
+        "stable": true,
+        "version": "v1.5.4"
+      },
+      "parser-AST-corpus": [
+        {
+          "code": "SELECT ';' AS s",
+          "ast": {
+            "error": false,
+            "statements": [
+              {
+                "node": {
+                  "type": "SELECT_NODE",
+                  "modifiers": [],
+                  "cte_map": {
+                    "map": []
+                  },
+                  "select_list": [
+                    {
+                      "class": "CONSTANT",
+                      "type": "VALUE_CONSTANT",
+                      "alias": "s",
+                      "query_location": 7,
+                      "value": {
+                        "type": {
+                          "id": "VARCHAR",
+                          "type_info": null
+                        },
+                        "is_null": false,
+                        "value": ";"
+                      }
+                    }
+                  ],
+                  "from_table": {
+                    "type": "EMPTY",
+                    "alias": "",
+                    "sample": null,
+                    "query_location": 18446744073709552000
+                  },
+                  "where_clause": null,
+                  "group_expressions": [],
+                  "group_sets": [],
+                  "aggregate_handling": "STANDARD_HANDLING",
+                  "having": null,
+                  "sample": null,
+                  "qualify": null
+                },
+                "named_param_map": []
+              }
+            ]
+          }
+        },
+        {
+          "code": "WITH t AS (SELECT 1 AS a) SELECT * FROM t",
+          "ast": {
+            "error": false,
+            "statements": [
+              {
+                "node": {
+                  "type": "SELECT_NODE",
+                  "modifiers": [],
+                  "cte_map": {
+                    "map": [
+                      {
+                        "key": "t",
+                        "value": {
+                          "aliases": [],
+                          "query": {
+                            "node": {
+                              "type": "SELECT_NODE",
+                              "modifiers": [],
+                              "cte_map": {
+                                "map": []
+                              },
+                              "select_list": [
+                                {
+                                  "class": "CONSTANT",
+                                  "type": "VALUE_CONSTANT",
+                                  "alias": "a",
+                                  "query_location": 18,
+                                  "value": {
+                                    "type": {
+                                      "id": "INTEGER",
+                                      "type_info": null
+                                    },
+                                    "is_null": false,
+                                    "value": 1
+                                  }
+                                }
+                              ],
+                              "from_table": {
+                                "type": "EMPTY",
+                                "alias": "",
+                                "sample": null,
+                                "query_location": 18446744073709552000
+                              },
+                              "where_clause": null,
+                              "group_expressions": [],
+                              "group_sets": [],
+                              "aggregate_handling": "STANDARD_HANDLING",
+                              "having": null,
+                              "sample": null,
+                              "qualify": null
+                            },
+                            "named_param_map": []
+                          },
+                          "materialized": "CTE_MATERIALIZE_DEFAULT",
+                          "key_targets": []
+                        }
+                      }
+                    ]
+                  },
+                  "select_list": [
+                    {
+                      "class": "STAR",
+                      "type": "STAR",
+                      "alias": "",
+                      "query_location": 33,
+                      "relation_name": "",
+                      "exclude_list": [],
+                      "replace_list": [],
+                      "columns": false,
+                      "expr": null,
+                      "qualified_exclude_list": [],
+                      "rename_list": []
+                    }
+                  ],
+                  "from_table": {
+                    "type": "BASE_TABLE",
+                    "alias": "",
+                    "sample": null,
+                    "query_location": 40,
+                    "schema_name": "",
+                    "table_name": "t",
+                    "column_name_alias": [],
+                    "catalog_name": "",
+                    "at_clause": null
+                  },
+                  "where_clause": null,
+                  "group_expressions": [],
+                  "group_sets": [],
+                  "aggregate_handling": "STANDARD_HANDLING",
+                  "having": null,
+                  "sample": null,
+                  "qualify": null
+                },
+                "named_param_map": []
+              }
+            ]
+          }
+        },
+        {
+          "code": "SELECT 1; SELECT 2",
+          "ast": {
+            "error": false,
+            "statements": [
+              {
+                "node": {
+                  "type": "SELECT_NODE",
+                  "modifiers": [],
+                  "cte_map": {
+                    "map": []
+                  },
+                  "select_list": [
+                    {
+                      "class": "CONSTANT",
+                      "type": "VALUE_CONSTANT",
+                      "alias": "",
+                      "query_location": 7,
+                      "value": {
+                        "type": {
+                          "id": "INTEGER",
+                          "type_info": null
+                        },
+                        "is_null": false,
+                        "value": 1
+                      }
+                    }
+                  ],
+                  "from_table": {
+                    "type": "EMPTY",
+                    "alias": "",
+                    "sample": null,
+                    "query_location": 18446744073709552000
+                  },
+                  "where_clause": null,
+                  "group_expressions": [],
+                  "group_sets": [],
+                  "aggregate_handling": "STANDARD_HANDLING",
+                  "having": null,
+                  "sample": null,
+                  "qualify": null
+                },
+                "named_param_map": []
+              },
+              {
+                "node": {
+                  "type": "SELECT_NODE",
+                  "modifiers": [],
+                  "cte_map": {
+                    "map": []
+                  },
+                  "select_list": [
+                    {
+                      "class": "CONSTANT",
+                      "type": "VALUE_CONSTANT",
+                      "alias": "",
+                      "query_location": 17,
+                      "value": {
+                        "type": {
+                          "id": "INTEGER",
+                          "type_info": null
+                        },
+                        "is_null": false,
+                        "value": 2
+                      }
+                    }
+                  ],
+                  "from_table": {
+                    "type": "EMPTY",
+                    "alias": "",
+                    "sample": null,
+                    "query_location": 18446744073709552000
+                  },
+                  "where_clause": null,
+                  "group_expressions": [],
+                  "group_sets": [],
+                  "aggregate_handling": "STANDARD_HANDLING",
+                  "having": null,
+                  "sample": null,
+                  "qualify": null
+                },
+                "named_param_map": []
+              }
+            ]
+          }
+        },
+        {
+          "code": "COPY (SELECT 1) TO 'x.csv'",
+          "ast": {
+            "error": true,
+            "error_type": "not implemented",
+            "error_message": "Only SELECT statements can be serialized to json!"
+          }
+        },
+        {
+          "code": "SELECT * FROM read_csv('https://evil.invalid/data.csv')",
+          "ast": {
+            "error": false,
+            "statements": [
+              {
+                "node": {
+                  "type": "SELECT_NODE",
+                  "modifiers": [],
+                  "cte_map": {
+                    "map": []
+                  },
+                  "select_list": [
+                    {
+                      "class": "STAR",
+                      "type": "STAR",
+                      "alias": "",
+                      "query_location": 7,
+                      "relation_name": "",
+                      "exclude_list": [],
+                      "replace_list": [],
+                      "columns": false,
+                      "expr": null,
+                      "qualified_exclude_list": [],
+                      "rename_list": []
+                    }
+                  ],
+                  "from_table": {
+                    "type": "TABLE_FUNCTION",
+                    "alias": "",
+                    "sample": null,
+                    "query_location": 14,
+                    "function": {
+                      "class": "FUNCTION",
+                      "type": "FUNCTION",
+                      "alias": "",
+                      "query_location": 14,
+                      "function_name": "read_csv",
+                      "schema": "",
+                      "children": [
+                        {
+                          "class": "CONSTANT",
+                          "type": "VALUE_CONSTANT",
+                          "alias": "",
+                          "query_location": 23,
+                          "value": {
+                            "type": {
+                              "id": "VARCHAR",
+                              "type_info": null
+                            },
+                            "is_null": false,
+                            "value": "https://evil.invalid/data.csv"
+                          }
+                        }
+                      ],
+                      "filter": null,
+                      "order_bys": {
+                        "type": "ORDER_MODIFIER",
+                        "orders": []
+                      },
+                      "distinct": false,
+                      "is_operator": false,
+                      "export_state": false,
+                      "catalog": ""
+                    },
+                    "column_name_alias": [],
+                    "with_ordinality": "WITHOUT_ORDINALITY"
+                  },
+                  "where_clause": null,
+                  "group_expressions": [],
+                  "group_sets": [],
+                  "aggregate_handling": "STANDARD_HANDLING",
+                  "having": null,
+                  "sample": null,
+                  "qualify": null
+                },
+                "named_param_map": []
+              }
+            ]
+          }
+        },
+        {
+          "code": "ATTACH 'x.db'",
+          "ast": {
+            "error": true,
+            "error_type": "not implemented",
+            "error_message": "Only SELECT statements can be serialized to json!"
+          }
+        }
+      ],
+      "SQL-stop": {
+        "wasRunning": true,
+        "settled": false,
+        "cancelSettled": false,
+        "neededReset": true,
+        "fresh": {
+          "rows": [
+            {
+              "wert": 7
+            }
+          ],
+          "columns": [
+            {
+              "name": "wert",
+              "type": "Int32"
+            }
+          ]
+        },
+        "closedWorkers": 1
+      },
+      "webR-proof": {
+        "smoke": {
+          "sum": 11,
+          "images": [
+            {
+              "width": 800,
+              "height": 600,
+              "ink": 25200
+            }
+          ],
+          "version": "R version 4.6.0 (2026-04-24)",
+          "channel": "PostMessage"
+        },
+        "cancel": {
+          "wasRunning": true,
+          "epoch": 1,
+          "result": 3
+        },
+        "closedWorkers": 1
+      }
+    },
+    "firefox": {
+      "duckdb-proof": {
+        "initializationCount": 1,
+        "rows": [
+          {
+            "id": "001",
+            "wert": 4
+          },
+          {
+            "id": "002",
+            "wert": 7
+          }
+        ],
+        "bytes": 308,
+        "arrow": "Table",
+        "stableRows": 350,
+        "stable": true,
+        "version": "v1.5.4"
+      },
+      "parser-AST-corpus": [
+        {
+          "code": "SELECT ';' AS s",
+          "ast": {
+            "error": false,
+            "statements": [
+              {
+                "node": {
+                  "type": "SELECT_NODE",
+                  "modifiers": [],
+                  "cte_map": {
+                    "map": []
+                  },
+                  "select_list": [
+                    {
+                      "class": "CONSTANT",
+                      "type": "VALUE_CONSTANT",
+                      "alias": "s",
+                      "query_location": 7,
+                      "value": {
+                        "type": {
+                          "id": "VARCHAR",
+                          "type_info": null
+                        },
+                        "is_null": false,
+                        "value": ";"
+                      }
+                    }
+                  ],
+                  "from_table": {
+                    "type": "EMPTY",
+                    "alias": "",
+                    "sample": null,
+                    "query_location": 18446744073709552000
+                  },
+                  "where_clause": null,
+                  "group_expressions": [],
+                  "group_sets": [],
+                  "aggregate_handling": "STANDARD_HANDLING",
+                  "having": null,
+                  "sample": null,
+                  "qualify": null
+                },
+                "named_param_map": []
+              }
+            ]
+          }
+        },
+        {
+          "code": "WITH t AS (SELECT 1 AS a) SELECT * FROM t",
+          "ast": {
+            "error": false,
+            "statements": [
+              {
+                "node": {
+                  "type": "SELECT_NODE",
+                  "modifiers": [],
+                  "cte_map": {
+                    "map": [
+                      {
+                        "key": "t",
+                        "value": {
+                          "aliases": [],
+                          "query": {
+                            "node": {
+                              "type": "SELECT_NODE",
+                              "modifiers": [],
+                              "cte_map": {
+                                "map": []
+                              },
+                              "select_list": [
+                                {
+                                  "class": "CONSTANT",
+                                  "type": "VALUE_CONSTANT",
+                                  "alias": "a",
+                                  "query_location": 18,
+                                  "value": {
+                                    "type": {
+                                      "id": "INTEGER",
+                                      "type_info": null
+                                    },
+                                    "is_null": false,
+                                    "value": 1
+                                  }
+                                }
+                              ],
+                              "from_table": {
+                                "type": "EMPTY",
+                                "alias": "",
+                                "sample": null,
+                                "query_location": 18446744073709552000
+                              },
+                              "where_clause": null,
+                              "group_expressions": [],
+                              "group_sets": [],
+                              "aggregate_handling": "STANDARD_HANDLING",
+                              "having": null,
+                              "sample": null,
+                              "qualify": null
+                            },
+                            "named_param_map": []
+                          },
+                          "materialized": "CTE_MATERIALIZE_DEFAULT",
+                          "key_targets": []
+                        }
+                      }
+                    ]
+                  },
+                  "select_list": [
+                    {
+                      "class": "STAR",
+                      "type": "STAR",
+                      "alias": "",
+                      "query_location": 33,
+                      "relation_name": "",
+                      "exclude_list": [],
+                      "replace_list": [],
+                      "columns": false,
+                      "expr": null,
+                      "qualified_exclude_list": [],
+                      "rename_list": []
+                    }
+                  ],
+                  "from_table": {
+                    "type": "BASE_TABLE",
+                    "alias": "",
+                    "sample": null,
+                    "query_location": 40,
+                    "schema_name": "",
+                    "table_name": "t",
+                    "column_name_alias": [],
+                    "catalog_name": "",
+                    "at_clause": null
+                  },
+                  "where_clause": null,
+                  "group_expressions": [],
+                  "group_sets": [],
+                  "aggregate_handling": "STANDARD_HANDLING",
+                  "having": null,
+                  "sample": null,
+                  "qualify": null
+                },
+                "named_param_map": []
+              }
+            ]
+          }
+        },
+        {
+          "code": "SELECT 1; SELECT 2",
+          "ast": {
+            "error": false,
+            "statements": [
+              {
+                "node": {
+                  "type": "SELECT_NODE",
+                  "modifiers": [],
+                  "cte_map": {
+                    "map": []
+                  },
+                  "select_list": [
+                    {
+                      "class": "CONSTANT",
+                      "type": "VALUE_CONSTANT",
+                      "alias": "",
+                      "query_location": 7,
+                      "value": {
+                        "type": {
+                          "id": "INTEGER",
+                          "type_info": null
+                        },
+                        "is_null": false,
+                        "value": 1
+                      }
+                    }
+                  ],
+                  "from_table": {
+                    "type": "EMPTY",
+                    "alias": "",
+                    "sample": null,
+                    "query_location": 18446744073709552000
+                  },
+                  "where_clause": null,
+                  "group_expressions": [],
+                  "group_sets": [],
+                  "aggregate_handling": "STANDARD_HANDLING",
+                  "having": null,
+                  "sample": null,
+                  "qualify": null
+                },
+                "named_param_map": []
+              },
+              {
+                "node": {
+                  "type": "SELECT_NODE",
+                  "modifiers": [],
+                  "cte_map": {
+                    "map": []
+                  },
+                  "select_list": [
+                    {
+                      "class": "CONSTANT",
+                      "type": "VALUE_CONSTANT",
+                      "alias": "",
+                      "query_location": 17,
+                      "value": {
+                        "type": {
+                          "id": "INTEGER",
+                          "type_info": null
+                        },
+                        "is_null": false,
+                        "value": 2
+                      }
+                    }
+                  ],
+                  "from_table": {
+                    "type": "EMPTY",
+                    "alias": "",
+                    "sample": null,
+                    "query_location": 18446744073709552000
+                  },
+                  "where_clause": null,
+                  "group_expressions": [],
+                  "group_sets": [],
+                  "aggregate_handling": "STANDARD_HANDLING",
+                  "having": null,
+                  "sample": null,
+                  "qualify": null
+                },
+                "named_param_map": []
+              }
+            ]
+          }
+        },
+        {
+          "code": "COPY (SELECT 1) TO 'x.csv'",
+          "ast": {
+            "error": true,
+            "error_type": "not implemented",
+            "error_message": "Only SELECT statements can be serialized to json!"
+          }
+        },
+        {
+          "code": "SELECT * FROM read_csv('https://evil.invalid/data.csv')",
+          "ast": {
+            "error": false,
+            "statements": [
+              {
+                "node": {
+                  "type": "SELECT_NODE",
+                  "modifiers": [],
+                  "cte_map": {
+                    "map": []
+                  },
+                  "select_list": [
+                    {
+                      "class": "STAR",
+                      "type": "STAR",
+                      "alias": "",
+                      "query_location": 7,
+                      "relation_name": "",
+                      "exclude_list": [],
+                      "replace_list": [],
+                      "columns": false,
+                      "expr": null,
+                      "qualified_exclude_list": [],
+                      "rename_list": []
+                    }
+                  ],
+                  "from_table": {
+                    "type": "TABLE_FUNCTION",
+                    "alias": "",
+                    "sample": null,
+                    "query_location": 14,
+                    "function": {
+                      "class": "FUNCTION",
+                      "type": "FUNCTION",
+                      "alias": "",
+                      "query_location": 14,
+                      "function_name": "read_csv",
+                      "schema": "",
+                      "children": [
+                        {
+                          "class": "CONSTANT",
+                          "type": "VALUE_CONSTANT",
+                          "alias": "",
+                          "query_location": 23,
+                          "value": {
+                            "type": {
+                              "id": "VARCHAR",
+                              "type_info": null
+                            },
+                            "is_null": false,
+                            "value": "https://evil.invalid/data.csv"
+                          }
+                        }
+                      ],
+                      "filter": null,
+                      "order_bys": {
+                        "type": "ORDER_MODIFIER",
+                        "orders": []
+                      },
+                      "distinct": false,
+                      "is_operator": false,
+                      "export_state": false,
+                      "catalog": ""
+                    },
+                    "column_name_alias": [],
+                    "with_ordinality": "WITHOUT_ORDINALITY"
+                  },
+                  "where_clause": null,
+                  "group_expressions": [],
+                  "group_sets": [],
+                  "aggregate_handling": "STANDARD_HANDLING",
+                  "having": null,
+                  "sample": null,
+                  "qualify": null
+                },
+                "named_param_map": []
+              }
+            ]
+          }
+        },
+        {
+          "code": "ATTACH 'x.db'",
+          "ast": {
+            "error": true,
+            "error_type": "not implemented",
+            "error_message": "Only SELECT statements can be serialized to json!"
+          }
+        }
+      ],
+      "SQL-stop": {
+        "wasRunning": true,
+        "settled": false,
+        "cancelSettled": false,
+        "neededReset": true,
+        "fresh": {
+          "rows": [
+            {
+              "wert": 7
+            }
+          ],
+          "columns": [
+            {
+              "name": "wert",
+              "type": "Int32"
+            }
+          ]
+        },
+        "closedWorkers": 1
+      },
+      "webR-proof": {
+        "smoke": {
+          "sum": 11,
+          "images": [
+            {
+              "width": 800,
+              "height": 600,
+              "ink": 25200
+            }
+          ],
+          "version": "R version 4.6.0 (2026-04-24)",
+          "channel": "PostMessage"
+        },
+        "cancel": {
+          "wasRunning": true,
+          "epoch": 1,
+          "result": 3
+        },
+        "closedWorkers": 1
+      }
+    },
+    "webkit": {
+      "duckdb-proof": {
+        "initializationCount": 1,
+        "rows": [
+          {
+            "id": "001",
+            "wert": 4
+          },
+          {
+            "id": "002",
+            "wert": 7
+          }
+        ],
+        "bytes": 308,
+        "arrow": "Table",
+        "stableRows": 350,
+        "stable": true,
+        "version": "v1.5.4"
+      },
+      "parser-AST-corpus": [
+        {
+          "code": "SELECT ';' AS s",
+          "ast": {
+            "error": false,
+            "statements": [
+              {
+                "node": {
+                  "type": "SELECT_NODE",
+                  "modifiers": [],
+                  "cte_map": {
+                    "map": []
+                  },
+                  "select_list": [
+                    {
+                      "class": "CONSTANT",
+                      "type": "VALUE_CONSTANT",
+                      "alias": "s",
+                      "query_location": 7,
+                      "value": {
+                        "type": {
+                          "id": "VARCHAR",
+                          "type_info": null
+                        },
+                        "is_null": false,
+                        "value": ";"
+                      }
+                    }
+                  ],
+                  "from_table": {
+                    "type": "EMPTY",
+                    "alias": "",
+                    "sample": null,
+                    "query_location": 18446744073709552000
+                  },
+                  "where_clause": null,
+                  "group_expressions": [],
+                  "group_sets": [],
+                  "aggregate_handling": "STANDARD_HANDLING",
+                  "having": null,
+                  "sample": null,
+                  "qualify": null
+                },
+                "named_param_map": []
+              }
+            ]
+          }
+        },
+        {
+          "code": "WITH t AS (SELECT 1 AS a) SELECT * FROM t",
+          "ast": {
+            "error": false,
+            "statements": [
+              {
+                "node": {
+                  "type": "SELECT_NODE",
+                  "modifiers": [],
+                  "cte_map": {
+                    "map": [
+                      {
+                        "key": "t",
+                        "value": {
+                          "aliases": [],
+                          "query": {
+                            "node": {
+                              "type": "SELECT_NODE",
+                              "modifiers": [],
+                              "cte_map": {
+                                "map": []
+                              },
+                              "select_list": [
+                                {
+                                  "class": "CONSTANT",
+                                  "type": "VALUE_CONSTANT",
+                                  "alias": "a",
+                                  "query_location": 18,
+                                  "value": {
+                                    "type": {
+                                      "id": "INTEGER",
+                                      "type_info": null
+                                    },
+                                    "is_null": false,
+                                    "value": 1
+                                  }
+                                }
+                              ],
+                              "from_table": {
+                                "type": "EMPTY",
+                                "alias": "",
+                                "sample": null,
+                                "query_location": 18446744073709552000
+                              },
+                              "where_clause": null,
+                              "group_expressions": [],
+                              "group_sets": [],
+                              "aggregate_handling": "STANDARD_HANDLING",
+                              "having": null,
+                              "sample": null,
+                              "qualify": null
+                            },
+                            "named_param_map": []
+                          },
+                          "materialized": "CTE_MATERIALIZE_DEFAULT",
+                          "key_targets": []
+                        }
+                      }
+                    ]
+                  },
+                  "select_list": [
+                    {
+                      "class": "STAR",
+                      "type": "STAR",
+                      "alias": "",
+                      "query_location": 33,
+                      "relation_name": "",
+                      "exclude_list": [],
+                      "replace_list": [],
+                      "columns": false,
+                      "expr": null,
+                      "qualified_exclude_list": [],
+                      "rename_list": []
+                    }
+                  ],
+                  "from_table": {
+                    "type": "BASE_TABLE",
+                    "alias": "",
+                    "sample": null,
+                    "query_location": 40,
+                    "schema_name": "",
+                    "table_name": "t",
+                    "column_name_alias": [],
+                    "catalog_name": "",
+                    "at_clause": null
+                  },
+                  "where_clause": null,
+                  "group_expressions": [],
+                  "group_sets": [],
+                  "aggregate_handling": "STANDARD_HANDLING",
+                  "having": null,
+                  "sample": null,
+                  "qualify": null
+                },
+                "named_param_map": []
+              }
+            ]
+          }
+        },
+        {
+          "code": "SELECT 1; SELECT 2",
+          "ast": {
+            "error": false,
+            "statements": [
+              {
+                "node": {
+                  "type": "SELECT_NODE",
+                  "modifiers": [],
+                  "cte_map": {
+                    "map": []
+                  },
+                  "select_list": [
+                    {
+                      "class": "CONSTANT",
+                      "type": "VALUE_CONSTANT",
+                      "alias": "",
+                      "query_location": 7,
+                      "value": {
+                        "type": {
+                          "id": "INTEGER",
+                          "type_info": null
+                        },
+                        "is_null": false,
+                        "value": 1
+                      }
+                    }
+                  ],
+                  "from_table": {
+                    "type": "EMPTY",
+                    "alias": "",
+                    "sample": null,
+                    "query_location": 18446744073709552000
+                  },
+                  "where_clause": null,
+                  "group_expressions": [],
+                  "group_sets": [],
+                  "aggregate_handling": "STANDARD_HANDLING",
+                  "having": null,
+                  "sample": null,
+                  "qualify": null
+                },
+                "named_param_map": []
+              },
+              {
+                "node": {
+                  "type": "SELECT_NODE",
+                  "modifiers": [],
+                  "cte_map": {
+                    "map": []
+                  },
+                  "select_list": [
+                    {
+                      "class": "CONSTANT",
+                      "type": "VALUE_CONSTANT",
+                      "alias": "",
+                      "query_location": 17,
+                      "value": {
+                        "type": {
+                          "id": "INTEGER",
+                          "type_info": null
+                        },
+                        "is_null": false,
+                        "value": 2
+                      }
+                    }
+                  ],
+                  "from_table": {
+                    "type": "EMPTY",
+                    "alias": "",
+                    "sample": null,
+                    "query_location": 18446744073709552000
+                  },
+                  "where_clause": null,
+                  "group_expressions": [],
+                  "group_sets": [],
+                  "aggregate_handling": "STANDARD_HANDLING",
+                  "having": null,
+                  "sample": null,
+                  "qualify": null
+                },
+                "named_param_map": []
+              }
+            ]
+          }
+        },
+        {
+          "code": "COPY (SELECT 1) TO 'x.csv'",
+          "ast": {
+            "error": true,
+            "error_type": "not implemented",
+            "error_message": "Only SELECT statements can be serialized to json!"
+          }
+        },
+        {
+          "code": "SELECT * FROM read_csv('https://evil.invalid/data.csv')",
+          "ast": {
+            "error": false,
+            "statements": [
+              {
+                "node": {
+                  "type": "SELECT_NODE",
+                  "modifiers": [],
+                  "cte_map": {
+                    "map": []
+                  },
+                  "select_list": [
+                    {
+                      "class": "STAR",
+                      "type": "STAR",
+                      "alias": "",
+                      "query_location": 7,
+                      "relation_name": "",
+                      "exclude_list": [],
+                      "replace_list": [],
+                      "columns": false,
+                      "expr": null,
+                      "qualified_exclude_list": [],
+                      "rename_list": []
+                    }
+                  ],
+                  "from_table": {
+                    "type": "TABLE_FUNCTION",
+                    "alias": "",
+                    "sample": null,
+                    "query_location": 14,
+                    "function": {
+                      "class": "FUNCTION",
+                      "type": "FUNCTION",
+                      "alias": "",
+                      "query_location": 14,
+                      "function_name": "read_csv",
+                      "schema": "",
+                      "children": [
+                        {
+                          "class": "CONSTANT",
+                          "type": "VALUE_CONSTANT",
+                          "alias": "",
+                          "query_location": 23,
+                          "value": {
+                            "type": {
+                              "id": "VARCHAR",
+                              "type_info": null
+                            },
+                            "is_null": false,
+                            "value": "https://evil.invalid/data.csv"
+                          }
+                        }
+                      ],
+                      "filter": null,
+                      "order_bys": {
+                        "type": "ORDER_MODIFIER",
+                        "orders": []
+                      },
+                      "distinct": false,
+                      "is_operator": false,
+                      "export_state": false,
+                      "catalog": ""
+                    },
+                    "column_name_alias": [],
+                    "with_ordinality": "WITHOUT_ORDINALITY"
+                  },
+                  "where_clause": null,
+                  "group_expressions": [],
+                  "group_sets": [],
+                  "aggregate_handling": "STANDARD_HANDLING",
+                  "having": null,
+                  "sample": null,
+                  "qualify": null
+                },
+                "named_param_map": []
+              }
+            ]
+          }
+        },
+        {
+          "code": "ATTACH 'x.db'",
+          "ast": {
+            "error": true,
+            "error_type": "not implemented",
+            "error_message": "Only SELECT statements can be serialized to json!"
+          }
+        }
+      ],
+      "SQL-stop": {
+        "wasRunning": true,
+        "settled": false,
+        "cancelSettled": false,
+        "neededReset": true,
+        "fresh": {
+          "rows": [
+            {
+              "wert": 7
+            }
+          ],
+          "columns": [
+            {
+              "name": "wert",
+              "type": "Int32"
+            }
+          ]
+        },
+        "closedWorkers": 2
+      },
+      "webR-proof": {
+        "smoke": {
+          "sum": 11,
+          "images": [
+            {
+              "width": 800,
+              "height": 600,
+              "ink": 27033
+            }
+          ],
+          "version": "R version 4.6.0 (2026-04-24)",
+          "channel": "PostMessage"
+        },
+        "cancel": {
+          "wasRunning": true,
+          "epoch": 1,
+          "result": 3
+        },
+        "closedWorkers": 2
+      }
+    }
+  },
+  "scope": "Implemented P0-P2 cases only; no V1 acceptance claim",
+  "browserVersions": {
+    "chromium": "153.0.8010.12",
+    "firefox": "155.0",
+    "webkit": "26.6 (Playwright; not actual Safari pilot)"
+  }
+}

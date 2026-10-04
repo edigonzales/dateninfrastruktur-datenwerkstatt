@@ -1,0 +1,18 @@
+[WebServer] (node:36685) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] (node:36686) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 2 tests using 1 worker
+
+(node:36697) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] 12:13:51 PM [vite] (client) [console.warn] WebR is using `PostMessage` communication channel, nested R REPLs are not available.
+[WebServer] 12:14:11 PM [vite] (client) [console.warn] WARNING: Invalid layout total size: 75%. Layout normalization will be applied.
+[WebServer] 12:14:11 PM [vite] (client) [console.warn] WARNING: Panel id and order props recommended when panels are dynamically rendered
+[WebServer] 12:14:12 PM [vite] (client) [console.warn] WARNING: Invalid layout total size: 75%. Layout normalization will be applied.
+[WebServer] 12:14:12 PM [vite] (client) [console.warn] WARNING: Invalid layout total size: 75%. Layout normalization will be applied.
+  ✓  1 [chromium] › tests/e2e/p7-ui.spec.ts:16:1 › P7 AT-054–055 AT-058: measured SQL/R geometry, keyboard splitters, layout reset and reload (28.5s)
+  ✓  2 [chromium] › tests/e2e/p7-ui.spec.ts:112:1 › P7 AT-055–057: native focus trap/return, settings, storage cleanup and data-free diagnostics (4.3s)
+
+  2 passed (33.9s)

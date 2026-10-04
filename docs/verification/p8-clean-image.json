@@ -1,0 +1,43 @@
+{
+  "image": "sha256:690098f7010ca608e1896c32bdc0c9059b52a1f8d3964e3b194fdfa646ef99b2",
+  "user": "1000870000:0",
+  "readOnly": true,
+  "capDrop": [
+    "ALL"
+  ],
+  "security": [
+    "no-new-privileges"
+  ],
+  "config": {
+    "formatVersion": 1,
+    "appBasePath": "/lab/",
+    "buildId": "p8-f044f1ef",
+    "portalProviders": [],
+    "allowedDataOrigins": [],
+    "runtimes": {
+      "webRBaseUrl": "vendor/webr/0.6.0/",
+      "webRPackageRepoUrl": "vendor/webr-packages/",
+      "webRChannel": "post-message",
+      "packageLockUrl": "vendor/webr-packages/lock.json"
+    },
+    "limits": {
+      "importFileBytes": 134217728,
+      "resultRows": 100000,
+      "resultBytes": 67108864,
+      "sqlTimeoutMs": 30000,
+      "rTimeoutMs": 60000,
+      "cancelGraceMs": 2000,
+      "rWarningRows": 10000,
+      "rHardRows": 100000,
+      "transferBytes": 67108864,
+      "archiveCompressedBytes": 134217728,
+      "archiveExpandedBytes": 536870912,
+      "archiveEntryBytes": 134217728,
+      "archiveEntries": 4096
+    }
+  },
+  "workspaceStatus": 200,
+  "workspaceMime": "text/html; charset=utf-8",
+  "missingStatus": 404,
+  "csp": "default-src 'none'; script-src 'self' 'wasm-unsafe-eval'; worker-src 'self' blob:; connect-src 'self' blob: ; img-src 'self' blob: data:; style-src 'self' 'unsafe-inline'; font-src 'self'; object-src 'none'; base-uri 'none'; form-action 'self'; frame-ancestors 'none'"
+}

@@ -1,0 +1,510 @@
+{
+  "config": {
+    "argv": [
+      "/Users/stefan/Library/Application Support/fnm/node-versions/v22.23.1/installation/bin/node",
+      "/Users/stefan/sources/dateninfrastruktur-datenwerkstatt/node_modules/.bin/playwright",
+      "test",
+      "tests/integration/portal.spec.ts",
+      "tests/e2e/portal.spec.ts",
+      "--reporter=list,json"
+    ],
+    "configFile": "/Users/stefan/sources/dateninfrastruktur-datenwerkstatt/playwright.config.ts",
+    "rootDir": "/Users/stefan/sources/dateninfrastruktur-datenwerkstatt/tests",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "/Users/stefan/sources/dateninfrastruktur-datenwerkstatt/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "chromium",
+        "name": "chromium",
+        "testDir": "/Users/stefan/sources/dateninfrastruktur-datenwerkstatt/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.spec.ts"
+        ],
+        "timeout": 120000
+      },
+      {
+        "outputDir": "/Users/stefan/sources/dateninfrastruktur-datenwerkstatt/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "firefox",
+        "name": "firefox",
+        "testDir": "/Users/stefan/sources/dateninfrastruktur-datenwerkstatt/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.spec.ts"
+        ],
+        "timeout": 120000
+      },
+      {
+        "outputDir": "/Users/stefan/sources/dateninfrastruktur-datenwerkstatt/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "webkit",
+        "name": "webkit",
+        "testDir": "/Users/stefan/sources/dateninfrastruktur-datenwerkstatt/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.spec.ts"
+        ],
+        "timeout": 120000
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "list"
+      ],
+      [
+        "json"
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "missing",
+    "updateSourceMethod": "patch",
+    "version": "1.63.0",
+    "workers": 1,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "e2e/portal.spec.ts",
+      "file": "e2e/portal.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "P4 AT-038 AT-056: explicit deep-link preview, replacement history and no autorun",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 16910,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mpage\u001b[39m\u001b[2m).\u001b[22mtoHaveURL\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nExpected pattern: \u001b[32m/\\/workspaces\\/[^/]+\\/data$/\u001b[39m\nReceived string:  \u001b[31m\"http://127.0.0.1:4173/open?provider=fixture&series=serie&issue=current&table=main\"\u001b[39m\nTimeout: 10000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveURL\" with timeout 10000ms\u001b[22m\n\u001b[2m    24 × locator resolved to <html lang=\"de-CH\">…</html>\u001b[22m\n\u001b[2m       - unexpected value \"http://127.0.0.1:4173/open?provider=fixture&series=serie&issue=current&table=main\"\u001b[22m\n",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mpage\u001b[39m\u001b[2m).\u001b[22mtoHaveURL\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nExpected pattern: \u001b[32m/\\/workspaces\\/[^/]+\\/data$/\u001b[39m\nReceived string:  \u001b[31m\"http://127.0.0.1:4173/open?provider=fixture&series=serie&issue=current&table=main\"\u001b[39m\nTimeout: 10000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveURL\" with timeout 10000ms\u001b[22m\n\u001b[2m    24 × locator resolved to <html lang=\"de-CH\">…</html>\u001b[22m\n\u001b[2m       - unexpected value \"http://127.0.0.1:4173/open?provider=fixture&series=serie&issue=current&table=main\"\u001b[22m\n\n    at /Users/stefan/sources/dateninfrastruktur-datenwerkstatt/tests/e2e/portal.spec.ts:20:22",
+                    "location": {
+                      "file": "/Users/stefan/sources/dateninfrastruktur-datenwerkstatt/tests/e2e/portal.spec.ts",
+                      "column": 22,
+                      "line": 20
+                    },
+                    "snippet": "  18 |   expect(await page.evaluate(() => Reflect.get(globalThis, 'marker'))).toBeUndefined();\n  19 |   await page.getByRole('button', {name: 'Portalimport bestätigen'}).click();\n> 20 |   await expect(page).toHaveURL(/\\/workspaces\\/[^/]+\\/data$/);\n     |                      ^\n  21 |   await expect(page.getByText('data.portal_daten', {exact: true})).toHaveCount(1);\n  22 |   await page.reload();\n  23 |   await expect(page.getByText('data.portal_daten', {exact: true})).toHaveCount(1);"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/Users/stefan/sources/dateninfrastruktur-datenwerkstatt/tests/e2e/portal.spec.ts",
+                        "column": 22,
+                        "line": 20
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mpage\u001b[39m\u001b[2m).\u001b[22mtoHaveURL\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nExpected pattern: \u001b[32m/\\/workspaces\\/[^/]+\\/data$/\u001b[39m\nReceived string:  \u001b[31m\"http://127.0.0.1:4173/open?provider=fixture&series=serie&issue=current&table=main\"\u001b[39m\nTimeout: 10000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveURL\" with timeout 10000ms\u001b[22m\n\u001b[2m    24 × locator resolved to <html lang=\"de-CH\">…</html>\u001b[22m\n\u001b[2m       - unexpected value \"http://127.0.0.1:4173/open?provider=fixture&series=serie&issue=current&table=main\"\u001b[22m\n\n\n  18 |   expect(await page.evaluate(() => Reflect.get(globalThis, 'marker'))).toBeUndefined();\n  19 |   await page.getByRole('button', {name: 'Portalimport bestätigen'}).click();\n> 20 |   await expect(page).toHaveURL(/\\/workspaces\\/[^/]+\\/data$/);\n     |                      ^\n  21 |   await expect(page.getByText('data.portal_daten', {exact: true})).toHaveCount(1);\n  22 |   await page.reload();\n  23 |   await expect(page.getByText('data.portal_daten', {exact: true})).toHaveCount(1);\n    at /Users/stefan/sources/dateninfrastruktur-datenwerkstatt/tests/e2e/portal.spec.ts:20:22"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-04T06:00:44.870Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/Users/stefan/sources/dateninfrastruktur-datenwerkstatt/test-results/e2e-portal-P4-AT-038-AT-05-e046e-ment-history-and-no-autorun-chromium/test-failed-1.png"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/Users/stefan/sources/dateninfrastruktur-datenwerkstatt/test-results/e2e-portal-P4-AT-038-AT-05-e046e-ment-history-and-no-autorun-chromium/error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/Users/stefan/sources/dateninfrastruktur-datenwerkstatt/test-results/e2e-portal-P4-AT-038-AT-05-e046e-ment-history-and-no-autorun-chromium/trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/Users/stefan/sources/dateninfrastruktur-datenwerkstatt/tests/e2e/portal.spec.ts",
+                    "column": 22,
+                    "line": 20
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "2d3f497fa0d8a2bc40e6-b259545c4ed6c9c7f166",
+          "file": "e2e/portal.spec.ts",
+          "line": 3,
+          "column": 1
+        },
+        {
+          "title": "P4 AT-038 AT-056: explicit deep-link preview, replacement history and no autorun",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "firefox",
+              "projectName": "firefox",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 3467,
+                  "error": {
+                    "message": "Error: page.evaluate: Execution context was destroyed, most likely because of a navigation.",
+                    "stack": "Error: page.evaluate: Execution context was destroyed, most likely because of a navigation.\n    at setupPortal (/Users/stefan/sources/dateninfrastruktur-datenwerkstatt/tests/portal/setup.ts:19:14)\n    at /Users/stefan/sources/dateninfrastruktur-datenwerkstatt/tests/e2e/portal.spec.ts:8:3",
+                    "location": {
+                      "file": "/Users/stefan/sources/dateninfrastruktur-datenwerkstatt/tests/portal/setup.ts",
+                      "column": 14,
+                      "line": 19
+                    },
+                    "snippet": "\u001b[90m   at \u001b[39mportal/setup.ts:19\n\n  17 |   await request.post('http://127.0.0.1:4174/__reset');\n  18 |   await page.goto('/tests/spike/index.html');\n> 19 |   await page.evaluate(async () => {\n     |              ^\n  20 |     const path = '/src/infrastructure/sqlrooms/fileImportEngine.ts';\n  21 |     const {DuckDbFileImportEngine} = (await import(\n  22 |       path"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/Users/stefan/sources/dateninfrastruktur-datenwerkstatt/tests/portal/setup.ts",
+                        "column": 14,
+                        "line": 19
+                      },
+                      "message": "Error: page.evaluate: Execution context was destroyed, most likely because of a navigation.\n\n   at portal/setup.ts:19\n\n  17 |   await request.post('http://127.0.0.1:4174/__reset');\n  18 |   await page.goto('/tests/spike/index.html');\n> 19 |   await page.evaluate(async () => {\n     |              ^\n  20 |     const path = '/src/infrastructure/sqlrooms/fileImportEngine.ts';\n  21 |     const {DuckDbFileImportEngine} = (await import(\n  22 |       path\n    at setupPortal (/Users/stefan/sources/dateninfrastruktur-datenwerkstatt/tests/portal/setup.ts:19:14)\n    at /Users/stefan/sources/dateninfrastruktur-datenwerkstatt/tests/e2e/portal.spec.ts:8:3"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-04T06:01:06.774Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/Users/stefan/sources/dateninfrastruktur-datenwerkstatt/test-results/e2e-portal-P4-AT-038-AT-05-e046e-ment-history-and-no-autorun-firefox/test-failed-1.png"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/Users/stefan/sources/dateninfrastruktur-datenwerkstatt/test-results/e2e-portal-P4-AT-038-AT-05-e046e-ment-history-and-no-autorun-firefox/error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/Users/stefan/sources/dateninfrastruktur-datenwerkstatt/test-results/e2e-portal-P4-AT-038-AT-05-e046e-ment-history-and-no-autorun-firefox/trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/Users/stefan/sources/dateninfrastruktur-datenwerkstatt/tests/portal/setup.ts",
+                    "column": 14,
+                    "line": 19
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "2d3f497fa0d8a2bc40e6-d61794cd8b77b3678973",
+          "file": "e2e/portal.spec.ts",
+          "line": 3,
+          "column": 1
+        },
+        {
+          "title": "P4 AT-038 AT-056: explicit deep-link preview, replacement history and no autorun",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "webkit",
+              "projectName": "webkit",
+              "results": [
+                {
+                  "workerIndex": 4,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 14084,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-04T06:01:19.879Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "2d3f497fa0d8a2bc40e6-c0af30c8074bf106f063",
+          "file": "e2e/portal.spec.ts",
+          "line": 3,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "integration/portal.spec.ts",
+      "file": "integration/portal.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "P4 AT-033–037: real v4, concrete issue, public/local join, changed ETag, kept snapshot",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 2611,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-04T06:01:02.398Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "a505707931355786205e-80d1cff7935fbfa692ac",
+          "file": "integration/portal.spec.ts",
+          "line": 4,
+          "column": 1
+        },
+        {
+          "title": "P4 AT-035–036 AT-039 AT-056: errors, URL security, optional index and no foreign configuration",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1446,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-04T06:01:05.033Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "a505707931355786205e-74a5e8600ffcc2603175",
+          "file": "integration/portal.spec.ts",
+          "line": 112,
+          "column": 1
+        },
+        {
+          "title": "P4 AT-033–037: real v4, concrete issue, public/local join, changed ETag, kept snapshot",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "firefox",
+              "projectName": "firefox",
+              "results": [
+                {
+                  "workerIndex": 3,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 5267,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-04T06:01:10.588Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "a505707931355786205e-9b51b134ce454a5d325c",
+          "file": "integration/portal.spec.ts",
+          "line": 4,
+          "column": 1
+        },
+        {
+          "title": "P4 AT-035–036 AT-039 AT-056: errors, URL security, optional index and no foreign configuration",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "firefox",
+              "projectName": "firefox",
+              "results": [
+                {
+                  "workerIndex": 3,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 3691,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-04T06:01:15.880Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "a505707931355786205e-f3629bea990df2a607f6",
+          "file": "integration/portal.spec.ts",
+          "line": 112,
+          "column": 1
+        },
+        {
+          "title": "P4 AT-033–037: real v4, concrete issue, public/local join, changed ETag, kept snapshot",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "webkit",
+              "projectName": "webkit",
+              "results": [
+                {
+                  "workerIndex": 4,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 4576,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-04T06:01:33.995Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "a505707931355786205e-43baee1c733d2c964ddc",
+          "file": "integration/portal.spec.ts",
+          "line": 4,
+          "column": 1
+        },
+        {
+          "title": "P4 AT-035–036 AT-039 AT-056: errors, URL security, optional index and no foreign configuration",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "webkit",
+              "projectName": "webkit",
+              "results": [
+                {
+                  "workerIndex": 4,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 2651,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-04T06:01:38.577Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "a505707931355786205e-4c07a1f6aaaac6b7a372",
+          "file": "integration/portal.spec.ts",
+          "line": 112,
+          "column": 1
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-10-04T06:00:44.075Z",
+    "duration": 57199.313,
+    "expected": 7,
+    "skipped": 0,
+    "unexpected": 2,
+    "flaky": 0
+  }
+}

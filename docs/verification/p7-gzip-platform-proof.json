@@ -1,0 +1,7 @@
+{
+  "reason": "RFC1952 OS header byte 19 (macOS) vs 3 (Linux); normalized to 255",
+  "original": "fa96046943999b63dc056087aad09693bf55ff70fee5c213c3fd5a6183a94319",
+  "normalized": "05c00f46c64c8c97ccd5a6fa0150abeabdb5b77131081484be6b976a5cf3a941",
+  "uncompressed": "81c54b8449e94cf1fe264dda3749d130dde2c1db88025a56d8764d6bce5f6d84",
+  "unchangedUncompressed": true
+}

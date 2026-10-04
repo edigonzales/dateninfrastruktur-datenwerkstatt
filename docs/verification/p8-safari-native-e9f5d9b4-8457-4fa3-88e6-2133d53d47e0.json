@@ -1,0 +1,108 @@
+{
+  "id": "e9f5d9b4-8457-4fa3-88e6-2133d53d47e0",
+  "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/27.0.1 Safari/605.1.15",
+  "startedAt": "2026-10-04T15:27:55.580Z",
+  "status": "failed",
+  "checks": [
+    {
+      "name": "native-browser-and-persistent-storage",
+      "at": "2026-10-04T15:28:00.844Z",
+      "evidence": {
+        "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/27.0.1 Safari/605.1.15",
+        "origin": "http://127.0.0.1:4184",
+        "opfs": true,
+        "locks": true,
+        "existingProjects": 1,
+        "isolation": "Each attempt creates a new workspace; existing projects remain untouched."
+      }
+    },
+    {
+      "name": "created-test-workspace",
+      "at": "2026-10-04T15:28:01.857Z",
+      "evidence": {
+        "workspaceId": "0f41ce0b-693a-4f20-872a-2576a3a34836",
+        "fixtureKey": "proof-ef8daa51-6d8f-4e27-9d62-3b9080163756"
+      }
+    },
+    {
+      "name": "sql-observed-values",
+      "at": "2026-10-04T15:28:02.907Z",
+      "evidence": {
+        "rows": [
+          [
+            "002",
+            "Bergtal",
+            "2024",
+            "2200",
+            "1650",
+            "750.0"
+          ],
+          [
+            "001",
+            "Auenried",
+            "2024",
+            "1100",
+            "660",
+            "600.0"
+          ],
+          [
+            "003",
+            "Lindenwil",
+            "2024",
+            "4400",
+            "1760",
+            "400.0"
+          ],
+          [
+            "004",
+            "Seedorf",
+            "2024",
+            "0",
+            "10",
+            null
+          ]
+        ],
+        "expected": [
+          [
+            "002",
+            "Bergtal",
+            "2024",
+            "2200",
+            "1650",
+            "750"
+          ],
+          [
+            "001",
+            "Auenried",
+            "2024",
+            "1100",
+            "660",
+            "600"
+          ],
+          [
+            "003",
+            "Lindenwil",
+            "2024",
+            "4400",
+            "1760",
+            "400"
+          ],
+          [
+            "004",
+            "Seedorf",
+            "2024",
+            "0",
+            "10",
+            null
+          ]
+        ]
+      }
+    },
+    {
+      "name": "failure",
+      "at": "2026-10-04T15:28:02.910Z",
+      "evidence": "Error: Golden SQL: [[\"002\",\"Bergtal\",\"2024\",\"2200\",\"1650\",\"750.0\"],[\"001\",\"Auenried\",\"2024\",\"1100\",\"660\",\"600.0\"],[\"003\",\"Lindenwil\",\"2024\",\"4400\",\"1760\",\"400.0\"],[\"004\",\"Seedorf\",\"2024\",\"0\",\"10\",null]] != [[\"002\",\"Bergtal\",\"2024\",\"2200\",\"1650\",\"750\"],[\"001\",\"Auenried\",\"2024\",\"1100\",\"660\",\"600\"],[\"003\",\"Lindenwil\",\"2024\",\"4400\",\"1760\",\"400\"],[\"004\",\"Seedorf\",\"2024\",\"0\",\"10\",null]]\nassert@http://127.0.0.1:4184/tests/safari/pilot.ts:35:25\nequal@http://127.0.0.1:4184/tests/safari/pilot.ts:38:8\nstart@http://127.0.0.1:4184/tests/safari/pilot.ts:178:7\nasync run@http://127.0.0.1:4184/tests/safari/pilot.ts:346:13"
+    }
+  ],
+  "error": "Error: Golden SQL: [[\"002\",\"Bergtal\",\"2024\",\"2200\",\"1650\",\"750.0\"],[\"001\",\"Auenried\",\"2024\",\"1100\",\"660\",\"600.0\"],[\"003\",\"Lindenwil\",\"2024\",\"4400\",\"1760\",\"400.0\"],[\"004\",\"Seedorf\",\"2024\",\"0\",\"10\",null]] != [[\"002\",\"Bergtal\",\"2024\",\"2200\",\"1650\",\"750\"],[\"001\",\"Auenried\",\"2024\",\"1100\",\"660\",\"600\"],[\"003\",\"Lindenwil\",\"2024\",\"4400\",\"1760\",\"400\"],[\"004\",\"Seedorf\",\"2024\",\"0\",\"10\",null]]\nassert@http://127.0.0.1:4184/tests/safari/pilot.ts:35:25\nequal@http://127.0.0.1:4184/tests/safari/pilot.ts:38:8\nstart@http://127.0.0.1:4184/tests/safari/pilot.ts:178:7\nasync run@http://127.0.0.1:4184/tests/safari/pilot.ts:346:13"
+}

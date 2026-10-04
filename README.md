@@ -1,6 +1,31 @@
-# Datenwerkstatt V1 — Spezifikationspaket
+# Datenwerkstatt V1 — technisch geprüftes Testprofil
 
-Dieses Paket ist ein Arbeitsauftrag für einen LLM-Coding-Agenten: **80 verbindliche Anforderungen**, eigene TypeScript-Verträge, Implementierungsphasen, Abnahmeszenarien und synthetische Testdaten. Es ist keine bereits implementierte Webanwendung.
+Dieses Repository enthält die verbindliche V1-Spezifikation und die eigenständige Anwendung. **P0–P8 sind für die dokumentierte Testkonfiguration technisch abgenommen; die produktive Veröffentlichung ist nicht freigegeben.** Implementiert sind lokale Arbeitsbereiche, bestätigte CSV-/Parquet- und Portalimporte, echte SQL-/R-Läufe, vollständiger SQL→R→SQL-Transfer, stabile Resultate/Paging, Aufbewahren, Daten-/Grafikexport und Projektarchive. Archivimport, Duplizieren, Recovery und Mehrtab-Schreibschutz erhalten Code und historische Herkunft. SQL und Dateiimport teilen einen sessioneigenen DuckDB-Connector; R startet lazy pro Workspace. P0–P8 sind geprüft. Statisches Deployment, gemessene Arbeitsflächen und Betriebsfunktionen sind geliefert; P8 weist 198 funktionale Browserfälle und 45 Deploymentfälle nach. Der echte Safari-Pilot einschliesslich vollständigem Prozessneustart ist bestanden. Vor produktiver Veröffentlichung bleiben bestätigte Portal-/Ingresskonfiguration und Distributionspflichten zu erfüllen.
+
+Der genaue Stand, tatsächliche Befehle/Fehlläufe und offene Abnahmen stehen in [docs/IMPLEMENTATION_STATUS.md](docs/IMPLEMENTATION_STATUS.md) und [docs/RELEASE_CHECKLIST.md](docs/RELEASE_CHECKLIST.md).
+
+## Lokaler Entwicklungsstart
+
+Node 22.23.1 und npm 11.18.0 verwenden (`.node-version`, `engines`).
+
+```sh
+npm ci
+npm run assets:prepare
+npm run dev
+```
+
+Die App läuft auf `http://127.0.0.1:4173`. `public/runtime-config.json` ist ausdrücklich ein lokales Entwicklungsprofil ohne produktive Portalendpunkte. Der erste Assetabruf benötigt Netzwerkzugriff für die DuckDB-Extensions und den kuratierten R-Paketspiegel; danach werden die gepinnten, hashgeprüften lokalen Assets genutzt. Ohne erfolgreichen echten Speichertest bietet die App einen ausdrücklich zu bestätigenden Sitzungsmodus an. Browserdaten sind kein Backup.
+
+```sh
+npx playwright install chromium firefox webkit
+npm run verify
+npm run test:browser-matrix
+npx playwright test
+```
+
+`verify` prüft TypeScript, Modulgrenzen/Lint, Unit-/übernommene Regressionstests, Build sowie reale Chromium-Integrations- und E2E-Fälle. `test:browser-matrix` führt die Integrationsfälle in allen drei Browsern aus; `npx playwright test` zusätzlich die E2E-Fälle und Ressourcenmessung. Die vollständige Zuordnung steht in [docs/ACCEPTANCE_STATUS.md](docs/ACCEPTANCE_STATUS.md). Der tatsächliche Safari-Pilot einschliesslich Prozessneustart und der fachliche Golden Path mit echtem Archiv-Rundlauf sind im dokumentierten Testprofil bestanden. Produktive Releasevoraussetzungen und der offene Safari-/Monaco-Clipboard-Diagnosebefund stehen in [docs/RELEASE_CHECKLIST.md](docs/RELEASE_CHECKLIST.md).
+
+Quellbaseline und Entscheidungen: [docs/BASELINE.md](docs/BASELINE.md), [docs/MIGRATION_MATRIX.md](docs/MIGRATION_MATRIX.md), [docs/DEPENDENCIES.md](docs/DEPENDENCIES.md). Das Quellportal wird nicht geändert.
 
 ## Einstieg
 
@@ -29,6 +54,10 @@ Der Portaladapter nutzt die bereits vorhandenen `explore/context.json`-Endpunkte
 
 ## Paketprüfung
 
-`python tools/verify-package.py` prüft Dokumentlinks, Requirement-/Test-Zuordnung, Fixture-Sollwerte und Manifestreferenzen des Pakets. `tsc -p contracts/tsconfig.json` prüft die eigenen TypeScript-Verträge. Diese Prüfungen ersetzen nicht die im Zielprojekt noch zu implementierenden Browser-, Engine- und E2E-Tests.
+`python tools/verify-package.py` prüft Dokumentlinks, Requirement-/Test-Zuordnung, Fixture-Sollwerte und Manifestreferenzen des Pakets. `tsc -p contracts/tsconfig.json` prüft die eigenen TypeScript-Verträge. Diese Prüfungen ersetzen nicht die Browser-, Engine- und E2E-Tests.
 
-Keine Schriftdateien oder vermeintlich offiziellen Logos aus generierten Mockups sind enthalten. Originalbranding aus dem vorhandenen kantonalen Assetbestand beziehen und Herkunft/Lizenz dokumentieren.
+Das Original-SVG wurde aus der geprüften so-web-components-Baseline übernommen; Herkunft und Lizenz sind dokumentiert. Keine generierten Logos oder kantonalen Schriftdateien. Die App verwendet Systemfonts und Monacos eigenen lizenzierten Iconfont.
+
+## Statischer Betrieb
+
+Container, Unterpfad `/lab/`, Betreiberkonfiguration, CSP-/Kommunikationsprofile, Diagnose und Backup sind in [docs/OPERATIONS.md](docs/OPERATIONS.md) beschrieben. `npm run test:deployment` prüft drei echte Containerprofile mit beliebiger UID. Das Produktionsimage startet ausschliesslich Caddy auf Port 8080.

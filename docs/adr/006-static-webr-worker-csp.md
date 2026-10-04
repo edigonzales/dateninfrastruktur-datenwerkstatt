@@ -1,0 +1,13 @@
+# ADR 006 — Statische Auslieferung und webR-Worker-CSP
+
+Status: implementiert, P7-Abschlussnachweis noch ausstehend.
+
+Der reale statische Caddy-Lauf mit webR 0.6.0 blieb beim Initialisieren stehen. Ein kleiner Chromium-Test mit identischen Originalbytes (nur vorgeschaltetem Diagnose-Listener) meldete `CSP script-src eval`; nach fünf Sekunden wurde der Worker explizit geschlossen. Mit zusätzlichem `unsafe-eval` ausschliesslich im Antwortheader von `webr-worker.js` initialisierte dieselbe Runtime. Ergebnisse: [p7-webr-csp-proof.json](../verification/p7-webr-csp-proof.json). Das ist keine Freigabe für eval im Anwendungscode oder für Workspace-Konfiguration.
+
+Entscheidung: Nur die feste, lokal ausgelieferte Workerdatei erhält diese belegte Ausnahme. Das Hauptdokument und sämtliche übrigen Assets behalten `script-src 'self' 'wasm-unsafe-eval'`. `connect-src` nennt nur die App-Origin, Blob-URLs und die explizit konfigurierten Daten-Origins. `worker-src` erlaubt lokale Worker und die vom gepinnten SQLRooms-Connector benötigte Blob-Hülle. Monaco/resizable-panels setzen dynamische Styles; `style-src 'self' 'unsafe-inline'` erlaubt diese, ohne fremde Stylesheets/Fonts/Scripts freizugeben. Kein Service Worker. PostMessage ohne COOP/COEP und separates auto-Profil mit COOP same-origin/COEP require-corp.
+
+Caddy 2.11.4 aus vorhandenem lokalen Originalimage ist per Digest gepinnt. Port 8080 benötigt keine privilegierte Bind-Capability; das mitgelieferte Dateicapability wird im Image entfernt. Containerprüfung verwendet arbitrary UID 1000870000, read-only Rootfs, keine Linux-Capabilities und nur `/tmp` als tmpfs. Node existiert nur im Buildstage. Erste Tests deckten zusätzlich die Cache-Header-Reihenfolge auf. Diese wurde mit disjunkten Matchern korrigiert. Komprimierte Runtime-Dateiformate werden ohne Content-Encoding geliefert.
+
+Nicht gewählte Alternativen: pauschales unsafe-eval auf der Hauptseite, Abschalten der CSP oder ein Runtime-/Backendwechsel. Ein Init-Timeout beendet den tatsächlichen R-Worker und erlaubt einen expliziten Retry. Der Build wird weiter durch echte SQL/R-/Netzwerk-/CSP- und Fehlerprüfungen validiert.
+
+Ergänzung: Ein dokumentseitiger `script-src: eval`-Befund kam aus Zods optionaler JIT-Fähigkeitsprobe (`Function('')`), die auch bei gefangener Exception eine CSP-Verletzung erzeugt. Die installierte Zod-4.4.3-API unterstützt `z.config({jitless:true})`. `src/app/validationConfig.ts` setzt dies vor dem übrigen Appgraph; strikte Validierung bleibt bestehen. Der Proof enthält Quellfile/Zeile/Spalte (`p7-main-csp-proof.json`). Die Dokument-CSP wird dafür nicht erweitert.

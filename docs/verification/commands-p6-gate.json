@@ -1,0 +1,38 @@
+[
+  {
+    "command": "npm run verify",
+    "exitCode": 0,
+    "log": "verify-p6-gate.log",
+    "counts": {
+      "unit": 40,
+      "integrationChromium": 38,
+      "e2eChromium": 17
+    }
+  },
+  {
+    "command": "PLAYWRIGHT_JSON_OUTPUT_FILE=docs/verification/browser-matrix-p6-gate.json npx playwright test --workers=3 --reporter=list,json",
+    "exitCode": 0,
+    "log": "browser-matrix-p6-gate.log",
+    "report": "browser-matrix-p6-gate.json",
+    "passed": 165
+  },
+  {
+    "command": "PLAYWRIGHT_JSON_OUTPUT_FILE=docs/verification/browser-portal-p6-serial.json npx playwright test tests/integration/portal.spec.ts tests/integration/archive-portal.spec.ts tests/e2e/portal.spec.ts --workers=1 --reporter=list,json",
+    "exitCode": 0,
+    "log": "browser-portal-p6-serial.log",
+    "report": "browser-portal-p6-serial.json",
+    "passed": 12
+  },
+  {
+    "command": "python3 tools/verify-package.py --report docs/verification/specification-check-p6.json",
+    "exitCode": 0
+  },
+  {
+    "command": "npx tsc -p contracts/tsconfig.json",
+    "exitCode": 0
+  },
+  {
+    "command": "git diff --check",
+    "exitCode": 0
+  }
+]

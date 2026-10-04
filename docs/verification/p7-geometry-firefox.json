@@ -1,0 +1,202 @@
+[
+  {
+    "kind": "sql",
+    "viewport": {
+      "width": 1440,
+      "height": 900
+    },
+    "header": {
+      "x": 0,
+      "y": 0,
+      "width": 1440,
+      "height": 56,
+      "bottom": 56
+    },
+    "sidebar": {
+      "x": 0,
+      "y": 56,
+      "width": 52,
+      "height": 844,
+      "bottom": 900
+    },
+    "toolbar": {
+      "x": 52,
+      "y": 86,
+      "width": 1388,
+      "height": 48,
+      "bottom": 134
+    },
+    "editor": {
+      "x": 52,
+      "y": 158,
+      "width": 1388,
+      "height": 330.75,
+      "bottom": 488.75
+    },
+    "area": {
+      "x": 52,
+      "y": 158,
+      "width": 1388,
+      "height": 742,
+      "bottom": 900
+    },
+    "output": {
+      "x": 52,
+      "y": 495.75,
+      "width": 1388,
+      "height": 404.25,
+      "bottom": 900
+    },
+    "scrollWidth": 1440
+  },
+  {
+    "kind": "sql",
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "header": {
+      "x": 0,
+      "y": 0,
+      "width": 1280,
+      "height": 56,
+      "bottom": 56
+    },
+    "sidebar": {
+      "x": 0,
+      "y": 56,
+      "width": 52,
+      "height": 744,
+      "bottom": 800
+    },
+    "toolbar": {
+      "x": 52,
+      "y": 86,
+      "width": 1228,
+      "height": 48,
+      "bottom": 134
+    },
+    "editor": {
+      "x": 52,
+      "y": 158,
+      "width": 1228,
+      "height": 285.75,
+      "bottom": 443.75
+    },
+    "area": {
+      "x": 52,
+      "y": 158,
+      "width": 1228,
+      "height": 642,
+      "bottom": 800
+    },
+    "output": {
+      "x": 52,
+      "y": 450.75,
+      "width": 1228,
+      "height": 349.25,
+      "bottom": 800
+    },
+    "scrollWidth": 1280
+  },
+  {
+    "kind": "r",
+    "viewport": {
+      "width": 1440,
+      "height": 900
+    },
+    "header": {
+      "x": 0,
+      "y": 0,
+      "width": 1440,
+      "height": 56,
+      "bottom": 56
+    },
+    "sidebar": {
+      "x": 0,
+      "y": 56,
+      "width": 52,
+      "height": 844,
+      "bottom": 900
+    },
+    "toolbar": {
+      "x": 52,
+      "y": 86,
+      "width": 1388,
+      "height": 48,
+      "bottom": 134
+    },
+    "editor": {
+      "x": 52,
+      "y": 168,
+      "width": 690.5,
+      "height": 543.75,
+      "bottom": 711.75
+    },
+    "area": {
+      "x": 52,
+      "y": 168,
+      "width": 1388,
+      "height": 732,
+      "bottom": 900
+    },
+    "output": {
+      "x": 749.5,
+      "y": 168,
+      "width": 690.5,
+      "height": 543.75,
+      "bottom": 711.75
+    },
+    "scrollWidth": 1440
+  },
+  {
+    "kind": "r",
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "header": {
+      "x": 0,
+      "y": 0,
+      "width": 1280,
+      "height": 56,
+      "bottom": 56
+    },
+    "sidebar": {
+      "x": 0,
+      "y": 56,
+      "width": 52,
+      "height": 744,
+      "bottom": 800
+    },
+    "toolbar": {
+      "x": 52,
+      "y": 86,
+      "width": 1228,
+      "height": 48,
+      "bottom": 134
+    },
+    "editor": {
+      "x": 52,
+      "y": 168,
+      "width": 610.5,
+      "height": 468.75,
+      "bottom": 636.75
+    },
+    "area": {
+      "x": 52,
+      "y": 168,
+      "width": 1228,
+      "height": 632,
+      "bottom": 800
+    },
+    "output": {
+      "x": 669.5,
+      "y": 168,
+      "width": 610.5,
+      "height": 468.75,
+      "bottom": 636.75
+    },
+    "scrollWidth": 1280
+  }
+]

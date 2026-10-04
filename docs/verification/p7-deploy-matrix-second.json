@@ -1,0 +1,1246 @@
+{
+  "config": {
+    "argv": [
+      "/Users/stefan/Library/Application Support/fnm/node-versions/v22.23.1/installation/bin/node",
+      "/Users/stefan/sources/dateninfrastruktur-datenwerkstatt/node_modules/.bin/playwright",
+      "test",
+      "-c",
+      "playwright.deploy.config.ts",
+      "--workers=3",
+      "--max-failures=1",
+      "--reporter=list,json"
+    ],
+    "configFile": "/Users/stefan/sources/dateninfrastruktur-datenwerkstatt/playwright.deploy.config.ts",
+    "rootDir": "/Users/stefan/sources/dateninfrastruktur-datenwerkstatt/tests/deployment",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 1,
+    "metadata": {
+      "actualWorkers": 3
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "/Users/stefan/sources/dateninfrastruktur-datenwerkstatt/test-results-deployment",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "profile": 0
+        },
+        "id": "chromium-0",
+        "name": "chromium-0",
+        "testDir": "/Users/stefan/sources/dateninfrastruktur-datenwerkstatt/tests/deployment",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 240000
+      },
+      {
+        "outputDir": "/Users/stefan/sources/dateninfrastruktur-datenwerkstatt/test-results-deployment",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "profile": 1
+        },
+        "id": "chromium-1",
+        "name": "chromium-1",
+        "testDir": "/Users/stefan/sources/dateninfrastruktur-datenwerkstatt/tests/deployment",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 240000
+      },
+      {
+        "outputDir": "/Users/stefan/sources/dateninfrastruktur-datenwerkstatt/test-results-deployment",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "profile": 2
+        },
+        "id": "chromium-2",
+        "name": "chromium-2",
+        "testDir": "/Users/stefan/sources/dateninfrastruktur-datenwerkstatt/tests/deployment",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 240000
+      },
+      {
+        "outputDir": "/Users/stefan/sources/dateninfrastruktur-datenwerkstatt/test-results-deployment",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "profile": 0
+        },
+        "id": "firefox-0",
+        "name": "firefox-0",
+        "testDir": "/Users/stefan/sources/dateninfrastruktur-datenwerkstatt/tests/deployment",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 240000
+      },
+      {
+        "outputDir": "/Users/stefan/sources/dateninfrastruktur-datenwerkstatt/test-results-deployment",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "profile": 1
+        },
+        "id": "firefox-1",
+        "name": "firefox-1",
+        "testDir": "/Users/stefan/sources/dateninfrastruktur-datenwerkstatt/tests/deployment",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 240000
+      },
+      {
+        "outputDir": "/Users/stefan/sources/dateninfrastruktur-datenwerkstatt/test-results-deployment",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "profile": 2
+        },
+        "id": "firefox-2",
+        "name": "firefox-2",
+        "testDir": "/Users/stefan/sources/dateninfrastruktur-datenwerkstatt/tests/deployment",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 240000
+      },
+      {
+        "outputDir": "/Users/stefan/sources/dateninfrastruktur-datenwerkstatt/test-results-deployment",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "profile": 0
+        },
+        "id": "webkit-0",
+        "name": "webkit-0",
+        "testDir": "/Users/stefan/sources/dateninfrastruktur-datenwerkstatt/tests/deployment",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 240000
+      },
+      {
+        "outputDir": "/Users/stefan/sources/dateninfrastruktur-datenwerkstatt/test-results-deployment",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "profile": 1
+        },
+        "id": "webkit-1",
+        "name": "webkit-1",
+        "testDir": "/Users/stefan/sources/dateninfrastruktur-datenwerkstatt/tests/deployment",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 240000
+      },
+      {
+        "outputDir": "/Users/stefan/sources/dateninfrastruktur-datenwerkstatt/test-results-deployment",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "profile": 2
+        },
+        "id": "webkit-2",
+        "name": "webkit-2",
+        "testDir": "/Users/stefan/sources/dateninfrastruktur-datenwerkstatt/tests/deployment",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 240000
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "list"
+      ],
+      [
+        "json"
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "missing",
+    "updateSourceMethod": "patch",
+    "version": "1.63.0",
+    "workers": 3,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "faults.spec.ts",
+      "file": "faults.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "P7 AT-069: missing/wrong MIME runtime assets fail explicitly; retry owns one valid worker",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 240000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium-0",
+              "projectName": "chromium-0",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 33950,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-04T10:44:03.514Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "0c44c28aff2fc4851b91-4b43d16897c225af64bb",
+          "file": "faults.spec.ts",
+          "line": 13,
+          "column": 1
+        },
+        {
+          "title": "P7 AT-046 AT-068–069: R worker CSP failure times out, corrected retry and genuine loop cancellation",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 240000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium-0",
+              "projectName": "chromium-0",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 111058,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-04T10:44:37.497Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "0c44c28aff2fc4851b91-c387de21a4882ae451d5",
+          "file": "faults.spec.ts",
+          "line": 63,
+          "column": 1
+        },
+        {
+          "title": "P7 AT-069: missing/wrong MIME runtime assets fail explicitly; retry owns one valid worker",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 240000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium-1",
+              "projectName": "chromium-1",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 2,
+                  "status": "passed",
+                  "duration": 33919,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-04T10:44:03.513Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "0c44c28aff2fc4851b91-c998d16e39516d0ba38a",
+          "file": "faults.spec.ts",
+          "line": 13,
+          "column": 1
+        },
+        {
+          "title": "P7 AT-046 AT-068–069: R worker CSP failure times out, corrected retry and genuine loop cancellation",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 240000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium-1",
+              "projectName": "chromium-1",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 2,
+                  "status": "passed",
+                  "duration": 109982,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-04T10:44:37.466Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "0c44c28aff2fc4851b91-be83656f6e6d60227e12",
+          "file": "faults.spec.ts",
+          "line": 63,
+          "column": 1
+        },
+        {
+          "title": "P7 AT-069: missing/wrong MIME runtime assets fail explicitly; retry owns one valid worker",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 240000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium-2",
+              "projectName": "chromium-2",
+              "results": [
+                {
+                  "workerIndex": 4,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 25045,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-04T10:45:08.256Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "0c44c28aff2fc4851b91-d581711a1a6a6b2cb2cb",
+          "file": "faults.spec.ts",
+          "line": 13,
+          "column": 1
+        },
+        {
+          "title": "P7 AT-046 AT-068–069: R worker CSP failure times out, corrected retry and genuine loop cancellation",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 240000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium-2",
+              "projectName": "chromium-2",
+              "results": [
+                {
+                  "workerIndex": 4,
+                  "parallelIndex": 1,
+                  "status": "failed",
+                  "duration": 107807,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m1\u001b[39m\nReceived: \u001b[31m0\u001b[39m\n\nCall Log:\n- Timeout 15000ms exceeded while waiting on the predicate",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m1\u001b[39m\nReceived: \u001b[31m0\u001b[39m\n\nCall Log:\n- Timeout 15000ms exceeded while waiting on the predicate\n    at /Users/stefan/sources/dateninfrastruktur-datenwerkstatt/tests/deployment/faults.spec.ts:117:6",
+                    "location": {
+                      "file": "/Users/stefan/sources/dateninfrastruktur-datenwerkstatt/tests/deployment/faults.spec.ts",
+                      "column": 6,
+                      "line": 117
+                    },
+                    "snippet": "  115 |   await expect\n  116 |     .poll(() => workers.filter((w) => w.url.includes('webr') && !w.closed).length)\n> 117 |     .toBe(info.project.metadata.profile === 2 ? 1 : 0); // Real SAB interrupt, without reset, is proved by the same live worker.\n      |      ^\n  118 |   await code(page, 'cat(\"nach Abbruch\")');\n  119 |   await page.getByRole('button', {name: 'Ausführen', exact: true}).click();\n  120 |   await expect(page.getByRole('log')).toContainText('nach Abbruch', {timeout: 90000});"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/Users/stefan/sources/dateninfrastruktur-datenwerkstatt/tests/deployment/faults.spec.ts",
+                        "column": 6,
+                        "line": 117
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m1\u001b[39m\nReceived: \u001b[31m0\u001b[39m\n\nCall Log:\n- Timeout 15000ms exceeded while waiting on the predicate\n\n  115 |   await expect\n  116 |     .poll(() => workers.filter((w) => w.url.includes('webr') && !w.closed).length)\n> 117 |     .toBe(info.project.metadata.profile === 2 ? 1 : 0); // Real SAB interrupt, without reset, is proved by the same live worker.\n      |      ^\n  118 |   await code(page, 'cat(\"nach Abbruch\")');\n  119 |   await page.getByRole('button', {name: 'Ausführen', exact: true}).click();\n  120 |   await expect(page.getByRole('log')).toContainText('nach Abbruch', {timeout: 90000});\n    at /Users/stefan/sources/dateninfrastruktur-datenwerkstatt/tests/deployment/faults.spec.ts:117:6"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-04T10:45:33.326Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/Users/stefan/sources/dateninfrastruktur-datenwerkstatt/test-results-deployment/faults-P7-AT-046-AT-068–06-25cc8-d-genuine-loop-cancellation-chromium-2/test-failed-1.png"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/Users/stefan/sources/dateninfrastruktur-datenwerkstatt/test-results-deployment/faults-P7-AT-046-AT-068–06-25cc8-d-genuine-loop-cancellation-chromium-2/error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/Users/stefan/sources/dateninfrastruktur-datenwerkstatt/test-results-deployment/faults-P7-AT-046-AT-068–06-25cc8-d-genuine-loop-cancellation-chromium-2/trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/Users/stefan/sources/dateninfrastruktur-datenwerkstatt/tests/deployment/faults.spec.ts",
+                    "column": 6,
+                    "line": 117
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "0c44c28aff2fc4851b91-cd36bc15b91188988640",
+          "file": "faults.spec.ts",
+          "line": 63,
+          "column": 1
+        },
+        {
+          "title": "P7 AT-069: missing/wrong MIME runtime assets fail explicitly; retry owns one valid worker",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 240000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "firefox-0",
+              "projectName": "firefox-0",
+              "results": [
+                {
+                  "workerIndex": 6,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 35600,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-04T10:46:28.931Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "0c44c28aff2fc4851b91-82494362ebe1a1dd5f3f",
+          "file": "faults.spec.ts",
+          "line": 13,
+          "column": 1
+        },
+        {
+          "title": "P7 AT-046 AT-068–069: R worker CSP failure times out, corrected retry and genuine loop cancellation",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 240000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "firefox-0",
+              "projectName": "firefox-0",
+              "results": [
+                {
+                  "workerIndex": 6,
+                  "parallelIndex": 0,
+                  "status": "interrupted",
+                  "duration": 19411,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-04T10:47:04.558Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/Users/stefan/sources/dateninfrastruktur-datenwerkstatt/test-results-deployment/faults-P7-AT-046-AT-068–06-25cc8-d-genuine-loop-cancellation-firefox-0/test-failed-1.png"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/Users/stefan/sources/dateninfrastruktur-datenwerkstatt/test-results-deployment/faults-P7-AT-046-AT-068–06-25cc8-d-genuine-loop-cancellation-firefox-0/error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/Users/stefan/sources/dateninfrastruktur-datenwerkstatt/test-results-deployment/faults-P7-AT-046-AT-068–06-25cc8-d-genuine-loop-cancellation-firefox-0/trace.zip"
+                    }
+                  ]
+                }
+              ],
+              "status": "skipped"
+            }
+          ],
+          "id": "0c44c28aff2fc4851b91-ccf1a6124f816ed3156c",
+          "file": "faults.spec.ts",
+          "line": 63,
+          "column": 1
+        },
+        {
+          "title": "P7 AT-069: missing/wrong MIME runtime assets fail explicitly; retry owns one valid worker",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 240000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "firefox-1",
+              "projectName": "firefox-1",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "0c44c28aff2fc4851b91-041ede5fdc87601d48be",
+          "file": "faults.spec.ts",
+          "line": 13,
+          "column": 1
+        },
+        {
+          "title": "P7 AT-046 AT-068–069: R worker CSP failure times out, corrected retry and genuine loop cancellation",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 240000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "firefox-1",
+              "projectName": "firefox-1",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "0c44c28aff2fc4851b91-652b319a0e5059935df7",
+          "file": "faults.spec.ts",
+          "line": 63,
+          "column": 1
+        },
+        {
+          "title": "P7 AT-069: missing/wrong MIME runtime assets fail explicitly; retry owns one valid worker",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 240000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "firefox-2",
+              "projectName": "firefox-2",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "0c44c28aff2fc4851b91-f2dbef095855b5bf6f68",
+          "file": "faults.spec.ts",
+          "line": 13,
+          "column": 1
+        },
+        {
+          "title": "P7 AT-046 AT-068–069: R worker CSP failure times out, corrected retry and genuine loop cancellation",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 240000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "firefox-2",
+              "projectName": "firefox-2",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "0c44c28aff2fc4851b91-752a8bf35698941e73cb",
+          "file": "faults.spec.ts",
+          "line": 63,
+          "column": 1
+        },
+        {
+          "title": "P7 AT-069: missing/wrong MIME runtime assets fail explicitly; retry owns one valid worker",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 240000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "webkit-0",
+              "projectName": "webkit-0",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "0c44c28aff2fc4851b91-da7a3c54c7486e00b6b8",
+          "file": "faults.spec.ts",
+          "line": 13,
+          "column": 1
+        },
+        {
+          "title": "P7 AT-046 AT-068–069: R worker CSP failure times out, corrected retry and genuine loop cancellation",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 240000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "webkit-0",
+              "projectName": "webkit-0",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "0c44c28aff2fc4851b91-965bc88d355cf7b2f1c8",
+          "file": "faults.spec.ts",
+          "line": 63,
+          "column": 1
+        },
+        {
+          "title": "P7 AT-069: missing/wrong MIME runtime assets fail explicitly; retry owns one valid worker",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 240000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "webkit-1",
+              "projectName": "webkit-1",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "0c44c28aff2fc4851b91-4b8b76c706cafaac0949",
+          "file": "faults.spec.ts",
+          "line": 13,
+          "column": 1
+        },
+        {
+          "title": "P7 AT-046 AT-068–069: R worker CSP failure times out, corrected retry and genuine loop cancellation",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 240000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "webkit-1",
+              "projectName": "webkit-1",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "0c44c28aff2fc4851b91-d489e15640a6f57eefec",
+          "file": "faults.spec.ts",
+          "line": 63,
+          "column": 1
+        },
+        {
+          "title": "P7 AT-069: missing/wrong MIME runtime assets fail explicitly; retry owns one valid worker",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 240000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "webkit-2",
+              "projectName": "webkit-2",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "0c44c28aff2fc4851b91-720d411665123e84b6fd",
+          "file": "faults.spec.ts",
+          "line": 13,
+          "column": 1
+        },
+        {
+          "title": "P7 AT-046 AT-068–069: R worker CSP failure times out, corrected retry and genuine loop cancellation",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 240000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "webkit-2",
+              "projectName": "webkit-2",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "0c44c28aff2fc4851b91-220bdb222c8b3a7d5e85",
+          "file": "faults.spec.ts",
+          "line": 63,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "static.spec.ts",
+      "file": "static.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "P7 AT-066–068: arbitrary UID static container, deep routes, MIME/cache/CSP and real SQL/R",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 240000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium-0",
+              "projectName": "chromium-0",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 35314,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-04T10:44:03.514Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "network",
+                      "contentType": "application/json",
+                      "body": "WwogICJodHRwOi8vMTI3LjAuMC4xOjQxODAvd29ya3NwYWNlcyIsCiAgImh0dHA6Ly8xMjcuMC4wLjE6NDE4MC9hc3NldHMvaW5kZXgtQ2lXOERvdDAuanMiLAogICJodHRwOi8vMTI3LjAuMC4xOjQxODAvYXNzZXRzL2luZGV4LURnRjB5ejU0LmNzcyIsCiAgImh0dHA6Ly8xMjcuMC4wLjE6NDE4MC9ydW50aW1lLWNvbmZpZy5qc29uIiwKICAiaHR0cDovLzEyNy4wLjAuMTo0MTgwL2Fzc2V0cy9rYW50b24tc29sb3RodXJuLURPcEpfeDhpLnN2ZyIsCiAgImh0dHA6Ly8xMjcuMC4wLjE6NDE4MC9hc3NldHMvQ29kZUVkaXRvckltcGwtQ1lyMXZ0elouanMiLAogICJodHRwOi8vMTI3LjAuMC4xOjQxODAvYXNzZXRzL0NvZGVFZGl0b3JJbXBsLXY1cmZLY1ZzLmNzcyIsCiAgImh0dHA6Ly8xMjcuMC4wLjE6NDE4MC9hc3NldHMvc3FsLU5FRTUyU3lxLmpzIiwKICAiaHR0cDovLzEyNy4wLjAuMTo0MTgwL2Fzc2V0cy9lZGl0b3Iud29ya2VyLUNuMm9SRVNlLmpzIiwKICAiaHR0cDovLzEyNy4wLjAuMTo0MTgwL3ZlbmRvci9kdWNrZGIvMS4zMy4xLWRldjU3LjAvZHVja2RiLW12cC53YXNtIiwKICAiaHR0cDovLzEyNy4wLjAuMTo0MTgwL3ZlbmRvci9kdWNrZGIvMS4zMy4xLWRldjU3LjAvZHVja2RiLWJyb3dzZXItbXZwLndvcmtlci5qcyIsCiAgImh0dHA6Ly8xMjcuMC4wLjE6NDE4MC92ZW5kb3IvZHVja2RiLzEuMzMuMS1kZXY1Ny4wL2R1Y2tkYi1laC53YXNtIiwKICAiaHR0cDovLzEyNy4wLjAuMTo0MTgwL3ZlbmRvci9kdWNrZGIvMS4zMy4xLWRldjU3LjAvZHVja2RiLWJyb3dzZXItZWgud29ya2VyLmpzIiwKICAiaHR0cDovLzEyNy4wLjAuMTo0MTgwL3ZlbmRvci9kdWNrZGIvMS4zMy4xLWRldjU3LjAvZHVja2RiLWJyb3dzZXItZWgud29ya2VyLmpzIiwKICAiaHR0cDovLzEyNy4wLjAuMTo0MTgwL3ZlbmRvci9kdWNrZGIvMS4zMy4xLWRldjU3LjAvZHVja2RiLWVoLndhc20iLAogICJodHRwOi8vMTI3LjAuMC4xOjQxODAvdmVuZG9yL2R1Y2tkYi1leHRlbnNpb25zL3YxLjUuNC93YXNtX2VoL2ljdS5kdWNrZGJfZXh0ZW5zaW9uLndhc20iLAogICJodHRwOi8vMTI3LjAuMC4xOjQxODAvdmVuZG9yL2R1Y2tkYi1leHRlbnNpb25zL3YxLjUuNC93YXNtX2VoL2pzb24uZHVja2RiX2V4dGVuc2lvbi53YXNtIiwKICAiaHR0cDovLzEyNy4wLjAuMTo0MTgwL3ZlbmRvci9kdWNrZGItZXh0ZW5zaW9ucy92MS41LjQvd2FzbV9laC9wYXJxdWV0LmR1Y2tkYl9leHRlbnNpb24ud2FzbSIsCiAgImh0dHA6Ly8xMjcuMC4wLjE6NDE4MC93b3Jrc3BhY2VzLzczODAyMWNlLTQ0MjQtNGZlNS05YTEzLWI3M2QxM2MwODE4Yy9zcWwvOTMwNzVlMjEtMjJkMS00ZTY1LTg2YjYtMzFlZTAxYTU2ODUwIiwKICAiaHR0cDovLzEyNy4wLjAuMTo0MTgwL2Fzc2V0cy9pbmRleC1DaVc4RG90MC5qcyIsCiAgImh0dHA6Ly8xMjcuMC4wLjE6NDE4MC9hc3NldHMvaW5kZXgtRGdGMHl6NTQuY3NzIiwKICAiaHR0cDovLzEyNy4wLjAuMTo0MTgwL3J1bnRpbWUtY29uZmlnLmpzb24iLAogICJodHRwOi8vMTI3LjAuMC4xOjQxODAvYXNzZXRzL2thbnRvbi1zb2xvdGh1cm4tRE9wSl94OGkuc3ZnIiwKICAiaHR0cDovLzEyNy4wLjAuMTo0MTgwL2Fzc2V0cy9Db2RlRWRpdG9ySW1wbC1DWXIxdnR6Wi5qcyIsCiAgImh0dHA6Ly8xMjcuMC4wLjE6NDE4MC9hc3NldHMvQ29kZUVkaXRvckltcGwtdjVyZktjVnMuY3NzIiwKICAiaHR0cDovLzEyNy4wLjAuMTo0MTgwL2Fzc2V0cy9zcWwtTkVFNTJTeXEuanMiLAogICJodHRwOi8vMTI3LjAuMC4xOjQxODAvYXNzZXRzL2VkaXRvci53b3JrZXItQ24yb1JFU2UuanMiLAogICJodHRwOi8vMTI3LjAuMC4xOjQxODAvdmVuZG9yL2R1Y2tkYi8xLjMzLjEtZGV2NTcuMC9kdWNrZGItbXZwLndhc20iLAogICJodHRwOi8vMTI3LjAuMC4xOjQxODAvdmVuZG9yL2R1Y2tkYi8xLjMzLjEtZGV2NTcuMC9kdWNrZGItYnJvd3Nlci1tdnAud29ya2VyLmpzIiwKICAiaHR0cDovLzEyNy4wLjAuMTo0MTgwL3ZlbmRvci9kdWNrZGIvMS4zMy4xLWRldjU3LjAvZHVja2RiLWVoLndhc20iLAogICJodHRwOi8vMTI3LjAuMC4xOjQxODAvdmVuZG9yL2R1Y2tkYi8xLjMzLjEtZGV2NTcuMC9kdWNrZGItYnJvd3Nlci1laC53b3JrZXIuanMiLAogICJodHRwOi8vMTI3LjAuMC4xOjQxODAvdmVuZG9yL2R1Y2tkYi8xLjMzLjEtZGV2NTcuMC9kdWNrZGItYnJvd3Nlci1laC53b3JrZXIuanMiLAogICJodHRwOi8vMTI3LjAuMC4xOjQxODAvdmVuZG9yL2R1Y2tkYi8xLjMzLjEtZGV2NTcuMC9kdWNrZGItZWgud2FzbSIsCiAgImh0dHA6Ly8xMjcuMC4wLjE6NDE4MC92ZW5kb3IvZHVja2RiLWV4dGVuc2lvbnMvdjEuNS40L3dhc21fZWgvaWN1LmR1Y2tkYl9leHRlbnNpb24ud2FzbSIsCiAgImh0dHA6Ly8xMjcuMC4wLjE6NDE4MC92ZW5kb3IvZHVja2RiLWV4dGVuc2lvbnMvdjEuNS40L3dhc21fZWgvcGFycXVldC5kdWNrZGJfZXh0ZW5zaW9uLndhc20iLAogICJodHRwOi8vMTI3LjAuMC4xOjQxODAvdmVuZG9yL3dlYnIvMC42LjAvd2Vici5qcyIsCiAgImh0dHA6Ly8xMjcuMC4wLjE6NDE4MC92ZW5kb3Ivd2Vici8wLjYuMC9SLndhc20iLAogICJodHRwOi8vMTI3LjAuMC4xOjQxODAvdmVuZG9yL3dlYnIvMC42LjAvd2Vici5qcyIsCiAgImh0dHA6Ly8xMjcuMC4wLjE6NDE4MC92ZW5kb3Ivd2Vici8wLjYuMC93ZWJyLXdvcmtlci5qcyIsCiAgImh0dHA6Ly8xMjcuMC4wLjE6NDE4MC92ZW5kb3Ivd2Vici8wLjYuMC9SLmpzIiwKICAiaHR0cDovLzEyNy4wLjAuMTo0MTgwL3ZlbmRvci93ZWJyLzAuNi4wL1Iud2FzbSIsCiAgImh0dHA6Ly8xMjcuMC4wLjE6NDE4MC92ZW5kb3Ivd2Vici8wLjYuMC9saWJSYmxhcy5zbyIsCiAgImh0dHA6Ly8xMjcuMC4wLjE6NDE4MC92ZW5kb3Ivd2Vici8wLjYuMC92ZnMvdXNyL2xpYi9SL2xpYnJhcnkvdHJhbnNsYXRpb25zL0RFU0NSSVBUSU9OIiwKICAiaHR0cDovLzEyNy4wLjAuMTo0MTgwL3ZlbmRvci93ZWJyLzAuNi4wL2xpYlJsYXBhY2suc28iLAogICJodHRwOi8vMTI3LjAuMC4xOjQxODAvdmVuZG9yL3dlYnItcGFja2FnZXMvbG9jay5qc29uIiwKICAiaHR0cDovLzEyNy4wLjAuMTo0MTgwL3ZlbmRvci93ZWJyLXBhY2thZ2VzL2Jpbi9lbXNjcmlwdGVuL2NvbnRyaWIvNC42L1BBQ0tBR0VTLnJkcyIsCiAgImh0dHA6Ly8xMjcuMC4wLjE6NDE4MC92ZW5kb3Ivd2Vici1wYWNrYWdlcy9iaW4vZW1zY3JpcHRlbi9jb250cmliLzQuNi9iaXRfNC42LjAudGd6IiwKICAiaHR0cDovLzEyNy4wLjAuMTo0MTgwL3ZlbmRvci93ZWJyLzAuNi4wL3Zmcy91c3IvbGliL1Ivc2hhcmUuanMubWV0YWRhdGEiLAogICJodHRwOi8vMTI3LjAuMC4xOjQxODAvdmVuZG9yL3dlYnIvMC42LjAvdmZzL3Vzci9saWIvUi9zaGFyZS5kYXRhLmd6IiwKICAiaHR0cDovLzEyNy4wLjAuMTo0MTgwL3ZlbmRvci93ZWJyLXBhY2thZ2VzL2Jpbi9lbXNjcmlwdGVuL2NvbnRyaWIvNC42L2NsaV8zLjYuNi50Z3oiLAogICJodHRwOi8vMTI3LjAuMC4xOjQxODAvdmVuZG9yL3dlYnItcGFja2FnZXMvYmluL2Vtc2NyaXB0ZW4vY29udHJpYi80LjYvZ2VuZXJpY3NfMC4xLjQudGd6IiwKICAiaHR0cDovLzEyNy4wLjAuMTo0MTgwL3ZlbmRvci93ZWJyLXBhY2thZ2VzL2Jpbi9lbXNjcmlwdGVuL2NvbnRyaWIvNC42L2dsdWVfMS44LjEudGd6IiwKICAiaHR0cDovLzEyNy4wLjAuMTo0MTgwL3ZlbmRvci93ZWJyLXBhY2thZ2VzL2Jpbi9lbXNjcmlwdGVuL2NvbnRyaWIvNC42L3JsYW5nXzEuMi4wLnRneiIsCiAgImh0dHA6Ly8xMjcuMC4wLjE6NDE4MC92ZW5kb3Ivd2Vici1wYWNrYWdlcy9iaW4vZW1zY3JpcHRlbi9jb250cmliLzQuNi9saWZlY3ljbGVfMS4wLjUudGd6IiwKICAiaHR0cDovLzEyNy4wLjAuMTo0MTgwL3ZlbmRvci93ZWJyLXBhY2thZ2VzL2Jpbi9lbXNjcmlwdGVuL2NvbnRyaWIvNC42L21hZ3JpdHRyXzIuMC41LnRneiIsCiAgImh0dHA6Ly8xMjcuMC4wLjE6NDE4MC92ZW5kb3Ivd2Vici1wYWNrYWdlcy9iaW4vZW1zY3JpcHRlbi9jb250cmliLzQuNi91dGY4XzEuMi42LnRneiIsCiAgImh0dHA6Ly8xMjcuMC4wLjE6NDE4MC92ZW5kb3Ivd2Vici1wYWNrYWdlcy9iaW4vZW1zY3JpcHRlbi9jb250cmliLzQuNi92Y3Ryc18wLjcuMy50Z3oiLAogICJodHRwOi8vMTI3LjAuMC4xOjQxODAvdmVuZG9yL3dlYnItcGFja2FnZXMvYmluL2Vtc2NyaXB0ZW4vY29udHJpYi80LjYvcGlsbGFyXzEuMTEuMS50Z3oiLAogICJodHRwOi8vMTI3LjAuMC4xOjQxODAvdmVuZG9yL3dlYnItcGFja2FnZXMvYmluL2Vtc2NyaXB0ZW4vY29udHJpYi80LjYvUjZfMi42LjEudGd6IiwKICAiaHR0cDovLzEyNy4wLjAuMTo0MTgwL3ZlbmRvci93ZWJyLXBhY2thZ2VzL2Jpbi9lbXNjcmlwdGVuL2NvbnRyaWIvNC42L3BrZ2NvbmZpZ18yLjAuMy50Z3oiLAogICJodHRwOi8vMTI3LjAuMC4xOjQxODAvdmVuZG9yL3dlYnItcGFja2FnZXMvYmluL2Vtc2NyaXB0ZW4vY29udHJpYi80LjYvdGliYmxlXzMuMy4xLnRneiIsCiAgImh0dHA6Ly8xMjcuMC4wLjE6NDE4MC92ZW5kb3Ivd2Vici1wYWNrYWdlcy9iaW4vZW1zY3JpcHRlbi9jb250cmliLzQuNi93aXRocl8zLjAuMi50Z3oiLAogICJodHRwOi8vMTI3LjAuMC4xOjQxODAvdmVuZG9yL3dlYnItcGFja2FnZXMvYmluL2Vtc2NyaXB0ZW4vY29udHJpYi80LjYvdGlkeXNlbGVjdF8xLjIuMS50Z3oiLAogICJodHRwOi8vMTI3LjAuMC4xOjQxODAvdmVuZG9yL3dlYnItcGFja2FnZXMvYmluL2Vtc2NyaXB0ZW4vY29udHJpYi80LjYvZ3RhYmxlXzAuMy42LnRneiIsCiAgImh0dHA6Ly8xMjcuMC4wLjE6NDE4MC92ZW5kb3Ivd2Vici1wYWNrYWdlcy9iaW4vZW1zY3JpcHRlbi9jb250cmliLzQuNi9pc29iYW5kXzAuMy4wLnRneiIsCiAgImh0dHA6Ly8xMjcuMC4wLjE6NDE4MC92ZW5kb3Ivd2Vici1wYWNrYWdlcy9iaW4vZW1zY3JpcHRlbi9jb250cmliLzQuNi9TN18wLjIuMi50Z3oiLAogICJodHRwOi8vMTI3LjAuMC4xOjQxODAvdmVuZG9yL3dlYnItcGFja2FnZXMvYmluL2Vtc2NyaXB0ZW4vY29udHJpYi80LjYvZmFydmVyXzIuMS4yLnRneiIsCiAgImh0dHA6Ly8xMjcuMC4wLjE6NDE4MC92ZW5kb3Ivd2Vici1wYWNrYWdlcy9iaW4vZW1zY3JpcHRlbi9jb250cmliLzQuNi9sYWJlbGluZ18wLjQuMy50Z3oiLAogICJodHRwOi8vMTI3LjAuMC4xOjQxODAvdmVuZG9yL3dlYnItcGFja2FnZXMvYmluL2Vtc2NyaXB0ZW4vY29udHJpYi80LjYvUkNvbG9yQnJld2VyXzEuMS0zLnRneiIsCiAgImh0dHA6Ly8xMjcuMC4wLjE6NDE4MC92ZW5kb3Ivd2Vici1wYWNrYWdlcy9iaW4vZW1zY3JpcHRlbi9jb250cmliLzQuNi92aXJpZGlzTGl0ZV8wLjQuMy50Z3oiLAogICJodHRwOi8vMTI3LjAuMC4xOjQxODAvdmVuZG9yL3dlYnItcGFja2FnZXMvYmluL2Vtc2NyaXB0ZW4vY29udHJpYi80LjYvc2NhbGVzXzEuNC4wLnRneiIsCiAgImh0dHA6Ly8xMjcuMC4wLjE6NDE4MC92ZW5kb3Ivd2Vici1wYWNrYWdlcy9iaW4vZW1zY3JpcHRlbi9jb250cmliLzQuNi9jcmF5b25fMS41LjMudGd6IiwKICAiaHR0cDovLzEyNy4wLjAuMTo0MTgwL3ZlbmRvci93ZWJyLXBhY2thZ2VzL2Jpbi9lbXNjcmlwdGVuL2NvbnRyaWIvNC42L2htc18xLjEuNC50Z3oiLAogICJodHRwOi8vMTI3LjAuMC4xOjQxODAvdmVuZG9yL3dlYnItcGFja2FnZXMvYmluL2Vtc2NyaXB0ZW4vY29udHJpYi80LjYvcHJldHR5dW5pdHNfMS4yLjAudGd6IiwKICAiaHR0cDovLzEyNy4wLjAuMTo0MTgwL3ZlbmRvci93ZWJyLXBhY2thZ2VzL2Jpbi9lbXNjcmlwdGVuL2NvbnRyaWIvNC42L2NsaXByXzAuOC4xLnRneiIsCiAgImh0dHA6Ly8xMjcuMC4wLjE6NDE4MC92ZW5kb3Ivd2Vici1wYWNrYWdlcy9iaW4vZW1zY3JpcHRlbi9jb250cmliLzQuNi9iaXQ2NF80LjguMi50Z3oiLAogICJodHRwOi8vMTI3LjAuMC4xOjQxODAvdmVuZG9yL3dlYnItcGFja2FnZXMvYmluL2Vtc2NyaXB0ZW4vY29udHJpYi80LjYvdHpkYl8wLjUuMC50Z3oiLAogICJodHRwOi8vMTI3LjAuMC4xOjQxODAvdmVuZG9yL3dlYnItcGFja2FnZXMvYmluL2Vtc2NyaXB0ZW4vY29udHJpYi80LjYvdnJvb21fMS43LjEuOTAwMC50Z3oiLAogICJodHRwOi8vMTI3LjAuMC4xOjQxODAvdmVuZG9yL3dlYnItcGFja2FnZXMvYmluL2Vtc2NyaXB0ZW4vY29udHJpYi80LjYvc3RyaW5naV8xLjguNy50Z3oiLAogICJodHRwOi8vMTI3LjAuMC4xOjQxODAvdmVuZG9yL3dlYnItcGFja2FnZXMvYmluL2Vtc2NyaXB0ZW4vY29udHJpYi80LjYvZHBseXJfMS4yLjEudGd6IiwKICAiaHR0cDovLzEyNy4wLjAuMTo0MTgwL3ZlbmRvci93ZWJyLXBhY2thZ2VzL2Jpbi9lbXNjcmlwdGVuL2NvbnRyaWIvNC42L3B1cnJyXzEuMi4yLnRneiIsCiAgImh0dHA6Ly8xMjcuMC4wLjE6NDE4MC92ZW5kb3Ivd2Vici1wYWNrYWdlcy9iaW4vZW1zY3JpcHRlbi9jb250cmliLzQuNi9zdHJpbmdyXzEuNi4wLnRneiIsCiAgImh0dHA6Ly8xMjcuMC4wLjE6NDE4MC92ZW5kb3Ivd2Vici1wYWNrYWdlcy9iaW4vZW1zY3JpcHRlbi9jb250cmliLzQuNi9jcHAxMV8wLjUuNS50Z3oiLAogICJodHRwOi8vMTI3LjAuMC4xOjQxODAvdmVuZG9yL3dlYnItcGFja2FnZXMvYmluL2Vtc2NyaXB0ZW4vY29udHJpYi80LjYvZ2dwbG90Ml80LjAuMy50Z3oiLAogICJodHRwOi8vMTI3LjAuMC4xOjQxODAvdmVuZG9yL3dlYnItcGFja2FnZXMvYmluL2Vtc2NyaXB0ZW4vY29udHJpYi80LjYvanNvbmxpdGVfMi4wLjAudGd6IiwKICAiaHR0cDovLzEyNy4wLjAuMTo0MTgwL3ZlbmRvci93ZWJyLXBhY2thZ2VzL2Jpbi9lbXNjcmlwdGVuL2NvbnRyaWIvNC42L3Byb2dyZXNzXzEuMi4zLnRneiIsCiAgImh0dHA6Ly8xMjcuMC4wLjE6NDE4MC92ZW5kb3Ivd2Vici1wYWNrYWdlcy9iaW4vZW1zY3JpcHRlbi9jb250cmliLzQuNi9yZWFkcl8yLjIuMC50Z3oiLAogICJodHRwOi8vMTI3LjAuMC4xOjQxODAvdmVuZG9yL3dlYnItcGFja2FnZXMvYmluL2Vtc2NyaXB0ZW4vY29udHJpYi80LjYvdGlkeXJfMS4zLjIudGd6Igpd"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "4852420a3ed5ea40b1af-f1129d96e70c3bce2a2e",
+          "file": "static.spec.ts",
+          "line": 9,
+          "column": 1
+        },
+        {
+          "title": "P7 AT-067: invalid operator config fails closed before any runtime",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 240000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium-0",
+              "projectName": "chromium-0",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 950,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-04T10:44:38.872Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "4852420a3ed5ea40b1af-794abd95d04a60da6ea5",
+          "file": "static.spec.ts",
+          "line": 94,
+          "column": 1
+        },
+        {
+          "title": "P7 AT-066–068: arbitrary UID static container, deep routes, MIME/cache/CSP and real SQL/R",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 240000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium-1",
+              "projectName": "chromium-1",
+              "results": [
+                {
+                  "workerIndex": 3,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 26841,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-04T10:44:40.422Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "network",
+                      "contentType": "application/json",
+                      "body": "WwogICJodHRwOi8vMTI3LjAuMC4xOjQxODEvbGFiL3dvcmtzcGFjZXMiLAogICJodHRwOi8vMTI3LjAuMC4xOjQxODEvbGFiL2Fzc2V0cy9pbmRleC1Ca1RQVXgyLS5qcyIsCiAgImh0dHA6Ly8xMjcuMC4wLjE6NDE4MS9sYWIvYXNzZXRzL2luZGV4LURnRjB5ejU0LmNzcyIsCiAgImh0dHA6Ly8xMjcuMC4wLjE6NDE4MS9sYWIvcnVudGltZS1jb25maWcuanNvbiIsCiAgImh0dHA6Ly8xMjcuMC4wLjE6NDE4MS9sYWIvYXNzZXRzL2thbnRvbi1zb2xvdGh1cm4tRE9wSl94OGkuc3ZnIiwKICAiaHR0cDovLzEyNy4wLjAuMTo0MTgxL2xhYi9hc3NldHMvQ29kZUVkaXRvckltcGwtQ0ZaMFdoTncuanMiLAogICJodHRwOi8vMTI3LjAuMC4xOjQxODEvbGFiL2Fzc2V0cy9Db2RlRWRpdG9ySW1wbC1CM0lpTzAwSi5jc3MiLAogICJodHRwOi8vMTI3LjAuMC4xOjQxODEvbGFiL2Fzc2V0cy9zcWwtTkVFNTJTeXEuanMiLAogICJodHRwOi8vMTI3LjAuMC4xOjQxODEvbGFiL2Fzc2V0cy9lZGl0b3Iud29ya2VyLUNuMm9SRVNlLmpzIiwKICAiaHR0cDovLzEyNy4wLjAuMTo0MTgxL2xhYi92ZW5kb3IvZHVja2RiLzEuMzMuMS1kZXY1Ny4wL2R1Y2tkYi1tdnAud2FzbSIsCiAgImh0dHA6Ly8xMjcuMC4wLjE6NDE4MS9sYWIvdmVuZG9yL2R1Y2tkYi8xLjMzLjEtZGV2NTcuMC9kdWNrZGItYnJvd3Nlci1tdnAud29ya2VyLmpzIiwKICAiaHR0cDovLzEyNy4wLjAuMTo0MTgxL2xhYi92ZW5kb3IvZHVja2RiLzEuMzMuMS1kZXY1Ny4wL2R1Y2tkYi1laC53YXNtIiwKICAiaHR0cDovLzEyNy4wLjAuMTo0MTgxL2xhYi92ZW5kb3IvZHVja2RiLzEuMzMuMS1kZXY1Ny4wL2R1Y2tkYi1icm93c2VyLWVoLndvcmtlci5qcyIsCiAgImh0dHA6Ly8xMjcuMC4wLjE6NDE4MS9sYWIvdmVuZG9yL2R1Y2tkYi8xLjMzLjEtZGV2NTcuMC9kdWNrZGItYnJvd3Nlci1laC53b3JrZXIuanMiLAogICJodHRwOi8vMTI3LjAuMC4xOjQxODEvbGFiL3ZlbmRvci9kdWNrZGIvMS4zMy4xLWRldjU3LjAvZHVja2RiLWVoLndhc20iLAogICJodHRwOi8vMTI3LjAuMC4xOjQxODEvbGFiL3ZlbmRvci9kdWNrZGItZXh0ZW5zaW9ucy92MS41LjQvd2FzbV9laC9pY3UuZHVja2RiX2V4dGVuc2lvbi53YXNtIiwKICAiaHR0cDovLzEyNy4wLjAuMTo0MTgxL2xhYi92ZW5kb3IvZHVja2RiLWV4dGVuc2lvbnMvdjEuNS40L3dhc21fZWgvanNvbi5kdWNrZGJfZXh0ZW5zaW9uLndhc20iLAogICJodHRwOi8vMTI3LjAuMC4xOjQxODEvbGFiL3ZlbmRvci9kdWNrZGItZXh0ZW5zaW9ucy92MS41LjQvd2FzbV9laC9wYXJxdWV0LmR1Y2tkYl9leHRlbnNpb24ud2FzbSIsCiAgImh0dHA6Ly8xMjcuMC4wLjE6NDE4MS9sYWIvd29ya3NwYWNlcy9mMjRmNWM0OS0yZGUwLTRlMDAtYWY5MS03NzU5NGE3MTQ3YjUvc3FsL2VmNTRhMGNkLTA0NjQtNDQ0ZC1iOWYxLWZhZmJlOTE3MzIxMSIsCiAgImh0dHA6Ly8xMjcuMC4wLjE6NDE4MS9sYWIvYXNzZXRzL2luZGV4LUJrVFBVeDItLmpzIiwKICAiaHR0cDovLzEyNy4wLjAuMTo0MTgxL2xhYi9hc3NldHMvaW5kZXgtRGdGMHl6NTQuY3NzIiwKICAiaHR0cDovLzEyNy4wLjAuMTo0MTgxL2xhYi9ydW50aW1lLWNvbmZpZy5qc29uIiwKICAiaHR0cDovLzEyNy4wLjAuMTo0MTgxL2xhYi9hc3NldHMva2FudG9uLXNvbG90aHVybi1ET3BKX3g4aS5zdmciLAogICJodHRwOi8vMTI3LjAuMC4xOjQxODEvbGFiL2Fzc2V0cy9Db2RlRWRpdG9ySW1wbC1DRlowV2hOdy5qcyIsCiAgImh0dHA6Ly8xMjcuMC4wLjE6NDE4MS9sYWIvYXNzZXRzL0NvZGVFZGl0b3JJbXBsLUIzSWlPMDBKLmNzcyIsCiAgImh0dHA6Ly8xMjcuMC4wLjE6NDE4MS9sYWIvYXNzZXRzL3NxbC1ORUU1MlN5cS5qcyIsCiAgImh0dHA6Ly8xMjcuMC4wLjE6NDE4MS9sYWIvYXNzZXRzL2VkaXRvci53b3JrZXItQ24yb1JFU2UuanMiLAogICJodHRwOi8vMTI3LjAuMC4xOjQxODEvbGFiL3ZlbmRvci9kdWNrZGIvMS4zMy4xLWRldjU3LjAvZHVja2RiLW12cC53YXNtIiwKICAiaHR0cDovLzEyNy4wLjAuMTo0MTgxL2xhYi92ZW5kb3IvZHVja2RiLzEuMzMuMS1kZXY1Ny4wL2R1Y2tkYi1icm93c2VyLW12cC53b3JrZXIuanMiLAogICJodHRwOi8vMTI3LjAuMC4xOjQxODEvbGFiL3ZlbmRvci9kdWNrZGIvMS4zMy4xLWRldjU3LjAvZHVja2RiLWVoLndhc20iLAogICJodHRwOi8vMTI3LjAuMC4xOjQxODEvbGFiL3ZlbmRvci9kdWNrZGIvMS4zMy4xLWRldjU3LjAvZHVja2RiLWJyb3dzZXItZWgud29ya2VyLmpzIiwKICAiaHR0cDovLzEyNy4wLjAuMTo0MTgxL2xhYi92ZW5kb3IvZHVja2RiLzEuMzMuMS1kZXY1Ny4wL2R1Y2tkYi1icm93c2VyLWVoLndvcmtlci5qcyIsCiAgImh0dHA6Ly8xMjcuMC4wLjE6NDE4MS9sYWIvdmVuZG9yL2R1Y2tkYi8xLjMzLjEtZGV2NTcuMC9kdWNrZGItZWgud2FzbSIsCiAgImh0dHA6Ly8xMjcuMC4wLjE6NDE4MS9sYWIvdmVuZG9yL2R1Y2tkYi1leHRlbnNpb25zL3YxLjUuNC93YXNtX2VoL2ljdS5kdWNrZGJfZXh0ZW5zaW9uLndhc20iLAogICJodHRwOi8vMTI3LjAuMC4xOjQxODEvbGFiL3ZlbmRvci9kdWNrZGItZXh0ZW5zaW9ucy92MS41LjQvd2FzbV9laC9wYXJxdWV0LmR1Y2tkYl9leHRlbnNpb24ud2FzbSIsCiAgImh0dHA6Ly8xMjcuMC4wLjE6NDE4MS9sYWIvdmVuZG9yL3dlYnIvMC42LjAvd2Vici5qcyIsCiAgImh0dHA6Ly8xMjcuMC4wLjE6NDE4MS9sYWIvdmVuZG9yL3dlYnIvMC42LjAvUi53YXNtIiwKICAiaHR0cDovLzEyNy4wLjAuMTo0MTgxL2xhYi92ZW5kb3Ivd2Vici8wLjYuMC93ZWJyLmpzIiwKICAiaHR0cDovLzEyNy4wLjAuMTo0MTgxL2xhYi92ZW5kb3Ivd2Vici8wLjYuMC93ZWJyLXdvcmtlci5qcyIsCiAgImh0dHA6Ly8xMjcuMC4wLjE6NDE4MS9sYWIvdmVuZG9yL3dlYnIvMC42LjAvUi5qcyIsCiAgImh0dHA6Ly8xMjcuMC4wLjE6NDE4MS9sYWIvdmVuZG9yL3dlYnIvMC42LjAvUi53YXNtIiwKICAiaHR0cDovLzEyNy4wLjAuMTo0MTgxL2xhYi92ZW5kb3Ivd2Vici8wLjYuMC9saWJSYmxhcy5zbyIsCiAgImh0dHA6Ly8xMjcuMC4wLjE6NDE4MS9sYWIvdmVuZG9yL3dlYnIvMC42LjAvdmZzL3Vzci9saWIvUi9saWJyYXJ5L3RyYW5zbGF0aW9ucy9ERVNDUklQVElPTiIsCiAgImh0dHA6Ly8xMjcuMC4wLjE6NDE4MS9sYWIvdmVuZG9yL3dlYnIvMC42LjAvbGliUmxhcGFjay5zbyIsCiAgImh0dHA6Ly8xMjcuMC4wLjE6NDE4MS9sYWIvdmVuZG9yL3dlYnItcGFja2FnZXMvbG9jay5qc29uIiwKICAiaHR0cDovLzEyNy4wLjAuMTo0MTgxL2xhYi92ZW5kb3Ivd2Vici1wYWNrYWdlcy9iaW4vZW1zY3JpcHRlbi9jb250cmliLzQuNi9QQUNLQUdFUy5yZHMiLAogICJodHRwOi8vMTI3LjAuMC4xOjQxODEvbGFiL3ZlbmRvci93ZWJyLXBhY2thZ2VzL2Jpbi9lbXNjcmlwdGVuL2NvbnRyaWIvNC42L2JpdF80LjYuMC50Z3oiLAogICJodHRwOi8vMTI3LjAuMC4xOjQxODEvbGFiL3ZlbmRvci93ZWJyLzAuNi4wL3Zmcy91c3IvbGliL1Ivc2hhcmUuanMubWV0YWRhdGEiLAogICJodHRwOi8vMTI3LjAuMC4xOjQxODEvbGFiL3ZlbmRvci93ZWJyLzAuNi4wL3Zmcy91c3IvbGliL1Ivc2hhcmUuZGF0YS5neiIsCiAgImh0dHA6Ly8xMjcuMC4wLjE6NDE4MS9sYWIvdmVuZG9yL3dlYnItcGFja2FnZXMvYmluL2Vtc2NyaXB0ZW4vY29udHJpYi80LjYvY2xpXzMuNi42LnRneiIsCiAgImh0dHA6Ly8xMjcuMC4wLjE6NDE4MS9sYWIvdmVuZG9yL3dlYnItcGFja2FnZXMvYmluL2Vtc2NyaXB0ZW4vY29udHJpYi80LjYvZ2VuZXJpY3NfMC4xLjQudGd6IiwKICAiaHR0cDovLzEyNy4wLjAuMTo0MTgxL2xhYi92ZW5kb3Ivd2Vici1wYWNrYWdlcy9iaW4vZW1zY3JpcHRlbi9jb250cmliLzQuNi9nbHVlXzEuOC4xLnRneiIsCiAgImh0dHA6Ly8xMjcuMC4wLjE6NDE4MS9sYWIvdmVuZG9yL3dlYnItcGFja2FnZXMvYmluL2Vtc2NyaXB0ZW4vY29udHJpYi80LjYvcmxhbmdfMS4yLjAudGd6IiwKICAiaHR0cDovLzEyNy4wLjAuMTo0MTgxL2xhYi92ZW5kb3Ivd2Vici1wYWNrYWdlcy9iaW4vZW1zY3JpcHRlbi9jb250cmliLzQuNi9saWZlY3ljbGVfMS4wLjUudGd6IiwKICAiaHR0cDovLzEyNy4wLjAuMTo0MTgxL2xhYi92ZW5kb3Ivd2Vici1wYWNrYWdlcy9iaW4vZW1zY3JpcHRlbi9jb250cmliLzQuNi9tYWdyaXR0cl8yLjAuNS50Z3oiLAogICJodHRwOi8vMTI3LjAuMC4xOjQxODEvbGFiL3ZlbmRvci93ZWJyLXBhY2thZ2VzL2Jpbi9lbXNjcmlwdGVuL2NvbnRyaWIvNC42L3V0ZjhfMS4yLjYudGd6IiwKICAiaHR0cDovLzEyNy4wLjAuMTo0MTgxL2xhYi92ZW5kb3Ivd2Vici1wYWNrYWdlcy9iaW4vZW1zY3JpcHRlbi9jb250cmliLzQuNi92Y3Ryc18wLjcuMy50Z3oiLAogICJodHRwOi8vMTI3LjAuMC4xOjQxODEvbGFiL3ZlbmRvci93ZWJyLXBhY2thZ2VzL2Jpbi9lbXNjcmlwdGVuL2NvbnRyaWIvNC42L3BpbGxhcl8xLjExLjEudGd6IiwKICAiaHR0cDovLzEyNy4wLjAuMTo0MTgxL2xhYi92ZW5kb3Ivd2Vici1wYWNrYWdlcy9iaW4vZW1zY3JpcHRlbi9jb250cmliLzQuNi9SNl8yLjYuMS50Z3oiLAogICJodHRwOi8vMTI3LjAuMC4xOjQxODEvbGFiL3ZlbmRvci93ZWJyLXBhY2thZ2VzL2Jpbi9lbXNjcmlwdGVuL2NvbnRyaWIvNC42L3BrZ2NvbmZpZ18yLjAuMy50Z3oiLAogICJodHRwOi8vMTI3LjAuMC4xOjQxODEvbGFiL3ZlbmRvci93ZWJyLXBhY2thZ2VzL2Jpbi9lbXNjcmlwdGVuL2NvbnRyaWIvNC42L3RpYmJsZV8zLjMuMS50Z3oiLAogICJodHRwOi8vMTI3LjAuMC4xOjQxODEvbGFiL3ZlbmRvci93ZWJyLXBhY2thZ2VzL2Jpbi9lbXNjcmlwdGVuL2NvbnRyaWIvNC42L3dpdGhyXzMuMC4yLnRneiIsCiAgImh0dHA6Ly8xMjcuMC4wLjE6NDE4MS9sYWIvdmVuZG9yL3dlYnItcGFja2FnZXMvYmluL2Vtc2NyaXB0ZW4vY29udHJpYi80LjYvdGlkeXNlbGVjdF8xLjIuMS50Z3oiLAogICJodHRwOi8vMTI3LjAuMC4xOjQxODEvbGFiL3ZlbmRvci93ZWJyLXBhY2thZ2VzL2Jpbi9lbXNjcmlwdGVuL2NvbnRyaWIvNC42L2d0YWJsZV8wLjMuNi50Z3oiLAogICJodHRwOi8vMTI3LjAuMC4xOjQxODEvbGFiL3ZlbmRvci93ZWJyLXBhY2thZ2VzL2Jpbi9lbXNjcmlwdGVuL2NvbnRyaWIvNC42L2lzb2JhbmRfMC4zLjAudGd6IiwKICAiaHR0cDovLzEyNy4wLjAuMTo0MTgxL2xhYi92ZW5kb3Ivd2Vici1wYWNrYWdlcy9iaW4vZW1zY3JpcHRlbi9jb250cmliLzQuNi9TN18wLjIuMi50Z3oiLAogICJodHRwOi8vMTI3LjAuMC4xOjQxODEvbGFiL3ZlbmRvci93ZWJyLXBhY2thZ2VzL2Jpbi9lbXNjcmlwdGVuL2NvbnRyaWIvNC42L2ZhcnZlcl8yLjEuMi50Z3oiLAogICJodHRwOi8vMTI3LjAuMC4xOjQxODEvbGFiL3ZlbmRvci93ZWJyLXBhY2thZ2VzL2Jpbi9lbXNjcmlwdGVuL2NvbnRyaWIvNC42L2xhYmVsaW5nXzAuNC4zLnRneiIsCiAgImh0dHA6Ly8xMjcuMC4wLjE6NDE4MS9sYWIvdmVuZG9yL3dlYnItcGFja2FnZXMvYmluL2Vtc2NyaXB0ZW4vY29udHJpYi80LjYvUkNvbG9yQnJld2VyXzEuMS0zLnRneiIsCiAgImh0dHA6Ly8xMjcuMC4wLjE6NDE4MS9sYWIvdmVuZG9yL3dlYnItcGFja2FnZXMvYmluL2Vtc2NyaXB0ZW4vY29udHJpYi80LjYvdmlyaWRpc0xpdGVfMC40LjMudGd6IiwKICAiaHR0cDovLzEyNy4wLjAuMTo0MTgxL2xhYi92ZW5kb3Ivd2Vici1wYWNrYWdlcy9iaW4vZW1zY3JpcHRlbi9jb250cmliLzQuNi9zY2FsZXNfMS40LjAudGd6IiwKICAiaHR0cDovLzEyNy4wLjAuMTo0MTgxL2xhYi92ZW5kb3Ivd2Vici1wYWNrYWdlcy9iaW4vZW1zY3JpcHRlbi9jb250cmliLzQuNi9jcmF5b25fMS41LjMudGd6IiwKICAiaHR0cDovLzEyNy4wLjAuMTo0MTgxL2xhYi92ZW5kb3Ivd2Vici1wYWNrYWdlcy9iaW4vZW1zY3JpcHRlbi9jb250cmliLzQuNi9obXNfMS4xLjQudGd6IiwKICAiaHR0cDovLzEyNy4wLjAuMTo0MTgxL2xhYi92ZW5kb3Ivd2Vici1wYWNrYWdlcy9iaW4vZW1zY3JpcHRlbi9jb250cmliLzQuNi9wcmV0dHl1bml0c18xLjIuMC50Z3oiLAogICJodHRwOi8vMTI3LjAuMC4xOjQxODEvbGFiL3ZlbmRvci93ZWJyLXBhY2thZ2VzL2Jpbi9lbXNjcmlwdGVuL2NvbnRyaWIvNC42L2NsaXByXzAuOC4xLnRneiIsCiAgImh0dHA6Ly8xMjcuMC4wLjE6NDE4MS9sYWIvdmVuZG9yL3dlYnItcGFja2FnZXMvYmluL2Vtc2NyaXB0ZW4vY29udHJpYi80LjYvYml0NjRfNC44LjIudGd6IiwKICAiaHR0cDovLzEyNy4wLjAuMTo0MTgxL2xhYi92ZW5kb3Ivd2Vici1wYWNrYWdlcy9iaW4vZW1zY3JpcHRlbi9jb250cmliLzQuNi90emRiXzAuNS4wLnRneiIsCiAgImh0dHA6Ly8xMjcuMC4wLjE6NDE4MS9sYWIvdmVuZG9yL3dlYnItcGFja2FnZXMvYmluL2Vtc2NyaXB0ZW4vY29udHJpYi80LjYvdnJvb21fMS43LjEuOTAwMC50Z3oiLAogICJodHRwOi8vMTI3LjAuMC4xOjQxODEvbGFiL3ZlbmRvci93ZWJyLXBhY2thZ2VzL2Jpbi9lbXNjcmlwdGVuL2NvbnRyaWIvNC42L3N0cmluZ2lfMS44LjcudGd6IiwKICAiaHR0cDovLzEyNy4wLjAuMTo0MTgxL2xhYi92ZW5kb3Ivd2Vici1wYWNrYWdlcy9iaW4vZW1zY3JpcHRlbi9jb250cmliLzQuNi9kcGx5cl8xLjIuMS50Z3oiLAogICJodHRwOi8vMTI3LjAuMC4xOjQxODEvbGFiL3ZlbmRvci93ZWJyLXBhY2thZ2VzL2Jpbi9lbXNjcmlwdGVuL2NvbnRyaWIvNC42L3B1cnJyXzEuMi4yLnRneiIsCiAgImh0dHA6Ly8xMjcuMC4wLjE6NDE4MS9sYWIvdmVuZG9yL3dlYnItcGFja2FnZXMvYmluL2Vtc2NyaXB0ZW4vY29udHJpYi80LjYvc3RyaW5ncl8xLjYuMC50Z3oiLAogICJodHRwOi8vMTI3LjAuMC4xOjQxODEvbGFiL3ZlbmRvci93ZWJyLXBhY2thZ2VzL2Jpbi9lbXNjcmlwdGVuL2NvbnRyaWIvNC42L2NwcDExXzAuNS41LnRneiIsCiAgImh0dHA6Ly8xMjcuMC4wLjE6NDE4MS9sYWIvdmVuZG9yL3dlYnItcGFja2FnZXMvYmluL2Vtc2NyaXB0ZW4vY29udHJpYi80LjYvZ2dwbG90Ml80LjAuMy50Z3oiLAogICJodHRwOi8vMTI3LjAuMC4xOjQxODEvbGFiL3ZlbmRvci93ZWJyLXBhY2thZ2VzL2Jpbi9lbXNjcmlwdGVuL2NvbnRyaWIvNC42L2pzb25saXRlXzIuMC4wLnRneiIsCiAgImh0dHA6Ly8xMjcuMC4wLjE6NDE4MS9sYWIvdmVuZG9yL3dlYnItcGFja2FnZXMvYmluL2Vtc2NyaXB0ZW4vY29udHJpYi80LjYvcHJvZ3Jlc3NfMS4yLjMudGd6IiwKICAiaHR0cDovLzEyNy4wLjAuMTo0MTgxL2xhYi92ZW5kb3Ivd2Vici1wYWNrYWdlcy9iaW4vZW1zY3JpcHRlbi9jb250cmliLzQuNi9yZWFkcl8yLjIuMC50Z3oiLAogICJodHRwOi8vMTI3LjAuMC4xOjQxODEvbGFiL3ZlbmRvci93ZWJyLXBhY2thZ2VzL2Jpbi9lbXNjcmlwdGVuL2NvbnRyaWIvNC42L3RpZHlyXzEuMy4yLnRneiIKXQ=="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "4852420a3ed5ea40b1af-b808e8b8c45f3b9c3fde",
+          "file": "static.spec.ts",
+          "line": 9,
+          "column": 1
+        },
+        {
+          "title": "P7 AT-067: invalid operator config fails closed before any runtime",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 240000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium-1",
+              "projectName": "chromium-1",
+              "results": [
+                {
+                  "workerIndex": 3,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 571,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-04T10:45:07.292Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "4852420a3ed5ea40b1af-605cbc6d7d6e6662e49f",
+          "file": "static.spec.ts",
+          "line": 94,
+          "column": 1
+        },
+        {
+          "title": "P7 AT-066–068: arbitrary UID static container, deep routes, MIME/cache/CSP and real SQL/R",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 240000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium-2",
+              "projectName": "chromium-2",
+              "results": [
+                {
+                  "workerIndex": 5,
+                  "parallelIndex": 2,
+                  "status": "passed",
+                  "duration": 32007,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-04T10:46:27.831Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "network",
+                      "contentType": "application/json",
+                      "body": "WwogICJodHRwOi8vMTI3LjAuMC4xOjQxODIvbGFiL3dvcmtzcGFjZXMiLAogICJodHRwOi8vMTI3LjAuMC4xOjQxODIvbGFiL2Fzc2V0cy9pbmRleC1Ca1RQVXgyLS5qcyIsCiAgImh0dHA6Ly8xMjcuMC4wLjE6NDE4Mi9sYWIvYXNzZXRzL2luZGV4LURnRjB5ejU0LmNzcyIsCiAgImh0dHA6Ly8xMjcuMC4wLjE6NDE4Mi9sYWIvcnVudGltZS1jb25maWcuanNvbiIsCiAgImh0dHA6Ly8xMjcuMC4wLjE6NDE4Mi9sYWIvYXNzZXRzL2thbnRvbi1zb2xvdGh1cm4tRE9wSl94OGkuc3ZnIiwKICAiaHR0cDovLzEyNy4wLjAuMTo0MTgyL2xhYi9hc3NldHMvQ29kZUVkaXRvckltcGwtQ0ZaMFdoTncuanMiLAogICJodHRwOi8vMTI3LjAuMC4xOjQxODIvbGFiL2Fzc2V0cy9Db2RlRWRpdG9ySW1wbC1CM0lpTzAwSi5jc3MiLAogICJodHRwOi8vMTI3LjAuMC4xOjQxODIvbGFiL2Fzc2V0cy9zcWwtTkVFNTJTeXEuanMiLAogICJodHRwOi8vMTI3LjAuMC4xOjQxODIvbGFiL2Fzc2V0cy9lZGl0b3Iud29ya2VyLUNuMm9SRVNlLmpzIiwKICAiaHR0cDovLzEyNy4wLjAuMTo0MTgyL2xhYi92ZW5kb3IvZHVja2RiLzEuMzMuMS1kZXY1Ny4wL2R1Y2tkYi1tdnAud2FzbSIsCiAgImh0dHA6Ly8xMjcuMC4wLjE6NDE4Mi9sYWIvdmVuZG9yL2R1Y2tkYi8xLjMzLjEtZGV2NTcuMC9kdWNrZGItYnJvd3Nlci1tdnAud29ya2VyLmpzIiwKICAiaHR0cDovLzEyNy4wLjAuMTo0MTgyL2xhYi92ZW5kb3IvZHVja2RiLzEuMzMuMS1kZXY1Ny4wL2R1Y2tkYi1laC53YXNtIiwKICAiaHR0cDovLzEyNy4wLjAuMTo0MTgyL2xhYi92ZW5kb3IvZHVja2RiLzEuMzMuMS1kZXY1Ny4wL2R1Y2tkYi1icm93c2VyLWVoLndvcmtlci5qcyIsCiAgImh0dHA6Ly8xMjcuMC4wLjE6NDE4Mi9sYWIvdmVuZG9yL2R1Y2tkYi8xLjMzLjEtZGV2NTcuMC9kdWNrZGItYnJvd3Nlci1laC53b3JrZXIuanMiLAogICJodHRwOi8vMTI3LjAuMC4xOjQxODIvbGFiL3ZlbmRvci9kdWNrZGIvMS4zMy4xLWRldjU3LjAvZHVja2RiLWVoLndhc20iLAogICJodHRwOi8vMTI3LjAuMC4xOjQxODIvbGFiL3ZlbmRvci9kdWNrZGItZXh0ZW5zaW9ucy92MS41LjQvd2FzbV9laC9pY3UuZHVja2RiX2V4dGVuc2lvbi53YXNtIiwKICAiaHR0cDovLzEyNy4wLjAuMTo0MTgyL2xhYi92ZW5kb3IvZHVja2RiLWV4dGVuc2lvbnMvdjEuNS40L3dhc21fZWgvanNvbi5kdWNrZGJfZXh0ZW5zaW9uLndhc20iLAogICJodHRwOi8vMTI3LjAuMC4xOjQxODIvbGFiL3ZlbmRvci9kdWNrZGItZXh0ZW5zaW9ucy92MS41LjQvd2FzbV9laC9wYXJxdWV0LmR1Y2tkYl9leHRlbnNpb24ud2FzbSIsCiAgImh0dHA6Ly8xMjcuMC4wLjE6NDE4Mi9sYWIvd29ya3NwYWNlcy82YmI3ODBjZS0wMGVkLTQxYjItYmQ3Mi1mOGQ4NWZlNzU4MjIvc3FsL2UxNjY5YWQ5LWE5NmItNGRlMC04NjU4LWM3ZTIwYzFiYmUzZiIsCiAgImh0dHA6Ly8xMjcuMC4wLjE6NDE4Mi9sYWIvYXNzZXRzL2luZGV4LUJrVFBVeDItLmpzIiwKICAiaHR0cDovLzEyNy4wLjAuMTo0MTgyL2xhYi9hc3NldHMvaW5kZXgtRGdGMHl6NTQuY3NzIiwKICAiaHR0cDovLzEyNy4wLjAuMTo0MTgyL2xhYi9ydW50aW1lLWNvbmZpZy5qc29uIiwKICAiaHR0cDovLzEyNy4wLjAuMTo0MTgyL2xhYi9hc3NldHMva2FudG9uLXNvbG90aHVybi1ET3BKX3g4aS5zdmciLAogICJodHRwOi8vMTI3LjAuMC4xOjQxODIvbGFiL2Fzc2V0cy9Db2RlRWRpdG9ySW1wbC1DRlowV2hOdy5qcyIsCiAgImh0dHA6Ly8xMjcuMC4wLjE6NDE4Mi9sYWIvYXNzZXRzL0NvZGVFZGl0b3JJbXBsLUIzSWlPMDBKLmNzcyIsCiAgImh0dHA6Ly8xMjcuMC4wLjE6NDE4Mi9sYWIvYXNzZXRzL3NxbC1ORUU1MlN5cS5qcyIsCiAgImh0dHA6Ly8xMjcuMC4wLjE6NDE4Mi9sYWIvYXNzZXRzL2VkaXRvci53b3JrZXItQ24yb1JFU2UuanMiLAogICJodHRwOi8vMTI3LjAuMC4xOjQxODIvbGFiL3ZlbmRvci9kdWNrZGIvMS4zMy4xLWRldjU3LjAvZHVja2RiLW12cC53YXNtIiwKICAiaHR0cDovLzEyNy4wLjAuMTo0MTgyL2xhYi92ZW5kb3IvZHVja2RiLzEuMzMuMS1kZXY1Ny4wL2R1Y2tkYi1icm93c2VyLW12cC53b3JrZXIuanMiLAogICJodHRwOi8vMTI3LjAuMC4xOjQxODIvbGFiL3ZlbmRvci9kdWNrZGIvMS4zMy4xLWRldjU3LjAvZHVja2RiLWVoLndhc20iLAogICJodHRwOi8vMTI3LjAuMC4xOjQxODIvbGFiL3ZlbmRvci9kdWNrZGIvMS4zMy4xLWRldjU3LjAvZHVja2RiLWJyb3dzZXItZWgud29ya2VyLmpzIiwKICAiaHR0cDovLzEyNy4wLjAuMTo0MTgyL2xhYi92ZW5kb3IvZHVja2RiLzEuMzMuMS1kZXY1Ny4wL2R1Y2tkYi1icm93c2VyLWVoLndvcmtlci5qcyIsCiAgImh0dHA6Ly8xMjcuMC4wLjE6NDE4Mi9sYWIvdmVuZG9yL2R1Y2tkYi8xLjMzLjEtZGV2NTcuMC9kdWNrZGItZWgud2FzbSIsCiAgImh0dHA6Ly8xMjcuMC4wLjE6NDE4Mi9sYWIvdmVuZG9yL2R1Y2tkYi1leHRlbnNpb25zL3YxLjUuNC93YXNtX2VoL2ljdS5kdWNrZGJfZXh0ZW5zaW9uLndhc20iLAogICJodHRwOi8vMTI3LjAuMC4xOjQxODIvbGFiL3ZlbmRvci9kdWNrZGItZXh0ZW5zaW9ucy92MS41LjQvd2FzbV9laC9wYXJxdWV0LmR1Y2tkYl9leHRlbnNpb24ud2FzbSIsCiAgImh0dHA6Ly8xMjcuMC4wLjE6NDE4Mi9sYWIvdmVuZG9yL3dlYnIvMC42LjAvd2Vici5qcyIsCiAgImh0dHA6Ly8xMjcuMC4wLjE6NDE4Mi9sYWIvdmVuZG9yL3dlYnIvMC42LjAvUi53YXNtIiwKICAiaHR0cDovLzEyNy4wLjAuMTo0MTgyL2xhYi92ZW5kb3Ivd2Vici8wLjYuMC93ZWJyLmpzIiwKICAiaHR0cDovLzEyNy4wLjAuMTo0MTgyL2xhYi92ZW5kb3Ivd2Vici8wLjYuMC93ZWJyLXdvcmtlci5qcyIsCiAgImh0dHA6Ly8xMjcuMC4wLjE6NDE4Mi9sYWIvdmVuZG9yL3dlYnIvMC42LjAvUi5qcyIsCiAgImh0dHA6Ly8xMjcuMC4wLjE6NDE4Mi9sYWIvdmVuZG9yL3dlYnIvMC42LjAvUi53YXNtIiwKICAiaHR0cDovLzEyNy4wLjAuMTo0MTgyL2xhYi92ZW5kb3Ivd2Vici8wLjYuMC9saWJSYmxhcy5zbyIsCiAgImh0dHA6Ly8xMjcuMC4wLjE6NDE4Mi9sYWIvdmVuZG9yL3dlYnIvMC42LjAvdmZzL3Vzci9saWIvUi9saWJyYXJ5L3RyYW5zbGF0aW9ucy9ERVNDUklQVElPTiIsCiAgImh0dHA6Ly8xMjcuMC4wLjE6NDE4Mi9sYWIvdmVuZG9yL3dlYnIvMC42LjAvbGliUmxhcGFjay5zbyIsCiAgImh0dHA6Ly8xMjcuMC4wLjE6NDE4Mi9sYWIvdmVuZG9yL3dlYnItcGFja2FnZXMvbG9jay5qc29uIiwKICAiaHR0cDovLzEyNy4wLjAuMTo0MTgyL2xhYi92ZW5kb3Ivd2Vici1wYWNrYWdlcy9iaW4vZW1zY3JpcHRlbi9jb250cmliLzQuNi9QQUNLQUdFUy5yZHMiLAogICJodHRwOi8vMTI3LjAuMC4xOjQxODIvbGFiL3ZlbmRvci93ZWJyLXBhY2thZ2VzL2Jpbi9lbXNjcmlwdGVuL2NvbnRyaWIvNC42L2JpdF80LjYuMC50Z3oiLAogICJodHRwOi8vMTI3LjAuMC4xOjQxODIvbGFiL3ZlbmRvci93ZWJyLzAuNi4wL3Zmcy91c3IvbGliL1Ivc2hhcmUuanMubWV0YWRhdGEiLAogICJodHRwOi8vMTI3LjAuMC4xOjQxODIvbGFiL3ZlbmRvci93ZWJyLzAuNi4wL3Zmcy91c3IvbGliL1Ivc2hhcmUuZGF0YS5neiIsCiAgImh0dHA6Ly8xMjcuMC4wLjE6NDE4Mi9sYWIvdmVuZG9yL3dlYnItcGFja2FnZXMvYmluL2Vtc2NyaXB0ZW4vY29udHJpYi80LjYvY2xpXzMuNi42LnRneiIsCiAgImh0dHA6Ly8xMjcuMC4wLjE6NDE4Mi9sYWIvdmVuZG9yL3dlYnItcGFja2FnZXMvYmluL2Vtc2NyaXB0ZW4vY29udHJpYi80LjYvZ2VuZXJpY3NfMC4xLjQudGd6IiwKICAiaHR0cDovLzEyNy4wLjAuMTo0MTgyL2xhYi92ZW5kb3Ivd2Vici1wYWNrYWdlcy9iaW4vZW1zY3JpcHRlbi9jb250cmliLzQuNi9nbHVlXzEuOC4xLnRneiIsCiAgImh0dHA6Ly8xMjcuMC4wLjE6NDE4Mi9sYWIvdmVuZG9yL3dlYnItcGFja2FnZXMvYmluL2Vtc2NyaXB0ZW4vY29udHJpYi80LjYvcmxhbmdfMS4yLjAudGd6IiwKICAiaHR0cDovLzEyNy4wLjAuMTo0MTgyL2xhYi92ZW5kb3Ivd2Vici1wYWNrYWdlcy9iaW4vZW1zY3JpcHRlbi9jb250cmliLzQuNi9saWZlY3ljbGVfMS4wLjUudGd6IiwKICAiaHR0cDovLzEyNy4wLjAuMTo0MTgyL2xhYi92ZW5kb3Ivd2Vici1wYWNrYWdlcy9iaW4vZW1zY3JpcHRlbi9jb250cmliLzQuNi9tYWdyaXR0cl8yLjAuNS50Z3oiLAogICJodHRwOi8vMTI3LjAuMC4xOjQxODIvbGFiL3ZlbmRvci93ZWJyLXBhY2thZ2VzL2Jpbi9lbXNjcmlwdGVuL2NvbnRyaWIvNC42L3V0ZjhfMS4yLjYudGd6IiwKICAiaHR0cDovLzEyNy4wLjAuMTo0MTgyL2xhYi92ZW5kb3Ivd2Vici1wYWNrYWdlcy9iaW4vZW1zY3JpcHRlbi9jb250cmliLzQuNi92Y3Ryc18wLjcuMy50Z3oiLAogICJodHRwOi8vMTI3LjAuMC4xOjQxODIvbGFiL3ZlbmRvci93ZWJyLXBhY2thZ2VzL2Jpbi9lbXNjcmlwdGVuL2NvbnRyaWIvNC42L3BpbGxhcl8xLjExLjEudGd6IiwKICAiaHR0cDovLzEyNy4wLjAuMTo0MTgyL2xhYi92ZW5kb3Ivd2Vici1wYWNrYWdlcy9iaW4vZW1zY3JpcHRlbi9jb250cmliLzQuNi9SNl8yLjYuMS50Z3oiLAogICJodHRwOi8vMTI3LjAuMC4xOjQxODIvbGFiL3ZlbmRvci93ZWJyLXBhY2thZ2VzL2Jpbi9lbXNjcmlwdGVuL2NvbnRyaWIvNC42L3BrZ2NvbmZpZ18yLjAuMy50Z3oiLAogICJodHRwOi8vMTI3LjAuMC4xOjQxODIvbGFiL3ZlbmRvci93ZWJyLXBhY2thZ2VzL2Jpbi9lbXNjcmlwdGVuL2NvbnRyaWIvNC42L3RpYmJsZV8zLjMuMS50Z3oiLAogICJodHRwOi8vMTI3LjAuMC4xOjQxODIvbGFiL3ZlbmRvci93ZWJyLXBhY2thZ2VzL2Jpbi9lbXNjcmlwdGVuL2NvbnRyaWIvNC42L3dpdGhyXzMuMC4yLnRneiIsCiAgImh0dHA6Ly8xMjcuMC4wLjE6NDE4Mi9sYWIvdmVuZG9yL3dlYnItcGFja2FnZXMvYmluL2Vtc2NyaXB0ZW4vY29udHJpYi80LjYvdGlkeXNlbGVjdF8xLjIuMS50Z3oiLAogICJodHRwOi8vMTI3LjAuMC4xOjQxODIvbGFiL3ZlbmRvci93ZWJyLXBhY2thZ2VzL2Jpbi9lbXNjcmlwdGVuL2NvbnRyaWIvNC42L2d0YWJsZV8wLjMuNi50Z3oiLAogICJodHRwOi8vMTI3LjAuMC4xOjQxODIvbGFiL3ZlbmRvci93ZWJyLXBhY2thZ2VzL2Jpbi9lbXNjcmlwdGVuL2NvbnRyaWIvNC42L2lzb2JhbmRfMC4zLjAudGd6IiwKICAiaHR0cDovLzEyNy4wLjAuMTo0MTgyL2xhYi92ZW5kb3Ivd2Vici1wYWNrYWdlcy9iaW4vZW1zY3JpcHRlbi9jb250cmliLzQuNi9TN18wLjIuMi50Z3oiLAogICJodHRwOi8vMTI3LjAuMC4xOjQxODIvbGFiL3ZlbmRvci93ZWJyLXBhY2thZ2VzL2Jpbi9lbXNjcmlwdGVuL2NvbnRyaWIvNC42L2ZhcnZlcl8yLjEuMi50Z3oiLAogICJodHRwOi8vMTI3LjAuMC4xOjQxODIvbGFiL3ZlbmRvci93ZWJyLXBhY2thZ2VzL2Jpbi9lbXNjcmlwdGVuL2NvbnRyaWIvNC42L2xhYmVsaW5nXzAuNC4zLnRneiIsCiAgImh0dHA6Ly8xMjcuMC4wLjE6NDE4Mi9sYWIvdmVuZG9yL3dlYnItcGFja2FnZXMvYmluL2Vtc2NyaXB0ZW4vY29udHJpYi80LjYvUkNvbG9yQnJld2VyXzEuMS0zLnRneiIsCiAgImh0dHA6Ly8xMjcuMC4wLjE6NDE4Mi9sYWIvdmVuZG9yL3dlYnItcGFja2FnZXMvYmluL2Vtc2NyaXB0ZW4vY29udHJpYi80LjYvdmlyaWRpc0xpdGVfMC40LjMudGd6IiwKICAiaHR0cDovLzEyNy4wLjAuMTo0MTgyL2xhYi92ZW5kb3Ivd2Vici1wYWNrYWdlcy9iaW4vZW1zY3JpcHRlbi9jb250cmliLzQuNi9zY2FsZXNfMS40LjAudGd6IiwKICAiaHR0cDovLzEyNy4wLjAuMTo0MTgyL2xhYi92ZW5kb3Ivd2Vici1wYWNrYWdlcy9iaW4vZW1zY3JpcHRlbi9jb250cmliLzQuNi9jcmF5b25fMS41LjMudGd6IiwKICAiaHR0cDovLzEyNy4wLjAuMTo0MTgyL2xhYi92ZW5kb3Ivd2Vici1wYWNrYWdlcy9iaW4vZW1zY3JpcHRlbi9jb250cmliLzQuNi9obXNfMS4xLjQudGd6IiwKICAiaHR0cDovLzEyNy4wLjAuMTo0MTgyL2xhYi92ZW5kb3Ivd2Vici1wYWNrYWdlcy9iaW4vZW1zY3JpcHRlbi9jb250cmliLzQuNi9wcmV0dHl1bml0c18xLjIuMC50Z3oiLAogICJodHRwOi8vMTI3LjAuMC4xOjQxODIvbGFiL3ZlbmRvci93ZWJyLXBhY2thZ2VzL2Jpbi9lbXNjcmlwdGVuL2NvbnRyaWIvNC42L2NsaXByXzAuOC4xLnRneiIsCiAgImh0dHA6Ly8xMjcuMC4wLjE6NDE4Mi9sYWIvdmVuZG9yL3dlYnItcGFja2FnZXMvYmluL2Vtc2NyaXB0ZW4vY29udHJpYi80LjYvYml0NjRfNC44LjIudGd6IiwKICAiaHR0cDovLzEyNy4wLjAuMTo0MTgyL2xhYi92ZW5kb3Ivd2Vici1wYWNrYWdlcy9iaW4vZW1zY3JpcHRlbi9jb250cmliLzQuNi90emRiXzAuNS4wLnRneiIsCiAgImh0dHA6Ly8xMjcuMC4wLjE6NDE4Mi9sYWIvdmVuZG9yL3dlYnItcGFja2FnZXMvYmluL2Vtc2NyaXB0ZW4vY29udHJpYi80LjYvdnJvb21fMS43LjEuOTAwMC50Z3oiLAogICJodHRwOi8vMTI3LjAuMC4xOjQxODIvbGFiL3ZlbmRvci93ZWJyLXBhY2thZ2VzL2Jpbi9lbXNjcmlwdGVuL2NvbnRyaWIvNC42L3N0cmluZ2lfMS44LjcudGd6IiwKICAiaHR0cDovLzEyNy4wLjAuMTo0MTgyL2xhYi92ZW5kb3Ivd2Vici1wYWNrYWdlcy9iaW4vZW1zY3JpcHRlbi9jb250cmliLzQuNi9kcGx5cl8xLjIuMS50Z3oiLAogICJodHRwOi8vMTI3LjAuMC4xOjQxODIvbGFiL3ZlbmRvci93ZWJyLXBhY2thZ2VzL2Jpbi9lbXNjcmlwdGVuL2NvbnRyaWIvNC42L3B1cnJyXzEuMi4yLnRneiIsCiAgImh0dHA6Ly8xMjcuMC4wLjE6NDE4Mi9sYWIvdmVuZG9yL3dlYnItcGFja2FnZXMvYmluL2Vtc2NyaXB0ZW4vY29udHJpYi80LjYvc3RyaW5ncl8xLjYuMC50Z3oiLAogICJodHRwOi8vMTI3LjAuMC4xOjQxODIvbGFiL3ZlbmRvci93ZWJyLXBhY2thZ2VzL2Jpbi9lbXNjcmlwdGVuL2NvbnRyaWIvNC42L2NwcDExXzAuNS41LnRneiIsCiAgImh0dHA6Ly8xMjcuMC4wLjE6NDE4Mi9sYWIvdmVuZG9yL3dlYnItcGFja2FnZXMvYmluL2Vtc2NyaXB0ZW4vY29udHJpYi80LjYvZ2dwbG90Ml80LjAuMy50Z3oiLAogICJodHRwOi8vMTI3LjAuMC4xOjQxODIvbGFiL3ZlbmRvci93ZWJyLXBhY2thZ2VzL2Jpbi9lbXNjcmlwdGVuL2NvbnRyaWIvNC42L2pzb25saXRlXzIuMC4wLnRneiIsCiAgImh0dHA6Ly8xMjcuMC4wLjE6NDE4Mi9sYWIvdmVuZG9yL3dlYnItcGFja2FnZXMvYmluL2Vtc2NyaXB0ZW4vY29udHJpYi80LjYvcHJvZ3Jlc3NfMS4yLjMudGd6IiwKICAiaHR0cDovLzEyNy4wLjAuMTo0MTgyL2xhYi92ZW5kb3Ivd2Vici1wYWNrYWdlcy9iaW4vZW1zY3JpcHRlbi9jb250cmliLzQuNi9yZWFkcl8yLjIuMC50Z3oiLAogICJodHRwOi8vMTI3LjAuMC4xOjQxODIvbGFiL3ZlbmRvci93ZWJyLXBhY2thZ2VzL2Jpbi9lbXNjcmlwdGVuL2NvbnRyaWIvNC42L3RpZHlyXzEuMy4yLnRneiIKXQ=="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "4852420a3ed5ea40b1af-961cf2e1ed3525742c40",
+          "file": "static.spec.ts",
+          "line": 9,
+          "column": 1
+        },
+        {
+          "title": "P7 AT-067: invalid operator config fails closed before any runtime",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 240000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium-2",
+              "projectName": "chromium-2",
+              "results": [
+                {
+                  "workerIndex": 5,
+                  "parallelIndex": 2,
+                  "status": "passed",
+                  "duration": 778,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-04T10:46:59.869Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "4852420a3ed5ea40b1af-b06f366ad0290cb86593",
+          "file": "static.spec.ts",
+          "line": 94,
+          "column": 1
+        },
+        {
+          "title": "P7 AT-066–068: arbitrary UID static container, deep routes, MIME/cache/CSP and real SQL/R",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 240000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "firefox-0",
+              "projectName": "firefox-0",
+              "results": [
+                {
+                  "workerIndex": 7,
+                  "parallelIndex": 2,
+                  "status": "interrupted",
+                  "duration": 23659,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-04T10:47:01.087Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/Users/stefan/sources/dateninfrastruktur-datenwerkstatt/test-results-deployment/static-P7-AT-066–068-arbit-5dac8-ME-cache-CSP-and-real-SQL-R-firefox-0/test-failed-1.png"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/Users/stefan/sources/dateninfrastruktur-datenwerkstatt/test-results-deployment/static-P7-AT-066–068-arbit-5dac8-ME-cache-CSP-and-real-SQL-R-firefox-0/error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/Users/stefan/sources/dateninfrastruktur-datenwerkstatt/test-results-deployment/static-P7-AT-066–068-arbit-5dac8-ME-cache-CSP-and-real-SQL-R-firefox-0/trace.zip"
+                    }
+                  ]
+                }
+              ],
+              "status": "skipped"
+            }
+          ],
+          "id": "4852420a3ed5ea40b1af-c8a333811eb7746900f6",
+          "file": "static.spec.ts",
+          "line": 9,
+          "column": 1
+        },
+        {
+          "title": "P7 AT-067: invalid operator config fails closed before any runtime",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 240000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "firefox-0",
+              "projectName": "firefox-0",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "4852420a3ed5ea40b1af-5049f3671282f7fde108",
+          "file": "static.spec.ts",
+          "line": 94,
+          "column": 1
+        },
+        {
+          "title": "P7 AT-066–068: arbitrary UID static container, deep routes, MIME/cache/CSP and real SQL/R",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 240000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "firefox-1",
+              "projectName": "firefox-1",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "4852420a3ed5ea40b1af-3b491423a1ed976d2fdc",
+          "file": "static.spec.ts",
+          "line": 9,
+          "column": 1
+        },
+        {
+          "title": "P7 AT-067: invalid operator config fails closed before any runtime",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 240000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "firefox-1",
+              "projectName": "firefox-1",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "4852420a3ed5ea40b1af-2505b3ec728e7d617bdb",
+          "file": "static.spec.ts",
+          "line": 94,
+          "column": 1
+        },
+        {
+          "title": "P7 AT-066–068: arbitrary UID static container, deep routes, MIME/cache/CSP and real SQL/R",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 240000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "firefox-2",
+              "projectName": "firefox-2",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "4852420a3ed5ea40b1af-435d3c40659e538931c8",
+          "file": "static.spec.ts",
+          "line": 9,
+          "column": 1
+        },
+        {
+          "title": "P7 AT-067: invalid operator config fails closed before any runtime",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 240000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "firefox-2",
+              "projectName": "firefox-2",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "4852420a3ed5ea40b1af-76e7733604d9ab5c3f55",
+          "file": "static.spec.ts",
+          "line": 94,
+          "column": 1
+        },
+        {
+          "title": "P7 AT-066–068: arbitrary UID static container, deep routes, MIME/cache/CSP and real SQL/R",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 240000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "webkit-0",
+              "projectName": "webkit-0",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "4852420a3ed5ea40b1af-d1b964c18b33699ee93f",
+          "file": "static.spec.ts",
+          "line": 9,
+          "column": 1
+        },
+        {
+          "title": "P7 AT-067: invalid operator config fails closed before any runtime",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 240000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "webkit-0",
+              "projectName": "webkit-0",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "4852420a3ed5ea40b1af-72b61c085ed49cc413aa",
+          "file": "static.spec.ts",
+          "line": 94,
+          "column": 1
+        },
+        {
+          "title": "P7 AT-066–068: arbitrary UID static container, deep routes, MIME/cache/CSP and real SQL/R",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 240000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "webkit-1",
+              "projectName": "webkit-1",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "4852420a3ed5ea40b1af-90c6d1a215a88656bbf6",
+          "file": "static.spec.ts",
+          "line": 9,
+          "column": 1
+        },
+        {
+          "title": "P7 AT-067: invalid operator config fails closed before any runtime",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 240000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "webkit-1",
+              "projectName": "webkit-1",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "4852420a3ed5ea40b1af-6ffbbb0ef670ac2c9ad7",
+          "file": "static.spec.ts",
+          "line": 94,
+          "column": 1
+        },
+        {
+          "title": "P7 AT-066–068: arbitrary UID static container, deep routes, MIME/cache/CSP and real SQL/R",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 240000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "webkit-2",
+              "projectName": "webkit-2",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "4852420a3ed5ea40b1af-2b84788eee2bd2285839",
+          "file": "static.spec.ts",
+          "line": 9,
+          "column": 1
+        },
+        {
+          "title": "P7 AT-067: invalid operator config fails closed before any runtime",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 240000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "webkit-2",
+              "projectName": "webkit-2",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "4852420a3ed5ea40b1af-80af37e0734e00558d56",
+          "file": "static.spec.ts",
+          "line": 94,
+          "column": 1
+        }
+      ]
+    }
+  ],
+  "errors": [
+    {
+      "message": "\u001b[31mTesting stopped early after 1 maximum allowed failures.\u001b[39m"
+    }
+  ],
+  "stats": {
+    "startTime": "2026-10-04T10:43:15.969Z",
+    "duration": 250372.118,
+    "expected": 12,
+    "skipped": 23,
+    "unexpected": 1,
+    "flaky": 0
+  }
+}

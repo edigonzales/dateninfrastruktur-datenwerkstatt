@@ -1,0 +1,19 @@
+[
+  {
+    "command": "npm run verify",
+    "exitCode": 0,
+    "note": "vor abschliessender NA-Maskenkorrektur; danach alle betroffenen P5-Pfade in Matrix erneut gepr\u00fcft"
+  },
+  {
+    "command": "npm run typecheck && npm run lint",
+    "exitCode": 0
+  },
+  {
+    "command": "npm run test:unit",
+    "exitCode": 0
+  },
+  {
+    "command": "PLAYWRIGHT_JSON_OUTPUT_FILE=docs/verification/browser-r-p5-gate.json npx playwright test 'tests/integration/r.*spec.ts' tests/e2e/r.spec.ts --reporter=list,json",
+    "exitCode": 0
+  }
+]

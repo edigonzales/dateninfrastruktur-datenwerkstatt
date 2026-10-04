@@ -1,0 +1,27 @@
+[WebServer] (node:31211) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] (node:31212) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 12 tests using 1 worker
+
+(node:31213) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓   1 [chromium] › tests/e2e/portal.spec.ts:3:1 › P4 AT-038 AT-056: explicit deep-link preview, replacement history and no autorun (9.5s)
+  ✓   2 [chromium] › tests/integration/archive-portal.spec.ts:3:1 › P6 AT-051: external inclusion is opt-in, immutable public origin and IDs survive offline archive import (2.0s)
+  ✓   3 [chromium] › tests/integration/portal.spec.ts:4:1 › P4 AT-033–037: real v4, concrete issue, public/local join, changed ETag, kept snapshot (1.6s)
+  ✓   4 [chromium] › tests/integration/portal.spec.ts:115:1 › P4 AT-035–036 AT-039 AT-056: errors, URL security, optional index and no foreign configuration (957ms)
+(node:31254) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓   5 [firefox] › tests/e2e/portal.spec.ts:3:1 › P4 AT-038 AT-056: explicit deep-link preview, replacement history and no autorun (8.8s)
+  ✓   6 [firefox] › tests/integration/archive-portal.spec.ts:3:1 › P6 AT-051: external inclusion is opt-in, immutable public origin and IDs survive offline archive import (3.8s)
+  ✓   7 [firefox] › tests/integration/portal.spec.ts:4:1 › P4 AT-033–037: real v4, concrete issue, public/local join, changed ETag, kept snapshot (3.1s)
+  ✓   8 [firefox] › tests/integration/portal.spec.ts:115:1 › P4 AT-035–036 AT-039 AT-056: errors, URL security, optional index and no foreign configuration (2.2s)
+(node:31300) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓   9 [webkit] › tests/e2e/portal.spec.ts:3:1 › P4 AT-038 AT-056: explicit deep-link preview, replacement history and no autorun (8.3s)
+  ✓  10 [webkit] › tests/integration/archive-portal.spec.ts:3:1 › P6 AT-051: external inclusion is opt-in, immutable public origin and IDs survive offline archive import (3.8s)
+  ✓  11 [webkit] › tests/integration/portal.spec.ts:4:1 › P4 AT-033–037: real v4, concrete issue, public/local join, changed ETag, kept snapshot (2.9s)
+  ✓  12 [webkit] › tests/integration/portal.spec.ts:115:1 › P4 AT-035–036 AT-039 AT-056: errors, URL security, optional index and no foreign configuration (1.8s)
+
+  12 passed (49.8s)

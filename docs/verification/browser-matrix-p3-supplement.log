@@ -1,0 +1,19 @@
+[WebServer] (node:5806) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 6 tests using 1 worker
+
+(node:5813) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  1 [chromium] › tests/e2e/sql.spec.ts:109:1 › P3 / AT-049: rendered bars and line gaps preserve NULL, PNG contains actual pixels (3.9s)
+  ✓  2 [chromium] › tests/integration/sql-lifecycle.spec.ts:2:1 › P3 / AT-031 AT-032: 350-row user Parquet export and a nonresponding cancel API (2.7s)
+(node:5835) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  3 [firefox] › tests/e2e/sql.spec.ts:109:1 › P3 / AT-049: rendered bars and line gaps preserve NULL, PNG contains actual pixels (5.4s)
+  ✓  4 [firefox] › tests/integration/sql-lifecycle.spec.ts:2:1 › P3 / AT-031 AT-032: 350-row user Parquet export and a nonresponding cancel API (5.4s)
+(node:5852) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  5 [webkit] › tests/e2e/sql.spec.ts:109:1 › P3 / AT-049: rendered bars and line gaps preserve NULL, PNG contains actual pixels (4.5s)
+  ✓  6 [webkit] › tests/integration/sql-lifecycle.spec.ts:2:1 › P3 / AT-031 AT-032: 350-row user Parquet export and a nonresponding cancel API (4.6s)
+
+  6 passed (28.0s)

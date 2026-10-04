@@ -1,0 +1,64 @@
+{
+  "status": "passed",
+  "pilotPassed": true,
+  "macOS": "27.0.1 (26A434)",
+  "safari": "27.0.1 (22625.1.29.11.28)",
+  "attempts": [
+    {
+      "method": "WebDriver POST /session",
+      "result": "session not created; Allow remote automation must be enabled",
+      "response": "p8-safari-session.json"
+    },
+    {
+      "method": "cua.getApp(\"Safari\")",
+      "result": "Mac is locked; automatic unlock failed; no UI state read or test performed"
+    },
+    {
+      "method": "WebDriver after user enabled remote automation",
+      "result": "curl timeout, then session connection timeout",
+      "responses": [
+        "p8-safari-session-enabled.json",
+        "p8-safari-session-enabled-second.json"
+      ]
+    },
+    {
+      "method": "Native Safari UI and local production-service test harness",
+      "result": "Golden SQL/R, PNG, archive, tab reopen, native terminate and subsequent R passed",
+      "report": "p8-safari-native-9cc4eeae-dba7-4c6c-a870-909e0bad5595.json",
+      "assertLog": "p8-safari-assert.log",
+      "assertExitCode": 0
+    },
+    {
+      "method": "Native Safari Command-Q, confirmed process exit, relaunch and persistence test",
+      "result": "passed; code, history, chart, PNG and kept SQL survive without autorun",
+      "report": "p8-safari-native-199dad27-4394-4105-bb98-4212c6839af2.json"
+    }
+  ],
+  "settingsChanged": false,
+  "requiredNextStep": "No further Safari activation required. Production portal/ingress configuration remains an external release prerequisite.",
+  "finalSessionResponse": "p8-safari-session-final.json",
+  "historicalFinalRetryResult": "same remote automation prerequisite; no session created",
+  "fullProcessRestartPassed": true,
+  "updatedAt": "2026-10-04T15:40:15.320853+00:00",
+  "scope": "Actual Safari normal profile, own origin on port 4184, each attempt a new workspace; no claim of second fresh Safari profile or full 72-case Safari matrix.",
+  "operatorUI": [
+    "Kept return SQL renders 3 exact Golden rows",
+    "Monaco SQL/R code visible",
+    "Kept PNG renders 400/600/750 bars",
+    "Plot fullscreen and Escape return verified",
+    "Own window closed; new window opened; user tabs preserved"
+  ],
+  "restartReport": "p8-safari-native-199dad27-4394-4105-bb98-4212c6839af2.json",
+  "processRestartEvidence": "p8-safari-process-restart.json",
+  "combinedAssertLog": "p8-safari-assert-restart.log",
+  "combinedAssertExitCode": 0,
+  "openDiagnostics": [
+    {
+      "source": "Monaco Safari Clipboard workaround",
+      "log": "p8-safari-server.log",
+      "observed": "2 clipboard write errors and one unhandled Canceled rejection during plot/fullscreen/Escape UI interaction",
+      "functionalImpact": "No interruption in the exercised flows; comprehensive clipboard behavior not verified",
+      "nextStep": "Isolate focused-editor copy/paste versus focus/fullscreen changes; do not suppress errors or patch dependencies without evidence."
+    }
+  ]
+}

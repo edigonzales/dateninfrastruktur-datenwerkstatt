@@ -1,0 +1,45 @@
+[WebServer] (node:24539) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] (node:24540) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 1 test using 1 worker
+
+(node:24541) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] 10:02:59 AM [vite] (client) [console.warn] WebR is using `PostMessage` communication channel, nested R REPLs are not available.
+  ✘  1 [chromium] › tests/integration/r-snapshots.spec.ts:3:1 › P5/P6 AT-025 AT-048: native R parameters, selection snapshot, seed and capture of a later object mutation (11.4s)
+
+
+  1) [chromium] › tests/integration/r-snapshots.spec.ts:3:1 › P5/P6 AT-025 AT-048: native R parameters, selection snapshot, seed and capture of a later object mutation 
+
+    Error: expect(received).toBe(expected) // Object.is equality
+
+    Expected: "9"
+    Received: "9.0"
+
+      84 |   expect(proof.editor).toContain('changed editor must not run');
+      85 |   expect(proof.repeat.rows).toEqual(proof.before.rows);
+    > 86 |   expect(proof.rows.rows[0]?.[0]).toBe('9');
+         |                                   ^
+      87 |   expect(proof.runsAfter).toBe(proof.runsBefore + 1);
+      88 |   expect(proof.capture.snapshot.inputScope).toBe('session-capture');
+      89 |   expect(proof.capture.snapshot.code).toBe('');
+        at /Users/stefan/sources/dateninfrastruktur-datenwerkstatt/tests/integration/r-snapshots.spec.ts:86:35
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/integration-r-snapshots-P5-4d714--of-a-later-object-mutation-chromium/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/integration-r-snapshots-P5-4d714--of-a-later-object-mutation-chromium/error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/integration-r-snapshots-P5-4d714--of-a-later-object-mutation-chromium/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/integration-r-snapshots-P5-4d714--of-a-later-object-mutation-chromium/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  1 failed
+    [chromium] › tests/integration/r-snapshots.spec.ts:3:1 › P5/P6 AT-025 AT-048: native R parameters, selection snapshot, seed and capture of a later object mutation 

@@ -1,0 +1,21 @@
+[WebServer] (node:23307) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] (node:23308) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 8 tests using 1 worker
+
+(node:23309) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] 9:56:03 AM [vite] (client) [console.warn] WebR is using `PostMessage` communication channel, nested R REPLs are not available.
+  ✓  1 [chromium] › tests/e2e/archive.spec.ts:5:1 › P6 AT-051 AT-053 AT-063: Golden archive in fresh profile, graph remap, real SQL/PNG, duplicate and independent deletion (16.9s)
+  ✓  2 [chromium] › tests/e2e/archive.spec.ts:135:1 › P6 AT-059: recipe inspection/confirmation without engine or empty fake tables (1.2s)
+  ✓  3 [chromium] › tests/e2e/multitab.spec.ts:2:1 › P6 AT-065: absent Web Locks permits existing project only as reader, archive export remains possible (2.8s)
+  ✓  4 [chromium] › tests/integration/archive-portal.spec.ts:3:1 › P6 AT-051: external inclusion is opt-in, immutable public origin and IDs survive offline archive import (1.8s)
+  ✓  5 [chromium] › tests/integration/recovery.spec.ts:3:1 › P6 AT-060: native browser decompressor enforces actual expansion with forged ZIP sizes (213ms)
+  ✓  6 [chromium] › tests/integration/recovery.spec.ts:30:1 › P6 AT-014 AT-064: failed import leaves recoverable OPFS staging; cleanup preserves another project and foreign files (854ms)
+  ✓  7 [chromium] › tests/integration/recovery.spec.ts:116:1 › P6 AT-012 AT-015 AT-017 AT-061: tab death interrupts real query, saved results remain, missing/corrupt bytes preserve code (5.3s)
+[WebServer] 9:56:31 AM [vite] (client) [console.warn] WebR is using `PostMessage` communication channel, nested R REPLs are not available.
+  ✓  8 [chromium] › tests/integration/transfer-recovery.spec.ts:3:1 › P6 AT-013 AT-050 AT-052: quota blocks persistent R input; workspace change aborts real capture after OPFS write without late publication (11.2s)
+
+  8 passed (41.0s)

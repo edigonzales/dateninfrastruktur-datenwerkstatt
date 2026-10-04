@@ -1,0 +1,43 @@
+[WebServer] (node:43715) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] (node:43726) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 1 test using 1 worker
+
+(node:43727) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  1 [chromium] › tests/integration/init-failure.spec.ts:3:1 › AT-069: corrupt DuckDB WASM frees its actual worker before retry (2.0m)
+
+
+  1) [chromium] › tests/integration/init-failure.spec.ts:3:1 › AT-069: corrupt DuckDB WASM frees its actual worker before retry 
+
+    Test timeout of 120000ms exceeded.
+
+    Error: page.evaluate: Target page, context or browser has been closed
+
+      15 |   });
+      16 |   await page.goto('/tests/spike/');
+    > 17 |   const failure = await page.evaluate(async () => {
+         |                              ^
+      18 |     const p = await import('/tests/spike/probe.ts');
+      19 |     try { await p.sqlInit(); return 'unexpected success'; }
+      20 |     catch (error) { return String(error); }
+        at /Users/stefan/sources/dateninfrastruktur-datenwerkstatt/tests/integration/init-failure.spec.ts:17:30
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/integration-init-failure-A-dc8ca--actual-worker-before-retry-chromium/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/integration-init-failure-A-dc8ca--actual-worker-before-retry-chromium/error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/integration-init-failure-A-dc8ca--actual-worker-before-retry-chromium/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/integration-init-failure-A-dc8ca--actual-worker-before-retry-chromium/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  1 failed
+    [chromium] › tests/integration/init-failure.spec.ts:3:1 › AT-069: corrupt DuckDB WASM frees its actual worker before retry 

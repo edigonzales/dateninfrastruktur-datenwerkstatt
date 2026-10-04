@@ -1,0 +1,16 @@
+[
+  {
+    "interactive": false,
+    "isolated": true,
+    "loop": "UnwindProtectException: A non-local transfer of control occurred during evaluation",
+    "interruptMs": 503.14000000059605,
+    "reused": "Error: probe timeout"
+  },
+  {
+    "interactive": true,
+    "isolated": true,
+    "loop": "UnwindProtectException: A non-local transfer of control occurred during evaluation",
+    "interruptMs": 502.7699999958277,
+    "reused": 42
+  }
+]

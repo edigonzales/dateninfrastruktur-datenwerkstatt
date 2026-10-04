@@ -1,0 +1,24 @@
+[WebServer] (node:13066) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] (node:13078) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 9 tests using 1 worker
+
+(node:13084) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  1 [chromium] › tests/e2e/portal.spec.ts:3:1 › P4 AT-038 AT-056: explicit deep-link preview, replacement history and no autorun (16.2s)
+  ✓  2 [chromium] › tests/integration/portal.spec.ts:4:1 › P4 AT-033–037: real v4, concrete issue, public/local join, changed ETag, kept snapshot (2.6s)
+  ✓  3 [chromium] › tests/integration/portal.spec.ts:115:1 › P4 AT-035–036 AT-039 AT-056: errors, URL security, optional index and no foreign configuration (1.4s)
+(node:13116) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  4 [firefox] › tests/e2e/portal.spec.ts:3:1 › P4 AT-038 AT-056: explicit deep-link preview, replacement history and no autorun (14.3s)
+  ✓  5 [firefox] › tests/integration/portal.spec.ts:4:1 › P4 AT-033–037: real v4, concrete issue, public/local join, changed ETag, kept snapshot (5.2s)
+  ✓  6 [firefox] › tests/integration/portal.spec.ts:115:1 › P4 AT-035–036 AT-039 AT-056: errors, URL security, optional index and no foreign configuration (3.6s)
+(node:13144) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  7 [webkit] › tests/e2e/portal.spec.ts:3:1 › P4 AT-038 AT-056: explicit deep-link preview, replacement history and no autorun (14.0s)
+  ✓  8 [webkit] › tests/integration/portal.spec.ts:4:1 › P4 AT-033–037: real v4, concrete issue, public/local join, changed ETag, kept snapshot (4.7s)
+  ✓  9 [webkit] › tests/integration/portal.spec.ts:115:1 › P4 AT-035–036 AT-039 AT-056: errors, URL security, optional index and no foreign configuration (2.6s)
+
+  9 passed (1.1m)

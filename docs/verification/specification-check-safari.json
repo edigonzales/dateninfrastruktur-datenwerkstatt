@@ -1,0 +1,22 @@
+{
+  "specVersion": "1.0.0",
+  "status": "passed",
+  "requirements": 80,
+  "acceptanceScenarios": 72,
+  "checks": [
+    "80 requirements, 72 acceptance scenarios, complete coverage and local Markdown links",
+    "JSON examples, workspace references, recipe archive, contract imports and runtime limits (114 JSON files)",
+    "Synthetic SQL/reference classification/return-SQL golden values (SQLite/Python, NOT DuckDB or R)",
+    "No font files bundled"
+  ],
+  "pythonVersion": "3.9.6",
+  "sqliteVersion": "3.54.0",
+  "notExecuted": [
+    "application-build",
+    "DuckDB-WASM",
+    "R-webR",
+    "browser",
+    "container",
+    "performance"
+  ]
+}

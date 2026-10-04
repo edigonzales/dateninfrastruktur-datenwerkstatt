@@ -1,0 +1,9 @@
+{
+  "outcome": "Error: Opening the database failed with error: {\"exception_type\":\"IO\",\"exception_message\":\"Cannot open database \\\"/missing-directory/db.duckdb\\\" in read-only mode: database does not exist\"}",
+  "workers": [
+    {
+      "url": "blob:http://127.0.0.1:4173/3bfc9cb2-d160-4873-9823-19975eea0720",
+      "closed": true
+    }
+  ]
+}

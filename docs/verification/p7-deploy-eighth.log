@@ -1,0 +1,194 @@
+[WebServer] (node:49488) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] (node:49515) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] [plugin builtin:vite-reporter] 
+[WebServer] (!) Some chunks are larger than 500 kB after minification. Consider:
+[WebServer] - Using dynamic import() to code-split the application
+[WebServer] - Use build.rolldownOptions.output.codeSplitting to improve chunking: https://rolldown.rs/reference/OutputOptions.codeSplitting
+[WebServer] - Adjust chunk size limit for this warning via build.chunkSizeWarningLimit.
+[WebServer] #0 building with "desktop-linux" instance using docker driver
+[WebServer] 
+[WebServer] #1 [internal] load build definition from Dockerfile
+[WebServer] #1 transferring dockerfile: 491B done
+[WebServer] #1 DONE 0.0s
+[WebServer] 
+[WebServer] #2 [internal] load metadata for docker.io/library/caddy:2.11.4-alpine@sha256:5f5c8640aae01df9654968d946d8f1a56c497f1dd5c5cda4cf95ab7c14d58648
+[WebServer] #2 DONE 0.0s
+[WebServer] 
+[WebServer] #3 [internal] load .dockerignore
+[WebServer] #3 transferring context: 2B done
+[WebServer] #3 DONE 0.0s
+[WebServer] 
+[WebServer] #4 [1/4] FROM docker.io/library/caddy:2.11.4-alpine@sha256:5f5c8640aae01df9654968d946d8f1a56c497f1dd5c5cda4cf95ab7c14d58648
+[WebServer] #4 resolve docker.io/library/caddy:2.11.4-alpine@sha256:5f5c8640aae01df9654968d946d8f1a56c497f1dd5c5cda4cf95ab7c14d58648 done
+[WebServer] #4 DONE 0.0s
+[WebServer] 
+[WebServer] #5 [internal] load build context
+[WebServer] #5 transferring context: 238.75MB 2.7s done
+[WebServer] #5 DONE 2.7s
+[WebServer] 
+[WebServer] #6 [2/4] COPY dist /srv
+[WebServer] #6 CACHED
+[WebServer] 
+[WebServer] #7 [3/4] COPY Caddyfile /etc/caddy/Caddyfile
+[WebServer] #7 CACHED
+[WebServer] 
+[WebServer] #8 [4/4] RUN setcap -r /usr/bin/caddy
+[WebServer] #8 CACHED
+[WebServer] 
+[WebServer] #9 exporting to image
+[WebServer] #9 exporting layers done
+[WebServer] #9 exporting manifest sha256:07fb02e9dabaeb8eac6f440c4dd648d4f8eceaca9fabcdcb32818bad1e823fcf done
+[WebServer] #9 exporting config sha256:62353cce49ffaf194ca208e740f5dfa339163bc6f5a53bc098f8fb3790450324 done
+[WebServer] #9 exporting attestation manifest sha256:19ee35d09c5cb66aa6a2f55fa0f611d9a6d50101d266aaa146ea963feb7dcb79
+[WebServer] #9 exporting attestation manifest sha256:19ee35d09c5cb66aa6a2f55fa0f611d9a6d50101d266aaa146ea963feb7dcb79 done
+[WebServer] #9 exporting manifest list sha256:81c3e0a88f43ddb59ba3f08b41f5f3e9a8a2ca7f9ba19f64e4b8929fafb20049 done
+[WebServer] #9 naming to docker.io/library/datenwerkstatt-p7-test:0 done
+[WebServer] #9 unpacking to docker.io/library/datenwerkstatt-p7-test:0 done
+[WebServer] #9 DONE 0.1s
+[WebServer] (node:51880) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] (node:51907) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] [plugin builtin:vite-reporter] 
+[WebServer] (!) Some chunks are larger than 500 kB after minification. Consider:
+[WebServer] - Using dynamic import() to code-split the application
+[WebServer] - Use build.rolldownOptions.output.codeSplitting to improve chunking: https://rolldown.rs/reference/OutputOptions.codeSplitting
+[WebServer] - Adjust chunk size limit for this warning via build.chunkSizeWarningLimit.
+[WebServer] #0 building with "desktop-linux" instance using docker driver
+[WebServer] 
+[WebServer] #1 [internal] load build definition from Dockerfile
+[WebServer] #1 transferring dockerfile: 491B done
+[WebServer] #1 DONE 0.0s
+[WebServer] 
+[WebServer] #2 [internal] load metadata for docker.io/library/caddy:2.11.4-alpine@sha256:5f5c8640aae01df9654968d946d8f1a56c497f1dd5c5cda4cf95ab7c14d58648
+[WebServer] #2 DONE 0.0s
+[WebServer] 
+[WebServer] #3 [internal] load .dockerignore
+[WebServer] #3 transferring context: 2B done
+[WebServer] #3 DONE 0.0s
+[WebServer] 
+[WebServer] #4 [1/4] FROM docker.io/library/caddy:2.11.4-alpine@sha256:5f5c8640aae01df9654968d946d8f1a56c497f1dd5c5cda4cf95ab7c14d58648
+[WebServer] #4 resolve docker.io/library/caddy:2.11.4-alpine@sha256:5f5c8640aae01df9654968d946d8f1a56c497f1dd5c5cda4cf95ab7c14d58648 done
+[WebServer] #4 DONE 0.0s
+[WebServer] 
+[WebServer] #5 [internal] load build context
+[WebServer] #5 transferring context: 238.75MB 2.8s done
+[WebServer] #5 DONE 2.8s
+[WebServer] 
+[WebServer] #6 [2/4] COPY dist /srv
+[WebServer] #6 CACHED
+[WebServer] 
+[WebServer] #7 [3/4] COPY Caddyfile /etc/caddy/Caddyfile
+[WebServer] #7 CACHED
+[WebServer] 
+[WebServer] #8 [4/4] RUN setcap -r /usr/bin/caddy
+[WebServer] #8 CACHED
+[WebServer] 
+[WebServer] #9 exporting to image
+[WebServer] #9 exporting layers done
+[WebServer] #9 exporting manifest sha256:7dff0f62331f02a5152f7adbd30094d5353ba33b5bc7e9e091f876c6a8cb2799 done
+[WebServer] #9 exporting config sha256:78c3c987fadb67e08f944e0190ee3180d536d1c315bea5dfc166db4ef238ccf8 done
+[WebServer] #9 exporting attestation manifest sha256:1c1ea8cedcdf26e767697c331f6bdeadf52c675150c8159a04edb11dd6f9d3d1 done
+[WebServer] #9 exporting manifest list sha256:34bc90a1167d1633f1502be0775a33c755b7bc9a136924cb93a4508888603411 done
+[WebServer] #9 naming to docker.io/library/datenwerkstatt-p7-test:1 done
+[WebServer] #9 unpacking to docker.io/library/datenwerkstatt-p7-test:1 done
+[WebServer] #9 DONE 0.1s
+[WebServer] #0 building with "desktop-linux" instance using docker driver
+[WebServer] 
+[WebServer] #1 [internal] load build definition from Dockerfile
+[WebServer] #1 transferring dockerfile: 491B done
+[WebServer] #1 DONE 0.0s
+[WebServer] 
+[WebServer] #2 [internal] load metadata for docker.io/library/caddy:2.11.4-alpine@sha256:5f5c8640aae01df9654968d946d8f1a56c497f1dd5c5cda4cf95ab7c14d58648
+[WebServer] #2 DONE 0.0s
+[WebServer] 
+[WebServer] #3 [internal] load .dockerignore
+[WebServer] #3 transferring context: 2B done
+[WebServer] #3 DONE 0.0s
+[WebServer] 
+[WebServer] #4 [1/4] FROM docker.io/library/caddy:2.11.4-alpine@sha256:5f5c8640aae01df9654968d946d8f1a56c497f1dd5c5cda4cf95ab7c14d58648
+[WebServer] #4 resolve docker.io/library/caddy:2.11.4-alpine@sha256:5f5c8640aae01df9654968d946d8f1a56c497f1dd5c5cda4cf95ab7c14d58648 done
+[WebServer] #4 DONE 0.0s
+[WebServer] 
+[WebServer] #5 [internal] load build context
+[WebServer] #5 transferring context: 238.75MB 2.7s done
+[WebServer] #5 DONE 2.7s
+[WebServer] 
+[WebServer] #6 [2/4] COPY dist /srv
+[WebServer] #6 CACHED
+[WebServer] 
+[WebServer] #7 [3/4] COPY Caddyfile /etc/caddy/Caddyfile
+[WebServer] #7 CACHED
+[WebServer] 
+[WebServer] #8 [4/4] RUN setcap -r /usr/bin/caddy
+[WebServer] #8 CACHED
+[WebServer] 
+[WebServer] #9 exporting to image
+[WebServer] #9 exporting layers done
+[WebServer] #9 exporting manifest sha256:f51e5eb24d6c080f11b5b176981b533d381f46ae5442210efa96f75f1ff6f5f6 done
+[WebServer] #9 exporting config sha256:9dc0a4e8aa5544624bcae9e9865610551e43a367847eaeca946910a8a08a6015 done
+[WebServer] #9 exporting attestation manifest sha256:e46e6ab571df9869343a8d41dbf2e2c6a4addfc2103d4223be824f1d55a5572f done
+[WebServer] #9 exporting manifest list sha256:83aa2ba9c82d06593f11cf53d6272d51d0ae921cc9b0dcfbc9b89bea31eaa5ce done
+[WebServer] #9 naming to docker.io/library/datenwerkstatt-p7-test:2 done
+[WebServer] #9 unpacking to docker.io/library/datenwerkstatt-p7-test:2 done
+[WebServer] #9 DONE 0.0s
+[WebServer] (node:54289) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 9 tests using 1 worker
+
+(node:54290) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  1 [chromium-0] › tests/deployment/faults.spec.ts:13:1 › P7 AT-069: missing/wrong MIME runtime assets fail explicitly; retry owns one valid worker (23.2s)
+  ✘  2 [chromium-0] › tests/deployment/faults.spec.ts:63:1 › P7 AT-046 AT-068–069: R worker CSP failure times out, corrected retry and genuine loop cancellation (57.9s)
+Testing stopped early after 1 maximum allowed failures.
+
+
+  1) [chromium-0] › tests/deployment/faults.spec.ts:63:1 › P7 AT-046 AT-068–069: R worker CSP failure times out, corrected retry and genuine loop cancellation 
+
+    Error: expect(locator).toContainText(expected) failed
+
+    Locator: getByRole('log')
+    Expected substring: "Schleife gestartet"
+    Received string:    ""
+    Timeout: 15000ms
+
+    Call log:
+      - Expect "toContainText" getByRole('log') with timeout 15000ms
+      - waiting for getByRole('log')
+        - locator resolved to <div role="log" class="r-console" aria-label="R-Konsole">…</div>
+        - unexpected value "Ausgabe, Meldungen und Warnungen. print()/cat() für explizite Ausgabe verwenden."
+        33 × locator resolved to <div role="log" class="r-console" aria-label="R-Konsole"></div>
+           - unexpected value ""
+
+
+      105 |   await code(page, 'repeat { 1+1 }');
+      106 |   await page.getByRole('button', {name: 'Ausführen', exact: true}).click();
+    > 107 |   await expect(page.locator('.run-status option').filter({hasText: 'running'})).toHaveCount(1);
+          |                                       ^
+      108 |   // captureR buffers console output until completion. Allow the posted loop to enter
+      109 |   // the worker before cancelling; cancelling the preceding metadata commit is different.
+      110 |   await page.waitForTimeout(1000);
+        at /Users/stefan/sources/dateninfrastruktur-datenwerkstatt/tests/deployment/faults.spec.ts:107:39
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results-deployment/faults-P7-AT-046-AT-068–06-25cc8-d-genuine-loop-cancellation-chromium-0/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results-deployment/faults-P7-AT-046-AT-068–06-25cc8-d-genuine-loop-cancellation-chromium-0/error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results-deployment/faults-P7-AT-046-AT-068–06-25cc8-d-genuine-loop-cancellation-chromium-0/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results-deployment/faults-P7-AT-046-AT-068–06-25cc8-d-genuine-loop-cancellation-chromium-0/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  1 failed
+    [chromium-0] › tests/deployment/faults.spec.ts:63:1 › P7 AT-046 AT-068–069: R worker CSP failure times out, corrected retry and genuine loop cancellation 
+  7 did not run
+  1 passed (1.7m)
+  1 error was not a part of any test, see above for details

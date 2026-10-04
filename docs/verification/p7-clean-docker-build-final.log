@@ -1,0 +1,127 @@
+#0 building with "desktop-linux" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 977B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/caddy:2.11.4-alpine@sha256:5f5c8640aae01df9654968d946d8f1a56c497f1dd5c5cda4cf95ab7c14d58648
+#2 DONE 0.0s
+
+#3 [internal] load metadata for docker.io/library/node:22.23.1-bookworm-slim@sha256:6c74791e557ce11fc957704f6d4fe134a7bc8d6f5ca4403205b2966bd488f6b3
+#3 DONE 0.8s
+
+#4 [internal] load .dockerignore
+#4 transferring context: 176B done
+#4 DONE 0.0s
+
+#5 [build 1/8] FROM docker.io/library/node:22.23.1-bookworm-slim@sha256:6c74791e557ce11fc957704f6d4fe134a7bc8d6f5ca4403205b2966bd488f6b3
+#5 resolve docker.io/library/node:22.23.1-bookworm-slim@sha256:6c74791e557ce11fc957704f6d4fe134a7bc8d6f5ca4403205b2966bd488f6b3 0.0s done
+#5 DONE 0.0s
+
+#6 [runtime 1/4] FROM docker.io/library/caddy:2.11.4-alpine@sha256:5f5c8640aae01df9654968d946d8f1a56c497f1dd5c5cda4cf95ab7c14d58648
+#6 resolve docker.io/library/caddy:2.11.4-alpine@sha256:5f5c8640aae01df9654968d946d8f1a56c497f1dd5c5cda4cf95ab7c14d58648 0.0s done
+#6 DONE 0.0s
+
+#7 [internal] load build context
+#7 transferring context: 1.43MB 0.0s done
+#7 DONE 0.1s
+
+#8 [build 2/8] WORKDIR /build
+#8 CACHED
+
+#9 [build 3/8] RUN npm install --global npm@11.18.0
+#9 CACHED
+
+#10 [build 4/8] COPY package.json package-lock.json .npmrc ./
+#10 DONE 0.0s
+
+#11 [build 5/8] COPY scripts/patch-sqlrooms.mjs scripts/patch-sqlrooms.mjs
+#11 DONE 0.0s
+
+#12 [build 6/8] RUN npm ci
+#12 9.106 
+#12 9.106 > datenwerkstatt@0.1.0 postinstall
+#12 9.106 > node scripts/patch-sqlrooms.mjs
+#12 9.106 
+#12 9.147 Applied SQLRooms 0.28.0 initialization cleanup (ADR-007).
+#12 9.199 
+#12 9.199 added 347 packages, and audited 348 packages in 9s
+#12 9.199 
+#12 9.199 78 packages are looking for funding
+#12 9.199   run `npm fund` for details
+#12 9.202 
+#12 9.202 found 0 vulnerabilities
+#12 9.203 npm warn allow-scripts 1 package has install scripts not yet covered by allowScripts:
+#12 9.203 npm warn allow-scripts   esbuild@0.28.1 (postinstall: node install.js)
+#12 9.203 npm warn allow-scripts
+#12 9.203 npm warn allow-scripts Run `npm install-scripts ls` to review, or `npm install-scripts approve <pkg>` to allow.
+#12 9.205 npm notice
+#12 9.205 npm notice New major version of npm available! 11.18.0 -> 12.2.0
+#12 9.205 npm notice Changelog: https://github.com/npm/cli/releases/tag/v12.2.0
+#12 9.205 npm notice To update run: npm install -g npm@12.2.0
+#12 9.205 npm notice
+#12 DONE 9.9s
+
+#13 [build 7/8] COPY . .
+#13 DONE 0.1s
+
+#14 [build 8/8] RUN npm run build && WEBR_CHANNEL=post-message BUILD_ID=local-pilot-not-released node scripts/deployment.mjs
+#14 0.279 
+#14 0.279 > datenwerkstatt@0.1.0 build
+#14 0.279 > npm run assets:prepare && vite build && node scripts/license-inventory.mjs
+#14 0.279 
+#14 0.385 
+#14 0.385 > datenwerkstatt@0.1.0 assets:prepare
+#14 0.385 > node scripts/prepare-assets.mjs
+#14 0.385 
+#14 1.636 Local webR 0.6.0 and 4 DuckDB extensions prepared.
+#14 3.692 Mirrored 40 WebR packages to public/vendor/webr-packages/bin/emscripten/contrib/4.6.
+#14 3.756 Pinned local R package mirror verified.
+#14 4.007 vite v8.1.2 building client environment for production...
+#14 4.016 [2Ktransforming...✓ 1408 modules transformed.
+#14 6.041 rendering chunks...
+#14 6.936 computing gzip size...
+#14 7.007 dist/index.html                                0.36 kB │ gzip:   0.26 kB
+#14 7.007 dist/.vite/manifest.json                       1.36 kB │ gzip:   0.41 kB
+#14 7.007 dist/assets/kanton-solothurn-DOpJ_x8i.svg      4.52 kB │ gzip:   1.75 kB
+#14 7.007 dist/assets/codicon-ngg6Pgfi.ttf             121.97 kB
+#14 7.007 dist/licenses/npm-bundle.json                161.40 kB │ gzip:  25.79 kB
+#14 7.007 dist/assets/editor.worker-Cn2oRESe.js        279.94 kB
+#14 7.007 dist/assets/index-DgF0yz54.css                 9.38 kB │ gzip:   2.64 kB
+#14 7.007 dist/assets/CodeEditorImpl-B3IiO00J.css      145.99 kB │ gzip:  22.62 kB
+#14 7.007 dist/assets/sql-NEE52Syq.js                    8.84 kB │ gzip:   3.73 kB
+#14 7.007 dist/assets/index-CLImFioH.js                913.81 kB │ gzip: 268.44 kB
+#14 7.007 dist/assets/CodeEditorImpl-PvGsLHiJ.js     3,629.58 kB │ gzip: 925.10 kB
+#14 7.007 
+#14 7.008 ✓ built in 3.00s
+#14 7.008 [plugin builtin:vite-reporter] 
+#14 7.008 (!) Some chunks are larger than 500 kB after minification. Consider:
+#14 7.008 - Using dynamic import() to code-split the application
+#14 7.008 - Use build.rolldownOptions.output.codeSplitting to improve chunking: https://rolldown.rs/reference/OutputOptions.codeSplitting
+#14 7.008 - Adjust chunk size limit for this warning via build.chunkSizeWarningLimit.
+#14 10.37 License inventory: 400 npm entries, 40 pinned R packages; original notices copied.
+#14 DONE 10.4s
+
+#6 [runtime 1/4] FROM docker.io/library/caddy:2.11.4-alpine@sha256:5f5c8640aae01df9654968d946d8f1a56c497f1dd5c5cda4cf95ab7c14d58648
+#6 CACHED
+
+#15 [runtime 2/4] COPY --from=build /build/dist /srv
+#15 DONE 0.7s
+
+#16 [runtime 3/4] COPY --from=build /build/deploy/generated/Caddyfile /etc/caddy/Caddyfile
+#16 DONE 0.0s
+
+#17 [runtime 4/4] RUN setcap -r /usr/bin/caddy
+#17 DONE 0.2s
+
+#18 exporting to image
+#18 exporting layers
+#18 exporting layers 7.7s done
+#18 exporting manifest sha256:9b66b4fef7a3453099afa3a5b9f21f9cc33a93b2f2770d5775d6779987695f7e done
+#18 exporting config sha256:6ecaffaedc09653b88f9b4a236ddede8776601a631bd725651deec84767660d9 done
+#18 exporting attestation manifest sha256:895ab8714f56bcba00bb0dcbef391da1049d39731cc14eaa26f837b50f1d1e44 done
+#18 exporting manifest list sha256:4443427ac607741e5225fa4417c213824dbb3bc2b643559c4d41b543407674dc done
+#18 naming to docker.io/library/datenwerkstatt-p7-clean:final done
+#18 unpacking to docker.io/library/datenwerkstatt-p7-clean:final
+#18 unpacking to docker.io/library/datenwerkstatt-p7-clean:final 1.4s done
+#18 DONE 9.2s

@@ -1,0 +1,7 @@
+{
+  "transport": "curl POST http://127.0.0.1:4191/session --max-time 30",
+  "exitCode": 28,
+  "responseBody": "",
+  "result": "Operation timed out; no WebDriver session created",
+  "note": "Structured record of the original empty response body, not a Safari test pass."
+}

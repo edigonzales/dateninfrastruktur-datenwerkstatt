@@ -1,1 +1,11 @@
 .DS_Store
+
+node_modules/
+dist/
+public/vendor/
+test-results/
+playwright-report/
+.vite/
+deploy/generated/
+dist-*/
+test-results-deployment/

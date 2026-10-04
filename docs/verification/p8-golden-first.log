@@ -1,0 +1,35 @@
+[WebServer] (node:3307) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 2 tests using 1 worker
+
+(node:3312) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] 1:27:19 PM [vite] (client) [console.warn] WebR is using `PostMessage` communication channel, nested R REPLs are not available.
+  ✘  1 [chromium] › tests/e2e/p8-golden.spec.ts:43:1 › P8 AT-072: portal population + local CSV, unchanged Golden SQL/R, process restart and second fresh archive profile (4.0m)
+(node:3482) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  2 [chromium] › tests/e2e/p8-imports.spec.ts:7:1 › P8 AT-019 AT-020: XLSX invalidates old preview, real over-limit file and visible replacement schema (4.6s)
+
+
+  1) [chromium] › tests/e2e/p8-golden.spec.ts:43:1 › P8 AT-072: portal population + local CSV, unchanged Golden SQL/R, process restart and second fresh archive profile 
+
+    Test timeout of 240000ms exceeded.
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/e2e-p8-golden-P8-AT-072-po-00a3a-econd-fresh-archive-profile-chromium/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/e2e-p8-golden-P8-AT-072-po-00a3a-econd-fresh-archive-profile-chromium/error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/e2e-p8-golden-P8-AT-072-po-00a3a-econd-fresh-archive-profile-chromium/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/e2e-p8-golden-P8-AT-072-po-00a3a-econd-fresh-archive-profile-chromium/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  1 failed
+    [chromium] › tests/e2e/p8-golden.spec.ts:43:1 › P8 AT-072: portal population + local CSV, unchanged Golden SQL/R, process restart and second fresh archive profile 
+  1 passed (4.2m)

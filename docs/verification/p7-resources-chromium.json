@@ -1,0 +1,346 @@
+{
+  "browser": "chromium",
+  "measurements": [
+    {
+      "cycle": 0,
+      "rows": 10000,
+      "sqlMs": 962.9000000059605,
+      "transferMs": 19823.90000000596,
+      "totalMs": 21102.90000000596,
+      "returned": [
+        [
+          "10000",
+          "49995000.0"
+        ]
+      ],
+      "objectsAfterReset": 0,
+      "handlesAfterClose": 0,
+      "workersCreated": 2,
+      "workersAlive": 0
+    },
+    {
+      "cycle": 1,
+      "rows": 100000,
+      "sqlMs": 904.0999999940395,
+      "transferMs": 14009.79999999702,
+      "totalMs": 16854.5,
+      "returned": [
+        [
+          "100000",
+          "4999950000.0"
+        ]
+      ],
+      "objectsAfterReset": 0,
+      "handlesAfterClose": 0,
+      "workersCreated": 4,
+      "workersAlive": 0
+    },
+    {
+      "cycle": 2,
+      "rows": 4,
+      "sqlMs": 908.8999999910593,
+      "transferMs": 12308.29999999702,
+      "totalMs": 13448.40000000596,
+      "returned": [
+        [
+          "4",
+          "6.0"
+        ]
+      ],
+      "objectsAfterReset": 0,
+      "handlesAfterClose": 0,
+      "workersCreated": 6,
+      "workersAlive": 0
+    },
+    {
+      "cycle": 3,
+      "rows": 4,
+      "sqlMs": 1101.8999999910593,
+      "transferMs": 12211.79999999702,
+      "totalMs": 13494.20000000298,
+      "returned": [
+        [
+          "4",
+          "6.0"
+        ]
+      ],
+      "objectsAfterReset": 0,
+      "handlesAfterClose": 0,
+      "workersCreated": 8,
+      "workersAlive": 0
+    },
+    {
+      "cycle": 4,
+      "rows": 4,
+      "sqlMs": 1002,
+      "transferMs": 12784.79999999702,
+      "totalMs": 13919.10000000894,
+      "returned": [
+        [
+          "4",
+          "6.0"
+        ]
+      ],
+      "objectsAfterReset": 0,
+      "handlesAfterClose": 0,
+      "workersCreated": 10,
+      "workersAlive": 0
+    },
+    {
+      "cycle": 5,
+      "rows": 4,
+      "sqlMs": 897.7999999970198,
+      "transferMs": 12231.70000000298,
+      "totalMs": 13298.40000000596,
+      "returned": [
+        [
+          "4",
+          "6.0"
+        ]
+      ],
+      "objectsAfterReset": 0,
+      "handlesAfterClose": 0,
+      "workersCreated": 12,
+      "workersAlive": 0
+    },
+    {
+      "cycle": 6,
+      "rows": 4,
+      "sqlMs": 1198.800000011921,
+      "transferMs": 12962.79999999702,
+      "totalMs": 14300.20000000298,
+      "returned": [
+        [
+          "4",
+          "6.0"
+        ]
+      ],
+      "objectsAfterReset": 0,
+      "handlesAfterClose": 0,
+      "workersCreated": 14,
+      "workersAlive": 0
+    },
+    {
+      "cycle": 7,
+      "rows": 4,
+      "sqlMs": 902,
+      "transferMs": 13250.5,
+      "totalMs": 14282,
+      "returned": [
+        [
+          "4",
+          "6.0"
+        ]
+      ],
+      "objectsAfterReset": 0,
+      "handlesAfterClose": 0,
+      "workersCreated": 16,
+      "workersAlive": 0
+    },
+    {
+      "cycle": 8,
+      "rows": 4,
+      "sqlMs": 898.6999999880791,
+      "transferMs": 17823.5,
+      "totalMs": 18894.20000000298,
+      "returned": [
+        [
+          "4",
+          "6.0"
+        ]
+      ],
+      "objectsAfterReset": 0,
+      "handlesAfterClose": 0,
+      "workersCreated": 18,
+      "workersAlive": 0
+    },
+    {
+      "cycle": 9,
+      "rows": 4,
+      "sqlMs": 1223.8999999910593,
+      "transferMs": 17628.10000000894,
+      "totalMs": 19110.59999999404,
+      "returned": [
+        [
+          "4",
+          "6.0"
+        ]
+      ],
+      "objectsAfterReset": 0,
+      "handlesAfterClose": 0,
+      "workersCreated": 20,
+      "workersAlive": 0
+    },
+    {
+      "cycle": 10,
+      "rows": 4,
+      "sqlMs": 1474,
+      "transferMs": 15435.59999999404,
+      "totalMs": 17045,
+      "returned": [
+        [
+          "4",
+          "6.0"
+        ]
+      ],
+      "objectsAfterReset": 0,
+      "handlesAfterClose": 0,
+      "workersCreated": 22,
+      "workersAlive": 0
+    },
+    {
+      "cycle": 11,
+      "rows": 4,
+      "sqlMs": 900.6000000089407,
+      "transferMs": 11983.5,
+      "totalMs": 13012.09999999404,
+      "returned": [
+        [
+          "4",
+          "6.0"
+        ]
+      ],
+      "objectsAfterReset": 0,
+      "handlesAfterClose": 0,
+      "workersCreated": 24,
+      "workersAlive": 0
+    },
+    {
+      "cycle": 12,
+      "rows": 4,
+      "sqlMs": 900.7000000029802,
+      "transferMs": 12090.59999999404,
+      "totalMs": 13117.40000000596,
+      "returned": [
+        [
+          "4",
+          "6.0"
+        ]
+      ],
+      "objectsAfterReset": 0,
+      "handlesAfterClose": 0,
+      "workersCreated": 26,
+      "workersAlive": 0
+    },
+    {
+      "cycle": 13,
+      "rows": 4,
+      "sqlMs": 886.8999999910593,
+      "transferMs": 12172.10000000894,
+      "totalMs": 13199,
+      "returned": [
+        [
+          "4",
+          "6.0"
+        ]
+      ],
+      "objectsAfterReset": 0,
+      "handlesAfterClose": 0,
+      "workersCreated": 28,
+      "workersAlive": 0
+    },
+    {
+      "cycle": 14,
+      "rows": 4,
+      "sqlMs": 881.2999999970198,
+      "transferMs": 11961.5,
+      "totalMs": 12973.800000011921,
+      "returned": [
+        [
+          "4",
+          "6.0"
+        ]
+      ],
+      "objectsAfterReset": 0,
+      "handlesAfterClose": 0,
+      "workersCreated": 30,
+      "workersAlive": 0
+    },
+    {
+      "cycle": 15,
+      "rows": 4,
+      "sqlMs": 903.8999999910593,
+      "transferMs": 11965.10000000894,
+      "totalMs": 12994.79999999702,
+      "returned": [
+        [
+          "4",
+          "6.0"
+        ]
+      ],
+      "objectsAfterReset": 0,
+      "handlesAfterClose": 0,
+      "workersCreated": 32,
+      "workersAlive": 0
+    },
+    {
+      "cycle": 16,
+      "rows": 4,
+      "sqlMs": 878.1000000089407,
+      "transferMs": 12031.39999999106,
+      "totalMs": 13044.5,
+      "returned": [
+        [
+          "4",
+          "6.0"
+        ]
+      ],
+      "objectsAfterReset": 0,
+      "handlesAfterClose": 0,
+      "workersCreated": 34,
+      "workersAlive": 0
+    },
+    {
+      "cycle": 17,
+      "rows": 4,
+      "sqlMs": 899.5,
+      "transferMs": 12031.70000000298,
+      "totalMs": 13059.5,
+      "returned": [
+        [
+          "4",
+          "6.0"
+        ]
+      ],
+      "objectsAfterReset": 0,
+      "handlesAfterClose": 0,
+      "workersCreated": 36,
+      "workersAlive": 0
+    },
+    {
+      "cycle": 18,
+      "rows": 4,
+      "sqlMs": 879.2999999970198,
+      "transferMs": 12034.40000000596,
+      "totalMs": 13048.09999999404,
+      "returned": [
+        [
+          "4",
+          "6.0"
+        ]
+      ],
+      "objectsAfterReset": 0,
+      "handlesAfterClose": 0,
+      "workersCreated": 38,
+      "workersAlive": 0
+    },
+    {
+      "cycle": 19,
+      "rows": 4,
+      "sqlMs": 879.0999999940395,
+      "transferMs": 11986.10000000894,
+      "totalMs": 13000.29999999702,
+      "returned": [
+        [
+          "4",
+          "6.0"
+        ]
+      ],
+      "objectsAfterReset": 0,
+      "handlesAfterClose": 0,
+      "workersCreated": 40,
+      "workersAlive": 0
+    }
+  ],
+  "note": "Wall-clock timings and real worker/handle counts; no peak-RAM claim."
+}

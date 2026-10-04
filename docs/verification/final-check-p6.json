@@ -1,0 +1,83 @@
+{
+  "checkedAt": "2026-10-04T08:46:55.354175+00:00",
+  "gitBase": "0535d2fd54f14e347cb3b488c3d47767923d1b2f",
+  "codeSha256": "a5fc622b0f2d36c7c4d67db677df4e0801cb2fd25ce54d18cf0b2275d12f46c7",
+  "verifiedFiles": 125,
+  "changedFiles": [],
+  "sourcePortalRevision": "6b45fc4e22116fba8fc00bd48175e347aa740562",
+  "sourcePortalStatus": "",
+  "originalFileChecks": [
+    {
+      "source": "/Users/stefan/sources/datenportal-sodata/src/main/frontend/explore/src/duckdb/executeDuckDbQuery.ts",
+      "target": "tests/baseline/duckdb/executeDuckDbQuery.ts",
+      "byteIdentical": true
+    },
+    {
+      "source": "/Users/stefan/sources/datenportal-sodata/src/main/frontend/explore/src/duckdb/executeDuckDbQuery.test.ts",
+      "target": "tests/baseline/duckdb/executeDuckDbQuery.test.ts",
+      "byteIdentical": true
+    },
+    {
+      "source": "/Users/stefan/sources/datenportal-sodata/src/main/frontend/explore/src/webr/DuckDbToWebRTypeMapper.ts",
+      "target": "tests/baseline/webr/DuckDbToWebRTypeMapper.ts",
+      "byteIdentical": true
+    },
+    {
+      "source": "/Users/stefan/sources/datenportal-sodata/src/main/frontend/explore/src/webr/DuckDbToWebRTypeMapper.test.ts",
+      "target": "tests/baseline/webr/DuckDbToWebRTypeMapper.test.ts",
+      "byteIdentical": true
+    },
+    {
+      "source": "/Users/stefan/sources/datenportal-sodata/src/main/frontend/explore/src/app/ExploreContext.ts",
+      "target": "tests/baseline/app/ExploreContext.ts",
+      "byteIdentical": true
+    },
+    {
+      "source": "node_modules/webr/dist/webr.mjs",
+      "target": "public/vendor/webr/0.6.0/webr.mjs",
+      "byteIdentical": true
+    },
+    {
+      "source": "node_modules/webr/dist/webr-worker.js",
+      "target": "public/vendor/webr/0.6.0/webr-worker.js",
+      "byteIdentical": true
+    }
+  ],
+  "verifyExit": 0,
+  "unitTests": 40,
+  "chromiumIntegrationTests": 38,
+  "chromiumE2ETests": 17,
+  "browserMatrixExit": 0,
+  "browserMatrix": {
+    "startTime": "2026-10-04T08:37:50.481Z",
+    "duration": 378174.56700000004,
+    "expected": 165,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  },
+  "browserMatrixCounts": {
+    "chromium": 55,
+    "firefox": 55,
+    "webkit": 55
+  },
+  "browserVersions": {
+    "chromium": "153.0.8010.12",
+    "firefox": "155.0",
+    "webkit": "26.6"
+  },
+  "serialPortalExit": 0,
+  "serialPortal": {
+    "startTime": "2026-10-04T08:44:29.295Z",
+    "duration": 49772.971000000005,
+    "expected": 12,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  },
+  "additionalChecks": {
+    "python3 tools/verify-package.py --report docs/verification/specification-check-p6.json": 0,
+    "npx tsc -p contracts/tsconfig.json": 0,
+    "git diff --check": 0
+  }
+}

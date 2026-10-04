@@ -1,0 +1,59 @@
+[WebServer] (node:3832) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 3 tests using 3 workers
+
+(node:3833) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:3835) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:3834) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] 1:34:42 PM [vite] (client) [console.warn] WebR is using `PostMessage` communication channel, nested R REPLs are not available.
+[WebServer] 1:34:43 PM [vite] (client) [console.warn] WebR is using `PostMessage` communication channel, nested R REPLs are not available.
+[WebServer] 1:34:45 PM [vite] (client) [console.warn] WebR is using `PostMessage` communication channel, nested R REPLs are not available.
+  ✘  3 [chromium] › tests/e2e/p8-golden.spec.ts:63:1 › P8 AT-072: portal population + local CSV, unchanged Golden SQL/R, process restart and second fresh archive profile (48.2s)
+  ✓  2 [firefox] › tests/e2e/p8-golden.spec.ts:63:1 › P8 AT-072: portal population + local CSV, unchanged Golden SQL/R, process restart and second fresh archive profile (53.5s)
+  ✓  1 [webkit] › tests/e2e/p8-golden.spec.ts:63:1 › P8 AT-072: portal population + local CSV, unchanged Golden SQL/R, process restart and second fresh archive profile (55.8s)
+
+
+  1) [chromium] › tests/e2e/p8-golden.spec.ts:63:1 › P8 AT-072: portal population + local CSV, unchanged Golden SQL/R, process restart and second fresh archive profile 
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator: getByRole('heading', { name: 'P8 Golden', exact: true })
+    Expected: visible
+    Timeout: 10000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toBeVisible" getByRole('heading', { name: 'P8 Golden', exact: true }) with timeout 10000ms
+      - waiting for getByRole('heading', { name: 'P8 Golden', exact: true })
+
+
+      261 |     await page.route('http://127.0.0.1:4174/**', (route) => route.abort());
+      262 |     await page.goto(workspaceUrl);
+    > 263 |     await expect(page.getByRole('heading', {name: 'P8 Golden', exact: true})).toBeVisible();
+          |                                                                               ^
+      264 |     expect(workers).toEqual([]);
+      265 |     const reopened = await documentOf(page);
+      266 |     expect(Object.keys(reopened.runs)).toEqual(runIds);
+        at /Users/stefan/sources/dateninfrastruktur-datenwerkstatt/tests/e2e/p8-golden.spec.ts:263:79
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/e2e-p8-golden-P8-AT-072-po-00a3a-econd-fresh-archive-profile-chromium/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/e2e-p8-golden-P8-AT-072-po-00a3a-econd-fresh-archive-profile-chromium/error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/e2e-p8-golden-P8-AT-072-po-00a3a-econd-fresh-archive-profile-chromium/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/e2e-p8-golden-P8-AT-072-po-00a3a-econd-fresh-archive-profile-chromium/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  1 failed
+    [chromium] › tests/e2e/p8-golden.spec.ts:63:1 › P8 AT-072: portal population + local CSV, unchanged Golden SQL/R, process restart and second fresh archive profile 
+  2 passed (56.8s)

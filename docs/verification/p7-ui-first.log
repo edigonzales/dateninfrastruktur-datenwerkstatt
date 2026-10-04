@@ -1,0 +1,78 @@
+[WebServer] (node:35533) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] (node:35534) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 2 tests using 1 worker
+
+(node:35535) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  1 [chromium] › tests/e2e/p7-ui.spec.ts:16:1 › P7 AT-054–055 AT-058: measured SQL/R geometry, keyboard splitters, layout reset and reload (4.6s)
+(node:35562) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  2 [chromium] › tests/e2e/p7-ui.spec.ts:107:1 › P7 AT-055–057: native focus trap/return, settings, storage cleanup and data-free diagnostics (2.4s)
+
+
+  1) [chromium] › tests/e2e/p7-ui.spec.ts:16:1 › P7 AT-054–055 AT-058: measured SQL/R geometry, keyboard splitters, layout reset and reload 
+
+    Error: expect(received).toBe(expected) // Object.is equality
+
+    Expected: 52
+    Received: 55.6875
+
+      55 |       }, kind);
+      56 |       expect(box.header.height).toBe(56);
+    > 57 |       expect(box.sidebar.width).toBe(52);
+         |                                 ^
+      58 |       expect(box.toolbar.height).toBeLessThanOrEqual(88);
+      59 |       expect(box.area.height).toBeGreaterThanOrEqual(size.height * 0.75);
+      60 |       expect(box.area.width).toBeGreaterThanOrEqual((size.width - box.sidebar.width) * 0.9);
+        at /Users/stefan/sources/dateninfrastruktur-datenwerkstatt/tests/e2e/p7-ui.spec.ts:57:33
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/e2e-p7-ui-P7-AT-054–055-AT-d61b4-ers-layout-reset-and-reload-chromium/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/e2e-p7-ui-P7-AT-054–055-AT-d61b4-ers-layout-reset-and-reload-chromium/error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/e2e-p7-ui-P7-AT-054–055-AT-d61b4-ers-layout-reset-and-reload-chromium/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/e2e-p7-ui-P7-AT-054–055-AT-d61b4-ers-layout-reset-and-reload-chromium/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  2) [chromium] › tests/e2e/p7-ui.spec.ts:107:1 › P7 AT-055–057: native focus trap/return, settings, storage cleanup and data-free diagnostics 
+
+    Error: expect(received).toBe(expected) // Object.is equality
+
+    Expected: true
+    Received: false
+
+      115 |   for (let i = 0; i < 25; i++) {
+      116 |     await page.keyboard.press('Tab');
+    > 117 |     expect(await dialog.evaluate((d) => d.contains(document.activeElement))).toBe(true);
+          |                                                                              ^
+      118 |   }
+      119 |   await page.keyboard.press('Escape');
+      120 |   await expect(dialog).toHaveCount(0);
+        at /Users/stefan/sources/dateninfrastruktur-datenwerkstatt/tests/e2e/p7-ui.spec.ts:117:78
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/e2e-p7-ui-P7-AT-055–057-na-3b970-p-and-data-free-diagnostics-chromium/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/e2e-p7-ui-P7-AT-055–057-na-3b970-p-and-data-free-diagnostics-chromium/error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/e2e-p7-ui-P7-AT-055–057-na-3b970-p-and-data-free-diagnostics-chromium/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/e2e-p7-ui-P7-AT-055–057-na-3b970-p-and-data-free-diagnostics-chromium/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  2 failed
+    [chromium] › tests/e2e/p7-ui.spec.ts:16:1 › P7 AT-054–055 AT-058: measured SQL/R geometry, keyboard splitters, layout reset and reload 
+    [chromium] › tests/e2e/p7-ui.spec.ts:107:1 › P7 AT-055–057: native focus trap/return, settings, storage cleanup and data-free diagnostics 

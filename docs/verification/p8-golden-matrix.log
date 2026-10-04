@@ -1,0 +1,131 @@
+[WebServer] (node:3554) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 6 tests using 3 workers
+
+(node:3566) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:3568) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:3569) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  1 [chromium] › tests/e2e/p8-imports.spec.ts:7:1 › P8 AT-019 AT-020: XLSX invalidates old preview, real over-limit file and visible replacement schema (5.8s)
+(node:3599) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] 1:32:08 PM [vite] (client) [console.warn] WebR is using `PostMessage` communication channel, nested R REPLs are not available.
+  ✓  4 [firefox] › tests/e2e/p8-imports.spec.ts:7:1 › P8 AT-019 AT-020: XLSX invalidates old preview, real over-limit file and visible replacement schema (9.3s)
+(node:3613) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] 1:32:24 PM [vite] (client) [console.warn] WebR is using `PostMessage` communication channel, nested R REPLs are not available.
+  ✘  2 [chromium] › tests/e2e/p8-golden.spec.ts:62:1 › P8 AT-072: portal population + local CSV, unchanged Golden SQL/R, process restart and second fresh archive profile (34.7s)
+(node:3653) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  3 [firefox] › tests/e2e/p8-golden.spec.ts:62:1 › P8 AT-072: portal population + local CSV, unchanged Golden SQL/R, process restart and second fresh archive profile (42.5s)
+  ✓  6 [webkit] › tests/e2e/p8-imports.spec.ts:7:1 › P8 AT-019 AT-020: XLSX invalidates old preview, real over-limit file and visible replacement schema (6.9s)
+  ✘  5 [webkit] › tests/e2e/p8-golden.spec.ts:62:1 › P8 AT-072: portal population + local CSV, unchanged Golden SQL/R, process restart and second fresh archive profile (36.7s)
+
+
+  1) [chromium] › tests/e2e/p8-golden.spec.ts:62:1 › P8 AT-072: portal population + local CSV, unchanged Golden SQL/R, process restart and second fresh archive profile 
+
+    Error: Ungültiger verwalteter Artefaktpfad.
+
+       at ../src/domain/workspace.ts:373
+
+      371 |   const d = parsed.data as WorkspaceDocument;
+      372 |   const fail = (path: string, message: string): never => {
+    > 373 |     throw new WorkspaceValidationError('REFERENCE_INVALID', message, path);
+          |           ^
+      374 |   };
+      375 |   for (const collection of [
+      376 |     'datasets',
+        at fail (/Users/stefan/sources/dateninfrastruktur-datenwerkstatt/src/domain/workspace.ts:373:11)
+        at parseWorkspace (/Users/stefan/sources/dateninfrastruktur-datenwerkstatt/src/domain/workspace.ts:474:7)
+        at /Users/stefan/sources/dateninfrastruktur-datenwerkstatt/tests/e2e/p8-golden.spec.ts:227:22
+
+    Error Context: test-results/e2e-p8-golden-P8-AT-072-po-00a3a-econd-fresh-archive-profile-chromium/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/e2e-p8-golden-P8-AT-072-po-00a3a-econd-fresh-archive-profile-chromium/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/e2e-p8-golden-P8-AT-072-po-00a3a-econd-fresh-archive-profile-chromium/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  2) [firefox] › tests/e2e/p8-golden.spec.ts:62:1 › P8 AT-072: portal population + local CSV, unchanged Golden SQL/R, process restart and second fresh archive profile 
+
+    Error: expect(received).toBe(expected) // Object.is equality
+
+    - Expected  - 16
+    + Received  +  1
+
+    - SELECT
+    -   g.gemeinde_id,
+    -   g.gemeinde,
+    -   b.jahr,
+    -   b.bevoelkerung,
+    -   f.fahrzeuge,
+    -   ROUND(1000.0 * f.fahrzeuge / NULLIF(b.bevoelkerung, 0), 1)
+    -     AS fahrzeuge_pro_1000
+    - FROM data.bevoelkerung AS b
+    - JOIN data.fahrzeuge AS f
+    -   ON b.gemeinde_id = f.gemeinde_id AND b.jahr = f.jahr
+    - JOIN data.gemeinden AS g
+    -   ON g.gemeinde_id = b.gemeinde_id
+    - WHERE b.jahr = $jahr
+    - ORDER BY fahrzeuge_pro_1000 DESC NULLS LAST, g.gemeinde_id;
+    -
+    + SELECT 1 AS wert;
+
+      30 |       return monaco.editor.getEditors()[0]!.getModel()!.getValue();
+      31 |     }),
+    > 32 |   ).toBe(code);
+         |     ^
+      33 |   await page.getByRole('textbox', {name: 'Analysecode'}).press('ControlOrMeta+s');
+      34 | }
+      35 | async function documentOf(page: Page) {
+        at editor (/Users/stefan/sources/dateninfrastruktur-datenwerkstatt/tests/e2e/p8-golden.spec.ts:32:5)
+        at /Users/stefan/sources/dateninfrastruktur-datenwerkstatt/tests/e2e/p8-golden.spec.ts:159:5
+
+    Error Context: test-results/e2e-p8-golden-P8-AT-072-po-00a3a-econd-fresh-archive-profile-firefox/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/e2e-p8-golden-P8-AT-072-po-00a3a-econd-fresh-archive-profile-firefox/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/e2e-p8-golden-P8-AT-072-po-00a3a-econd-fresh-archive-profile-firefox/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  3) [webkit] › tests/e2e/p8-golden.spec.ts:62:1 › P8 AT-072: portal population + local CSV, unchanged Golden SQL/R, process restart and second fresh archive profile 
+
+    Error: Ungültiger verwalteter Artefaktpfad.
+
+       at ../src/domain/workspace.ts:373
+
+      371 |   const d = parsed.data as WorkspaceDocument;
+      372 |   const fail = (path: string, message: string): never => {
+    > 373 |     throw new WorkspaceValidationError('REFERENCE_INVALID', message, path);
+          |           ^
+      374 |   };
+      375 |   for (const collection of [
+      376 |     'datasets',
+        at fail (/Users/stefan/sources/dateninfrastruktur-datenwerkstatt/src/domain/workspace.ts:373:11)
+        at parseWorkspace (/Users/stefan/sources/dateninfrastruktur-datenwerkstatt/src/domain/workspace.ts:474:7)
+        at /Users/stefan/sources/dateninfrastruktur-datenwerkstatt/tests/e2e/p8-golden.spec.ts:227:22
+
+    Error Context: test-results/e2e-p8-golden-P8-AT-072-po-00a3a-econd-fresh-archive-profile-webkit/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/e2e-p8-golden-P8-AT-072-po-00a3a-econd-fresh-archive-profile-webkit/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/e2e-p8-golden-P8-AT-072-po-00a3a-econd-fresh-archive-profile-webkit/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  3 failed
+    [chromium] › tests/e2e/p8-golden.spec.ts:62:1 › P8 AT-072: portal population + local CSV, unchanged Golden SQL/R, process restart and second fresh archive profile 
+    [firefox] › tests/e2e/p8-golden.spec.ts:62:1 › P8 AT-072: portal population + local CSV, unchanged Golden SQL/R, process restart and second fresh archive profile 
+    [webkit] › tests/e2e/p8-golden.spec.ts:62:1 › P8 AT-072: portal population + local CSV, unchanged Golden SQL/R, process restart and second fresh archive profile 
+  3 passed (56.7s)

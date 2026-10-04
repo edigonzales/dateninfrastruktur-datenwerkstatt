@@ -1,0 +1,629 @@
+:root {
+  font-family: system-ui, sans-serif;
+  color: #222;
+  background: #f6f6f7;
+  font-synthesis: none;
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+}
+header {
+  height: 56px;
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  padding: 0 24px;
+  background: white;
+  border-bottom: 1px solid #d7d7dc;
+}
+header img {
+  width: 190px;
+  height: auto;
+}
+main {
+  padding: 32px;
+  max-width: 1100px;
+  margin: auto;
+}
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+button {
+  cursor: pointer;
+}
+a {
+  color: #a41424;
+}
+:focus-visible {
+  outline: 3px solid #185eaa;
+  outline-offset: 3px;
+}
+button {
+  padding: 8px 12px;
+  border: 1px solid #b6b6bd;
+  border-radius: 4px;
+  background: white;
+  color: #25252a;
+}
+button:hover {
+  background: #eeeef1;
+}
+button:disabled {
+  opacity: 0.5;
+  cursor: default;
+}
+.primary {
+  background: #b31828;
+  color: white;
+  border-color: #b31828;
+}
+input:not([type='checkbox']),
+textarea,
+select {
+  display: block;
+  border: 1px solid #96969f;
+  border-radius: 3px;
+  background: white;
+  padding: 8px;
+  margin-top: 6px;
+  color: #222;
+}
+textarea {
+  width: 100%;
+  min-height: 100px;
+  resize: vertical;
+}
+label {
+  font-size: 14px;
+  font-weight: 550;
+}
+.brand {
+  font-weight: 650;
+  color: #25252a;
+  text-decoration: none;
+}
+.build-status {
+  font-size: 12px;
+  margin-left: auto;
+  color: #555;
+}
+.create-workspace {
+  display: flex;
+  align-items: end;
+  gap: 12px;
+  margin: 24px 0 36px;
+}
+.form-fields {
+  display: grid;
+  gap: 16px;
+  max-width: 680px;
+  margin-bottom: 20px;
+}
+.form-fields input:not([type='checkbox']) {
+  width: 100%;
+}
+.form-fields input[type='checkbox'] {
+  margin-right: 8px;
+}
+.workspace-list {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+}
+.workspace-list td,
+.workspace-list th {
+  text-align: left;
+  padding: 14px 16px;
+  border-bottom: 1px solid #dedee4;
+}
+.workspace-list th {
+  font-size: 12px;
+  color: #555;
+}
+.workspace-layout {
+  display: flex;
+  min-height: calc(100vh - 56px);
+}
+.sidebar {
+  flex: 0 0 52px;
+  background: white;
+  border-right: 1px solid #dedee4;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+  padding: 12px 4px;
+}
+.sidebar.expanded {
+  flex-basis: 212px;
+  align-items: stretch;
+}
+.sidebar a {
+  font-size: 20px;
+  text-decoration: none;
+  padding: 8px;
+  color: #333;
+}
+.sidebar button {
+  border: 0;
+  padding: 8px;
+}
+.workspace-content {
+  flex: 1;
+  min-width: 0;
+}
+.save-status {
+  min-height: 30px;
+  padding: 6px 20px;
+  font-size: 12px;
+  color: #54545a;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+.project-details {
+  padding: 20px 32px;
+  max-width: 1000px;
+}
+.section-heading {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+.section-heading h2 {
+  margin-right: auto;
+}
+.analysis-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.analysis-list li {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  border-bottom: 1px solid #ddd;
+  padding: 12px 0;
+}
+.analysis-list li a {
+  flex: 1;
+}
+.analysis-list li span {
+  font-size: 12px;
+}
+.error {
+  padding: 12px 24px;
+  background: #fff1ef;
+  border: 1px solid #b31828;
+  color: #81202c;
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+.error button {
+  margin-left: auto;
+}
+.analysis-area {
+  display: flex;
+  flex-direction: column;
+  height: calc(100vh - 86px);
+}
+.analysis-toolbar {
+  display: flex;
+  gap: 16px;
+  align-items: end;
+  padding: 8px 20px;
+  border-bottom: 1px solid #ddd;
+  background: white;
+}
+.analysis-toolbar input {
+  margin-top: 3px;
+  padding: 5px;
+  width: 320px;
+}
+.analysis-toolbar span {
+  font-size: 12px;
+  padding: 8px;
+}
+.code-editor {
+  flex: 1;
+  min-height: 250px;
+  overflow: hidden;
+}
+.phase-note {
+  font-size: 13px;
+  padding: 12px 20px;
+  margin: 0;
+  border-top: 1px solid #ddd;
+}
+h1 {
+  font-size: 26px;
+  font-weight: 650;
+}
+h2 {
+  font-size: 19px;
+  font-weight: 600;
+}
+@media (max-width: 750px) {
+  header {
+    padding: 0 12px;
+    gap: 12px;
+  }
+  header img {
+    width: 145px;
+  }
+  .build-status {
+    display: none;
+  }
+  main,
+  .project-details {
+    padding: 20px;
+  }
+  .analysis-toolbar input {
+    width: 200px;
+  }
+  .create-workspace {
+    flex-wrap: wrap;
+  }
+}
+.dataset-list {
+  list-style: none;
+  padding: 0;
+}
+.dataset-list li {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding: 12px 0;
+  border-bottom: 1px solid #ddd;
+  align-items: center;
+}
+.dataset-list li > div {
+  display: flex;
+  flex: 1;
+  min-width: 220px;
+  gap: 6px;
+  flex-direction: column;
+}
+.dataset-list input {
+  max-width: 340px;
+}
+.dataset-list span {
+  font-size: 12px;
+  color: #555;
+}
+.dialog-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  background: #0006;
+  display: grid;
+  place-items: center;
+  padding: 24px;
+}
+.import-dialog {
+  background: white;
+  padding: 24px;
+  width: min(1120px, 96vw);
+  max-height: 90vh;
+  overflow: auto;
+  box-shadow: 0 10px 60px #0003;
+}
+.import-dialog h2 {
+  margin-top: 0;
+}
+.import-fields {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin: 12px 0;
+  align-items: center;
+}
+.import-fields label,
+.column-options label {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+}
+.file-drop {
+  border: 1px dashed #777;
+  padding: 16px;
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+.column-options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  max-height: 180px;
+  overflow: auto;
+}
+.column-options > div {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+.column-options input {
+  width: 150px;
+}
+.dialog-actions {
+  position: sticky;
+  bottom: -24px;
+  padding: 16px 0;
+  display: flex;
+  gap: 12px;
+  background: white;
+  border-top: 1px solid #ddd;
+}
+.table-scroll {
+  max-height: 320px;
+  max-width: 100%;
+  overflow: auto;
+  margin: 12px 0;
+}
+.table-scroll table {
+  border-collapse: collapse;
+  width: 100%;
+  font-variant-numeric: tabular-nums;
+}
+.table-scroll th,
+.table-scroll td {
+  text-align: left;
+  padding: 6px 12px;
+  border-bottom: 1px solid #ddd;
+  white-space: pre-wrap;
+  min-width: 100px;
+}
+.table-scroll th {
+  position: sticky;
+  top: 0;
+  background: #f3f4f5;
+}
+.table-scroll small {
+  display: block;
+  font-weight: normal;
+  font-size: 11px;
+  color: #555;
+}
+.table-scroll i {
+  color: #666;
+}
+.sql-panels {
+  flex: 1;
+  min-height: 0;
+}
+.sql-panels .code-editor {
+  height: 100%;
+  min-height: 0;
+}
+.panel-handle {
+  height: 7px;
+  background: #dbe1e5;
+  cursor: row-resize;
+}
+.panel-handle:focus-visible,
+.panel-handle[data-resize-handle-active] {
+  background: #0078a0;
+  outline: 2px solid #0078a0;
+}
+.parameters {
+  padding: 4px 20px;
+  font-size: 12px;
+  border-bottom: 1px solid #ddd;
+  max-height: 200px;
+  overflow: auto;
+}
+.parameters td {
+  padding: 2px;
+}
+.parameters input {
+  padding: 4px;
+}
+.parameters select {
+  padding: 4px;
+}
+.result-section {
+  height: 100%;
+  overflow: auto;
+  font-size: 13px;
+}
+.result-toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: center;
+  padding: 6px 12px;
+  border-bottom: 1px solid #e1e5e8;
+}
+.result-toolbar select {
+  max-width: 380px;
+  padding: 4px;
+}
+.result-toolbar button {
+  padding: 5px 8px;
+}
+.result-grid {
+  overflow: auto;
+  max-height: calc(100% - 125px);
+  min-height: 100px;
+}
+.result-grid table {
+  border-collapse: collapse;
+  min-width: 100%;
+  font-variant-numeric: tabular-nums;
+}
+.result-grid th {
+  position: sticky;
+  top: 0;
+  background: #f4f6f7;
+  text-align: left;
+}
+.result-grid td {
+  border-bottom: 1px solid #e5e8eb;
+  padding: 5px 12px;
+  white-space: pre-wrap;
+  max-width: 500px;
+  overflow-wrap: anywhere;
+}
+.result-grid th button {
+  border: 0;
+  background: none;
+  color: inherit;
+  font-weight: 600;
+}
+.null-cell {
+  color: #6b5361;
+  font-style: italic;
+  background: #f8f0f4;
+  padding: 1px 4px;
+}
+.run-details,
+.result-data {
+  padding: 8px 12px;
+}
+.run-details pre {
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+  max-height: 240px;
+  overflow: auto;
+}
+.result-data label {
+  display: inline-flex;
+  flex-direction: column;
+  gap: 4px;
+  margin: 8px;
+}
+.result-error,
+.result-empty {
+  padding: 8px 12px;
+}
+.chart-area canvas {
+  width: 100%;
+  max-height: 480px;
+  object-fit: contain;
+}
+.native-dialog {
+  width: min(760px, 92vw);
+  max-height: 88vh;
+  overflow: auto;
+  border: 1px solid #aaa;
+  padding: 24px;
+  border-radius: 6px;
+}
+.native-dialog::backdrop {
+  background: #0006;
+}
+.native-dialog label {
+  display: block;
+  margin: 10px 0;
+}
+.r-panels {
+  flex: 1;
+  min-height: 0;
+}
+.r-upper {
+  display: flex;
+  height: 100%;
+  min-width: 0;
+}
+.r-objects {
+  width: 190px;
+  flex-shrink: 0;
+  overflow: auto;
+  padding: 8px;
+  border-right: 1px solid #ddd;
+  overflow-wrap: anywhere;
+  background: #fff;
+}
+.r-objects h3 {
+  font-size: 14px;
+}
+.r-objects button {
+  display: block;
+  font-size: 12px;
+  width: 100%;
+  text-align: left;
+  margin: 4px 0;
+}
+.horizontal-handle {
+  width: 7px;
+  height: auto !important;
+  cursor: col-resize;
+  flex-shrink: 0;
+}
+.r-output {
+  height: 100%;
+  overflow: auto;
+  background: #fff;
+  padding: 8px;
+}
+.r-plot img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+.r-plot:fullscreen {
+  overflow: auto;
+  background: white;
+}
+.r-console {
+  height: 100%;
+  overflow: auto;
+  background: #fafafa;
+  padding: 8px;
+}
+.r-console pre {
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+  margin: 2px 0;
+  font-size: 12px;
+}
+.r-console pre[data-kind='stderr'],
+.r-console pre[data-kind='warning'] {
+  color: #a41424;
+}
+.r-workbench .run-status {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+.r-workbench .run-status select {
+  display: inline-block;
+  max-width: 250px;
+}
+/* P7: compact chrome; panels, rather than toolbar copy, get the viewport. */
+.analysis-toolbar { gap: 8px; padding: 6px 12px; min-height: 48px; align-items: center; }
+.analysis-toolbar > label { display: flex; align-items: center; gap: 8px; flex-shrink: 1; min-width: 0; }
+.analysis-toolbar input { width: 200px; max-width: 100%; margin: 0; }
+.analysis-toolbar button { padding: 6px 8px; font-size: 13px; }
+.analysis-toolbar .parameters { padding: 0; border: 0; }
+.analysis-toolbar details[open] { position: relative; }
+.analysis-toolbar details[open] > :not(summary) { background: white; }
+.sql-panel-host { flex: 1; min-height: 410px; position: relative; }
+.sql-panels { height: 100%; }
+.schema-drawer { position: absolute; z-index: 20; right: 0; top: 140px; max-height: 70vh; width: min(360px,90vw); padding: 16px; background: white; border: 1px solid #aaa; box-shadow: 0 4px 16px #0002; overflow: auto; }
+.r-workbench .run-status { min-height: 34px; padding: 2px 12px; font-size: 12px; }
+.r-workbench .run-status label { display: flex; gap: 6px; align-items: center; font-size: 12px; }
+.r-workbench .run-status select { padding: 3px; margin: 0; }
+.r-panels { min-height: 410px; }
+.r-panels .code-editor { height: 100%; min-height: 0; }
+.run-status details[open] { position: absolute; top: 150px; right: 16px; z-index: 20; background: white; border: 1px solid #aaa; padding: 12px; max-width: 65vw; max-height: 60vh; overflow: auto; }
+.import-dialog { border: 1px solid #aaa; }
+.import-dialog::backdrop { background: #0006; }
+.primary:hover { background: #941323; color: white; }
+@media (max-width: 1100px) { .analysis-toolbar { flex-wrap: wrap; } }
+@media (max-height: 700px) { .analysis-area { height: auto; min-height: 580px; } .sql-panel-host, .r-panels { height: 450px; flex: none; } }
+
+.visually-hidden { position: absolute; width: 1px; height: 1px; padding: 0; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+.analysis-toolbar > label { max-width: 200px; }
+.schema-drawer::backdrop {background: #0003;}
+
+.sidebar { min-width: 0; width: 52px; }
+.sidebar.expanded {width: 212px;}
+.sidebar button {font-size: 14px; max-width: 100%;}

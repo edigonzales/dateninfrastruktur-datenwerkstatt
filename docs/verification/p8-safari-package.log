@@ -1,0 +1,5 @@
+PASS: 80 requirements, 72 acceptance scenarios, complete coverage and local Markdown links
+PASS: JSON examples, workspace references, recipe archive, contract imports and runtime limits (114 JSON files)
+PASS: Synthetic SQL/reference classification/return-SQL golden values (SQLite/Python, NOT DuckDB or R)
+PASS: No font files bundled
+Package checks passed; application acceptance is reported separately in docs/IMPLEMENTATION_STATUS.md.

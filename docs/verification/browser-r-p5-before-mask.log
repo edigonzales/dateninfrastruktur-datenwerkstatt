@@ -1,0 +1,363 @@
+[WebServer] (node:20687) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] (node:20688) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 30 tests using 1 worker
+
+(node:20689) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] 9:08:48 AM [vite] (client) [console.warn] WebR is using `PostMessage` communication channel, nested R REPLs are not available.
+[WebServer] 9:08:59 AM [vite] (client) [console.warn] WebR is using `PostMessage` communication channel, nested R REPLs are not available.
+  ✓   1 [chromium] › tests/e2e/r.spec.ts:10:1 › P5 AT-040 AT-042 AT-046 AT-048: complete UI transfer, lazy worker survives routes, capture, reset and cancel (22.8s)
+browser: [vite] connecting...
+browser: [vite] connected.
+[WebServer] 9:09:09 AM [vite] (client) [console.warn] WebR is using `PostMessage` communication channel, nested R REPLs are not available.
+browser: WebR is using `PostMessage` communication channel, nested R REPLs are not available.
+{"encoded":["NA","NaN","Infinity","-Infinity","-2147483648"],"missing":[true,false,false,false,false],"outputs":[{"type":"stdout","text":"out"},{"type":"warning","text":"warn"},{"type":"message","text":"msg\n"}],"classes":["data.frame"]}
+  ✓   2 [chromium] › tests/integration/r-api.spec.ts:2:1 › P5 native webR vectors, NA/NaN, Date, attributes and captured conditions (699ms)
+[WebServer] 9:09:10 AM [vite] (client) [console.warn] WebR is using `PostMessage` communication channel, nested R REPLs are not available.
+  ✓   3 [chromium] › tests/integration/r-date-proof.spec.ts:2:1 › P5 runtime gzip files stay opaque and native R Date parser works (737ms)
+[WebServer] 9:09:11 AM [vite] (client) [console.warn] WebR is using `PostMessage` communication channel, nested R REPLs are not available.
+  ✓   4 [chromium] › tests/integration/r-faults.spec.ts:3:1 › P5 AT-045 AT-052 AT-062: approvals, unsupported columns, stale edits, write/commit failure, console and plot limits (11.2s)
+[WebServer] 9:09:22 AM [vite] (client) [console.warn] WebR is using `PostMessage` communication channel, nested R REPLs are not available.
+  ✓   5 [chromium] › tests/integration/r-golden.spec.ts:4:1 › P5 AT-041 AT-048: unchanged Golden SQL → R script → explicit capture → Golden SQL, real plot and reopen (11.3s)
+[WebServer] 9:09:33 AM [vite] (client) [console.warn] WebR is using `PostMessage` communication channel, nested R REPLs are not available.
+  ✓   6 [chromium] › tests/integration/r-packages.spec.ts:3:1 › P5 pinned local R packages installed and used (11.4s)
+[WebServer] 9:09:45 AM [vite] (client) [console.warn] WebR is using `PostMessage` communication channel, nested R REPLs are not available.
+  ✓   7 [chromium] › tests/integration/r.spec.ts:4:1 › P5 AT-042–045: full typed SQL → R → SQL including NA/NaN, exact decimals, dates, factor and rejected casts (11.1s)
+[WebServer] 9:09:56 AM [vite] (client) [console.warn] WebR is using `PostMessage` communication channel, nested R REPLs are not available.
+[WebServer] 9:10:06 AM [vite] (client) [console.warn] WebR is using `PostMessage` communication channel, nested R REPLs are not available.
+[WebServer] 9:10:13 AM [vite] (client) [console.warn] WebR is using `PostMessage` communication channel, nested R REPLs are not available.
+  ✓   8 [chromium] › tests/integration/r.spec.ts:91:1 › P5 AT-040 AT-042 AT-047 AT-052: 350 rows, stale plans, five inactive fresh scopes and genuine R worker stop (24.0s)
+  ✓   9 [chromium] › tests/integration/repository.spec.ts:5:1 › AT-007 AT-012: actual IndexedDB CAS, invalid load, transaction rollback (146ms)
+  ✓  10 [chromium] › tests/integration/repository.spec.ts:75:1 › P0: persistent browser profile OPFS read/write/delete (281ms)
+(node:20781) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] 9:10:22 AM [vite] (client) [console.warn] WebR is using `PostMessage` communication channel, nested R REPLs are not available.
+[WebServer] 9:10:34 AM [vite] (client) [console.warn] WebR is using `PostMessage` communication channel, nested R REPLs are not available.
+  ✓  11 [firefox] › tests/e2e/r.spec.ts:10:1 › P5 AT-040 AT-042 AT-046 AT-048: complete UI transfer, lazy worker survives routes, capture, reset and cancel (24.3s)
+browser: [vite] connecting...
+browser: [vite] connected.
+browser: [JavaScript Warning: "The WebAssembly exception handling 'try' instruction is deprecated and should no longer be used. Please recompile to use the 'try_table' instruction instead."]
+browser: WebR is using `PostMessage` communication channel, nested R REPLs are not available.
+[WebServer] 9:10:45 AM [vite] (client) [console.warn] WebR is using `PostMessage` communication channel, nested R REPLs are not available.
+{"encoded":["NaN","NaN","Infinity","-Infinity","-2147483648"],"missing":[false,false,false,false,false],"outputs":[{"type":"stdout","text":"out"},{"type":"warning","text":"warn"},{"type":"message","text":"msg\n"}],"classes":["data.frame"]}
+  ✘  12 [firefox] › tests/integration/r-api.spec.ts:2:1 › P5 native webR vectors, NA/NaN, Date, attributes and captured conditions (1.6s)
+(node:20798) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] 9:10:47 AM [vite] (client) [console.warn] WebR is using `PostMessage` communication channel, nested R REPLs are not available.
+  ✓  13 [firefox] › tests/integration/r-date-proof.spec.ts:2:1 › P5 runtime gzip files stay opaque and native R Date parser works (1.6s)
+[WebServer] 9:10:49 AM [vite] (client) [console.warn] WebR is using `PostMessage` communication channel, nested R REPLs are not available.
+  ✓  14 [firefox] › tests/integration/r-faults.spec.ts:3:1 › P5 AT-045 AT-052 AT-062: approvals, unsupported columns, stale edits, write/commit failure, console and plot limits (11.8s)
+[WebServer] 9:11:01 AM [vite] (client) [console.warn] WebR is using `PostMessage` communication channel, nested R REPLs are not available.
+  ✘  15 [firefox] › tests/integration/r-golden.spec.ts:4:1 › P5 AT-041 AT-048: unchanged Golden SQL → R script → explicit capture → Golden SQL, real plot and reopen (13.0s)
+(node:20827) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] 9:11:14 AM [vite] (client) [console.warn] WebR is using `PostMessage` communication channel, nested R REPLs are not available.
+  ✓  16 [firefox] › tests/integration/r-packages.spec.ts:3:1 › P5 pinned local R packages installed and used (11.9s)
+[WebServer] 9:11:27 AM [vite] (client) [console.warn] WebR is using `PostMessage` communication channel, nested R REPLs are not available.
+  ✘  17 [firefox] › tests/integration/r.spec.ts:4:1 › P5 AT-042–045: full typed SQL → R → SQL including NA/NaN, exact decimals, dates, factor and rejected casts (12.1s)
+(node:20847) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] 9:11:39 AM [vite] (client) [console.warn] WebR is using `PostMessage` communication channel, nested R REPLs are not available.
+[WebServer] 9:11:49 AM [vite] (client) [console.warn] WebR is using `PostMessage` communication channel, nested R REPLs are not available.
+[WebServer] 9:11:59 AM [vite] (client) [console.warn] WebR is using `PostMessage` communication channel, nested R REPLs are not available.
+  ✓  18 [firefox] › tests/integration/r.spec.ts:91:1 › P5 AT-040 AT-042 AT-047 AT-052: 350 rows, stale plans, five inactive fresh scopes and genuine R worker stop (31.3s)
+  ✓  19 [firefox] › tests/integration/repository.spec.ts:5:1 › AT-007 AT-012: actual IndexedDB CAS, invalid load, transaction rollback (542ms)
+  ✓  20 [firefox] › tests/integration/repository.spec.ts:75:1 › P0: persistent browser profile OPFS read/write/delete (1.2s)
+(node:20904) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] 9:12:14 AM [vite] (client) [console.warn] WebR is using `PostMessage` communication channel, nested R REPLs are not available.
+[WebServer] 9:12:26 AM [vite] (client) [console.warn] WebR is using `PostMessage` communication channel, nested R REPLs are not available.
+  ✓  21 [webkit] › tests/e2e/r.spec.ts:10:1 › P5 AT-040 AT-042 AT-046 AT-048: complete UI transfer, lazy worker survives routes, capture, reset and cancel (24.9s)
+browser: [vite] connecting...
+browser: [vite] connected.
+[WebServer] 9:12:37 AM [vite] (client) [console.warn] WebR is using `PostMessage` communication channel, nested R REPLs are not available.
+browser: WebR is using `PostMessage` communication channel, nested R REPLs are not available.
+{"encoded":["NaN","NaN","Infinity","-Infinity","-2147483648"],"missing":[false,false,false,false,false],"outputs":[{"type":"stdout","text":"out"},{"type":"warning","text":"warn"},{"type":"message","text":"msg\n"}],"classes":["data.frame"]}
+  ✘  22 [webkit] › tests/integration/r-api.spec.ts:2:1 › P5 native webR vectors, NA/NaN, Date, attributes and captured conditions (1.2s)
+(node:20942) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] 9:12:39 AM [vite] (client) [console.warn] WebR is using `PostMessage` communication channel, nested R REPLs are not available.
+  ✓  23 [webkit] › tests/integration/r-date-proof.spec.ts:2:1 › P5 runtime gzip files stay opaque and native R Date parser works (940ms)
+[WebServer] 9:12:40 AM [vite] (client) [console.warn] WebR is using `PostMessage` communication channel, nested R REPLs are not available.
+  ✓  24 [webkit] › tests/integration/r-faults.spec.ts:3:1 › P5 AT-045 AT-052 AT-062: approvals, unsupported columns, stale edits, write/commit failure, console and plot limits (12.5s)
+[WebServer] 9:12:53 AM [vite] (client) [console.warn] WebR is using `PostMessage` communication channel, nested R REPLs are not available.
+  ✘  25 [webkit] › tests/integration/r-golden.spec.ts:4:1 › P5 AT-041 AT-048: unchanged Golden SQL → R script → explicit capture → Golden SQL, real plot and reopen (14.6s)
+(node:20982) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] 9:13:08 AM [vite] (client) [console.warn] WebR is using `PostMessage` communication channel, nested R REPLs are not available.
+  ✓  26 [webkit] › tests/integration/r-packages.spec.ts:3:1 › P5 pinned local R packages installed and used (12.5s)
+[WebServer] 9:13:22 AM [vite] (client) [console.warn] WebR is using `PostMessage` communication channel, nested R REPLs are not available.
+  ✘  27 [webkit] › tests/integration/r.spec.ts:4:1 › P5 AT-042–045: full typed SQL → R → SQL including NA/NaN, exact decimals, dates, factor and rejected casts (13.5s)
+(node:21009) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] 9:13:37 AM [vite] (client) [console.warn] WebR is using `PostMessage` communication channel, nested R REPLs are not available.
+[WebServer] 9:13:47 AM [vite] (client) [console.warn] WebR is using `PostMessage` communication channel, nested R REPLs are not available.
+[WebServer] 9:13:59 AM [vite] (client) [console.warn] WebR is using `PostMessage` communication channel, nested R REPLs are not available.
+  ✓  28 [webkit] › tests/integration/r.spec.ts:91:1 › P5 AT-040 AT-042 AT-047 AT-052: 350 rows, stale plans, five inactive fresh scopes and genuine R worker stop (33.8s)
+[WebServer] 9:14:09 AM [vite] (client) [console.warn] Dexie.delete('test-354aa34a-c6f8-48ec-9c0a-ac3436306953') was blocked
+  ✓  29 [webkit] › tests/integration/repository.spec.ts:5:1 › AT-007 AT-012: actual IndexedDB CAS, invalid load, transaction rollback (324ms)
+[WebServer] 9:14:10 AM [vite] (client) [console.warn] Dexie.delete('probe-probe-6f75b4b3-9d83-43a6-a333-f4cf4d8516b1') was blocked
+  ✓  30 [webkit] › tests/integration/repository.spec.ts:75:1 › P0: persistent browser profile OPFS read/write/delete (688ms)
+
+
+  1) [firefox] › tests/integration/r-api.spec.ts:2:1 › P5 native webR vectors, NA/NaN, Date, attributes and captured conditions 
+
+    Error: expect(received).toEqual(expected) // deep equality
+
+    - Expected  - 1
+    + Received  + 1
+
+      Array [
+    -   "NA",
+    +   "NaN",
+        "NaN",
+        "Infinity",
+        "-Infinity",
+        "-2147483648",
+      ]
+
+      67 |   });
+      68 |   console.log(JSON.stringify(proof));
+    > 69 |   expect(proof.encoded).toEqual(['NA', 'NaN', 'Infinity', '-Infinity', '-2147483648']);
+         |                         ^
+      70 |   expect(proof.missing).toEqual([true, false, false, false, false]);
+      71 |   expect(proof.classes).toContain('data.frame');
+      72 | });
+        at /Users/stefan/sources/dateninfrastruktur-datenwerkstatt/tests/integration/r-api.spec.ts:69:25
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/integration-r-api-P5-nativ-4137b-tes-and-captured-conditions-firefox/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/integration-r-api-P5-nativ-4137b-tes-and-captured-conditions-firefox/error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/integration-r-api-P5-nativ-4137b-tes-and-captured-conditions-firefox/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/integration-r-api-P5-nativ-4137b-tes-and-captured-conditions-firefox/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  2) [firefox] › tests/integration/r-golden.spec.ts:4:1 › P5 AT-041 AT-048: unchanged Golden SQL → R script → explicit capture → Golden SQL, real plot and reopen 
+
+    Error: expect(received).toEqual(expected) // deep equality
+
+    - Expected  - 1
+    + Received  + 1
+
+    @@ -30,9 +30,9 @@
+          "004",
+          "Seedorf",
+          "2024",
+          "0",
+          "10",
+    -     null,
+    +     "NaN",
+          "nicht berechenbar",
+        ],
+      ]
+
+      116 |     rows: Record<string, unknown>[];
+      117 |   };
+    > 118 |   expect(result.preview.rows).toEqual(
+          |                               ^
+      119 |     expected.rows.map((row) =>
+      120 |       result.preview.schema.columns.map((c) => (row[c.name] === null ? null : String(row[c.name]))),
+      121 |     ),
+        at /Users/stefan/sources/dateninfrastruktur-datenwerkstatt/tests/integration/r-golden.spec.ts:118:31
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/integration-r-golden-P5-AT-654fd-en-SQL-real-plot-and-reopen-firefox/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/integration-r-golden-P5-AT-654fd-en-SQL-real-plot-and-reopen-firefox/error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/integration-r-golden-P5-AT-654fd-en-SQL-real-plot-and-reopen-firefox/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/integration-r-golden-P5-AT-654fd-en-SQL-real-plot-and-reopen-firefox/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  3) [firefox] › tests/integration/r.spec.ts:4:1 › P5 AT-042–045: full typed SQL → R → SQL including NA/NaN, exact decimals, dates, factor and rejected casts 
+
+    Error: expect(received).toEqual(expected) // deep equality
+
+    - Expected  - 1
+    + Received  + 1
+
+    @@ -4,11 +4,11 @@
+          "2147483648",
+          "9007199254740993",
+          "18446744073709551615",
+          "12345678901234.5678",
+          "001",
+    -     null,
+    +     "nan",
+          "nan",
+          "inf",
+          "-inf",
+          "",
+          "NULL",
+
+      85 |   expect(proof.noAutorun).toBe(0);
+      86 |   expect(proof.kept).toBe('kept');
+    > 87 |   expect(proof.returned.rows).toEqual(proof.original.rows);
+         |                               ^
+      88 |   expect(proof.factor?.metadata.factorLevels).toBe('["a","b","unused"]');
+      89 |   expect(proof.rejected).toContain('DECIMAL');
+      90 | });
+        at /Users/stefan/sources/dateninfrastruktur-datenwerkstatt/tests/integration/r.spec.ts:87:31
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/integration-r-P5-AT-042–04-5ac35-s-factor-and-rejected-casts-firefox/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/integration-r-P5-AT-042–04-5ac35-s-factor-and-rejected-casts-firefox/error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/integration-r-P5-AT-042–04-5ac35-s-factor-and-rejected-casts-firefox/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/integration-r-P5-AT-042–04-5ac35-s-factor-and-rejected-casts-firefox/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  4) [webkit] › tests/integration/r-api.spec.ts:2:1 › P5 native webR vectors, NA/NaN, Date, attributes and captured conditions 
+
+    Error: expect(received).toEqual(expected) // deep equality
+
+    - Expected  - 1
+    + Received  + 1
+
+      Array [
+    -   "NA",
+    +   "NaN",
+        "NaN",
+        "Infinity",
+        "-Infinity",
+        "-2147483648",
+      ]
+
+      67 |   });
+      68 |   console.log(JSON.stringify(proof));
+    > 69 |   expect(proof.encoded).toEqual(['NA', 'NaN', 'Infinity', '-Infinity', '-2147483648']);
+         |                         ^
+      70 |   expect(proof.missing).toEqual([true, false, false, false, false]);
+      71 |   expect(proof.classes).toContain('data.frame');
+      72 | });
+        at /Users/stefan/sources/dateninfrastruktur-datenwerkstatt/tests/integration/r-api.spec.ts:69:25
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/integration-r-api-P5-nativ-4137b-tes-and-captured-conditions-webkit/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/integration-r-api-P5-nativ-4137b-tes-and-captured-conditions-webkit/error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/integration-r-api-P5-nativ-4137b-tes-and-captured-conditions-webkit/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/integration-r-api-P5-nativ-4137b-tes-and-captured-conditions-webkit/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  5) [webkit] › tests/integration/r-golden.spec.ts:4:1 › P5 AT-041 AT-048: unchanged Golden SQL → R script → explicit capture → Golden SQL, real plot and reopen 
+
+    Error: expect(received).toEqual(expected) // deep equality
+
+    - Expected  - 1
+    + Received  + 1
+
+    @@ -30,9 +30,9 @@
+          "004",
+          "Seedorf",
+          "2024",
+          "0",
+          "10",
+    -     null,
+    +     "NaN",
+          "nicht berechenbar",
+        ],
+      ]
+
+      116 |     rows: Record<string, unknown>[];
+      117 |   };
+    > 118 |   expect(result.preview.rows).toEqual(
+          |                               ^
+      119 |     expected.rows.map((row) =>
+      120 |       result.preview.schema.columns.map((c) => (row[c.name] === null ? null : String(row[c.name]))),
+      121 |     ),
+        at /Users/stefan/sources/dateninfrastruktur-datenwerkstatt/tests/integration/r-golden.spec.ts:118:31
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/integration-r-golden-P5-AT-654fd-en-SQL-real-plot-and-reopen-webkit/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/integration-r-golden-P5-AT-654fd-en-SQL-real-plot-and-reopen-webkit/error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/integration-r-golden-P5-AT-654fd-en-SQL-real-plot-and-reopen-webkit/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/integration-r-golden-P5-AT-654fd-en-SQL-real-plot-and-reopen-webkit/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  6) [webkit] › tests/integration/r.spec.ts:4:1 › P5 AT-042–045: full typed SQL → R → SQL including NA/NaN, exact decimals, dates, factor and rejected casts 
+
+    Error: expect(received).toEqual(expected) // deep equality
+
+    - Expected  - 1
+    + Received  + 1
+
+    @@ -4,11 +4,11 @@
+          "2147483648",
+          "9007199254740993",
+          "18446744073709551615",
+          "12345678901234.5678",
+          "001",
+    -     null,
+    +     "nan",
+          "nan",
+          "inf",
+          "-inf",
+          "",
+          "NULL",
+
+      85 |   expect(proof.noAutorun).toBe(0);
+      86 |   expect(proof.kept).toBe('kept');
+    > 87 |   expect(proof.returned.rows).toEqual(proof.original.rows);
+         |                               ^
+      88 |   expect(proof.factor?.metadata.factorLevels).toBe('["a","b","unused"]');
+      89 |   expect(proof.rejected).toContain('DECIMAL');
+      90 | });
+        at /Users/stefan/sources/dateninfrastruktur-datenwerkstatt/tests/integration/r.spec.ts:87:31
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/integration-r-P5-AT-042–04-5ac35-s-factor-and-rejected-casts-webkit/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/integration-r-P5-AT-042–04-5ac35-s-factor-and-rejected-casts-webkit/error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/integration-r-P5-AT-042–04-5ac35-s-factor-and-rejected-casts-webkit/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/integration-r-P5-AT-042–04-5ac35-s-factor-and-rejected-casts-webkit/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  6 failed
+    [firefox] › tests/integration/r-api.spec.ts:2:1 › P5 native webR vectors, NA/NaN, Date, attributes and captured conditions 
+    [firefox] › tests/integration/r-golden.spec.ts:4:1 › P5 AT-041 AT-048: unchanged Golden SQL → R script → explicit capture → Golden SQL, real plot and reopen 
+    [firefox] › tests/integration/r.spec.ts:4:1 › P5 AT-042–045: full typed SQL → R → SQL including NA/NaN, exact decimals, dates, factor and rejected casts 
+    [webkit] › tests/integration/r-api.spec.ts:2:1 › P5 native webR vectors, NA/NaN, Date, attributes and captured conditions 
+    [webkit] › tests/integration/r-golden.spec.ts:4:1 › P5 AT-041 AT-048: unchanged Golden SQL → R script → explicit capture → Golden SQL, real plot and reopen 
+    [webkit] › tests/integration/r.spec.ts:4:1 › P5 AT-042–045: full typed SQL → R → SQL including NA/NaN, exact decimals, dates, factor and rejected casts 
+  24 passed (5.4m)

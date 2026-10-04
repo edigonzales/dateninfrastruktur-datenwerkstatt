@@ -1,0 +1,10 @@
+.git
+node_modules
+dist
+dist-*
+public/vendor
+test-results
+playwright-report
+deploy/generated
+docs/verification
+test-results-deployment

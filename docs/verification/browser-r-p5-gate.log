@@ -1,0 +1,93 @@
+[WebServer] (node:21437) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] (node:21438) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 30 tests using 1 worker
+
+(node:21439) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] 9:17:06 AM [vite] (client) [console.warn] WebR is using `PostMessage` communication channel, nested R REPLs are not available.
+[WebServer] 9:17:17 AM [vite] (client) [console.warn] WebR is using `PostMessage` communication channel, nested R REPLs are not available.
+  ✓   1 [chromium] › tests/e2e/r.spec.ts:10:1 › P5 AT-040 AT-042 AT-046 AT-048: complete UI transfer, lazy worker survives routes, capture, reset and cancel (23.0s)
+browser: [vite] connecting...
+browser: [vite] connected.
+[WebServer] 9:17:26 AM [vite] (client) [console.warn] WebR is using `PostMessage` communication channel, nested R REPLs are not available.
+browser: WebR is using `PostMessage` communication channel, nested R REPLs are not available.
+{"encoded":["NA","NaN","Infinity","-Infinity","-2147483648"],"missing":[true,false,false,false,false],"outputs":[{"type":"stdout","text":"out"},{"type":"warning","text":"warn"},{"type":"message","text":"msg\n"}],"classes":["data.frame"],"nativeMissing":[true,false,false,false,false]}
+  ✓   2 [chromium] › tests/integration/r-api.spec.ts:2:1 › P5 native webR vectors, NA/NaN, Date, attributes and captured conditions (704ms)
+[WebServer] 9:17:27 AM [vite] (client) [console.warn] WebR is using `PostMessage` communication channel, nested R REPLs are not available.
+  ✓   3 [chromium] › tests/integration/r-date-proof.spec.ts:2:1 › P5 runtime gzip files stay opaque and native R Date parser works (737ms)
+[WebServer] 9:17:28 AM [vite] (client) [console.warn] WebR is using `PostMessage` communication channel, nested R REPLs are not available.
+  ✓   4 [chromium] › tests/integration/r-faults.spec.ts:3:1 › P5 AT-045 AT-052 AT-062: approvals, unsupported columns, stale edits, write/commit failure, console and plot limits (11.3s)
+[WebServer] 9:17:40 AM [vite] (client) [console.warn] WebR is using `PostMessage` communication channel, nested R REPLs are not available.
+  ✓   5 [chromium] › tests/integration/r-golden.spec.ts:4:1 › P5 AT-041 AT-048: unchanged Golden SQL → R script → explicit capture → Golden SQL, real plot and reopen (11.3s)
+[WebServer] 9:17:51 AM [vite] (client) [console.warn] WebR is using `PostMessage` communication channel, nested R REPLs are not available.
+  ✓   6 [chromium] › tests/integration/r-packages.spec.ts:3:1 › P5 pinned local R packages installed and used (11.5s)
+[WebServer] 9:18:03 AM [vite] (client) [console.warn] WebR is using `PostMessage` communication channel, nested R REPLs are not available.
+  ✓   7 [chromium] › tests/integration/r.spec.ts:4:1 › P5 AT-042–045: full typed SQL → R → SQL including NA/NaN, exact decimals, dates, factor and rejected casts (10.8s)
+[WebServer] 9:18:13 AM [vite] (client) [console.warn] WebR is using `PostMessage` communication channel, nested R REPLs are not available.
+[WebServer] 9:18:23 AM [vite] (client) [console.warn] WebR is using `PostMessage` communication channel, nested R REPLs are not available.
+[WebServer] 9:18:30 AM [vite] (client) [console.warn] WebR is using `PostMessage` communication channel, nested R REPLs are not available.
+  ✓   8 [chromium] › tests/integration/r.spec.ts:91:1 › P5 AT-040 AT-042 AT-047 AT-052: 350 rows, stale plans, five inactive fresh scopes and genuine R worker stop (24.0s)
+  ✓   9 [chromium] › tests/integration/repository.spec.ts:5:1 › AT-007 AT-012: actual IndexedDB CAS, invalid load, transaction rollback (145ms)
+  ✓  10 [chromium] › tests/integration/repository.spec.ts:75:1 › P0: persistent browser profile OPFS read/write/delete (278ms)
+(node:21574) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] 9:18:40 AM [vite] (client) [console.warn] WebR is using `PostMessage` communication channel, nested R REPLs are not available.
+[WebServer] 9:18:51 AM [vite] (client) [console.warn] WebR is using `PostMessage` communication channel, nested R REPLs are not available.
+  ✓  11 [firefox] › tests/e2e/r.spec.ts:10:1 › P5 AT-040 AT-042 AT-046 AT-048: complete UI transfer, lazy worker survives routes, capture, reset and cancel (24.3s)
+browser: [vite] connecting...
+browser: [vite] connected.
+browser: [JavaScript Warning: "The WebAssembly exception handling 'try' instruction is deprecated and should no longer be used. Please recompile to use the 'try_table' instruction instead."]
+[WebServer] 9:19:03 AM [vite] (client) [console.warn] WebR is using `PostMessage` communication channel, nested R REPLs are not available.
+browser: WebR is using `PostMessage` communication channel, nested R REPLs are not available.
+{"encoded":["NA","NaN","Infinity","-Infinity","-2147483648"],"missing":[true,false,false,false,false],"outputs":[{"type":"stdout","text":"out"},{"type":"warning","text":"warn"},{"type":"message","text":"msg\n"}],"classes":["data.frame"],"nativeMissing":[false,false,false,false,false]}
+  ✓  12 [firefox] › tests/integration/r-api.spec.ts:2:1 › P5 native webR vectors, NA/NaN, Date, attributes and captured conditions (1.5s)
+[WebServer] 9:19:04 AM [vite] (client) [console.warn] WebR is using `PostMessage` communication channel, nested R REPLs are not available.
+  ✓  13 [firefox] › tests/integration/r-date-proof.spec.ts:2:1 › P5 runtime gzip files stay opaque and native R Date parser works (1.5s)
+[WebServer] 9:19:06 AM [vite] (client) [console.warn] WebR is using `PostMessage` communication channel, nested R REPLs are not available.
+  ✓  14 [firefox] › tests/integration/r-faults.spec.ts:3:1 › P5 AT-045 AT-052 AT-062: approvals, unsupported columns, stale edits, write/commit failure, console and plot limits (11.9s)
+[WebServer] 9:19:19 AM [vite] (client) [console.warn] WebR is using `PostMessage` communication channel, nested R REPLs are not available.
+  ✓  15 [firefox] › tests/integration/r-golden.spec.ts:4:1 › P5 AT-041 AT-048: unchanged Golden SQL → R script → explicit capture → Golden SQL, real plot and reopen (12.4s)
+[WebServer] 9:19:30 AM [vite] (client) [console.warn] WebR is using `PostMessage` communication channel, nested R REPLs are not available.
+  ✓  16 [firefox] › tests/integration/r-packages.spec.ts:3:1 › P5 pinned local R packages installed and used (11.9s)
+[WebServer] 9:19:43 AM [vite] (client) [console.warn] WebR is using `PostMessage` communication channel, nested R REPLs are not available.
+  ✓  17 [firefox] › tests/integration/r.spec.ts:4:1 › P5 AT-042–045: full typed SQL → R → SQL including NA/NaN, exact decimals, dates, factor and rejected casts (11.6s)
+[WebServer] 9:19:54 AM [vite] (client) [console.warn] WebR is using `PostMessage` communication channel, nested R REPLs are not available.
+[WebServer] 9:20:04 AM [vite] (client) [console.warn] WebR is using `PostMessage` communication channel, nested R REPLs are not available.
+[WebServer] 9:20:14 AM [vite] (client) [console.warn] WebR is using `PostMessage` communication channel, nested R REPLs are not available.
+  ✓  18 [firefox] › tests/integration/r.spec.ts:91:1 › P5 AT-040 AT-042 AT-047 AT-052: 350 rows, stale plans, five inactive fresh scopes and genuine R worker stop (31.6s)
+  ✓  19 [firefox] › tests/integration/repository.spec.ts:5:1 › AT-007 AT-012: actual IndexedDB CAS, invalid load, transaction rollback (626ms)
+  ✓  20 [firefox] › tests/integration/repository.spec.ts:75:1 › P0: persistent browser profile OPFS read/write/delete (1.2s)
+(node:21683) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] 9:20:29 AM [vite] (client) [console.warn] WebR is using `PostMessage` communication channel, nested R REPLs are not available.
+[WebServer] 9:20:41 AM [vite] (client) [console.warn] WebR is using `PostMessage` communication channel, nested R REPLs are not available.
+  ✓  21 [webkit] › tests/e2e/r.spec.ts:10:1 › P5 AT-040 AT-042 AT-046 AT-048: complete UI transfer, lazy worker survives routes, capture, reset and cancel (25.0s)
+browser: [vite] connecting...
+browser: [vite] connected.
+browser: WebR is using `PostMessage` communication channel, nested R REPLs are not available.
+[WebServer] 9:20:52 AM [vite] (client) [console.warn] WebR is using `PostMessage` communication channel, nested R REPLs are not available.
+{"encoded":["NA","NaN","Infinity","-Infinity","-2147483648"],"missing":[true,false,false,false,false],"outputs":[{"type":"stdout","text":"out"},{"type":"warning","text":"warn"},{"type":"message","text":"msg\n"}],"classes":["data.frame"],"nativeMissing":[false,false,false,false,false]}
+  ✓  22 [webkit] › tests/integration/r-api.spec.ts:2:1 › P5 native webR vectors, NA/NaN, Date, attributes and captured conditions (952ms)
+[WebServer] 9:20:53 AM [vite] (client) [console.warn] WebR is using `PostMessage` communication channel, nested R REPLs are not available.
+  ✓  23 [webkit] › tests/integration/r-date-proof.spec.ts:2:1 › P5 runtime gzip files stay opaque and native R Date parser works (942ms)
+[WebServer] 9:20:55 AM [vite] (client) [console.warn] WebR is using `PostMessage` communication channel, nested R REPLs are not available.
+  ✓  24 [webkit] › tests/integration/r-faults.spec.ts:3:1 › P5 AT-045 AT-052 AT-062: approvals, unsupported columns, stale edits, write/commit failure, console and plot limits (12.4s)
+[WebServer] 9:21:08 AM [vite] (client) [console.warn] WebR is using `PostMessage` communication channel, nested R REPLs are not available.
+  ✓  25 [webkit] › tests/integration/r-golden.spec.ts:4:1 › P5 AT-041 AT-048: unchanged Golden SQL → R script → explicit capture → Golden SQL, real plot and reopen (13.2s)
+[WebServer] 9:21:20 AM [vite] (client) [console.warn] WebR is using `PostMessage` communication channel, nested R REPLs are not available.
+  ✓  26 [webkit] › tests/integration/r-packages.spec.ts:3:1 › P5 pinned local R packages installed and used (12.5s)
+[WebServer] 9:21:33 AM [vite] (client) [console.warn] WebR is using `PostMessage` communication channel, nested R REPLs are not available.
+  ✓  27 [webkit] › tests/integration/r.spec.ts:4:1 › P5 AT-042–045: full typed SQL → R → SQL including NA/NaN, exact decimals, dates, factor and rejected casts (12.2s)
+[WebServer] 9:21:45 AM [vite] (client) [console.warn] WebR is using `PostMessage` communication channel, nested R REPLs are not available.
+[WebServer] 9:21:56 AM [vite] (client) [console.warn] WebR is using `PostMessage` communication channel, nested R REPLs are not available.
+[WebServer] 9:22:07 AM [vite] (client) [console.warn] WebR is using `PostMessage` communication channel, nested R REPLs are not available.
+  ✓  28 [webkit] › tests/integration/r.spec.ts:91:1 › P5 AT-040 AT-042 AT-047 AT-052: 350 rows, stale plans, five inactive fresh scopes and genuine R worker stop (33.8s)
+[WebServer] 9:22:18 AM [vite] (client) [console.warn] Dexie.delete('test-5d5c8aec-e91f-4eb3-a0cb-9576df80b417') was blocked
+  ✓  29 [webkit] › tests/integration/repository.spec.ts:5:1 › AT-007 AT-012: actual IndexedDB CAS, invalid load, transaction rollback (280ms)
+[WebServer] 9:22:18 AM [vite] (client) [console.warn] Dexie.delete('probe-probe-87eee330-b859-4193-a2b6-e92db7de9af1') was blocked
+  ✓  30 [webkit] › tests/integration/repository.spec.ts:75:1 › P0: persistent browser profile OPFS read/write/delete (664ms)
+
+  30 passed (5.3m)

@@ -1,0 +1,14 @@
+[WebServer] (node:2705) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 4 tests using 1 worker
+
+(node:2714) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  1 [chromium] › tests/integration/p8-acceptance.spec.ts:4:1 › P8 AT-007: separate predecessor upgrade rolls back schema and data, then migrates atomically (679ms)
+  ✓  2 [chromium] › tests/integration/p8-acceptance.spec.ts:21:1 › P8 AT-019: replacement is rejected during real SQL; old snapshot stays v1, next run reads v2 (1.7s)
+  ✓  3 [chromium] › tests/integration/p8-acceptance.spec.ts:128:3 › P8 AT-024: delayed real sql response is discarded on workspace switch and resources close (2.6s)
+[WebServer] 1:21:15 PM [vite] (client) [console.warn] WebR is using `PostMessage` communication channel, nested R REPLs are not available.
+  ✓  4 [chromium] › tests/integration/p8-acceptance.spec.ts:128:3 › P8 AT-024: delayed real r response is discarded on workspace switch and resources close (22.1s)
+
+  4 passed (27.9s)

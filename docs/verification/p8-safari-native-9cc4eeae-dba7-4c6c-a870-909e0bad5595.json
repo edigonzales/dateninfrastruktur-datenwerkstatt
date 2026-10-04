@@ -1,0 +1,410 @@
+{
+  "id": "9cc4eeae-dba7-4c6c-a870-909e0bad5595",
+  "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/27.0.1 Safari/605.1.15",
+  "startedAt": "2026-10-04T15:28:33.474Z",
+  "status": "passed",
+  "checks": [
+    {
+      "name": "native-browser-and-persistent-storage",
+      "at": "2026-10-04T15:28:46.715Z",
+      "evidence": {
+        "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/27.0.1 Safari/605.1.15",
+        "origin": "http://127.0.0.1:4184",
+        "opfs": true,
+        "locks": true,
+        "existingProjects": 2,
+        "isolation": "Each attempt creates a new workspace; existing projects remain untouched."
+      }
+    },
+    {
+      "name": "created-test-workspace",
+      "at": "2026-10-04T15:28:47.705Z",
+      "evidence": {
+        "workspaceId": "f2337dea-faba-4b4c-8d3c-bf025458478d",
+        "fixtureKey": "proof-512772d5-084c-4a9b-aa7d-a3d74b5ebba3"
+      }
+    },
+    {
+      "name": "sql-observed-values",
+      "at": "2026-10-04T15:28:48.719Z",
+      "evidence": {
+        "rows": [
+          [
+            "002",
+            "Bergtal",
+            "2024",
+            "2200",
+            "1650",
+            "750.0"
+          ],
+          [
+            "001",
+            "Auenried",
+            "2024",
+            "1100",
+            "660",
+            "600.0"
+          ],
+          [
+            "003",
+            "Lindenwil",
+            "2024",
+            "4400",
+            "1760",
+            "400.0"
+          ],
+          [
+            "004",
+            "Seedorf",
+            "2024",
+            "0",
+            "10",
+            null
+          ]
+        ],
+        "expected": [
+          [
+            "002",
+            "Bergtal",
+            "2024",
+            "2200",
+            "1650",
+            "750"
+          ],
+          [
+            "001",
+            "Auenried",
+            "2024",
+            "1100",
+            "660",
+            "600"
+          ],
+          [
+            "003",
+            "Lindenwil",
+            "2024",
+            "4400",
+            "1760",
+            "400"
+          ],
+          [
+            "004",
+            "Seedorf",
+            "2024",
+            "0",
+            "10",
+            null
+          ]
+        ]
+      }
+    },
+    {
+      "name": "mixed-local-public-golden-sql",
+      "at": "2026-10-04T15:28:48.722Z",
+      "evidence": {
+        "rows": [
+          [
+            "002",
+            "Bergtal",
+            "2024",
+            "2200",
+            "1650",
+            "750.0"
+          ],
+          [
+            "001",
+            "Auenried",
+            "2024",
+            "1100",
+            "660",
+            "600.0"
+          ],
+          [
+            "003",
+            "Lindenwil",
+            "2024",
+            "4400",
+            "1760",
+            "400.0"
+          ],
+          [
+            "004",
+            "Seedorf",
+            "2024",
+            "0",
+            "10",
+            null
+          ]
+        ],
+        "publicVersion": {
+          "id": "a1b8cb20-8852-4079-97c0-fd09a210eb62",
+          "workspaceId": "f2337dea-faba-4b4c-8d3c-bf025458478d",
+          "datasetId": "b66aded1-ff41-4278-8001-c9c05ede6c50",
+          "origin": {
+            "kind": "portal",
+            "providerId": "fixture",
+            "target": {
+              "kind": "dataset",
+              "entryId": "proof-512772d5-084c-4a9b-aa7d-a3d74b5ebba3"
+            },
+            "tableId": "main",
+            "observedAt": "2026-10-04T15:28:48.632Z",
+            "canonicalUrl": "http://127.0.0.1:4174/portal/datasets/proof-512772d5-084c-4a9b-aa7d-a3d74b5ebba3",
+            "license": "CC0 · synthetisch"
+          },
+          "backing": {
+            "kind": "public-parquet",
+            "url": "http://127.0.0.1:4174/portal/datasets/proof-512772d5-084c-4a9b-aa7d-a3d74b5ebba3/data.parquet",
+            "etag": "\"proof-512772d5-084c-4a9b-aa7d-a3d74b5ebba3\""
+          },
+          "evidence": {
+            "kind": "sha256",
+            "value": "a1669d8a029d95613ba041ea38565025fcb557b1660a216f754bc343ce3d5b5a"
+          },
+          "schema": {
+            "columns": [
+              {
+                "name": "gemeinde_id",
+                "logicalType": "VARCHAR",
+                "nullable": true,
+                "roles": [
+                  "identifier"
+                ],
+                "metadata": {}
+              },
+              {
+                "name": "jahr",
+                "logicalType": "INTEGER",
+                "nullable": true,
+                "roles": [],
+                "metadata": {}
+              },
+              {
+                "name": "bevoelkerung",
+                "logicalType": "INTEGER",
+                "nullable": true,
+                "roles": [],
+                "metadata": {}
+              }
+            ],
+            "metadata": {}
+          },
+          "rowCount": "8",
+          "createdAt": "2026-10-04T15:28:48.648Z"
+        }
+      }
+    },
+    {
+      "name": "golden-r-and-return-sql",
+      "at": "2026-10-04T15:28:59.922Z",
+      "evidence": {
+        "r": [
+          [
+            "002",
+            "Bergtal",
+            "2024",
+            "2200",
+            "1650",
+            "750",
+            "hoch"
+          ],
+          [
+            "001",
+            "Auenried",
+            "2024",
+            "1100",
+            "660",
+            "600",
+            "hoch"
+          ],
+          [
+            "003",
+            "Lindenwil",
+            "2024",
+            "4400",
+            "1760",
+            "400",
+            "niedrig"
+          ],
+          [
+            "004",
+            "Seedorf",
+            "2024",
+            "0",
+            "10",
+            null,
+            "nicht berechenbar"
+          ]
+        ],
+        "returned": [
+          [
+            "hoch",
+            "2"
+          ],
+          [
+            "nicht berechenbar",
+            "1"
+          ],
+          [
+            "niedrig",
+            "1"
+          ]
+        ],
+        "completeTransfer": "4"
+      }
+    },
+    {
+      "name": "png-archive-and-persistence",
+      "at": "2026-10-04T15:29:00.030Z",
+      "evidence": {
+        "pngBytes": 53679,
+        "archiveBytes": 107398,
+        "runCount": 5,
+        "runtime": {
+          "appBuildId": "safari-pilot-test-only",
+          "engineId": "webr-local",
+          "engineVersion": "webR 0.6.0",
+          "transferCodecVersion": "columnar-1",
+          "rVersion": "R version 4.6.0 (2026-04-24)",
+          "rPackageVersions": {
+            "bit": "4.6.0",
+            "bit64": "4.8.2",
+            "cli": "3.6.6",
+            "clipr": "0.8.1",
+            "cpp11": "0.5.5",
+            "crayon": "1.5.3",
+            "dplyr": "1.2.1",
+            "farver": "2.1.2",
+            "generics": "0.1.4",
+            "ggplot2": "4.0.3",
+            "glue": "1.8.1",
+            "gtable": "0.3.6",
+            "hms": "1.1.4",
+            "isoband": "0.3.0",
+            "jsonlite": "2.0.0",
+            "labeling": "0.4.3",
+            "lifecycle": "1.0.5",
+            "magrittr": "2.0.5",
+            "pillar": "1.11.1",
+            "pkgconfig": "2.0.3",
+            "prettyunits": "1.2.0",
+            "progress": "1.2.3",
+            "purrr": "1.2.2",
+            "R6": "2.6.1",
+            "RColorBrewer": "1.1-3",
+            "readr": "2.2.0",
+            "rlang": "1.2.0",
+            "S7": "0.2.2",
+            "scales": "1.4.0",
+            "stringi": "1.8.7",
+            "stringr": "1.6.0",
+            "tibble": "3.3.1",
+            "tidyr": "1.3.2",
+            "tidyselect": "1.2.1",
+            "tzdb": "0.5.0",
+            "utf8": "1.2.6",
+            "vctrs": "0.7.3",
+            "viridisLite": "0.4.3",
+            "vroom": "1.7.1.9000",
+            "withr": "3.0.2",
+            "graphics": "4.6.0",
+            "tools": "4.6.0",
+            "webr": "0.6.0",
+            "utils": "4.6.0",
+            "grDevices": "4.6.0",
+            "stats": "4.6.0",
+            "datasets": "4.6.0",
+            "methods": "4.6.0",
+            "base": "4.6.0"
+          },
+          "locale": "en_US.UTF-8;C;en_US.UTF-8;en_US.UTF-8;en_US.UTF-8;C",
+          "timeZone": "UTC"
+        }
+      }
+    },
+    {
+      "name": "native-worker-release-at-close",
+      "at": "2026-10-04T15:29:00.034Z",
+      "evidence": {
+        "workers": [
+          {
+            "url": "blob:http://127.0.0.1:4184/55592cd2-e143-47e6-a5be-e772a3a6a0cf",
+            "terminated": true
+          },
+          {
+            "url": "blob:http://127.0.0.1:4184/acc30fac-d55b-48fb-a433-5a07a5e9c7aa",
+            "terminated": true
+          },
+          {
+            "url": "http://127.0.0.1:4184/vendor/webr/0.6.0/webr-worker.js",
+            "terminated": true
+          }
+        ]
+      }
+    },
+    {
+      "name": "native-tab-reopen-and-archive",
+      "at": "2026-10-04T15:30:17.161Z",
+      "evidence": {
+        "rows": [
+          [
+            "hoch",
+            "2"
+          ],
+          [
+            "nicht berechenbar",
+            "1"
+          ],
+          [
+            "niedrig",
+            "1"
+          ]
+        ],
+        "original": "f2337dea-faba-4b4c-8d3c-bf025458478d",
+        "imported": "82b00509-ae40-4875-85d8-5e060acb714c",
+        "nativeWorkerAutostart": false
+      }
+    },
+    {
+      "name": "native-postmessage-cancel-and-new-r",
+      "at": "2026-10-04T15:30:39.171Z",
+      "evidence": {
+        "cancelMs": 4,
+        "epochBefore": 0,
+        "epochAfter": 1,
+        "followup": [
+          {
+            "kind": "stdout",
+            "text": "42"
+          }
+        ],
+        "nativeTerminateCalls": 2
+      }
+    },
+    {
+      "name": "safari-engine-pilot-passed",
+      "at": "2026-10-04T15:30:39.177Z",
+      "evidence": {
+        "workers": [
+          {
+            "url": "blob:http://127.0.0.1:4184/be4ef9a0-fd31-4b3a-8216-8efb2d2bbbdb",
+            "terminated": true
+          },
+          {
+            "url": "blob:http://127.0.0.1:4184/e199b941-9927-42e5-8640-db97922684ba",
+            "terminated": true
+          },
+          {
+            "url": "http://127.0.0.1:4184/vendor/webr/0.6.0/webr-worker.js",
+            "terminated": true
+          },
+          {
+            "url": "http://127.0.0.1:4184/vendor/webr/0.6.0/webr-worker.js",
+            "terminated": true
+          }
+        ],
+        "note": "Actual Safari; native tab close/reopen, no full application quit; UI inspection recorded separately."
+      }
+    }
+  ]
+}

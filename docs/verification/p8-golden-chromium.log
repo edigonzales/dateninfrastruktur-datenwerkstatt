@@ -1,0 +1,11 @@
+[WebServer] (node:4147) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 1 test using 1 worker
+
+(node:4164) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] 1:36:23 PM [vite] (client) [console.warn] WebR is using `PostMessage` communication channel, nested R REPLs are not available.
+  ✓  1 [chromium] › tests/e2e/p8-golden.spec.ts:63:1 › P8 AT-072: portal population + local CSV, unchanged Golden SQL/R, process restart and second fresh archive profile (38.2s)
+
+  1 passed (39.1s)

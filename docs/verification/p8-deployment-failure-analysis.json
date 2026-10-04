@@ -1,0 +1,50 @@
+[
+  {
+    "test": "faults-P7-AT-046-AT-068\u201306-25cc8-d-genuine-loop-cancellation-firefox-1",
+    "errors": [
+      "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m0\u001b[39m\nReceived: \u001b[31m1\u001b[39m",
+      "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoContainText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: getByRole('log')\nExpected substring: \u001b[32m\"nach Abbruch\"\u001b[39m\nReceived string:    \u001b[31m\"\"\u001b[39m\nTimeout: 90000ms\n\nCall log:\n\u001b[2m  - Expect \"toContainText\" getByRole('log') with timeout 90000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('log')\u001b[22m\n\u001b[2m    176 \u00d7 locator resolved to <div role=\"log\" class=\"r-console\" aria-label=\"R-Konsole\"></div>\u001b[22m\n\u001b[2m        - unexpected value \"\"\u001b[22m\n",
+      "[JavaScript Error: \"uncaught exception: WebAssembly.Exception\" {file: \"http://127.0.0.1:4181/lab/vendor/webr/0.6.0/webr-worker.js\" line: 2}]",
+      "Expect failed"
+    ],
+    "uiStates": [
+      "TIMEOUT: R-Initialisierung \u00fcberschritt das Laufzeitlimit; der Worker wurde beendet."
+    ]
+  },
+  {
+    "test": "network-flow-P7-AT-056-AT--11878-chive-with-recorded-network-firefox-2",
+    "errors": [
+      "Error: locator.click: Target page, context or browser has been closed\nCall log:\n\u001b[2m  - waiting for getByRole('button', { name: 'In R \u00fcbernehmen', exact: true })\u001b[22m\n",
+      "Error: apiRequestContext.delete: Target page, context or browser has been closed",
+      "Target page, context or browser has been closed"
+    ],
+    "uiStates": []
+  },
+  {
+    "test": "faults-P7-AT-046-AT-068\u201306-25cc8-d-genuine-loop-cancellation-firefox-2",
+    "errors": [
+      "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveCount\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator:  locator('.run-status option').filter({ hasText: 'running' })\nExpected: \u001b[32m1\u001b[39m\nReceived: \u001b[31m0\u001b[39m\nTimeout:  15000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveCount\" locator('.run-status option').filter({ hasText: 'running' }) with timeout 15000ms\u001b[22m\n\u001b[2m  - waiting for locator('.run-status option').filter({ hasText: 'running' })\u001b[22m\n\u001b[2m    32 \u00d7 locator resolved to 0 elements\u001b[22m\n\u001b[2m       - unexpected value \"0\"\u001b[22m\n",
+      "[JavaScript Error: \"TypeError: ASM_CONSTS[code] is not a function\" {file: \"http://127.0.0.1:4182/lab/vendor/webr/0.6.0/R.js\" line: 1841}]",
+      "Expect failed"
+    ],
+    "uiStates": [
+      "TIMEOUT: R-Initialisierung \u00fcberschritt das Laufzeitlimit; der Worker wurde beendet."
+    ]
+  },
+  {
+    "test": "static-P7-AT-066\u2013068-arbit-5dac8-ME-cache-CSP-and-real-SQL-R-firefox-2",
+    "errors": [
+      "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('.r-plot img')\nExpected: visible\nTimeout: 90000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" locator('.r-plot img') with timeout 90000ms\u001b[22m\n\u001b[2m  - waiting for locator('.r-plot img')\u001b[22m\n",
+      "Expect failed"
+    ],
+    "uiStates": [
+      "TIMEOUT: R-Initialisierung \u00fcberschritt das Laufzeitlimit; der Worker wurde beendet."
+    ]
+  },
+  {
+    "test": "static firefox-2 screenshot",
+    "uiStates": [
+      "TIMEOUT: R-Initialisierung \u00fcberschritt das Laufzeitlimit; der Worker wurde beendet."
+    ]
+  }
+]

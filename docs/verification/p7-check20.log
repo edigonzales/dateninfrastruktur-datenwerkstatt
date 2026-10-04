@@ -1,0 +1,5 @@
+
+> datenwerkstatt@0.1.0 lint
+> eslint . && node scripts/check-boundaries.mjs
+
+Module boundaries checked.
