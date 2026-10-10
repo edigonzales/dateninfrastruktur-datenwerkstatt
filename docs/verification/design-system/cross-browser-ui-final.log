@@ -1,0 +1,79 @@
+[WebServer] (node:5852) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] (node:5855) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 14 tests using 1 worker
+
+(node:5863) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓   1 [firefox] › tests/e2e/design-system.spec.ts:19:1 › UI components: labels, native submit, checkbox, errors, busy state, menu and dialog keyboard (4.9s)
+  ✓   2 [firefox] › tests/e2e/design-system.spec.ts:109:1 › UI geometry: 8 px wrapped actions, form labels, narrow/zoom equivalent and failed local font (3.7s)
+  ✓   3 [firefox] › tests/e2e/design-system.spec.ts:180:1 › UI screens: project actions, forms, navigation and settings at target viewports (4.0s)
+[WebServer] 8:44:24 PM [vite] (client) [console.warn] WebR is using `PostMessage` communication channel, nested R REPLs are not available.
+  ✓   4 [firefox] › tests/e2e/p7-ui.spec.ts:16:1 › P7 AT-054–055 AT-058: measured SQL/R geometry, keyboard splitters, layout reset and reload (27.0s)
+  ✓   5 [firefox] › tests/e2e/p7-ui.spec.ts:142:1 › P7 AT-055–057: native focus trap/return, settings, storage cleanup and data-free diagnostics (4.8s)
+  ✓   6 [firefox] › tests/e2e/p7-ui.spec.ts:188:1 › P7 AT-025 AT-055 AT-056: selected SQL is snapshotted and cell markup remains text (6.0s)
+  ✓   7 [firefox] › tests/e2e/p7-ui.spec.ts:215:1 › P7 AT-058: browser history restores the analysis cursor and layout does not edit the domain (5.5s)
+(node:6101) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓   8 [webkit] › tests/e2e/design-system.spec.ts:19:1 › UI components: labels, native submit, checkbox, errors, busy state, menu and dialog keyboard (2.1s)
+  ✘   9 [webkit] › tests/e2e/design-system.spec.ts:109:1 › UI geometry: 8 px wrapped actions, form labels, narrow/zoom equivalent and failed local font (11.0s)
+(node:6171) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  10 [webkit] › tests/e2e/design-system.spec.ts:180:1 › UI screens: project actions, forms, navigation and settings at target viewports (1.4s)
+[WebServer] 8:45:19 PM [vite] (client) [console.warn] WebR is using `PostMessage` communication channel, nested R REPLs are not available.
+[WebServer] 8:45:31 PM [vite] (client) [console.error]   ERR write@[native code]
+[WebServer] handler@http://127.0.0.1:4173/node_modules/.vite/deps/editor.api2-DCT-GyFS.js:114775:47
+[WebServer] 8:45:31 PM [vite] (client) [Unhandled rejection] Canceled: Canceled
+[WebServer]  > cancel node_modules/monaco-editor/esm/vs/base/common/async.js:686:48
+[WebServer]     684 |      }
+[WebServer]     685 |      cancel() {
+[WebServer]     686 |          return this.error(new CancellationError());
+[WebServer]         |                                                  ^
+[WebServer]     687 |      }
+[WebServer]     688 |  }
+[WebServer]  > handler node_modules/monaco-editor/esm/vs/platform/clipboard/browser/clipboardService.js:74:63
+[WebServer] 
+  ✓  11 [webkit] › tests/e2e/p7-ui.spec.ts:16:1 › P7 AT-054–055 AT-058: measured SQL/R geometry, keyboard splitters, layout reset and reload (17.7s)
+  ✓  12 [webkit] › tests/e2e/p7-ui.spec.ts:142:1 › P7 AT-055–057: native focus trap/return, settings, storage cleanup and data-free diagnostics (3.5s)
+  ✓  13 [webkit] › tests/e2e/p7-ui.spec.ts:188:1 › P7 AT-025 AT-055 AT-056: selected SQL is snapshotted and cell markup remains text (4.1s)
+  ✓  14 [webkit] › tests/e2e/p7-ui.spec.ts:215:1 › P7 AT-058: browser history restores the analysis cursor and layout does not edit the domain (2.5s)
+
+
+  1) [webkit] › tests/e2e/design-system.spec.ts:109:1 › UI geometry: 8 px wrapped actions, form labels, narrow/zoom equivalent and failed local font 
+
+    Error: expect(received).toBe(expected) // Object.is equality
+
+    Expected: "error"
+    Received: "unloaded"
+
+    Call Log:
+    - Timeout 10000ms exceeded while waiting on the predicate
+
+      165 |       ),
+      166 |     )
+    > 167 |     .toBe('error');
+          |      ^
+      168 |   expect(
+      169 |     await page.evaluate(() =>
+      170 |       [...document.fonts]
+        at /Users/stefan/sources/dateninfrastruktur-datenwerkstatt/tests/e2e/design-system.spec.ts:167:6
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/e2e-design-system-UI-geome-91172-alent-and-failed-local-font-webkit/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/e2e-design-system-UI-geome-91172-alent-and-failed-local-font-webkit/error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/e2e-design-system-UI-geome-91172-alent-and-failed-local-font-webkit/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/e2e-design-system-UI-geome-91172-alent-and-failed-local-font-webkit/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  1 failed
+    [webkit] › tests/e2e/design-system.spec.ts:109:1 › UI geometry: 8 px wrapped actions, form labels, narrow/zoom equivalent and failed local font 
+  13 passed (1.7m)

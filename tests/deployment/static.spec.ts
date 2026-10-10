@@ -107,3 +107,76 @@ test('P7 AT-067: invalid operator config fails closed before any runtime', async
   );
   expect(workers).toEqual([]);
 });
+
+test('UI assets: local SVGs, Frutiger, JetBrains Mono, fallback and notices under each deployment base', async ({
+  page,
+  request,
+  baseURL,
+}) => {
+  const external: string[] = [];
+  page.on('request', (r) => {
+    if (/^https?:/.test(r.url()) && new URL(r.url()).origin !== new URL(baseURL!).origin)
+      external.push(r.url());
+  });
+  await page.goto(`${baseURL}workspaces`);
+  await page.getByLabel('Name des neuen Arbeitsbereichs').fill('Lokale UI-Assets');
+  await page.getByRole('button', {name: 'Neuer Arbeitsbereich', exact: true}).click();
+  await expect(page.locator('.sidebar svg')).toHaveCount(6);
+  await page.getByRole('button', {name: 'SQL', exact: true}).click();
+  await expect(page.locator('.monaco-editor')).toBeVisible();
+  await page.evaluate(() => document.fonts.ready);
+  const loaded = await page.evaluate(() => ({
+    font:
+      [...document.fonts].find((font) => font.family.includes('JetBrains Mono'))?.status ===
+      'loaded',
+    urls: performance
+      .getEntriesByType('resource')
+      .map((r) => r.name)
+      .filter((n) => /JetBrainsMono|Frutiger/.test(n)),
+    frutiger: [...document.fonts]
+      .filter((font) => font.family.includes('Frutiger'))
+      .map((font) => ({weight: font.weight, status: font.status}))
+      .sort((a, b) => a.weight.localeCompare(b.weight)),
+  }));
+  expect(loaded.font).toBe(true);
+  expect(loaded.frutiger).toEqual([
+    {weight: '400', status: 'loaded'},
+    {weight: '700', status: 'loaded'},
+  ]);
+  expect(loaded.urls.length).toBeGreaterThan(0);
+  for (const url of loaded.urls) {
+    expect(url.startsWith(baseURL!)).toBe(true);
+    const r = await request.get(url);
+    expect(r.status()).toBe(200);
+    expect(r.headers()['content-type']).toContain('font/woff2');
+  }
+  for (const path of [
+    'licenses/ui-assets.json',
+    'licenses/original-notices/bootstrap-icons-1.13.1.txt',
+    'licenses/original-notices/jetbrains-mono-2.304-OFL.txt',
+    'licenses/original-notices/frutiger-original-notices.txt',
+  ])
+    expect((await request.get(`${baseURL}${path}`)).status()).toBe(200);
+  // Persist the newly created analysis before intentionally reloading it.
+  await page.getByRole('button', {name: 'Speichern', exact: true}).click();
+  await expect(page.getByText('Lokal gespeichert · kein Backup', {exact: true})).toBeVisible();
+  await page.route('**/*.woff2', (route) => route.abort());
+  await page.reload();
+  await expect(page.locator('.monaco-editor')).toBeVisible();
+  await code(page, 'SELECT 5 AS fallback');
+  await page.getByRole('button', {name: 'Ausführen', exact: true}).click();
+  await expect(page.locator('.result-grid tbody td')).toHaveText(['5']);
+  expect(
+    await page.evaluate(
+      () => [...document.fonts].find((font) => font.family.includes('JetBrains Mono'))?.status,
+    ),
+  ).toBe('error');
+  expect(
+    await page.evaluate(() =>
+      [...document.fonts]
+        .filter((font) => font.family.includes('Frutiger'))
+        .map((font) => font.status),
+    ),
+  ).toEqual(['error', 'error']);
+  expect(external).toEqual([]);
+});

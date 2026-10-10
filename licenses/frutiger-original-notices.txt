@@ -1,0 +1,19 @@
+Frutiger LT W05 – original embedded font notices
+
+The following text is extracted unchanged from the name table (IDs 0, 13, 14) of each original font. Project-specific usage context: docs/FONT_PROVENANCE.md.
+
+FrutigerLTW05-55Roman.woff2
+
+Copyright  2014, 2015 Monotype Imaging Inc. All rights reserved.
+
+This font software is the property of Monotype Imaging Inc., or one of its affiliated entities (collectively, Monotype) and its use by you is covered under the terms of a license agreement. You have obtained this font software either directly from Monotype or together with software distributed by one of the licensees of Monotype. This software is a valuable asset of Monotype. Unless you have entered into a specific license agreement granting you additional rights, your use of this software is limited by the terms of the actual license agreement you have entered into with Monotype. You may not copy or distribute this software. If you have any questions concerning your rights you should review the license agreement you received with the software.  You can learn more about Monotype here:  www.monotype.com
+
+http://www.monotype.com
+
+FrutigerLTW05-75Black.woff2
+
+Copyright  2014 - 2016 Monotype Imaging Inc. All rights reserved.
+
+This font software is the property of Monotype Imaging Inc., or one of its affiliated entities (collectively, Monotype) and its use by you is covered under the terms of a license agreement. You have obtained this font software either directly from Monotype or together with software distributed by one of the licensees of Monotype. This software is a valuable asset of Monotype. Unless you have entered into a specific license agreement granting you additional rights, your use of this software is limited by the terms of the actual license agreement you have entered into with Monotype. You may not copy or distribute this software. If you have any questions concerning your rights you should review the license agreement you received with the software.  You can learn more about Monotype here:  www.monotype.com
+
+http://www.monotype.com

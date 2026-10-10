@@ -32,6 +32,25 @@ test('P7 AT-054–055 AT-058: measured SQL/R geometry, keyboard splitters, layou
       await page.getByRole('button', {name: 'Ausführen', exact: true}).click();
       await expect(page.locator('.r-plot img')).toBeVisible();
       await expect(page.getByRole('log')).toContainText('Gemessene R-Ausgabe');
+      await page.getByRole('button', {name: 'Grafik Vollbild', exact: true}).click();
+      await expect.poll(() => page.evaluate(() => !!document.fullscreenElement)).toBe(true);
+      const full = await page.locator('.r-plot').evaluate((el) => {
+        const img = el.querySelector('img')!.getBoundingClientRect();
+        const actions = el.querySelector('.dw-actions')!.getBoundingClientRect();
+        return {
+          imageBottom: img.bottom,
+          actionsTop: actions.top,
+          actionsBottom: actions.bottom,
+          height: innerHeight,
+        };
+      });
+      expect(full.imageBottom).toBeLessThanOrEqual(full.actionsTop);
+      expect(full.actionsBottom).toBeLessThanOrEqual(full.height);
+      await page.evaluate(() => document.exitFullscreen());
+      const plotActions = await page
+        .locator('.r-plot .dw-actions')
+        .evaluate((el) => getComputedStyle(el).gap);
+      expect(plotActions).toBe('8px');
       await page.getByRole('button', {name: 'Objekte / Eingaben'}).click();
     }
     for (const size of [
@@ -60,18 +79,24 @@ test('P7 AT-054–055 AT-058: measured SQL/R geometry, keyboard splitters, layou
       expect(box.header.height).toBe(56);
       expect(box.sidebar.width).toBe(52);
       expect(box.toolbar.height).toBeLessThanOrEqual(88);
+      expect(box.area.y - box.toolbar.y).toBeLessThanOrEqual(88);
       expect(box.area.height).toBeGreaterThanOrEqual(size.height * 0.75);
       expect(box.area.width).toBeGreaterThanOrEqual((size.width - box.sidebar.width) * 0.9);
       expect(box.scrollWidth).toBeLessThanOrEqual(size.width);
       expect(box.area.bottom).toBeLessThanOrEqual(size.height + 1);
+      if (kind === 'sql')
+        await expect(page.locator('.analysis-toolbar [role="status"]')).toHaveAttribute(
+          'aria-live',
+          'off',
+        );
       if (kind === 'sql' && size.height === 900) {
         expect(box.editor.height).toBeGreaterThanOrEqual(180);
         expect(box.output.height).toBeGreaterThanOrEqual(220);
       }
       geometry.push(box);
-      await mkdir('docs/verification', {recursive: true});
+      await mkdir('docs/verification/design-system', {recursive: true});
       await page.screenshot({
-        path: `docs/verification/p7-${kind}-${info.project.name}-${size.width}.png`,
+        path: `docs/verification/design-system/p7-${kind}-${info.project.name}-${size.width}.png`,
       });
     }
     const splitter = page.getByRole('separator', {
@@ -99,11 +124,12 @@ test('P7 AT-054–055 AT-058: measured SQL/R geometry, keyboard splitters, layou
       .toBe(Number(changed));
     await page.reload();
     await expect(splitter).toHaveAttribute('aria-valuenow', changed!);
-    await page.getByRole('button', {name: 'Arbeitsfläche zurücksetzen'}).click();
+    await page.getByRole('button', {name: 'Weitere Aktionen', exact: true}).click();
+    await page.getByRole('menuitem', {name: 'Arbeitsfläche zurücksetzen'}).click();
     await expect(splitter).toHaveAttribute('aria-valuenow', kind === 'sql' ? '45' : '50');
   }
   await writeFile(
-    `docs/verification/p7-geometry-${info.project.name}.json`,
+    `docs/verification/design-system/p7-geometry-${info.project.name}.json`,
     JSON.stringify(geometry, null, 2),
   );
   await page.getByRole('button', {name: 'Konsole', exact: true}).click();
@@ -234,7 +260,8 @@ test('P7 AT-058: browser history restores the analysis cursor and layout does no
   const splitter = page.getByRole('separator', {name: 'Grösse von Editor und Resultat ändern'});
   await splitter.focus();
   await splitter.press('ArrowDown');
-  await page.getByRole('button', {name: 'Arbeitsfläche zurücksetzen'}).click();
+  await page.getByRole('button', {name: 'Weitere Aktionen', exact: true}).click();
+  await page.getByRole('menuitem', {name: 'Arbeitsfläche zurücksetzen'}).click();
   expect(await state()).toEqual(before);
   expect(before.runs).toEqual([]);
 });

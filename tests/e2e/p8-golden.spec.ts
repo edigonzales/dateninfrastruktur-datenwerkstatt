@@ -1,5 +1,5 @@
 import {test, expect, type BrowserContext, type Page} from '@playwright/test';
-import {mkdtemp, readFile, rm, writeFile} from 'node:fs/promises';
+import {mkdir, mkdtemp, readFile, rm, writeFile} from 'node:fs/promises';
 import {tmpdir} from 'node:os';
 import {join} from 'node:path';
 import {isolateOpfs} from '../isolateOpfs';
@@ -318,9 +318,12 @@ test('P8 AT-072: portal population + local CSV, unchanged Golden SQL/R, process 
     await expect(page.locator('.result-grid tbody tr')).toHaveCount(3);
     expect(await tableRows(page, '.result-grid tbody tr', [])).toEqual(returned);
     expect(Object.keys((await documentOf(page)).runs)).toEqual(Object.keys(imported.runs));
-    await page.screenshot({path: `docs/verification/p8-golden-${info.project.name}.png`});
+    await mkdir('docs/verification/design-system', {recursive: true});
+    await page.screenshot({
+      path: `docs/verification/design-system/p8-golden-${info.project.name}.png`,
+    });
     await writeFile(
-      `docs/verification/p8-golden-${info.project.name}.json`,
+      `docs/verification/design-system/p8-golden-${info.project.name}.json`,
       JSON.stringify(
         {
           browser: info.project.name,

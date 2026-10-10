@@ -1,0 +1,112 @@
+[
+  {
+    "name": "layout-sidebar",
+    "sourceHashMatches": true,
+    "svgPathsUnchanged": true
+  },
+  {
+    "name": "collection",
+    "sourceHashMatches": true,
+    "svgPathsUnchanged": true
+  },
+  {
+    "name": "folder2-open",
+    "sourceHashMatches": true,
+    "svgPathsUnchanged": true
+  },
+  {
+    "name": "table",
+    "sourceHashMatches": true,
+    "svgPathsUnchanged": true
+  },
+  {
+    "name": "database",
+    "sourceHashMatches": true,
+    "svgPathsUnchanged": true
+  },
+  {
+    "name": "bar-chart-line",
+    "sourceHashMatches": true,
+    "svgPathsUnchanged": true
+  },
+  {
+    "name": "gear",
+    "sourceHashMatches": true,
+    "svgPathsUnchanged": true
+  },
+  {
+    "name": "play-fill",
+    "sourceHashMatches": true,
+    "svgPathsUnchanged": true
+  },
+  {
+    "name": "stop-fill",
+    "sourceHashMatches": true,
+    "svgPathsUnchanged": true
+  },
+  {
+    "name": "floppy",
+    "sourceHashMatches": true,
+    "svgPathsUnchanged": true
+  },
+  {
+    "name": "three-dots",
+    "sourceHashMatches": true,
+    "svgPathsUnchanged": true
+  },
+  {
+    "name": "chevron-down",
+    "sourceHashMatches": true,
+    "svgPathsUnchanged": true
+  },
+  {
+    "name": "x-lg",
+    "sourceHashMatches": true,
+    "svgPathsUnchanged": true
+  },
+  {
+    "name": "download",
+    "sourceHashMatches": true,
+    "svgPathsUnchanged": true
+  },
+  {
+    "name": "upload",
+    "sourceHashMatches": true,
+    "svgPathsUnchanged": true
+  },
+  {
+    "name": "plus-lg",
+    "sourceHashMatches": true,
+    "svgPathsUnchanged": true
+  },
+  {
+    "name": "trash",
+    "sourceHashMatches": true,
+    "svgPathsUnchanged": true
+  },
+  {
+    "name": "arrow-repeat",
+    "sourceHashMatches": true,
+    "svgPathsUnchanged": true
+  },
+  {
+    "name": "arrows-fullscreen",
+    "sourceHashMatches": true,
+    "svgPathsUnchanged": true
+  },
+  {
+    "name": "info-circle",
+    "sourceHashMatches": true,
+    "svgPathsUnchanged": true
+  },
+  {
+    "name": "exclamation-triangle",
+    "sourceHashMatches": true,
+    "svgPathsUnchanged": true
+  },
+  {
+    "name": "check-circle",
+    "sourceHashMatches": true,
+    "svgPathsUnchanged": true
+  }
+]

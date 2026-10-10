@@ -1,3 +1,4 @@
+import {Button, Input, Select, FormField, Notice} from '../../ui/Controls';
 import {useState} from 'react';
 import {useNavigate} from '@tanstack/react-router';
 import type {EditingSession} from '../../application/workspaceService';
@@ -23,8 +24,8 @@ export function PlanView({
         {plan.issues.map((i) => (
           <li key={i.id}>
             {i.requiresApproval ? (
-              <label>
-                <input
+              <FormField label={<>{i.message}</>}>
+                <Input
                   type="checkbox"
                   checked={approved.includes(i.id)}
                   onChange={(e) =>
@@ -33,8 +34,7 @@ export function PlanView({
                     )
                   }
                 />
-                {i.message}
-              </label>
+              </FormField>
             ) : (
               i.message
             )}
@@ -80,10 +80,51 @@ export function TransferToR({
       onClose={() => {
         if (!busy) onClose();
       }}
+      footer={
+        <>
+          <Button
+            disabled={busy}
+            onClick={() =>
+              void act(async () => {
+                const id =
+                  analysisId === 'new' ? session.createAnalysis('r') : (analysisId as AnalysisId);
+                setAnalysisId(id);
+                setApproved([]);
+                setPlan(
+                  await session
+                    .getR()
+                    .planToR(resultId, id, variable, new AbortController().signal),
+                );
+              })
+            }
+          >
+            Transfer prüfen
+          </Button>
+          {plan && (
+            <Button
+              variant="primary"
+              disabled={
+                busy || plan.issues.some((i) => i.requiresApproval && !approved.includes(i.id))
+              }
+              onClick={() =>
+                void act(async () => {
+                  await session.getR().commitToR(plan.id, approved, new AbortController().signal);
+                  onClose();
+                  await navigate({
+                    to: '/workspaces/$workspaceId/r/$analysisId',
+                    params: {workspaceId: session.document.workspace.id, analysisId},
+                  });
+                })
+              }
+            >
+              In R übernehmen
+            </Button>
+          )}
+        </>
+      }
     >
-      <label>
-        R-Analyse
-        <select
+      <FormField label={<>R-Analyse</>}>
+        <Select
           value={analysisId}
           disabled={busy}
           onChange={(e) => {
@@ -97,11 +138,10 @@ export function TransferToR({
               {a.name}
             </option>
           ))}
-        </select>
-      </label>
-      <label>
-        R-Variablenname
-        <input
+        </Select>
+      </FormField>
+      <FormField label={<>R-Variablenname</>}>
+        <Input
           value={variable}
           disabled={busy}
           onChange={(e) => {
@@ -109,23 +149,8 @@ export function TransferToR({
             setPlan(undefined);
           }}
         />
-      </label>
-      <button
-        disabled={busy}
-        onClick={() =>
-          void act(async () => {
-            const id =
-              analysisId === 'new' ? session.createAnalysis('r') : (analysisId as AnalysisId);
-            setAnalysisId(id);
-            setApproved([]);
-            setPlan(
-              await session.getR().planToR(resultId, id, variable, new AbortController().signal),
-            );
-          })
-        }
-      >
-        Transfer prüfen
-      </button>
+      </FormField>
+
       {plan && (
         <>
           <PlanView plan={plan} approved={approved} onChange={setApproved} />
@@ -133,27 +158,10 @@ export function TransferToR({
             Das Resultat wird vor der dauerhaften Eingabebindung gesichert. Das R-Skript wird nicht
             gestartet.
           </p>
-          <button
-            disabled={
-              busy || plan.issues.some((i) => i.requiresApproval && !approved.includes(i.id))
-            }
-            onClick={() =>
-              void act(async () => {
-                await session.getR().commitToR(plan.id, approved, new AbortController().signal);
-                onClose();
-                await navigate({
-                  to: '/workspaces/$workspaceId/r/$analysisId',
-                  params: {workspaceId: session.document.workspace.id, analysisId},
-                });
-              })
-            }
-          >
-            In R übernehmen
-          </button>
         </>
       )}
-      {error && <p role="alert">{error}</p>}
-      {busy && <p role="status">Transfer wird verarbeitet …</p>}
+      {error && <Notice tone="danger">{error}</Notice>}
+      {busy && <Notice tone="info">Transfer wird verarbeitet …</Notice>}
     </Modal>
   );
 }

@@ -124,3 +124,18 @@ Wiederholte Sessionwechsel, Cancel-/Initfehler, Netzwerk-/Speicherausfall, fehle
 **Liefern:** `docs/RELEASE_CHECKLIST.md`, vollständige AT-Matrix, `docs/KNOWN_LIMITATIONS.md`, reproduzierbare Verify-Befehle, SHA-/Versionsangaben zu getesteten Builds. Produktive URLs/Logoassets müssen für einen tatsächlichen Release vorliegen; ihr Fehlen ist kein Grund, Kernimplementierung oder Tests zu erfinden.
 
 **Gate:** AT-001–AT-072 alle für zugesicherte Konfigurationen bestanden; `npm run verify` Exit 0; Golden Path nachgewiesen. Offene kritische Anforderungen bedeuten „nicht vollständig abgenommen“, nicht automatisch Funktionsumfang reduzieren.
+
+## UI — Designsystem nach P0–P8
+
+Vertrag: [docs/DESIGN_SYSTEM.md](docs/DESIGN_SYSTEM.md). Die historischen
+P0–P8-Nachweise werden nicht als Nachweis der neuen Oberfläche ausgegeben.
+
+A: Dokumentation, Tokens, Assets, Komponenten und enginefreie Entwicklungsreferenz.
+B: Formulare, Übersichten, Import/Export, Dialoge, Einstellungen und Bootzustände.
+C: Bootstrap-Navigation, konsistente SQL-/R-Werkzeugleisten und Ergebnisaktionen.
+D: CSS-Bereinigung, Lizenz-/Assetdokumentation und abschliessende Abnahme.
+
+Gate: REQ-061–067 / AT-054–058; 8px-Aktionsabstände, Labelsemantik, Fokus und
+Geometrie; verify, Firefox-/WebKit-E2E, statische Assetprüfung unter /lab/ und
+nativer Safari-Smoke. Befehle, Exitcodes, Revision und offene Abhängigkeiten
+stehen im Implementierungsstatus. Keine neue Domain-/Engine-/Speicherschnittstelle.

@@ -1,3 +1,4 @@
+import {Button, Input, Select, FormField, Notice} from '../../ui/Controls';
 import {Modal} from '../../ui/Modal';
 import {useEffect, useRef, useState} from 'react';
 import {useNavigate} from '@tanstack/react-router';
@@ -104,14 +105,80 @@ export function PortalImport({
         controller.current.abort();
         onClose();
       }}
+      footer={
+        <>
+          <Button
+            onClick={() => {
+              controller.current.abort();
+              onClose();
+            }}
+          >
+            Schliessen
+          </Button>
+          {preview && (
+            <Button
+              variant="primary"
+              disabled={busy}
+              onClick={() =>
+                void act(async () => {
+                  const table = tables.find((t) => t.tableId === selected)!;
+                  let chosen = active;
+                  if (target === 'new') {
+                    const observed = await access.fetch(
+                      table.publicParquetUrl,
+                      controller.current.signal,
+                    );
+                    if (observed.sha256 !== preview.sourceSha256)
+                      throw Error(
+                        'SOURCE_CHANGED: Quelle seit Vorschau geändert. Vorschau erneut laden.',
+                      );
+                    const created = await services.workspaces.create('Portal-Arbeitsbereich');
+                    chosen = await services.workspaces.open(created.workspace.id);
+                    setTarget(created.workspace.id);
+                    setActive(chosen);
+                  }
+                  if (!chosen) throw Error('Zielarbeitsbereich fehlt.');
+                  let key = stage.current?.session === chosen ? stage.current.key : undefined;
+                  if (!key) {
+                    const p = await chosen
+                      .getDatasets()
+                      .previewPortal(table, controller.current.signal);
+                    if (p.sourceSha256 !== preview.sourceSha256) {
+                      await chosen.getDatasets().discard(p.key);
+                      throw Error('SOURCE_CHANGED: Quelle seit Vorschau geändert.');
+                    }
+                    key = p.key;
+                    stage.current = {session: chosen, key};
+                  }
+                  await chosen
+                    .getDatasets()
+                    .confirm(
+                      key,
+                      {name, sqlName, keepOriginal: false, local, ...(replace ? {replace} : {})},
+                      controller.current.signal,
+                    );
+                  stage.current = undefined;
+                  await navigate({
+                    to: '/workspaces/$workspaceId/data',
+                    params: {workspaceId: chosen.document.workspace.id},
+                    replace: true,
+                  });
+                  onClose(true);
+                })
+              }
+            >
+              Portalimport bestätigen
+            </Button>
+          )}
+        </>
+      }
     >
       {!access.config.portalProviders.length ? (
         <p>Kein Portalprovider konfiguriert. Produktive Portal-URL fehlt im Entwicklungsprofil.</p>
       ) : (
         <>
-          <label>
-            Portal
-            <select
+          <FormField label={<>Portal</>}>
+            <Select
               disabled={busy}
               value={provider}
               onChange={(e) => {
@@ -125,24 +192,23 @@ export function PortalImport({
                   {p.title}
                 </option>
               ))}
-            </select>
-          </label>
-          <label>
-            Dataset-ID oder Portal-URL
-            <input value={value} disabled={busy} onChange={(e) => setValue(e.target.value)} />
-          </label>
-          <button
+            </Select>
+          </FormField>
+          <FormField label={<>Dataset-ID oder Portal-URL</>}>
+            <Input value={value} disabled={busy} onChange={(e) => setValue(e.target.value)} />
+          </FormField>
+          <Button
             disabled={busy || !value.trim()}
             onClick={() => void act(() => resolve(access.selection(provider, value)))}
           >
             Kontext laden
-          </button>
+          </Button>
           <a href={access.provider(provider).baseUrl} target="_blank" rel="noreferrer">
             Im Portal suchen
           </a>
           {access.provider(provider).indexUrl && (
             <>
-              <button
+              <Button
                 disabled={busy}
                 onClick={() =>
                   void act(async () =>
@@ -151,11 +217,11 @@ export function PortalImport({
                 }
               >
                 Index durchsuchen
-              </button>
+              </Button>
               <ul>
                 {entries.map((e) => (
                   <li key={e.key}>
-                    <button
+                    <Button
                       onClick={() =>
                         void act(() =>
                           resolve({
@@ -167,7 +233,7 @@ export function PortalImport({
                       }
                     >
                       {e.title}
-                    </button>
+                    </Button>
                   </li>
                 ))}
               </ul>
@@ -175,9 +241,8 @@ export function PortalImport({
           )}
           {tables.length > 0 && (
             <>
-              <label>
-                Portaltabelle
-                <select
+              <FormField label={<>Portaltabelle</>}>
+                <Select
                   disabled={busy}
                   value={selected}
                   onChange={(e) => {
@@ -190,13 +255,12 @@ export function PortalImport({
                       {t.title}
                     </option>
                   ))}
-                </select>
-              </label>
+                </Select>
+              </FormField>
               <p>{tables.find((t) => t.tableId === selected)?.license ?? 'Keine Lizenzangabe'}</p>
               {!session && (
-                <label>
-                  Zielarbeitsbereich
-                  <select
+                <FormField label={<>Zielarbeitsbereich</>}>
+                  <Select
                     disabled={busy}
                     value={target}
                     onChange={(e) => {
@@ -210,37 +274,34 @@ export function PortalImport({
                         {w.name}
                       </option>
                     ))}
-                  </select>
-                </label>
+                  </Select>
+                </FormField>
               )}
-              <button disabled={busy} onClick={() => void load()}>
+              <Button disabled={busy} onClick={() => void load()}>
                 Portalvorschau laden
-              </button>
+              </Button>
             </>
           )}
           {preview && (
             <>
               <PreviewTable preview={preview} />
-              <label>
-                Anzeigename
-                <input value={name} onChange={(e) => setName(e.target.value)} />
-              </label>
-              <label>
-                SQL-Name
-                <input
+              <FormField label={<>Anzeigename</>}>
+                <Input value={name} onChange={(e) => setName(e.target.value)} />
+              </FormField>
+              <FormField label={<>SQL-Name</>}>
+                <Input
                   disabled={!!replace}
                   value={sqlName}
                   onChange={(e) => setSqlName(e.target.value)}
                 />
-              </label>
-              <label>
-                <input
+              </FormField>
+              <FormField label={<>Lokal sichern</>}>
+                <Input
                   type="checkbox"
                   checked={local}
                   onChange={(e) => setLocal(e.target.checked)}
                 />
-                Lokal sichern
-              </label>
+              </FormField>
               <p>
                 {local
                   ? 'Datei wird mit geprüftem Hash gesichert.'
@@ -257,72 +318,12 @@ export function PortalImport({
                   → {JSON.stringify(preview.schema.columns.map((c) => [c.name, c.logicalType]))}
                 </p>
               )}
-              <button
-                disabled={busy}
-                onClick={() =>
-                  void act(async () => {
-                    const table = tables.find((t) => t.tableId === selected)!;
-                    let chosen = active;
-                    if (target === 'new') {
-                      const observed = await access.fetch(
-                        table.publicParquetUrl,
-                        controller.current.signal,
-                      );
-                      if (observed.sha256 !== preview.sourceSha256)
-                        throw Error(
-                          'SOURCE_CHANGED: Quelle seit Vorschau geändert. Vorschau erneut laden.',
-                        );
-                      const created = await services.workspaces.create('Portal-Arbeitsbereich');
-                      chosen = await services.workspaces.open(created.workspace.id);
-                      setTarget(created.workspace.id);
-                      setActive(chosen);
-                    }
-                    if (!chosen) throw Error('Zielarbeitsbereich fehlt.');
-                    let key = stage.current?.session === chosen ? stage.current.key : undefined;
-                    if (!key) {
-                      const p = await chosen
-                        .getDatasets()
-                        .previewPortal(table, controller.current.signal);
-                      if (p.sourceSha256 !== preview.sourceSha256) {
-                        await chosen.getDatasets().discard(p.key);
-                        throw Error('SOURCE_CHANGED: Quelle seit Vorschau geändert.');
-                      }
-                      key = p.key;
-                      stage.current = {session: chosen, key};
-                    }
-                    await chosen
-                      .getDatasets()
-                      .confirm(
-                        key,
-                        {name, sqlName, keepOriginal: false, local, ...(replace ? {replace} : {})},
-                        controller.current.signal,
-                      );
-                    stage.current = undefined;
-                    await navigate({
-                      to: '/workspaces/$workspaceId/data',
-                      params: {workspaceId: chosen.document.workspace.id},
-                      replace: true,
-                    });
-                    onClose(true);
-                  })
-                }
-              >
-                Portalimport bestätigen
-              </button>
             </>
           )}
         </>
       )}
-      {error && <p role="alert">{error}</p>}
-      {busy && <p role="status">Portal wird geprüft …</p>}
-      <button
-        onClick={() => {
-          controller.current.abort();
-          onClose();
-        }}
-      >
-        Schliessen
-      </button>
+      {error && <Notice tone="danger">{error}</Notice>}
+      {busy && <Notice tone="info">Portal wird geprüft …</Notice>}
     </Modal>
   );
 }

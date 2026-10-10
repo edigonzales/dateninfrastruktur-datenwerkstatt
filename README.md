@@ -4,6 +4,10 @@ Dieses Repository enthält die verbindliche V1-Spezifikation und die eigenständ
 
 Der genaue Stand, tatsächliche Befehle/Fehlläufe und offene Abnahmen stehen in [docs/IMPLEMENTATION_STATUS.md](docs/IMPLEMENTATION_STATUS.md) und [docs/RELEASE_CHECKLIST.md](docs/RELEASE_CHECKLIST.md).
 
+## Designsystem
+
+[Das Designsystem](docs/DESIGN_SYSTEM.md) legt Farben und Hintergründe, Typografie, Formularlabels, Abstände, SVG-Icons und Komponenten verbindlich fest. Die Umsetzung steht im [Implementierungsstatus](docs/IMPLEMENTATION_STATUS.md), die aktuellen Screenshots und Prüfungen im [UI-Abnahmebericht](docs/verification/design-system/README.md).
+
 ## Lokaler Entwicklungsstart
 
 Node 22.23.1 und npm 11.18.0 verwenden (`.node-version`, `engines`).
@@ -56,7 +60,7 @@ Der Portaladapter nutzt die bereits vorhandenen `explore/context.json`-Endpunkte
 
 `python tools/verify-package.py` prüft Dokumentlinks, Requirement-/Test-Zuordnung, Fixture-Sollwerte und Manifestreferenzen des Pakets. `tsc -p contracts/tsconfig.json` prüft die eigenen TypeScript-Verträge. Diese Prüfungen ersetzen nicht die Browser-, Engine- und E2E-Tests.
 
-Das Original-SVG wurde aus der geprüften so-web-components-Baseline übernommen; Herkunft und Lizenz sind dokumentiert. Keine generierten Logos oder kantonalen Schriftdateien. Die App verwendet Systemfonts und Monacos eigenen lizenzierten Iconfont.
+Das Original-SVG wurde aus der geprüften so-web-components-Baseline übernommen; Herkunft und Lizenz sind dokumentiert. Die Oberfläche verwendet die kantonal lizenzierten lokalen Frutiger-Schnitte 55Roman/75Black aus sodata mit Systemfont-Fallback, JetBrains Mono 2.304 für Code und Konsole sowie lokale Bootstrap-SVGs 1.13.1. [Schriftherkunft und Nutzungsbestätigung](docs/FONT_PROVENANCE.md) sowie die Gestaltungsregeln im [Designsystem](docs/DESIGN_SYSTEM.md) sind dokumentiert. Monacos interner lizenzierter Iconfont bleibt unverändert.
 
 ## Statischer Betrieb
 

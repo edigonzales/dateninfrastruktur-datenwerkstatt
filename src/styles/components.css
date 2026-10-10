@@ -1,0 +1,360 @@
+.dw-compact,
+.dw-size-compact {
+  --dw-control-height: 32px;
+  --dw-control-padding-y: 4px;
+  --dw-control-font: 14px;
+  --dw-control-padding: 12px;
+}
+.dw-size-default {
+  --dw-control-height: 40px;
+  --dw-control-padding-y: 6px;
+  --dw-control-font: 16px;
+  --dw-control-padding: 16px;
+}
+.dw-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--dw-space-2);
+  min-height: var(--dw-control-height);
+  padding: 6px var(--dw-control-padding);
+  border: 1px solid var(--dw-color-input-border);
+  border-radius: var(--dw-radius);
+  background: var(--dw-color-surface);
+  color: var(--dw-color-text);
+  font: 400 var(--dw-control-font) / 1.25 var(--dw-font-sans);
+  cursor: pointer;
+  text-decoration: none;
+  overflow-wrap: anywhere;
+  transition:
+    background-color 120ms ease,
+    border-color 120ms ease;
+}
+.dw-button:hover:not(:disabled) {
+  background: var(--dw-color-hover);
+}
+.dw-button:active:not(:disabled) {
+  background: var(--dw-color-line);
+}
+.dw-button--primary {
+  background: var(--dw-color-accent);
+  border-color: var(--dw-color-accent);
+  color: #fff;
+}
+.dw-button--primary:hover:not(:disabled),
+.dw-button--primary:active:not(:disabled) {
+  background: var(--dw-color-accent-hover);
+  border-color: var(--dw-color-accent-hover);
+}
+.dw-button--ghost {
+  background: transparent;
+  border-color: transparent;
+}
+.dw-button--danger {
+  color: var(--dw-color-danger);
+  background: var(--dw-color-danger-bg);
+  border-color: var(--dw-color-danger);
+}
+.dw-button--danger:hover:not(:disabled) {
+  background: var(--dw-color-danger);
+  color: #fff;
+}
+.dw-button[aria-pressed='true'] {
+  background: var(--dw-color-selected);
+  border-color: var(--dw-color-accent);
+  color: var(--dw-color-accent);
+}
+.dw-button:disabled {
+  background: var(--dw-color-subtle);
+  border-color: var(--dw-color-line);
+  color: var(--dw-color-muted);
+  cursor: not-allowed;
+}
+.dw-button[aria-busy='true'] {
+  cursor: progress;
+}
+.dw-icon {
+  display: block;
+  flex: 0 0 auto;
+}
+.dw-icon-button {
+  width: 40px;
+  min-height: 40px;
+  padding: 8px;
+  flex: 0 0 auto;
+}
+.dw-spin {
+  animation: dw-spin 1.2s linear infinite;
+}
+@keyframes dw-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+.dw-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--dw-gap-actions);
+}
+.dw-actions > .dw-actions {
+  margin-inline-end: var(--dw-space-2);
+}
+.dw-toolbar {
+  background: var(--dw-color-subtle);
+  padding: var(--dw-space-2) var(--dw-space-3);
+}
+.dw-field {
+  display: grid;
+  align-content: start;
+  gap: var(--dw-space-2);
+  min-width: 0;
+}
+.dw-label {
+  font: 700 14px/20px var(--dw-font-sans);
+  color: var(--dw-color-text);
+  overflow-wrap: anywhere;
+}
+.dw-field--hidden {
+  display: block;
+}
+.dw-check-line {
+  display: flex;
+  align-items: start;
+  gap: var(--dw-space-2);
+}
+.dw-check-line .dw-label {
+  font-weight: 400;
+  cursor: pointer;
+}
+.dw-input,
+.dw-select,
+.dw-textarea {
+  min-width: 0;
+  max-width: 100%;
+  width: 100%;
+  min-height: var(--dw-control-height);
+  padding: var(--dw-control-padding-y) 12px;
+  border: 1px solid var(--dw-color-input-border);
+  border-radius: var(--dw-radius);
+  background: var(--dw-color-surface);
+  color: var(--dw-color-text);
+  font: 400 var(--dw-control-font) / 1.5 var(--dw-font-sans);
+}
+.dw-select {
+  padding-inline-end: 24px;
+}
+.dw-textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+.dw-input[type='checkbox'],
+.dw-input[type='radio'] {
+  appearance: auto;
+  width: 16px;
+  height: 16px;
+  min-height: 16px;
+  flex: 0 0 auto;
+  padding: 0;
+  margin: 2px 0 0;
+  accent-color: var(--dw-color-accent);
+}
+.dw-input:disabled,
+.dw-select:disabled,
+.dw-textarea:disabled {
+  background: var(--dw-color-subtle);
+  color: var(--dw-color-muted);
+  cursor: not-allowed;
+}
+.dw-input[aria-invalid='true'],
+.dw-select[aria-invalid='true'],
+.dw-textarea[aria-invalid='true'] {
+  border-color: var(--dw-color-danger);
+}
+.dw-field-hint,
+.dw-field-error,
+.dw-required-note {
+  font-size: 14px;
+  margin: 0;
+  color: var(--dw-color-muted);
+}
+.dw-field-error {
+  color: var(--dw-color-danger);
+}
+.dw-file-input {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: var(--dw-space-2);
+}
+.dw-file-name {
+  font-size: 14px;
+  color: var(--dw-color-muted);
+  overflow-wrap: anywhere;
+}
+.dw-tone-neutral {
+  --dw-tone: var(--dw-color-muted);
+  --dw-tone-bg: var(--dw-color-badge);
+}
+.dw-tone-info {
+  --dw-tone: var(--dw-color-info);
+  --dw-tone-bg: var(--dw-color-info-bg);
+}
+.dw-tone-success {
+  --dw-tone: var(--dw-color-success);
+  --dw-tone-bg: var(--dw-color-success-bg);
+}
+.dw-tone-warning {
+  --dw-tone: var(--dw-color-warning);
+  --dw-tone-bg: var(--dw-color-warning-bg);
+}
+.dw-tone-danger {
+  --dw-tone: var(--dw-color-danger);
+  --dw-tone-bg: var(--dw-color-danger-bg);
+}
+.dw-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 2px 8px;
+  border-radius: var(--dw-radius);
+  font-size: 12px;
+  color: var(--dw-tone);
+  background: var(--dw-tone-bg);
+}
+.dw-notice {
+  padding: 12px 16px;
+  background: var(--dw-tone-bg);
+  color: var(--dw-tone);
+  border-inline-start: 3px solid var(--dw-tone);
+  border-radius: var(--dw-radius);
+  overflow-wrap: anywhere;
+}
+.dw-notice > :last-child {
+  margin-bottom: 0;
+}
+.dw-empty {
+  padding: 24px;
+  color: var(--dw-color-muted);
+  background: var(--dw-color-subtle);
+  border-radius: var(--dw-radius);
+}
+.dw-empty p {
+  margin: 0;
+}
+.dw-panel-header {
+  margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+.dw-panel-header h2 {
+  margin: 0;
+}
+.dw-tooltip-host {
+  position: relative;
+  display: inline-flex;
+  min-width: 0;
+}
+/* Fixed and viewport-clamped so hidden tooltips never create page overflow. */
+.dw-tooltip {
+  position: fixed;
+  z-index: 60;
+  display: none;
+  width: max-content;
+  max-width: min(240px, calc(100vw - 16px));
+  pointer-events: none;
+  color: white;
+  background: var(--dw-color-text);
+  border-radius: var(--dw-radius);
+  padding: 6px 10px;
+  font: 400 14px/1.4 var(--dw-font-sans);
+  box-shadow: var(--dw-shadow-overlay);
+}
+.dw-tooltip-host:hover > .dw-tooltip:not([hidden]),
+.dw-tooltip-host:focus-within > .dw-tooltip:not([hidden]) {
+  display: block;
+}
+.dw-menu {
+  position: relative;
+}
+.dw-menu-panel {
+  position: absolute;
+  z-index: 40;
+  top: calc(100% + 8px);
+  right: 0;
+  min-width: 240px;
+  max-width: min(360px, 90vw);
+  padding: 4px;
+  display: grid;
+  gap: 4px;
+  background: white;
+  border: 1px solid var(--dw-color-line);
+  border-radius: var(--dw-radius);
+  box-shadow: var(--dw-shadow-overlay);
+}
+.dw-menu-panel .dw-button {
+  min-height: 40px;
+  justify-content: flex-start;
+  text-align: left;
+}
+.dw-dialog {
+  --dw-control-height: 40px;
+  --dw-control-padding-y: 6px;
+  --dw-control-font: 16px;
+  --dw-control-padding: 16px;
+  padding: 0;
+  width: min(760px, calc(100vw - 48px));
+  max-height: calc(100dvh - 48px);
+  overflow: auto;
+  border: 1px solid var(--dw-color-input-border);
+  border-radius: var(--dw-radius);
+  color: var(--dw-color-text);
+  background: white;
+  box-shadow: var(--dw-shadow-overlay);
+}
+.dw-dialog::backdrop {
+  background: var(--dw-backdrop);
+}
+.dw-dialog-header {
+  padding: 24px 24px 0;
+}
+.dw-dialog-header h2 {
+  margin: 0;
+}
+.dw-dialog-body {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.dw-dialog-body > p,
+.dw-dialog-body > ul {
+  margin-block: 0;
+}
+.dw-dialog-body > .dw-button {
+  align-self: flex-start;
+}
+.dw-dialog-footer {
+  position: sticky;
+  bottom: 0;
+  padding: 16px 24px;
+  border-top: 1px solid var(--dw-color-line);
+  background: white;
+  justify-content: flex-end;
+}
+.dw-dialog-footer > .dw-actions {
+  margin: 0;
+}
+.dw-dialog fieldset {
+  border: 1px solid var(--dw-color-line);
+  border-radius: var(--dw-radius);
+  padding: 16px;
+  min-width: 0;
+}
+.dw-dialog legend {
+  font-size: 14px;
+  font-weight: 700;
+  padding-inline: 8px;
+}

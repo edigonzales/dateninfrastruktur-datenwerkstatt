@@ -1,0 +1,134 @@
+[WebServer] (node:13251) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] (node:13252) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 38 tests using 1 worker
+
+(node:13257) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] 8:57:42 PM [vite] (client) [console.warn] WebR is using `PostMessage` communication channel, nested R REPLs are not available.
+  ✓   1 [firefox] › tests/e2e/archive.spec.ts:6:1 › P6 AT-051 AT-053 AT-063: Golden archive in fresh profile, graph remap, real SQL/PNG, duplicate and independent deletion (32.0s)
+  ✓   2 [firefox] › tests/e2e/archive.spec.ts:141:1 › P6 AT-059: recipe inspection/confirmation without engine or empty fake tables (2.6s)
+  ✓   3 [firefox] › tests/e2e/imports.spec.ts:20:1 › P2 / AT-008 AT-010 AT-018: confirmed import, reload, data preview, independent alias and complete Parquet download (8.9s)
+  ✓   4 [firefox] › tests/e2e/imports.spec.ts:53:1 › P2 / AT-016: denied OPFS requires explicit temporary mode and never claims local persistence (7.1s)
+  ✓   5 [firefox] › tests/e2e/imports.spec.ts:79:1 › P2 / AT-013: real import surfaces OPFS quota failure without publishing partial metadata (35.9s)
+  ✓   6 [firefox] › tests/e2e/imports.spec.ts:105:1 › P2 / AT-002 AT-024 partial: one import worker survives routes and closes before another workspace opens (26.4s)
+  ✓   7 [firefox] › tests/e2e/multitab.spec.ts:2:1 › P6 AT-065: absent Web Locks permits existing project only as reader, archive export remains possible (10.1s)
+[WebServer] 8:59:56 PM [vite] (client) [console.warn] WebR is using `PostMessage` communication channel, nested R REPLs are not available.
+  ✓   8 [firefox] › tests/e2e/p8-golden.spec.ts:63:1 › P8 AT-072: portal population + local CSV, unchanged Golden SQL/R, process restart and second fresh archive profile (1.5m)
+  ✓   9 [firefox] › tests/e2e/p8-imports.spec.ts:7:1 › P8 AT-019 AT-020: XLSX invalidates old preview, real over-limit file and visible replacement schema (8.2s)
+  ✓  10 [firefox] › tests/e2e/portal.spec.ts:3:1 › P4 AT-038 AT-056: explicit deep-link preview, replacement history and no autorun (14.2s)
+[WebServer] 9:01:41 PM [vite] (client) [console.warn] WebR is using `PostMessage` communication channel, nested R REPLs are not available.
+[WebServer] 9:02:09 PM [vite] (client) [console.warn] WebR is using `PostMessage` communication channel, nested R REPLs are not available.
+  ✓  11 [firefox] › tests/e2e/r.spec.ts:10:1 › P5 AT-040 AT-042 AT-046 AT-048: complete UI transfer, lazy worker survives routes, capture, reset and cancel (57.5s)
+  ✓  12 [firefox] › tests/e2e/sql.spec.ts:18:1 › P3 / AT-022 AT-027 AT-032 AT-049 AT-055 AT-058: SQL, paging, keep, exports, chart, resize and reload (12.8s)
+  ✓  13 [firefox] › tests/e2e/sql.spec.ts:77:1 › P3 / AT-025 AT-030: parameters, explicit cancel and failed runs never show a previous output (13.5s)
+  ✓  14 [firefox] › tests/e2e/sql.spec.ts:109:1 › P3 / AT-049: rendered bars and line gaps preserve NULL, PNG contains actual pixels (5.3s)
+  ✓  15 [firefox] › tests/e2e/workspaces.spec.ts:9:1 › AT-003: workspace metadata persists across reload without engine startup (2.5s)
+[WebServer] 9:03:11 PM [vite] (client) [console.warn] WebR is using `PostMessage` communication channel, nested R REPLs are not available.
+  ✓  16 [firefox] › tests/e2e/workspaces.spec.ts:28:1 › AT-005 AT-058: saved SQL and R, separate models, duplicate, archive, no code auto-run (5.6s)
+  ✓  17 [firefox] › tests/e2e/workspaces.spec.ts:90:1 › AT-012: another tab opens read-only and explicitly reacquires after writer closes (4.2s)
+  ✓  18 [firefox] › tests/e2e/workspaces.spec.ts:109:1 › AT-054 AT-057 partial: compact chrome and implemented settings persist (3.5s)
+[WebServer] 9:03:23 PM [vite] (client) [console.error] checkedId@http://127.0.0.1:4173/src/domain/workspace.ts:4:20
+[WebServer] open@http://127.0.0.1:4173/src/application/workspaceService.ts:386:23
+[WebServer] loader@http://127.0.0.1:4173/src/app/router.tsx:93:46
+[WebServer] loadResource/flight<@http://127.0.0.1:4173/node_modules/.vite/deps/@tanstack_react-router.js?v=e9127557:3174:40
+[WebServer] promise callback*loadResource@http://127.0.0.1:4173/node_modules/.vite/deps/@tanstack_react-router.js?v=e9127557:3174:23
+[WebServer] createLoaderTask$1@http://127.0.0.1:4173/node_modules/.vite/deps/@tanstack_react-router.js?v=e9127557:3279:47
+[WebServer] planSuccessfulLane@http://127.0.0.1:4173/node_modules/.vite/deps/@tanstack_react-router.js?v=e9127557:3549:22
+[WebServer] contextualize$1@http://127.0.0.1:4173/node_modules/.vite/deps/@tanstack_react-router.js?v=e9127557:3095:2
+[WebServer] executeClientLane@http://127.0.0.1:4173/node_modules/.vite/deps/@tanstack_react-router.js?v=e9127557:3552:25
+[WebServer] runClientTransaction@http://127.0.0.1:4173/node_modules/.vite/deps/@tanstack_react-router.js?v=e9127557:3796:23
+[WebServer] run@http://127.0.0.1:4173/node_modules/.vite/deps/@tanstack_react-router.js?v=e9127557:3924:40
+[WebServer] loadClientRoute@http://127.0.0.1:4173/node_modules/.vite/deps/@tanstack_react-router.js?v=e9127557:3959:11
+[WebServer] RouterCore/this.load@http://127.0.0.1:4173/node_modules/.vite/deps/@tanstack_react-router.js?v=e9127557:2450:10
+[WebServer] Transitioner/<@http://127.0.0.1:4173/node_modules/.vite/deps/@tanstack_react-router.js?v=e9127557:6852:32
+[WebServer] react_stack_bottom_frame@http://127.0.0.1:4173/node_modules/.vite/deps/react-dom_client.js?v=e9127557:12902:13
+[WebServer] runWithFiberInDEV@http://127.0.0.1:4173/node_modules/.vite/deps/react-dom_client.js?v=e9127557:851:123
+[WebServer] commitHookEffectListMount@http://127.0.0.1:4173/node_modules/.vite/deps/react-dom_client.js?v=e9127557:6617:153
+[WebServer] commitHookLayoutEffects@http://127.0.0.1:4173/node_modules/.vite/deps/react-dom_client.js?v=e9127557:6605:55
+[WebServer] commitLayoutEffectOnFiber@http://127.0.0.1:4173/node_modules/.vite/deps/react-dom_client.js?v=e9127557:6959:19
+[WebServer] recursivelyTraverseLayoutEffects@http://127.0.0.1:4173/node_modules/.vite/deps/react-dom_client.js?v=e9127557:7479:127
+[WebServer] commitLayoutEffectOnFiber@http://127.0.0.1:4173/node_modules/.vite/deps/react-dom_client.js?v=e9127557:6958:38
+[WebServer] recursivelyTraverseLayoutEffects@http://127.0.0.1:4173/node_modules/.vite/deps/react-dom_client.js?v=e9127557:7479:127
+[WebServer] commitLayoutEffectOnFiber@http://127.0.0.1:4173/node_modules/.vite/deps/react-dom_client.js?v=e9127557:7047:46
+[WebServer] recursivelyTraverseLayoutEffects@http://127.0.0.1:4173/node_modules/.vite/deps/react-dom_client.js?v=e9127557:7479:127
+[WebServer] commitLayoutEffectOnFiber@http://127.0.0.1:4173/node_modules/.vite/deps/react-dom_client.js?v=e9127557:6958:38
+[WebServer] recursivelyTraverseLayoutEffects@http://127.0.0.1:4173/node_modules/.vite/deps/react-dom_client.js?v=e9127557:7479:127
+[WebServer] commitLayoutEffectOnFiber@http://127.0.0.1:4173/node_modules/.vite/deps/react-dom_client.js?v=e9127557:6958:38
+[WebServer] recursivelyTraverseLayoutEffects@http://127.0.0.1:4173/node_modules/.vite/deps/react-dom_client.js?v=e9127557:7479:127
+[WebServer] commitLayoutEffectOnFiber@http://127.0.0.1:4173/node_modules/.vite/deps/react-dom_client.js?v=e9127557:6958:38
+[WebServer] recursivelyTraverseLayoutEffects@http://127.0.0.1:4173/node_modules/.vite/deps/react-dom_client.js?v=e9127557:7479:127
+[WebServer] commitLayoutEffectOnFiber@http://127.0.0.1:4173/node_modules/.vite/deps/react-dom_client.js?v=e9127557:7047:46
+[WebServer] recursivelyTraverseLayoutEffects@http://127.0.0.1:4173/node_modules/.vite/deps/react-dom_client.js?v=e9127557:7479:127
+[WebServer] commitLayoutEffectOnFiber@http://127.0.0.1:4173/node_modules/.vite/deps/react-dom_client.js?v=e9127557:6975:38
+[WebServer] flushLayoutEffects@http://127.0.0.1:4173/node_modules/.vite/deps/react-dom_client.js?v=e9127557:8671:112
+[WebServer] commitRoot@http://127.0.0.1:4173/node_modules/.vite/deps/react-dom_client.js?v=e9127557:8584:5
+[WebServer] commitRootWhenReady@http://127.0.0.1:4173/node_modules/.vite/deps/react-dom_client.js?v=e9127557:8079:14
+[WebServer] performWorkOnRoot@http://127.0.0.1:4173/node_modules/.vite/deps/react-dom_client.js?v=e9127557:8051:27
+[WebServer] performWorkOnRootViaSchedulerTask@http://127.0.0.1:4173/node_modules/.vite/deps/react-dom_client.js?v=e9127557:9059:21
+[WebServer] performWorkUntilDeadline@http://127.0.0.1:4173/node_modules/.vite/deps/react-dom_client.js?v=e9127557:36:46
+[WebServer] EventHandlerNonNull*require_scheduler_development</<@http://127.0.0.1:4173/node_modules/.vite/deps/react-dom_client.js?v=e9127557:141:4
+[WebServer] require_scheduler_development<@http://127.0.0.1:4173/node_modules/.vite/deps/react-dom_client.js?v=e9127557:244:4
+[WebServer] __commonJSMin/<@http://127.0.0.1:4173/node_modules/.vite/deps/rolldown-runtime-B-1-B7_t.js?v=e9127557:8:49
+[WebServer] require_scheduler<@http://127.0.0.1:4173/node_modules/.vite/deps/react-dom_client.js?v=e9127557:249:19
+[WebServer] __commonJSMin/<@http://127.0.0.1:4173/node_modules/.vite/deps/rolldown-runtime-B-1-B7_t.js?v=e9127557:8:49
+[WebServer] require_react_dom_client_development</<@http://127.0.0.1:4173/node_modules/.vite/deps/react-dom_client.js?v=e9127557:11672:19
+[WebServer] require_react_dom_client_development<@http://127.0.0.1:4173/node_modules/.vite/deps/react-dom_client.js?v=e9127557:14373:4
+[WebServer] __commonJSMin/<@http://127.0.0.1:4173/node_modules/.vite/deps/rolldown-runtime-B-1-B7_t.js?v=e9127557:8:49
+[WebServer] require_client<@http://127.0.0.1:4173/node_modules/.vite/deps/react-dom_client.js?v=e9127557:14378:19
+[WebServer] __commonJSMin/<@http://127.0.0.1:4173/node_modules/.vite/deps/rolldown-runtime-B-1-B7_t.js?v=e9127557:8:49
+[WebServer] @http://127.0.0.1:4173/node_modules/.vite/deps/react-dom_client.js?v=e9127557:14381:16
+[WebServer] 
+[WebServer] 
+[WebServer] The above error occurred in the <MatchInnerImpl> component.
+[WebServer] 
+[WebServer] React will try to recreate this component tree from scratch using the error boundary you provided, CatchBoundary.
+[WebServer] 
+[WebServer] 9:03:23 PM [vite] (client) [console.warn] Warning: Error in route match: __root__/
+  ✓  19 [firefox] › tests/e2e/workspaces.spec.ts:142:1 › AT-058 / REQ-060: invalid workspace/analysis route is controlled (3.0s)
+(node:15432) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] 9:03:32 PM [vite] (client) [console.warn] WebR is using `PostMessage` communication channel, nested R REPLs are not available.
+  ✓  20 [webkit] › tests/e2e/archive.spec.ts:6:1 › P6 AT-051 AT-053 AT-063: Golden archive in fresh profile, graph remap, real SQL/PNG, duplicate and independent deletion (43.2s)
+  ✓  21 [webkit] › tests/e2e/archive.spec.ts:141:1 › P6 AT-059: recipe inspection/confirmation without engine or empty fake tables (2.2s)
+  ✓  22 [webkit] › tests/e2e/imports.spec.ts:20:1 › P2 / AT-008 AT-010 AT-018: confirmed import, reload, data preview, independent alias and complete Parquet download (7.6s)
+  ✓  23 [webkit] › tests/e2e/imports.spec.ts:53:1 › P2 / AT-016: denied OPFS requires explicit temporary mode and never claims local persistence (4.7s)
+  ✓  24 [webkit] › tests/e2e/imports.spec.ts:79:1 › P2 / AT-013: real import surfaces OPFS quota failure without publishing partial metadata (7.5s)
+  ✓  25 [webkit] › tests/e2e/imports.spec.ts:105:1 › P2 / AT-002 AT-024 partial: one import worker survives routes and closes before another workspace opens (6.5s)
+  ✓  26 [webkit] › tests/e2e/multitab.spec.ts:2:1 › P6 AT-065: absent Web Locks permits existing project only as reader, archive export remains possible (4.8s)
+[WebServer] 9:04:54 PM [vite] (client) [console.warn] WebR is using `PostMessage` communication channel, nested R REPLs are not available.
+  ✓  27 [webkit] › tests/e2e/p8-golden.spec.ts:63:1 › P8 AT-072: portal population + local CSV, unchanged Golden SQL/R, process restart and second fresh archive profile (1.0m)
+  ✓  28 [webkit] › tests/e2e/p8-imports.spec.ts:7:1 › P8 AT-019 AT-020: XLSX invalidates old preview, real over-limit file and visible replacement schema (8.3s)
+  ✓  29 [webkit] › tests/e2e/portal.spec.ts:3:1 › P4 AT-038 AT-056: explicit deep-link preview, replacement history and no autorun (15.2s)
+[WebServer] 9:06:12 PM [vite] (client) [console.warn] WebR is using `PostMessage` communication channel, nested R REPLs are not available.
+[WebServer] 9:06:36 PM [vite] (client) [console.warn] WebR is using `PostMessage` communication channel, nested R REPLs are not available.
+  ✓  30 [webkit] › tests/e2e/r.spec.ts:10:1 › P5 AT-040 AT-042 AT-046 AT-048: complete UI transfer, lazy worker survives routes, capture, reset and cancel (51.5s)
+  ✓  31 [webkit] › tests/e2e/sql.spec.ts:18:1 › P3 / AT-022 AT-027 AT-032 AT-049 AT-055 AT-058: SQL, paging, keep, exports, chart, resize and reload (10.8s)
+  ✓  32 [webkit] › tests/e2e/sql.spec.ts:77:1 › P3 / AT-025 AT-030: parameters, explicit cancel and failed runs never show a previous output (12.0s)
+  ✓  33 [webkit] › tests/e2e/sql.spec.ts:109:1 › P3 / AT-049: rendered bars and line gaps preserve NULL, PNG contains actual pixels (6.7s)
+  ✓  34 [webkit] › tests/e2e/workspaces.spec.ts:9:1 › AT-003: workspace metadata persists across reload without engine startup (2.3s)
+[WebServer] 9:07:33 PM [vite] (client) [console.warn] WebR is using `PostMessage` communication channel, nested R REPLs are not available.
+  ✓  35 [webkit] › tests/e2e/workspaces.spec.ts:28:1 › AT-005 AT-058: saved SQL and R, separate models, duplicate, archive, no code auto-run (6.6s)
+  ✓  36 [webkit] › tests/e2e/workspaces.spec.ts:90:1 › AT-012: another tab opens read-only and explicitly reacquires after writer closes (2.2s)
+  ✓  37 [webkit] › tests/e2e/workspaces.spec.ts:109:1 › AT-054 AT-057 partial: compact chrome and implemented settings persist (3.6s)
+[WebServer] 9:07:43 PM [vite] (client) [console.error] ZodError: [
+[WebServer]   {
+[WebServer]     "origin": "string",
+[WebServer]     "code": "invalid_format",
+[WebServer]     "format": "uuid",
+[WebServer]     "pattern": "/^([0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[1-8][0-9a-fA-F]{3}-[89abAB][0-9a-fA-F]{3}-[0-9a-fA-F]{12}|00000000-0000-0000-0000-000000000000|ffffffff-ffff-ffff-ffff-ffffffffffff)$/",
+[WebServer]     "path": [],
+[WebServer]     "message": "Invalid UUID"
+[WebServer]   }
+[WebServer] ]
+[WebServer] 
+[WebServer] The above error occurred in the <MatchInnerImpl> component.
+[WebServer] 
+[WebServer] React will try to recreate this component tree from scratch using the error boundary you provided, CatchBoundary.
+[WebServer] 
+[WebServer] 9:07:43 PM [vite] (client) [console.warn] Warning: Error in route match: __root__/
+  ✓  38 [webkit] › tests/e2e/workspaces.spec.ts:142:1 › AT-058 / REQ-060: invalid workspace/analysis route is controlled (2.5s)
+
+  38 passed (10.1m)

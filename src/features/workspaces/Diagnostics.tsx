@@ -1,3 +1,4 @@
+import {Button, Input, FormField} from '../../ui/Controls';
 import {useState} from 'react';
 import type {EditingSession} from '../../application/workspaceService';
 import {timings} from '../../application/diagnostics';
@@ -17,11 +18,10 @@ export function Diagnostics({session}: {session: EditingSession}) {
         Exportiert IDs, Laufstatus, tatsächliche Runtimeversionen und die letzten 200 Zeitmessungen.
         Keine Tabellenwerte, Dateien, Quellen-URLs, Parametersätze oder Fehlermeldungstexte.
       </p>
-      <label>
-        <input type="checkbox" checked={code} onChange={(e) => setCode(e.target.checked)} />
-        Analysecode ausdrücklich aufnehmen
-      </label>
-      <button
+      <FormField label={<>Analysecode ausdrücklich aufnehmen</>}>
+        <Input type="checkbox" checked={code} onChange={(e) => setCode(e.target.checked)} />
+      </FormField>
+      <Button
         onClick={() => {
           const d = session.document;
           const data = {
@@ -64,7 +64,7 @@ export function Diagnostics({session}: {session: EditingSession}) {
         }}
       >
         Diagnosebericht herunterladen
-      </button>
+      </Button>
     </details>
   );
 }

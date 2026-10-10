@@ -1,0 +1,11 @@
+{
+  "baseline": "c1d4bc0ee38eafb182d736e5f606d1650bb8e7f6",
+  "historicalVerificationFiles": 231,
+  "changedHistoricalVerificationFiles": [],
+  "implementationHistoryPreserved": true,
+  "sourceRepositoryStatus": {
+    "../datenportal-sodata": "",
+    "../datenportal-datenblatt-editor": ""
+  },
+  "domainDiff": []
+}

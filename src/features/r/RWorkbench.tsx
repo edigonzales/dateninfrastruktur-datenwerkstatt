@@ -1,3 +1,5 @@
+import {Button, Input, Select, FormField, ActionGroup, Toolbar, Notice} from '../../ui/Controls';
+import {ActionMenu} from '../../ui/ActionMenu';
 import {useEffect, useRef, useState, useSyncExternalStore} from 'react';
 import {Panel, PanelGroup, PanelResizeHandle} from 'react-resizable-panels';
 import type {RAnalysis, RunId, DatasetId, PlotResult} from '../../domain/model';
@@ -71,10 +73,16 @@ export function RWorkbench({
   };
   return (
     <div className="analysis-area r-workbench">
-      <div className="analysis-toolbar">
-        <label>
-          <span className="visually-hidden">Analysename</span>
-          <input
+      <Toolbar className="analysis-toolbar">
+        <FormField
+          label={
+            <>
+              <span className="visually-hidden">Analysename</span>
+            </>
+          }
+          labelHidden
+        >
+          <Input
             value={name}
             disabled={session.readOnly}
             onChange={(e) => setName(e.target.value)}
@@ -86,39 +94,68 @@ export function RWorkbench({
               }
             }}
           />
-        </label>
-        <button disabled={!!busy || session.readOnly} onClick={() => execute()}>
-          Ausführen
-        </button>
-        <button disabled={!busy?.startsWith('R ')} onClick={() => service.cancel()}>
-          Abbrechen
-        </button>
-        <button disabled={session.readOnly} onClick={() => void session.flush().catch(report)}>
-          Speichern
-        </button>
-        <button onClick={() => view.patch({rObjectsVisible: !objectsOpen})}>
-          Objekte / Eingaben
-        </button>
-        <button onClick={() => view.patch({rConsoleVisible: !consoleOpen})}>Konsole</button>
-        <button disabled={!!busy || session.readOnly} onClick={() => setReset(true)}>
-          R zurücksetzen
-        </button>
-        <Parameters analysis={analysis} session={session} />
-        <button onClick={() => setOptionsOpen(true)}>R-Optionen</button>
-        <button
-          onClick={() => {
-            view.reset();
-            columns.current?.setLayout([50, 50]);
-            rows.current?.setLayout([75, 25]);
-          }}
-        >
-          Arbeitsfläche zurücksetzen
-        </button>
+        </FormField>
+        <ActionGroup>
+          <Button
+            variant="primary"
+            icon="play-fill"
+            busy={busy?.startsWith('R ') ?? false}
+            disabled={!!busy || session.readOnly}
+            onClick={() => execute()}
+          >
+            Ausführen
+          </Button>
+          {busy?.startsWith('R ') && (
+            <Button icon="stop-fill" onClick={() => service.cancel()}>
+              Abbrechen
+            </Button>
+          )}
+          <Button
+            icon="floppy"
+            disabled={session.readOnly}
+            onClick={() => void session.flush().catch(report)}
+          >
+            Speichern
+          </Button>
+        </ActionGroup>
+        <ActionGroup>
+          <Button
+            aria-pressed={objectsOpen}
+            onClick={() => view.patch({rObjectsVisible: !objectsOpen})}
+          >
+            Objekte / Eingaben
+          </Button>
+          <Button
+            aria-pressed={consoleOpen}
+            onClick={() => view.patch({rConsoleVisible: !consoleOpen})}
+          >
+            Konsole
+          </Button>
+        </ActionGroup>
+        <ActionMenu
+          actions={[
+            {label: 'R-Optionen', onSelect: () => setOptionsOpen(true)},
+            {
+              label: 'R zurücksetzen',
+              disabled: !!busy || session.readOnly,
+              variant: 'danger',
+              onSelect: () => setReset(true),
+            },
+            {
+              label: 'Arbeitsfläche zurücksetzen',
+              icon: 'arrow-repeat',
+              onSelect: () => {
+                view.reset();
+                columns.current?.setLayout([50, 50]);
+                rows.current?.setLayout([75, 25]);
+              },
+            },
+          ]}
+        />
         {optionsOpen && (
           <Modal title="R-Optionen" onClose={() => setOptionsOpen(false)}>
-            <label>
-              Umgebung
-              <select
+            <FormField label={<>Umgebung</>}>
+              <Select
                 value={analysis.environmentMode}
                 disabled={!!busy || session.readOnly}
                 onChange={(e) =>
@@ -129,12 +166,12 @@ export function RWorkbench({
               >
                 <option value="workspace-session">Workspace-Sitzung</option>
                 <option value="fresh-environment">Frisches Environment</option>
-              </select>
-            </label>
-            <label>
-              Zufallsseed
-              <input
+              </Select>
+            </FormField>
+            <FormField label={<>Zufallsseed</>}>
+              <Input
                 type="number"
+                disabled={!!busy || session.readOnly}
                 min="0"
                 max="2147483647"
                 defaultValue={analysis.randomSeed ?? ''}
@@ -148,15 +185,15 @@ export function RWorkbench({
                   }
                 }}
               />
-            </label>
+            </FormField>
             <p>Ein frisches Environment ist keine Prozessisolation.</p>
           </Modal>
         )}
-      </div>
-      <div className="run-status" role="status">
-        <label>
-          R-Lauf
-          <select
+      </Toolbar>
+      <div className="run-status dw-compact">
+        <Parameters analysis={analysis} session={session} />
+        <FormField label={<>R-Lauf</>}>
+          <Select
             value={selected}
             onChange={(e) => {
               setSelected(e.target.value);
@@ -171,15 +208,15 @@ export function RWorkbench({
                 {r.queuedAt} · {r.status}
               </option>
             ))}
-          </select>
-        </label>
+          </Select>
+        </FormField>
         <span>
           {busy ?? run?.status ?? 'Bereit'} · R-Epoche {service.epoch}
         </span>
         {!service.scope && !busy && !session.readOnly && (
-          <button onClick={() => void service.activate(analysis.id).catch(report)}>
+          <Button onClick={() => void service.activate(analysis.id).catch(report)}>
             R initialisieren
-          </button>
+          </Button>
         )}
         {run && (
           <details>
@@ -189,14 +226,14 @@ export function RWorkbench({
         )}
       </div>
       {run?.error && (
-        <p role="alert" className="result-error">
+        <Notice tone="danger" className="result-error">
           {run.error.code}: {run.error.message}
-        </p>
+        </Notice>
       )}
       {run?.warnings.map((w) => (
-        <p key={w} role="status">
+        <Notice key={w} tone="info">
           {w}
-        </p>
+        </Notice>
       ))}
       <PanelGroup
         ref={rows}
@@ -218,25 +255,27 @@ export function RWorkbench({
               <aside className="r-objects">
                 <h3>Objekte</h3>
                 <small>Scope {service.scope?.key ?? 'nicht aktiv'}</small>
-                {service.objectList.map((o) => (
-                  <button
-                    key={o.ref.name}
-                    disabled={!!busy || !o.isDataFrame}
-                    onClick={() => {
-                      setObject(o.ref);
-                      setPlan(undefined);
-                      setDatasetName(o.ref.name);
-                      setSqlName(o.ref.name.toLowerCase().replace(/[^a-z0-9_]/g, '_'));
-                      void service
-                        .previewObject(o.ref, new AbortController().signal)
-                        .then(setPreview)
-                        .catch(report);
-                    }}
-                  >
-                    {o.ref.name} ·{' '}
-                    {o.isDataFrame ? `${o.rowCount} × ${o.columnCount}` : o.classes.join(', ')}
-                  </button>
-                ))}
+                <ActionGroup>
+                  {service.objectList.map((o) => (
+                    <Button
+                      key={o.ref.name}
+                      disabled={!!busy || !o.isDataFrame}
+                      onClick={() => {
+                        setObject(o.ref);
+                        setPlan(undefined);
+                        setDatasetName(o.ref.name);
+                        setSqlName(o.ref.name.toLowerCase().replace(/[^a-z0-9_]/g, '_'));
+                        void service
+                          .previewObject(o.ref, new AbortController().signal)
+                          .then(setPreview)
+                          .catch(report);
+                      }}
+                    >
+                      {o.ref.name} ·{' '}
+                      {o.isDataFrame ? `${o.rowCount} × ${o.columnCount}` : o.classes.join(', ')}
+                    </Button>
+                  ))}
+                </ActionGroup>
                 <h3>Eingaben</h3>
                 {analysis.inputs.map((i) => (
                   <p key={i.name}>
@@ -244,7 +283,7 @@ export function RWorkbench({
                   </p>
                 ))}
                 {object && (
-                  <button
+                  <Button
                     disabled={!!busy || session.readOnly}
                     onClick={() => {
                       setApproved([]);
@@ -255,7 +294,7 @@ export function RWorkbench({
                     }}
                   >
                     Objekt als Datensatz
-                  </button>
+                  </Button>
                 )}
               </aside>
             )}
@@ -290,7 +329,7 @@ export function RWorkbench({
                   <div className="r-output">
                     {preview ? (
                       <>
-                        <button onClick={() => setPreview(undefined)}>Grafiken anzeigen</button>
+                        <Button onClick={() => setPreview(undefined)}>Grafiken anzeigen</Button>
                         <PreviewTable preview={preview} />
                       </>
                     ) : plots.length ? (
@@ -334,37 +373,67 @@ export function RWorkbench({
         )}
       </PanelGroup>
       {reset && (
-        <Modal title="R-Sitzung zurücksetzen?" onClose={() => setReset(false)}>
+        <Modal
+          title="R-Sitzung zurücksetzen?"
+          onClose={() => setReset(false)}
+          footer={
+            <>
+              <Button
+                variant="danger"
+                onClick={() => {
+                  void service
+                    .reset()
+                    .then(() => {
+                      setReset(false);
+                      setPreview(undefined);
+                      setObject(undefined);
+                    })
+                    .catch(report);
+                }}
+              >
+                Reset bestätigen
+              </Button>
+            </>
+          }
+        >
           <p>
             {service.objectList.length} ungesicherte Objekte werden verworfen. Gespeicherter Code,
             Daten und SQL-Resultate bleiben erhalten.
           </p>
-          <button
-            onClick={() => {
-              void service
-                .reset()
-                .then(() => {
-                  setReset(false);
-                  setPreview(undefined);
-                  setObject(undefined);
-                })
-                .catch(report);
-            }}
-          >
-            Reset bestätigen
-          </button>
         </Modal>
       )}
       {plan && (
-        <Modal title="R-Objekt nach SQL übernehmen" onClose={() => setPlan(undefined)}>
+        <Modal
+          title="R-Objekt nach SQL übernehmen"
+          onClose={() => setPlan(undefined)}
+          footer={
+            <>
+              <Button
+                variant="primary"
+                disabled={
+                  !!busy || plan.issues.some((i) => i.requiresApproval && !approved.includes(i.id))
+                }
+                onClick={() =>
+                  void service
+                    .commitFromR(plan.id, datasetName, approved, new AbortController().signal, {
+                      sqlName,
+                      ...(replace === 'new' ? {} : {replace: replace as DatasetId}),
+                    })
+                    .then(() => setPlan(undefined))
+                    .catch(report)
+                }
+              >
+                Datensatz übernehmen
+              </Button>
+            </>
+          }
+        >
           <PlanView plan={plan} approved={approved} onChange={setApproved} />
-          <label>
-            Datensatzname
-            <input value={datasetName} onChange={(e) => setDatasetName(e.target.value)} />
-          </label>
-          <label>
-            Zieldatensatz
-            <select value={replace} onChange={(e) => setReplace(e.target.value)}>
+          <FormField label={<>Datensatzname</>}>
+            <Input value={datasetName} onChange={(e) => setDatasetName(e.target.value)} />
+          </FormField>
+          <FormField label={<>Zieldatensatz</>}>
+            <Select value={replace} onChange={(e) => setReplace(e.target.value)}>
               <option value="new">Neuer Datensatz</option>
               {Object.values(session.document.datasets)
                 .filter((d) => !d.removedAt)
@@ -373,32 +442,15 @@ export function RWorkbench({
                     {d.name} ersetzen
                   </option>
                 ))}
-            </select>
-          </label>
-          <label>
-            SQL-Name
-            <input
+            </Select>
+          </FormField>
+          <FormField label={<>SQL-Name</>}>
+            <Input
               value={sqlName}
               disabled={replace !== 'new'}
               onChange={(e) => setSqlName(e.target.value)}
             />
-          </label>
-          <button
-            disabled={
-              !!busy || plan.issues.some((i) => i.requiresApproval && !approved.includes(i.id))
-            }
-            onClick={() =>
-              void service
-                .commitFromR(plan.id, datasetName, approved, new AbortController().signal, {
-                  sqlName,
-                  ...(replace === 'new' ? {} : {replace: replace as DatasetId}),
-                })
-                .then(() => setPlan(undefined))
-                .catch(report)
-            }
-          >
-            Datensatz übernehmen
-          </button>
+          </FormField>
         </Modal>
       )}
     </div>
@@ -428,26 +480,31 @@ function Plot({session, result}: {session: EditingSession; result: PlotResult}) 
   return (
     <div ref={container} className="r-plot">
       {url && <img src={url} alt={result.name} />}
-      <button onClick={() => void container.current?.requestFullscreen().catch(report)}>
-        Grafik Vollbild
-      </button>
-      <button
-        onClick={() =>
-          void session
-            .getR()
-            .plot(result.id, new AbortController().signal)
-            .then((blob) => downloadStream(blob.stream(), 'r-grafik.png', 'image/png'))
-            .catch(report)
-        }
-      >
-        PNG herunterladen
-      </button>
-      <button
-        disabled={session.readOnly || result.retention === 'kept'}
-        onClick={() => void session.getR().keepPlot(result.id).catch(report)}
-      >
-        Grafik aufbewahren
-      </button>
+      <ActionGroup className="dw-compact">
+        <Button
+          icon="arrows-fullscreen"
+          onClick={() => void container.current?.requestFullscreen().catch(report)}
+        >
+          Grafik Vollbild
+        </Button>
+        <Button
+          onClick={() =>
+            void session
+              .getR()
+              .plot(result.id, new AbortController().signal)
+              .then((blob) => downloadStream(blob.stream(), 'r-grafik.png', 'image/png'))
+              .catch(report)
+          }
+        >
+          PNG herunterladen
+        </Button>
+        <Button
+          disabled={session.readOnly || result.retention === 'kept'}
+          onClick={() => void session.getR().keepPlot(result.id).catch(report)}
+        >
+          Grafik aufbewahren
+        </Button>
+      </ActionGroup>
     </div>
   );
 }

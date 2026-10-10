@@ -1,0 +1,42 @@
+[WebServer] (node:6613) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] (node:6614) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 14 tests using 1 worker
+
+(node:6631) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓   1 [firefox] › tests/e2e/design-system.spec.ts:19:1 › UI components: labels, native submit, checkbox, errors, busy state, menu and dialog keyboard (3.0s)
+  ✓   2 [firefox] › tests/e2e/design-system.spec.ts:109:1 › UI geometry: 8 px wrapped actions, form labels, narrow/zoom equivalent and failed local font (2.4s)
+  ✓   3 [firefox] › tests/e2e/design-system.spec.ts:187:1 › UI screens: project actions, forms, navigation and settings at target viewports (2.3s)
+[WebServer] 8:47:45 PM [vite] (client) [console.warn] WebR is using `PostMessage` communication channel, nested R REPLs are not available.
+  ✓   4 [firefox] › tests/e2e/p7-ui.spec.ts:16:1 › P7 AT-054–055 AT-058: measured SQL/R geometry, keyboard splitters, layout reset and reload (22.2s)
+  ✓   5 [firefox] › tests/e2e/p7-ui.spec.ts:142:1 › P7 AT-055–057: native focus trap/return, settings, storage cleanup and data-free diagnostics (4.0s)
+  ✓   6 [firefox] › tests/e2e/p7-ui.spec.ts:188:1 › P7 AT-025 AT-055 AT-056: selected SQL is snapshotted and cell markup remains text (4.5s)
+  ✓   7 [firefox] › tests/e2e/p7-ui.spec.ts:215:1 › P7 AT-058: browser history restores the analysis cursor and layout does not edit the domain (3.9s)
+(node:6872) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓   8 [webkit] › tests/e2e/design-system.spec.ts:19:1 › UI components: labels, native submit, checkbox, errors, busy state, menu and dialog keyboard (1.9s)
+  ✓   9 [webkit] › tests/e2e/design-system.spec.ts:109:1 › UI geometry: 8 px wrapped actions, form labels, narrow/zoom equivalent and failed local font (1.2s)
+  ✓  10 [webkit] › tests/e2e/design-system.spec.ts:187:1 › UI screens: project actions, forms, navigation and settings at target viewports (2.2s)
+[WebServer] 8:48:25 PM [vite] (client) [console.warn] WebR is using `PostMessage` communication channel, nested R REPLs are not available.
+[WebServer] 8:48:40 PM [vite] (client) [console.error]   ERR write@[native code]
+[WebServer] handler@http://127.0.0.1:4173/node_modules/.vite/deps/editor.api2-DCT-GyFS.js:114775:47
+[WebServer] 8:48:40 PM [vite] (client) [Unhandled rejection] Canceled: Canceled
+[WebServer]  > cancel node_modules/monaco-editor/esm/vs/base/common/async.js:686:48
+[WebServer]     684 |      }
+[WebServer]     685 |      cancel() {
+[WebServer]     686 |          return this.error(new CancellationError());
+[WebServer]         |                                                  ^
+[WebServer]     687 |      }
+[WebServer]     688 |  }
+[WebServer]  > handler node_modules/monaco-editor/esm/vs/platform/clipboard/browser/clipboardService.js:74:63
+[WebServer] 
+  ✓  11 [webkit] › tests/e2e/p7-ui.spec.ts:16:1 › P7 AT-054–055 AT-058: measured SQL/R geometry, keyboard splitters, layout reset and reload (23.8s)
+  ✓  12 [webkit] › tests/e2e/p7-ui.spec.ts:142:1 › P7 AT-055–057: native focus trap/return, settings, storage cleanup and data-free diagnostics (3.2s)
+  ✓  13 [webkit] › tests/e2e/p7-ui.spec.ts:188:1 › P7 AT-025 AT-055 AT-056: selected SQL is snapshotted and cell markup remains text (5.5s)
+[WebServer] 8:48:55 PM [vite] (client) [console.warn] WebR is using `PostMessage` communication channel, nested R REPLs are not available.
+  ✓  14 [webkit] › tests/e2e/p7-ui.spec.ts:215:1 › P7 AT-058: browser history restores the analysis cursor and layout does not edit the domain (3.7s)
+
+  14 passed (1.4m)

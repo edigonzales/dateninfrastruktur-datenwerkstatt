@@ -1,3 +1,6 @@
+import {numericColumn} from '../../ui/table';
+import {Button, Input, Select, FormField, ActionGroup, Toolbar, Notice} from '../../ui/Controls';
+import {ActionMenu} from '../../ui/ActionMenu';
 import {Modal} from '../../ui/Modal';
 import {failureMessage} from '../../application/errors';
 import {TransferToR} from '../r/Transfer';
@@ -57,10 +60,16 @@ export function SqlWorkbench({
   };
   return (
     <div className="analysis-area">
-      <div className="analysis-toolbar">
-        <label>
-          <span className="visually-hidden">Analysename</span>
-          <input
+      <Toolbar className="analysis-toolbar">
+        <FormField
+          label={
+            <>
+              <span className="visually-hidden">Analysename</span>
+            </>
+          }
+          labelHidden
+        >
+          <Input
             value={name}
             disabled={session.readOnly}
             onChange={(e) => setName(e.target.value)}
@@ -72,32 +81,52 @@ export function SqlWorkbench({
               }
             }}
           />
-        </label>
-        <button
-          disabled={session.readOnly}
-          onClick={() => {
-            void session.flush().catch(report);
-          }}
+        </FormField>
+        <ActionGroup>
+          <Button
+            variant="primary"
+            icon="play-fill"
+            busy={busy?.startsWith('SQL ') ?? false}
+            disabled={session.readOnly || !!busy}
+            onClick={() => execute()}
+          >
+            Ausführen
+          </Button>
+          {busy === 'SQL ausführen' && (
+            <Button icon="stop-fill" onClick={() => service.cancel()}>
+              Abbrechen
+            </Button>
+          )}
+          <Button
+            icon="floppy"
+            disabled={session.readOnly}
+            onClick={() => void session.flush().catch(report)}
+          >
+            Speichern
+          </Button>
+        </ActionGroup>
+        <Button
+          aria-pressed={layout.dataPanelVisible}
+          onClick={() => view.patch({dataPanelVisible: !layout.dataPanelVisible})}
         >
-          Speichern
-        </button>
-        <button disabled={session.readOnly || !!busy} onClick={() => execute()}>
-          Ausführen
-        </button>
-        {busy === 'SQL ausführen' && <button onClick={() => service.cancel()}>Abbrechen</button>}
-        <button onClick={() => view.patch({dataPanelVisible: !layout.dataPanelVisible})}>
           Schema
-        </button>
-        <button
-          onClick={() => {
-            view.reset();
-            panels.current?.setLayout([45, 55]);
-          }}
-        >
-          Arbeitsfläche zurücksetzen
-        </button>
-        <span role="status">{busy ?? `SQL · Revision ${analysis.revision}`}</span>
-      </div>
+        </Button>
+        <span role="status" aria-live={busy ? 'polite' : 'off'}>
+          {busy ?? `SQL · Revision ${analysis.revision}`}
+        </span>
+        <ActionMenu
+          actions={[
+            {
+              label: 'Arbeitsfläche zurücksetzen',
+              icon: 'arrow-repeat',
+              onSelect: () => {
+                view.reset();
+                panels.current?.setLayout([45, 55]);
+              },
+            },
+          ]}
+        />
+      </Toolbar>
       <Parameters key={analysis.id} analysis={analysis} session={session} />
       {layout.dataPanelVisible && (
         <Modal
@@ -106,7 +135,7 @@ export function SqlWorkbench({
           onClose={() => view.patch({dataPanelVisible: false})}
           showClose={false}
         >
-          <button onClick={() => view.patch({dataPanelVisible: false})}>Schema schliessen</button>
+          <Button onClick={() => view.patch({dataPanelVisible: false})}>Schema schliessen</Button>
           {Object.values(session.document.datasets)
             .filter((d) => !d.removedAt)
             .map((d) => (
@@ -163,29 +192,28 @@ export function SqlWorkbench({
           />
           <Panel minSize={Math.min(50, (220 / panelHeight) * 100)}>
             <section className="result-section" aria-label="SQL-Resultat">
-              <div className="result-toolbar">
-                <label>
-                  Lauf
-                  <select value={selected} onChange={(e) => setSelected(e.target.value)}>
+              <Toolbar className="result-toolbar">
+                <FormField label={<>Lauf</>}>
+                  <Select value={selected} onChange={(e) => setSelected(e.target.value)}>
                     <option value="latest">Letzter Lauf</option>
                     {runs.map((r) => (
                       <option key={r.id} value={r.id}>
                         {r.queuedAt} · Revision {r.snapshot.analysisRevision} · {statusText(r)}
                       </option>
                     ))}
-                  </select>
-                </label>
+                  </Select>
+                </FormField>
                 {run && (
                   <span>
                     {statusText(run)} · Revision {run.snapshot.analysisRevision} ·{' '}
                     {run.durationMs ?? '–'} ms
                   </span>
                 )}
-              </div>
+              </Toolbar>
               {run?.error && (
-                <p role="alert" className="result-error">
+                <Notice tone="danger" className="result-error">
                   {run.error.code}: {run.error.message}
-                </p>
+                </Notice>
               )}
               {!run && (
                 <p className="result-empty">
@@ -257,7 +285,7 @@ export function Parameters({analysis, session}: {analysis: Analysis; session: Ed
   const [error, setError] = useState('');
   const [dirty, setDirty] = useState(false);
   return (
-    <details className="parameters">
+    <details className="parameters dw-compact">
       <summary>
         Parameter ({Object.keys(analysis.parameters).length})
         {dirty ? ' · Änderungen noch nicht übernommen' : ''}
@@ -275,7 +303,7 @@ export function Parameters({analysis, session}: {analysis: Analysis; session: Ed
           {rows.map((row, i) => (
             <tr key={i}>
               <td>
-                <input
+                <Input
                   aria-label={`Parameter ${i + 1} Name`}
                   disabled={session.readOnly}
                   value={row.name}
@@ -286,7 +314,7 @@ export function Parameters({analysis, session}: {analysis: Analysis; session: Ed
                 />
               </td>
               <td>
-                <select
+                <Select
                   aria-label={`Parameter ${i + 1} Typ`}
                   disabled={session.readOnly}
                   value={row.type}
@@ -311,10 +339,10 @@ export function Parameters({analysis, session}: {analysis: Analysis; session: Ed
                   ].map((t) => (
                     <option key={t}>{t}</option>
                   ))}
-                </select>
+                </Select>
               </td>
               <td>
-                <input
+                <Input
                   aria-label={`Parameter ${i + 1} Wert`}
                   disabled={session.readOnly || row.type === 'null'}
                   value={row.value}
@@ -325,7 +353,7 @@ export function Parameters({analysis, session}: {analysis: Analysis; session: Ed
                 />
               </td>
               <td>
-                <button
+                <Button
                   disabled={session.readOnly}
                   aria-label={`Parameter ${i + 1} entfernen`}
                   onClick={() => {
@@ -334,55 +362,60 @@ export function Parameters({analysis, session}: {analysis: Analysis; session: Ed
                   }}
                 >
                   Entfernen
-                </button>
+                </Button>
               </td>
             </tr>
           ))}
         </tbody>
       </table>
-      <button
-        disabled={session.readOnly}
-        onClick={() => {
-          setRows([...rows, {name: '', type: 'string', value: ''}]);
-          setDirty(true);
-        }}
-      >
-        Parameter hinzufügen
-      </button>
-      <button
-        disabled={session.readOnly || !dirty}
-        onClick={() => {
-          try {
-            const parameters: Record<string, ParameterValue> = {};
-            for (const row of rows) {
-              if (!/^[A-Za-z][A-Za-z0-9_]*$/.test(row.name) || Object.hasOwn(parameters, row.name))
-                throw Error('Parameternamen müssen eindeutig und gültig sein.');
-              if (row.type === 'boolean' && !['true', 'false'].includes(row.value))
-                throw Error('Boolescher Wert: true oder false.');
-              if (row.type === 'number' && !row.value.trim()) throw Error('Zahl fehlt.');
-              const value =
-                row.type === 'null'
-                  ? null
-                  : row.type === 'number'
-                    ? Number(row.value)
-                    : row.type === 'boolean'
-                      ? row.value === 'true'
-                      : row.type === 'string'
-                        ? row.value
-                        : {type: row.type, value: row.value};
-              parameters[row.name] = parameterSchema.parse(value);
+      <ActionGroup>
+        <Button
+          disabled={session.readOnly}
+          onClick={() => {
+            setRows([...rows, {name: '', type: 'string', value: ''}]);
+            setDirty(true);
+          }}
+        >
+          Parameter hinzufügen
+        </Button>
+        <Button
+          disabled={session.readOnly || !dirty}
+          onClick={() => {
+            try {
+              const parameters: Record<string, ParameterValue> = {};
+              for (const row of rows) {
+                if (
+                  !/^[A-Za-z][A-Za-z0-9_]*$/.test(row.name) ||
+                  Object.hasOwn(parameters, row.name)
+                )
+                  throw Error('Parameternamen müssen eindeutig und gültig sein.');
+                if (row.type === 'boolean' && !['true', 'false'].includes(row.value))
+                  throw Error('Boolescher Wert: true oder false.');
+                if (row.type === 'number' && !row.value.trim()) throw Error('Zahl fehlt.');
+                const value =
+                  row.type === 'null'
+                    ? null
+                    : row.type === 'number'
+                      ? Number(row.value)
+                      : row.type === 'boolean'
+                        ? row.value === 'true'
+                        : row.type === 'string'
+                          ? row.value
+                          : {type: row.type, value: row.value};
+                parameters[row.name] = parameterSchema.parse(value);
+              }
+              session.updateAnalysis(analysis.id, {parameters});
+              setDirty(false);
+              setError('');
+            } catch (e) {
+              setError(failureMessage(e));
             }
-            session.updateAnalysis(analysis.id, {parameters});
-            setDirty(false);
-            setError('');
-          } catch (e) {
-            setError(failureMessage(e));
-          }
-        }}
-      >
-        Parameter übernehmen
-      </button>
-      {error && <p role="alert">{error}</p>}
+          }}
+        >
+          Parameter übernehmen
+        </Button>
+      </ActionGroup>
+      {error && <Notice tone="danger">{error}</Notice>}
     </details>
   );
 }
@@ -426,28 +459,30 @@ function TableView({result, session}: {result: TableResult; session: EditingSess
   const unavailable = result.materialization.kind === 'unavailable';
   return (
     <>
-      <div className="result-toolbar">
+      <Toolbar className="result-toolbar">
         <strong>
           {result.rowCount} Zeilen ·{' '}
           {result.coverage.kind === 'limited' ? 'begrenzt' : 'vollständig'} ·{' '}
           {result.retention === 'kept' ? 'aufbewahrt' : 'temporär'}
         </strong>
-        <button
-          disabled={!!busy || unavailable || session.readOnly || result.retention === 'kept'}
-          onClick={() => {
-            void service.keep(result.id).catch(report);
-          }}
-        >
-          Aufbewahren
-        </button>
-        <button
-          disabled={!!busy || unavailable || session.readOnly}
-          onClick={() => setTransfer(true)}
-        >
-          In R
-        </button>
+        <ActionGroup>
+          <Button
+            disabled={!!busy || unavailable || session.readOnly || result.retention === 'kept'}
+            onClick={() => {
+              void service.keep(result.id).catch(report);
+            }}
+          >
+            Aufbewahren
+          </Button>
+          <Button
+            disabled={!!busy || unavailable || session.readOnly}
+            onClick={() => setTransfer(true)}
+          >
+            In R
+          </Button>
+        </ActionGroup>
         {(['csv', 'parquet'] as const).map((format) => (
-          <button
+          <Button
             key={format}
             disabled={!!busy || unavailable}
             onClick={() => {
@@ -464,15 +499,15 @@ function TableView({result, session}: {result: TableResult; session: EditingSess
             }}
           >
             {format.toUpperCase()} exportieren
-          </button>
+          </Button>
         ))}
-        <button
+        <Button
           disabled={unavailable}
           onClick={() => setView(view === 'table' ? 'chart' : 'table')}
         >
           {view === 'table' ? 'Diagramm' : 'Tabelle'}
-        </button>
-      </div>
+        </Button>
+      </Toolbar>
       {transfer && (
         <TransferToR session={session} resultId={result.id} onClose={() => setTransfer(false)} />
       )}
@@ -481,7 +516,7 @@ function TableView({result, session}: {result: TableResult; session: EditingSess
           Das App-Limit hat dieses Resultat gekürzt. Die ursprüngliche Gesamtzahl ist unbekannt.
         </p>
       )}
-      {error && <p role="alert">{error}</p>}
+      {error && <Notice tone="danger">{error}</Notice>}
       {view === 'table' ? (
         <>
           <div className="result-grid" aria-busy={loading}>
@@ -489,8 +524,11 @@ function TableView({result, session}: {result: TableResult; session: EditingSess
               <thead>
                 <tr>
                   {result.schema.columns.map((col) => (
-                    <th key={col.name}>
-                      <button
+                    <th
+                      key={col.name}
+                      className={numericColumn(col.logicalType) ? 'numeric' : undefined}
+                    >
+                      <Button
                         onClick={() => {
                           setOffset(0);
                           setSort([
@@ -510,7 +548,7 @@ function TableView({result, session}: {result: TableResult; session: EditingSess
                             ? ' ↑'
                             : ' ↓'
                           : ''}
-                      </button>
+                      </Button>
                     </th>
                   ))}
                 </tr>
@@ -519,7 +557,14 @@ function TableView({result, session}: {result: TableResult; session: EditingSess
                 {rows.map((row, i) => (
                   <tr key={offset + i}>
                     {row.map((value, j) => (
-                      <td key={j}>
+                      <td
+                        key={j}
+                        className={
+                          numericColumn(result.schema.columns[j]?.logicalType)
+                            ? 'numeric'
+                            : undefined
+                        }
+                      >
                         {value === null ? (
                           <span className="null-cell">NULL</span>
                         ) : (
@@ -532,18 +577,18 @@ function TableView({result, session}: {result: TableResult; session: EditingSess
               </tbody>
             </table>
           </div>
-          <div className="result-toolbar">
-            <button disabled={offset === 0 || loading} onClick={() => setOffset(offset - 100)}>
+          <Toolbar className="result-toolbar">
+            <Button disabled={offset === 0 || loading} onClick={() => setOffset(offset - 100)}>
               Vorherige Seite
-            </button>
+            </Button>
             <span>Seite {Math.floor(offset / 100) + 1} · bis zu 100 Zeilen</span>
-            <button
+            <Button
               disabled={offset + 100 >= Number(result.rowCount) || loading}
               onClick={() => setOffset(offset + 100)}
             >
               Nächste Seite
-            </button>
-          </div>
+            </Button>
+          </Toolbar>
         </>
       ) : (
         <ChartControls result={result} session={session} />
@@ -553,22 +598,20 @@ function TableView({result, session}: {result: TableResult; session: EditingSess
         <p>
           Das vollständige Resultat wird zuerst aufbewahrt und als neue Dateneinbindung gespeichert.
         </p>
-        <label>
-          Datensatzname
-          <input value={datasetName} onChange={(e) => setDatasetName(e.target.value)} />
-        </label>
-        <label>
-          SQL-Name
-          <input value={sqlName} onChange={(e) => setSqlName(e.target.value)} />
-        </label>
-        <button
+        <FormField label={<>Datensatzname</>}>
+          <Input value={datasetName} onChange={(e) => setDatasetName(e.target.value)} />
+        </FormField>
+        <FormField label={<>SQL-Name</>}>
+          <Input value={sqlName} onChange={(e) => setSqlName(e.target.value)} />
+        </FormField>
+        <Button
           disabled={!!busy || session.readOnly || unavailable}
           onClick={() => {
             void service.asDataset(result.id, datasetName, sqlName).catch(report);
           }}
         >
           Als Datensatz speichern
-        </button>
+        </Button>
         <table>
           <tbody>
             {result.schema.columns.map((c) => (
@@ -618,10 +661,9 @@ function ChartControls({result, session}: {result: TableResult; session: Editing
   }, [service, result.id, spec]);
   return (
     <div className="chart-area">
-      <div className="result-toolbar">
-        <label>
-          Diagrammtyp
-          <select
+      <Toolbar className="result-toolbar">
+        <FormField label={<>Diagrammtyp</>}>
+          <Select
             value={spec.type}
             onChange={(e) =>
               setSpec({...spec, type: e.target.value as Visualization['spec']['type']})
@@ -630,12 +672,11 @@ function ChartControls({result, session}: {result: TableResult; session: Editing
             <option value="bar">Balken</option>
             <option value="line">Linie</option>
             <option value="scatter">Scatter</option>
-          </select>
-        </label>
+          </Select>
+        </FormField>
         {(['x', 'y', 'color'] as const).map((axis) => (
-          <label key={axis}>
-            {axis === 'color' ? 'Kategorie' : axis.toUpperCase()}
-            <select
+          <FormField key={axis} label={<>{axis === 'color' ? 'Kategorie' : axis.toUpperCase()}</>}>
+            <Select
               aria-label={`Diagramm ${axis}`}
               value={spec[axis] ?? ''}
               onChange={(e) => {
@@ -649,30 +690,32 @@ function ChartControls({result, session}: {result: TableResult; session: Editing
               {result.schema.columns.map((c) => (
                 <option key={c.name}>{c.name}</option>
               ))}
-            </select>
-          </label>
+            </Select>
+          </FormField>
         ))}
-        <button
-          disabled={!data || !!error || !!busy || session.readOnly}
-          onClick={() => {
-            void service.saveVisualization(result.id, result.name, spec).catch(report);
-          }}
-        >
-          Diagramm speichern
-        </button>
-        <button
-          disabled={!data || !!error}
-          onClick={() =>
-            canvas.current?.toBlob((blob) => {
-              if (blob) void downloadStream(blob.stream(), `${result.name}.png`, 'image/png');
-            }, 'image/png')
-          }
-        >
-          PNG exportieren
-        </button>
+        <ActionGroup>
+          <Button
+            disabled={!data || !!error || !!busy || session.readOnly}
+            onClick={() => {
+              void service.saveVisualization(result.id, result.name, spec).catch(report);
+            }}
+          >
+            Diagramm speichern
+          </Button>
+          <Button
+            disabled={!data || !!error}
+            onClick={() =>
+              canvas.current?.toBlob((blob) => {
+                if (blob) void downloadStream(blob.stream(), `${result.name}.png`, 'image/png');
+              }, 'image/png')
+            }
+          >
+            PNG exportieren
+          </Button>
+        </ActionGroup>
         {saved.length > 0 && <span>{saved.length} Diagramm(e) gespeichert</span>}
-      </div>
-      {error && <p role="alert">{error}</p>}
+      </Toolbar>
+      {error && <Notice tone="danger">{error}</Notice>}
       {data && (
         <Chart canvas={canvas} data={data} spec={spec} title={result.name} onError={setError} />
       )}

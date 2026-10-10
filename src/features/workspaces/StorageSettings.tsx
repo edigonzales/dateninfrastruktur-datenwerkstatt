@@ -1,3 +1,4 @@
+import {Button, ActionGroup, Notice} from '../../ui/Controls';
 import {useEffect, useState} from 'react';
 import {Link} from '@tanstack/react-router';
 import {services} from '../../app/services';
@@ -26,41 +27,48 @@ export function StorageSettings() {
         Geschätzter Verbrauch: {bytes(estimate?.usage)} · Browserbudget: {bytes(estimate?.quota)}.
         Die Schätzung reserviert keinen Speicher.
       </p>
-      <button onClick={refresh}>Speicherstatus aktualisieren</button>{' '}
-      <Link to="/workspaces">Projekte verwalten und gezielt löschen</Link>{' '}
-      <button disabled={busy} onClick={() => setConfirm(true)}>
-        Nicht referenzierte Projektreste bereinigen
-      </button>
-      {receipt && <p role="status">{receipt}</p>}
+      <ActionGroup>
+        <Button onClick={refresh}>Speicherstatus aktualisieren</Button>
+        <Link to="/workspaces">Projekte verwalten und gezielt löschen</Link>
+        <Button disabled={busy} onClick={() => setConfirm(true)}>
+          Nicht referenzierte Projektreste bereinigen
+        </Button>
+      </ActionGroup>
+      {receipt && <Notice tone="info">{receipt}</Notice>}
       {confirm && (
         <Modal
           title="Projektreste bereinigen?"
           onClose={() => {
             if (!busy) setConfirm(false);
           }}
+          footer={
+            <>
+              <Button
+                variant="danger"
+                disabled={busy}
+                onClick={() => {
+                  setBusy(true);
+                  void services.workspaces
+                    .cleanAbandoned(new AbortController().signal)
+                    .then((r) => {
+                      setReceipt(`${r.removed.length} Dateien bereinigt. ${r.failures.join('; ')}`);
+                      setConfirm(false);
+                      refresh();
+                    })
+                    .catch(report)
+                    .finally(() => setBusy(false));
+                }}
+              >
+                Bereinigung bestätigen
+              </Button>
+            </>
+          }
         >
           <p>
             Entfernt ausschliesslich eigene Dateien abgebrochener oder bereits gelöschter Projekte
             ohne Projektmetadaten. Gespeicherte Projekte, benötigte Resultate und fremde Dateien
             bleiben erhalten. Aktive Writer werden ausgelassen.
           </p>
-          <button
-            disabled={busy}
-            onClick={() => {
-              setBusy(true);
-              void services.workspaces
-                .cleanAbandoned(new AbortController().signal)
-                .then((r) => {
-                  setReceipt(`${r.removed.length} Dateien bereinigt. ${r.failures.join('; ')}`);
-                  setConfirm(false);
-                  refresh();
-                })
-                .catch(report)
-                .finally(() => setBusy(false));
-            }}
-          >
-            Bereinigung bestätigen
-          </button>
         </Modal>
       )}
     </section>

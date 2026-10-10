@@ -1,3 +1,4 @@
+import {ActionGroup, Button} from './Controls';
 import {useEffect, useRef, type ReactNode} from 'react';
 // WebKit does not focus clicked buttons with the default macOS keyboard setting.
 // Remember the explicit activator so focus returns to it after a modal closes.
@@ -24,8 +25,10 @@ export function Modal({
   children,
   className = 'native-dialog',
   showClose = true,
+  footer,
 }: {
   title: string;
+  footer?: ReactNode;
   className?: string;
   showClose?: boolean;
   onClose(): void;
@@ -45,7 +48,7 @@ export function Modal({
     <dialog
       ref={ref}
       aria-label={title}
-      className={className}
+      className={`dw-dialog ${className}`}
       onKeyDown={(event) => {
         if (event.key !== 'Tab') return;
         const dialog = event.currentTarget;
@@ -74,9 +77,16 @@ export function Modal({
         onClose();
       }}
     >
-      <h2>{title}</h2>
-      {children}
-      {showClose && <button onClick={onClose}>Schliessen</button>}
+      <div className="dw-dialog-header">
+        <h2>{title}</h2>
+      </div>
+      <div className="dw-dialog-body">{children}</div>
+      {(footer || showClose) && (
+        <ActionGroup className="dw-dialog-footer">
+          {showClose && <Button onClick={onClose}>Schliessen</Button>}
+          {footer}
+        </ActionGroup>
+      )}
     </dialog>
   );
 }

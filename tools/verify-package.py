@@ -8,6 +8,7 @@ from __future__ import annotations
 
 import argparse
 import csv
+import hashlib
 import json
 import re
 import sqlite3
@@ -200,9 +201,30 @@ def main() -> int:
         requirements, cases = check_documents()
         check_examples()
         check_fixture_math()
-        forbidden = [p for p in package_files("*") if p.suffix.lower() in {".ttf", ".otf", ".woff", ".woff2"}]
-        require(not forbidden, "Font files must not be distributed")
-        record("No font files bundled")
+        fonts = {p.relative_to(ROOT).as_posix() for p in package_files("*")
+                 if p.suffix.lower() in {".ttf", ".otf", ".woff", ".woff2"}}
+        # Only inventoried fonts with a documented license/use context are permitted.
+        mono_path = "src/assets/fonts/JetBrainsMono-Regular.woff2"
+        frutiger = load("src/assets/ui-assets.json")["frutiger"]
+        expected = {mono_path, "src/assets/fonts/FrutigerLTW05-55Roman.woff2",
+                    "src/assets/fonts/FrutigerLTW05-75Black.woff2"}
+        require(fonts == expected, "Only documented Frutiger and JetBrains Mono fonts may be distributed")
+        require(frutiger["status"] == "licensed-for-cantonal-use", "Frutiger use context missing")
+        require((ROOT / frutiger["usageConfirmation"]["record"]).is_file(), "Font provenance missing")
+        require({f["weight"] for f in frutiger["files"]} == {400, 700}, "Frutiger cuts differ")
+        for font in frutiger["files"]:
+            path = ROOT / "src/assets/fonts" / font["file"]
+            require(hashlib.sha256(path.read_bytes()).hexdigest() == font["sha256"],
+                    "Frutiger bytes differ from the asset inventory")
+        require((ROOT / "licenses/frutiger-original-notices.txt").is_file(), "Frutiger notices missing")
+        mono = load("src/assets/ui-assets.json")["jetbrainsMono"]
+        require(mono["version"] == "2.304", "Unexpected JetBrains Mono version")
+        require(hashlib.sha256((ROOT / mono_path).read_bytes()).hexdigest() == mono["sha256"],
+                "JetBrains Mono bytes differ from the asset inventory")
+        require("SIL OPEN FONT LICENSE Version 1.1" in
+                (ROOT / "licenses/jetbrains-mono-2.304-OFL.txt").read_text(),
+                "JetBrains Mono original OFL notice missing")
+        record("Inventoried Frutiger 400/700 with cantonal use confirmation and JetBrains Mono 2.304 with OFL")
     except (ValueError, KeyError, TypeError, OSError, sqlite3.Error, zipfile.BadZipFile) as exc:
         print(f"FAIL: {exc}", file=sys.stderr)
         return 1

@@ -1,3 +1,4 @@
+import {Button, Input, Select, FormField, ActionGroup, FileInput, Notice} from '../../ui/Controls';
 import {useState, useSyncExternalStore} from 'react';
 import {useNavigate} from '@tanstack/react-router';
 import {services} from '../../app/services';
@@ -12,10 +13,10 @@ export function ArchiveImport() {
     [message, setMessage] = useState('');
   const navigate = useNavigate();
   return (
-    <section>
-      <label>
-        Projektdatei importieren
-        <input
+    <section className="archive-import">
+      <FormField label="Projektdatei importieren">
+        <FileInput
+          buttonLabel="Projekt öffnen"
           type="file"
           accept=".dwproj,.zip"
           disabled={busy || !services.workspaces.canCreate}
@@ -33,26 +34,31 @@ export function ArchiveImport() {
               .finally(() => setBusy(false));
           }}
         />
-      </label>
-      <button
-        disabled={busy}
-        onClick={() => {
-          setBusy(true);
-          void services.workspaces
-            .cleanAbandoned(new AbortController().signal)
-            .then((r) =>
-              setMessage(
-                `${r.removed.length} verwaiste Dateien aus entfernten/abgebrochenen Projekten bereinigt. ${r.failures.join('; ')}`,
-              ),
-            )
-            .catch(report)
-            .finally(() => setBusy(false));
-        }}
-      >
-        Reste abgebrochener Projekte bereinigen
-      </button>
-      {busy && <p role="status">Archiv wird geprüft/verarbeitet …</p>}
-      {message && <p role="status">{message}</p>}
+      </FormField>
+      <details className="maintenance">
+        <summary>Wartung</summary>
+        <ActionGroup>
+          <Button
+            disabled={busy}
+            onClick={() => {
+              setBusy(true);
+              void services.workspaces
+                .cleanAbandoned(new AbortController().signal)
+                .then((r) =>
+                  setMessage(
+                    `${r.removed.length} verwaiste Dateien aus entfernten/abgebrochenen Projekten bereinigt. ${r.failures.join('; ')}`,
+                  ),
+                )
+                .catch(report)
+                .finally(() => setBusy(false));
+            }}
+          >
+            Reste abgebrochener Projekte bereinigen
+          </Button>
+        </ActionGroup>
+      </details>
+      {busy && <Notice tone="info">Archiv wird geprüft/verarbeitet …</Notice>}
+      {message && <Notice tone="info">{message}</Notice>}
       {candidate && (
         <Modal
           title="Projektimport bestätigen"
@@ -62,6 +68,30 @@ export function ArchiveImport() {
               services.workspaces.getArchive().discard();
             }
           }}
+          footer={
+            <>
+              <Button
+                variant="primary"
+                disabled={busy}
+                onClick={() => {
+                  setBusy(true);
+                  void services.workspaces
+                    .importArchive(candidate.id, new AbortController().signal)
+                    .then(async (d) => {
+                      setCandidate(undefined);
+                      await navigate({
+                        to: '/workspaces/$workspaceId',
+                        params: {workspaceId: d.workspace.id},
+                      });
+                    })
+                    .catch(report)
+                    .finally(() => setBusy(false));
+                }}
+              >
+                Als neuen Arbeitsbereich importieren
+              </Button>
+            </>
+          }
         >
           <p>
             {candidate.inspection.workspaceName}: {candidate.inspection.datasets} Datensätze ·{' '}
@@ -76,25 +106,6 @@ export function ArchiveImport() {
           {candidate.inspection.warnings.map((w, i) => (
             <p key={i}>{w}</p>
           ))}
-          <button
-            disabled={busy}
-            onClick={() => {
-              setBusy(true);
-              void services.workspaces
-                .importArchive(candidate.id, new AbortController().signal)
-                .then(async (d) => {
-                  setCandidate(undefined);
-                  await navigate({
-                    to: '/workspaces/$workspaceId',
-                    params: {workspaceId: d.workspace.id},
-                  });
-                })
-                .catch(report)
-                .finally(() => setBusy(false));
-            }}
-          >
-            Als neuen Arbeitsbereich importieren
-          </button>
         </Modal>
       )}
     </section>
@@ -132,84 +143,123 @@ export function ArchiveActions({session}: {session: EditingSession}) {
   return (
     <section className="archive-actions">
       <h2>Projektdatei und Speicher</h2>
-      <button disabled={busy} onClick={() => setDialog('export')}>
-        Projekt exportieren
-      </button>
-      <button
-        disabled={busy || !services.workspaces.canCreate}
-        onClick={() =>
-          act(async () => {
-            const d = await services.workspaces.duplicate(
-              doc.workspace.id,
-              new AbortController().signal,
-            );
-            await navigate({to: '/workspaces/$workspaceId', params: {workspaceId: d.workspace.id}});
-          })
-        }
-      >
-        Arbeitsbereich duplizieren
-      </button>
-      <button
-        disabled={busy || session.readOnly}
-        onClick={() =>
-          act(async () => {
-            await session.flush();
-            setRevision(session.document.revision);
-            setDialog('delete');
-          })
-        }
-      >
-        Arbeitsbereich löschen
-      </button>
-      <button
-        disabled={busy}
-        onClick={() =>
-          act(async () => {
-            const checked = await session.inspectIntegrity(new AbortController().signal, true);
-            setIntegrity(checked);
-            setMessage('Dateilängen und SHA-256 geprüft.');
-          })
-        }
-      >
-        Integrität prüfen
-      </button>
+      <ActionGroup>
+        <ActionGroup>
+          <Button disabled={busy} onClick={() => setDialog('export')}>
+            Projekt exportieren
+          </Button>
+          <Button
+            disabled={busy || !services.workspaces.canCreate}
+            onClick={() =>
+              act(async () => {
+                const d = await services.workspaces.duplicate(
+                  doc.workspace.id,
+                  new AbortController().signal,
+                );
+                await navigate({
+                  to: '/workspaces/$workspaceId',
+                  params: {workspaceId: d.workspace.id},
+                });
+              })
+            }
+          >
+            Arbeitsbereich duplizieren
+          </Button>
+          <Button
+            disabled={busy}
+            onClick={() =>
+              act(async () => {
+                const checked = await session.inspectIntegrity(new AbortController().signal, true);
+                setIntegrity(checked);
+                setMessage('Dateilängen und SHA-256 geprüft.');
+              })
+            }
+          >
+            Integrität prüfen
+          </Button>
+        </ActionGroup>
+        <Button
+          variant="danger"
+          disabled={busy || session.readOnly}
+          onClick={() =>
+            act(async () => {
+              await session.flush();
+              setRevision(session.document.revision);
+              setDialog('delete');
+            })
+          }
+        >
+          Arbeitsbereich löschen
+        </Button>
+      </ActionGroup>
       {integrity && (
-        <p role="status">
+        <Notice tone="info">
           {integrity.missing.length} fehlende · {integrity.corrupt.length} beschädigte ·{' '}
           {integrity.orphanPaths.length} verwaiste Dateien.{' '}
           {session.hashesChecked
             ? 'Hashprüfung ausgeführt.'
             : 'Inventar geprüft; Hashprüfung erfolgt vor Verwendung oder ausdrücklich hier.'}
-        </p>
+        </Notice>
       )}
       {!!missing && (
-        <p role="alert">
+        <Notice tone="danger">
           Betroffene Daten sind nicht verfügbar. Code und Herkunft bleiben erhalten. Daten über
           „Daten ersetzen“ als neue Version wieder einbinden.
-        </p>
+        </Notice>
       )}
       {session.integrityError && (
-        <p role="alert">Dateiinventar konnte nicht geprüft werden: {session.integrityError}</p>
+        <Notice tone="danger">
+          Dateiinventar konnte nicht geprüft werden: {session.integrityError}
+        </Notice>
       )}
-      {message && <p role="status">{message}</p>}
+      {message && <Notice tone="info">{message}</Notice>}
       {dialog === 'export' && (
         <Modal
           title="Projekt exportieren"
           onClose={() => {
             if (!busy) setDialog(undefined);
           }}
+          footer={
+            <>
+              <Button
+                variant="primary"
+                disabled={busy}
+                onClick={() =>
+                  act(async () => {
+                    const result = await session.exportArchive(
+                      mode,
+                      {keepTemporary: keep && !session.readOnly, includeExternal: external},
+                      new AbortController().signal,
+                    );
+                    await downloadStream(
+                      result.blob.stream(),
+                      'datenwerkstatt.dwproj',
+                      'application/zip',
+                    );
+                    setMessage(
+                      result.manifest.omissions.length
+                        ? `Archiv exportiert mit ${result.manifest.omissions.length} ausdrücklich dokumentierten Auslassungen.`
+                        : 'Archiv mit sämtlichen gespeicherten Datenständen exportiert.',
+                    );
+                    setDialog(undefined);
+                  })
+                }
+              >
+                Archiv herunterladen
+              </Button>
+            </>
+          }
         >
-          <label>
-            Archivmodus
-            <select
+          <FormField label={<>Archivmodus</>}>
+            <Select
               value={mode}
               disabled={busy}
               onChange={(e) => setMode(e.target.value as 'recipe' | 'with-data')}
             >
               <option value="with-data">Mit Daten</option>
               <option value="recipe">Rezept ohne lokale Bytes</option>
-            </select>
-          </label>
+            </Select>
+          </FormField>
           <p>
             {Object.keys(doc.datasets).length} Datensätze · {Object.keys(doc.results).length}{' '}
             Resultate · {Object.values(doc.artifacts).reduce((n, a) => n + a.bytes, 0)} bekannte
@@ -222,51 +272,24 @@ export function ArchiveActions({session}: {session: EditingSession}) {
           </p>
           {mode === 'with-data' && (
             <>
-              <label>
-                <input
+              <FormField label={<>Temporäre Resultate vor Export aufbewahren</>}>
+                <Input
                   type="checkbox"
                   checked={keep && !session.readOnly}
                   disabled={busy || session.readOnly}
                   onChange={(e) => setKeep(e.target.checked)}
                 />
-                Temporäre Resultate vor Export aufbewahren
-              </label>
-              <label>
-                <input
+              </FormField>
+              <FormField label={<>Externe Quellen ebenfalls sichern</>}>
+                <Input
                   type="checkbox"
                   checked={external}
                   disabled={busy}
                   onChange={(e) => setExternal(e.target.checked)}
                 />
-                Externe Quellen ebenfalls sichern
-              </label>
+              </FormField>
             </>
           )}
-          <button
-            disabled={busy}
-            onClick={() =>
-              act(async () => {
-                const result = await session.exportArchive(
-                  mode,
-                  {keepTemporary: keep && !session.readOnly, includeExternal: external},
-                  new AbortController().signal,
-                );
-                await downloadStream(
-                  result.blob.stream(),
-                  'datenwerkstatt.dwproj',
-                  'application/zip',
-                );
-                setMessage(
-                  result.manifest.omissions.length
-                    ? `Archiv exportiert mit ${result.manifest.omissions.length} ausdrücklich dokumentierten Auslassungen.`
-                    : 'Archiv mit sämtlichen gespeicherten Datenständen exportiert.',
-                );
-                setDialog(undefined);
-              })
-            }
-          >
-            Archiv herunterladen
-          </button>
         </Modal>
       )}
       {dialog === 'delete' && (
@@ -275,6 +298,33 @@ export function ArchiveActions({session}: {session: EditingSession}) {
           onClose={() => {
             if (!busy) setDialog(undefined);
           }}
+          footer={
+            <>
+              <Button
+                variant="danger"
+                disabled={busy}
+                onClick={() =>
+                  act(async () => {
+                    const failures = await services.workspaces.deleteWorkspace(
+                      doc.workspace.id,
+                      revision,
+                    );
+                    setDialog(undefined);
+                    if (failures.length)
+                      report(
+                        new Error(
+                          `Projekt gelöscht; ${failures.length} Dateireste sind über die Arbeitsbereichsliste bereinigbar.`,
+                        ),
+                      );
+                    await routerApi.invalidate();
+                    await navigate({to: '/workspaces'});
+                  })
+                }
+              >
+                Endgültig löschen
+              </Button>
+            </>
+          }
         >
           <p>
             {doc.workspace.name}: {Object.keys(doc.datasets).length} Datensätze,{' '}
@@ -283,28 +333,6 @@ export function ArchiveActions({session}: {session: EditingSession}) {
             Resultate werden gelöscht. Laufende Jobs werden beendet. Ein heruntergeladenes Archiv
             bleibt bestehen.
           </p>
-          <button
-            disabled={busy}
-            onClick={() =>
-              act(async () => {
-                const failures = await services.workspaces.deleteWorkspace(
-                  doc.workspace.id,
-                  revision,
-                );
-                setDialog(undefined);
-                if (failures.length)
-                  report(
-                    new Error(
-                      `Projekt gelöscht; ${failures.length} Dateireste sind über die Arbeitsbereichsliste bereinigbar.`,
-                    ),
-                  );
-                await routerApi.invalidate();
-                await navigate({to: '/workspaces'});
-              })
-            }
-          >
-            Endgültig löschen
-          </button>
         </Modal>
       )}
     </section>

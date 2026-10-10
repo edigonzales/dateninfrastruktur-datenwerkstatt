@@ -1,3 +1,13 @@
+import {
+  Button,
+  Input,
+  Textarea,
+  FormField,
+  ActionGroup,
+  EmptyState,
+  StatusBadge,
+  PanelHeader,
+} from '../../ui/Controls';
 import {Diagnostics} from './Diagnostics';
 import {ArchiveActions, ArchiveImport} from '../archive/ArchiveActions';
 import {useState} from 'react';
@@ -28,17 +38,25 @@ export function WorkspaceList() {
             .finally(() => setBusy(false));
         }}
       >
-        <label>
-          Name des neuen Arbeitsbereichs
-          <input value={name} onChange={(e) => setName(e.target.value)} required maxLength={120} />
-        </label>
-        <button className="primary" disabled={busy || !services.workspaces.canCreate}>
+        <FormField label={<>Name des neuen Arbeitsbereichs</>}>
+          <Input value={name} onChange={(e) => setName(e.target.value)} required maxLength={120} />
+        </FormField>
+        <Button
+          type="submit"
+          variant="primary"
+          icon="plus-lg"
+          busy={busy}
+          disabled={busy || !services.workspaces.canCreate}
+        >
           Neuer Arbeitsbereich
-        </button>
+        </Button>
       </form>
+      <p className="dw-required-note">* Pflichtfeld</p>
       <ArchiveImport />
       {workspaces.length === 0 ? (
-        <p>Noch kein Arbeitsbereich. Lege ein Projekt an oder öffne eine Projektdatei.</p>
+        <EmptyState>
+          Noch kein Arbeitsbereich. Lege ein Projekt an oder öffne eine Projektdatei.
+        </EmptyState>
       ) : (
         <table className="workspace-list">
           <thead>
@@ -57,8 +75,8 @@ export function WorkspaceList() {
                     {w.name}
                   </Link>
                 </td>
-                <td>{w.datasetCount}</td>
-                <td>{w.analysisCount}</td>
+                <td className="numeric">{w.datasetCount}</td>
+                <td className="numeric">{w.analysisCount}</td>
                 <td>{new Date(w.updatedAt).toLocaleString('de-CH')}</td>
               </tr>
             ))}
@@ -91,9 +109,8 @@ export function WorkspaceDetails() {
     <div className="project-details">
       <h1>{doc.workspace.name}</h1>
       <div className="form-fields">
-        <label>
-          Projektname
-          <input
+        <FormField label={<>Projektname</>}>
+          <Input
             value={name}
             disabled={session.readOnly}
             maxLength={120}
@@ -107,10 +124,9 @@ export function WorkspaceDetails() {
                 }
             }}
           />
-        </label>
-        <div>
-          <label htmlFor="workspace-description">Beschreibung</label>
-          <textarea
+        </FormField>
+        <FormField label="Beschreibung">
+          <Textarea
             id="workspace-description"
             value={doc.workspace.description ?? ''}
             disabled={session.readOnly}
@@ -123,29 +139,33 @@ export function WorkspaceDetails() {
               }
             }}
           />
-        </div>
+        </FormField>
       </div>
-      <button
-        disabled={session.readOnly}
-        onClick={() => {
-          void session.flush().catch(report);
-        }}
-      >
-        Speichern
-      </button>
+      <ActionGroup>
+        <Button
+          icon="floppy"
+          disabled={session.readOnly}
+          onClick={() => {
+            void session.flush().catch(report);
+          }}
+        >
+          Speichern
+        </Button>
+      </ActionGroup>
       <ArchiveActions session={session} />
       <Diagnostics session={session} />
       <DataSection />
       <section>
-        <div className="section-heading">
-          <h2>Analysen</h2>
-          <button disabled={session.readOnly} onClick={() => create('sql')}>
-            Neue SQL-Abfrage
-          </button>
-          <button disabled={session.readOnly} onClick={() => create('r')}>
-            Neues R-Skript
-          </button>
-        </div>
+        <PanelHeader title="Analysen">
+          <ActionGroup>
+            <Button disabled={session.readOnly} onClick={() => create('sql')}>
+              Neue SQL-Abfrage
+            </Button>
+            <Button disabled={session.readOnly} onClick={() => create('r')}>
+              Neues R-Skript
+            </Button>
+          </ActionGroup>
+        </PanelHeader>
         <ul className="analysis-list">
           {Object.values(doc.analyses)
             .filter((a) => !a.archivedAt)
@@ -161,31 +181,33 @@ export function WorkspaceDetails() {
                 >
                   {a.name}
                 </Link>
-                <span>{a.kind.toUpperCase()}</span>
-                <button
-                  disabled={session.readOnly}
-                  onClick={() => {
-                    try {
-                      session.duplicateAnalysis(a.id);
-                    } catch (e) {
-                      report(e);
-                    }
-                  }}
-                >
-                  Duplizieren
-                </button>
-                <button
-                  disabled={session.readOnly}
-                  onClick={() => {
-                    try {
-                      session.archiveAnalysis(a.id);
-                    } catch (e) {
-                      report(e);
-                    }
-                  }}
-                >
-                  Archivieren
-                </button>
+                <StatusBadge>{a.kind.toUpperCase()}</StatusBadge>
+                <ActionGroup>
+                  <Button
+                    disabled={session.readOnly}
+                    onClick={() => {
+                      try {
+                        session.duplicateAnalysis(a.id);
+                      } catch (e) {
+                        report(e);
+                      }
+                    }}
+                  >
+                    Duplizieren
+                  </Button>
+                  <Button
+                    disabled={session.readOnly}
+                    onClick={() => {
+                      try {
+                        session.archiveAnalysis(a.id);
+                      } catch (e) {
+                        report(e);
+                      }
+                    }}
+                  >
+                    Archivieren
+                  </Button>
+                </ActionGroup>
               </li>
             ))}
         </ul>

@@ -1,3 +1,4 @@
+import {ActionGroup, Button} from '../ui/Controls';
 import './validationConfig';
 import {measure} from '../application/diagnostics';
 import {StrictMode, useEffect, useState} from 'react';
@@ -26,12 +27,15 @@ function Boot() {
           ))}
         </ul>
         {result.allowTemporary && (
-          <>
-            <p>
-              Ein Sitzungsprojekt verliert Daten beim Schliessen oder Neuladen. Exportiere benötigte
-              Dateien vorher. Bestehende gespeicherte Projekte werden nicht verändert.
-            </p>
-            <button
+          <p>
+            Ein Sitzungsprojekt verliert Daten beim Schliessen oder Neuladen. Exportiere benötigte
+            Dateien vorher. Bestehende gespeicherte Projekte werden nicht verändert.
+          </p>
+        )}
+        <ActionGroup>
+          {result.allowTemporary && (
+            <Button
+              variant="primary"
               onClick={async () => {
                 useTemporaryServices();
                 await router.navigate({to: '/workspaces', replace: true});
@@ -39,14 +43,14 @@ function Boot() {
               }}
             >
               Nur diese Sitzung verwenden
-            </button>
-          </>
-        )}
-        {result.allowReadOnly && (
-          <button onClick={() => setResult({...result, ready: true})}>
-            Gesicherte Projekte nur lesen
-          </button>
-        )}
+            </Button>
+          )}
+          {result.allowReadOnly && (
+            <Button onClick={() => setResult({...result, ready: true})}>
+              Gesicherte Projekte nur lesen
+            </Button>
+          )}
+        </ActionGroup>
       </main>
     );
   return <RouterProvider router={router} />;

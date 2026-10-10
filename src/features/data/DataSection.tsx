@@ -1,3 +1,15 @@
+import {numericColumn} from '../../ui/table';
+import {
+  Button,
+  Input,
+  Select,
+  FormField,
+  ActionGroup,
+  FileInput,
+  EmptyState,
+  Notice,
+  PanelHeader,
+} from '../../ui/Controls';
 import {Modal} from '../../ui/Modal';
 import {PortalImport} from '../catalog/PortalImport';
 import {useEffect, useRef, useState} from 'react';
@@ -37,7 +49,7 @@ export function PreviewTable({preview}: {preview: Pick<ImportPreview, 'schema' |
         <thead>
           <tr>
             {preview.schema.columns.map((c) => (
-              <th key={c.name}>
+              <th key={c.name} className={numericColumn(c.logicalType) ? 'numeric' : undefined}>
                 {c.name}
                 <small>{c.logicalType}</small>
               </th>
@@ -48,7 +60,14 @@ export function PreviewTable({preview}: {preview: Pick<ImportPreview, 'schema' |
           {preview.rows.map((row, index) => (
             <tr key={index}>
               {row.map((value, column) => (
-                <td key={column}>
+                <td
+                  key={column}
+                  className={
+                    numericColumn(preview.schema.columns[column]?.logicalType)
+                      ? 'numeric'
+                      : undefined
+                  }
+                >
                   {value === null ? <i>NULL</i> : value === '' ? <i>Leerstring</i> : String(value)}
                 </td>
               ))}
@@ -87,17 +106,18 @@ export function DataSection() {
   const datasets = Object.values(doc.datasets).filter((d) => !d.removedAt);
   return (
     <section>
-      <div className="section-heading">
-        <h2>Daten</h2>
-        <button disabled={session.readOnly || busy} onClick={() => setImporting({})}>
-          Datei hinzufügen
-        </button>
-        <button disabled={session.readOnly || busy} onClick={() => setPortal({})}>
-          Aus Portal hinzufügen
-        </button>
-      </div>
+      <PanelHeader title="Daten">
+        <ActionGroup>
+          <Button disabled={session.readOnly || busy} onClick={() => setImporting({})}>
+            Datei hinzufügen
+          </Button>
+          <Button disabled={session.readOnly || busy} onClick={() => setPortal({})}>
+            Aus Portal hinzufügen
+          </Button>
+        </ActionGroup>
+      </PanelHeader>
       {datasets.length === 0 ? (
-        <p>Noch keine Dateneinbindungen.</p>
+        <EmptyState>Noch keine Dateneinbindungen.</EmptyState>
       ) : (
         <ul className="dataset-list">
           {datasets.map((dataset) => {
@@ -105,19 +125,20 @@ export function DataSection() {
             return (
               <li key={dataset.id}>
                 <div>
-                  <input
-                    aria-label={`Anzeigename ${dataset.sqlName}`}
-                    defaultValue={dataset.name}
-                    disabled={session.readOnly}
-                    onBlur={(event) => {
-                      if (event.target.value !== dataset.name)
-                        try {
-                          session.renameDataset(dataset.id, event.target.value);
-                        } catch (error) {
-                          report(error);
-                        }
-                    }}
-                  />
+                  <FormField label={`Anzeigename ${dataset.sqlName}`}>
+                    <Input
+                      defaultValue={dataset.name}
+                      disabled={session.readOnly}
+                      onBlur={(event) => {
+                        if (event.target.value !== dataset.name)
+                          try {
+                            session.renameDataset(dataset.id, event.target.value);
+                          } catch (error) {
+                            report(error);
+                          }
+                      }}
+                    />
+                  </FormField>
                   <code>data.{dataset.sqlName}</code>
                   <span>
                     {version.rowCount ?? '?'} Zeilen ·{' '}
@@ -134,72 +155,78 @@ export function DataSection() {
                         : 'Nicht verfügbar'}
                   </span>
                 </div>
-                <button
-                  disabled={busy}
-                  onClick={() => {
-                    setBusy(true);
-                    void session
-                      .getDatasets()
-                      .inspect(dataset.id, new AbortController().signal)
-                      .then(setPreview)
-                      .catch(report)
-                      .finally(() => setBusy(false));
-                  }}
-                >
-                  Daten ansehen
-                </button>
-                <button
-                  disabled={busy}
-                  onClick={() => {
-                    setBusy(true);
-                    void session
-                      .getDatasets()
-                      .export(dataset.id, new AbortController().signal)
-                      .then((data) =>
-                        downloadStream(
-                          data,
-                          `${dataset.sqlName}.parquet`,
-                          'application/vnd.apache.parquet',
-                        ),
-                      )
-                      .catch(report)
-                      .finally(() => setBusy(false));
-                  }}
-                >
-                  Parquet exportieren
-                </button>
-                {version.backing.kind === 'public-parquet' && (
-                  <button
-                    disabled={session.readOnly || busy}
+                <ActionGroup>
+                  <Button
+                    disabled={busy}
                     onClick={() => {
                       setBusy(true);
                       void session
                         .getDatasets()
-                        .keepLocal(dataset.id, new AbortController().signal)
+                        .inspect(dataset.id, new AbortController().signal)
+                        .then(setPreview)
                         .catch(report)
                         .finally(() => setBusy(false));
                     }}
                   >
-                    Lokal sichern
-                  </button>
-                )}
-                {version.origin.kind === 'portal' && (
-                  <button
-                    disabled={session.readOnly || busy}
-                    onClick={() => setPortal({replace: dataset.id})}
+                    Daten ansehen
+                  </Button>
+                  <Button
+                    disabled={busy}
+                    onClick={() => {
+                      setBusy(true);
+                      void session
+                        .getDatasets()
+                        .export(dataset.id, new AbortController().signal)
+                        .then((data) =>
+                          downloadStream(
+                            data,
+                            `${dataset.sqlName}.parquet`,
+                            'application/vnd.apache.parquet',
+                          ),
+                        )
+                        .catch(report)
+                        .finally(() => setBusy(false));
+                    }}
                   >
-                    Portalstand ersetzen
-                  </button>
-                )}
-                <button
-                  disabled={session.readOnly || busy}
-                  onClick={() => setImporting({replace: dataset.id})}
-                >
-                  Daten ersetzen
-                </button>
-                <button disabled={session.readOnly || busy} onClick={() => setRemoving(dataset)}>
-                  Einbindung entfernen
-                </button>
+                    Parquet exportieren
+                  </Button>
+                  {version.backing.kind === 'public-parquet' && (
+                    <Button
+                      disabled={session.readOnly || busy}
+                      onClick={() => {
+                        setBusy(true);
+                        void session
+                          .getDatasets()
+                          .keepLocal(dataset.id, new AbortController().signal)
+                          .catch(report)
+                          .finally(() => setBusy(false));
+                      }}
+                    >
+                      Lokal sichern
+                    </Button>
+                  )}
+                  {version.origin.kind === 'portal' && (
+                    <Button
+                      disabled={session.readOnly || busy}
+                      onClick={() => setPortal({replace: dataset.id})}
+                    >
+                      Portalstand ersetzen
+                    </Button>
+                  )}
+                  <Button
+                    disabled={session.readOnly || busy}
+                    onClick={() => setImporting({replace: dataset.id})}
+                  >
+                    Daten ersetzen
+                  </Button>
+                  <Button
+                    variant="danger"
+                    disabled={session.readOnly || busy}
+                    onClick={() => setRemoving(dataset)}
+                  >
+                    Einbindung entfernen
+                  </Button>
+                </ActionGroup>
               </li>
             );
           })}
@@ -208,7 +235,7 @@ export function DataSection() {
       {inventory && inventory.orphans.length > 0 && (
         <p>
           {inventory.orphans.length} nicht referenzierte Dateien.{' '}
-          <button
+          <Button
             disabled={session.readOnly || busy}
             onClick={() => {
               setBusy(true);
@@ -224,14 +251,14 @@ export function DataSection() {
             }}
           >
             Verwaiste Dateien bereinigen
-          </button>
+          </Button>
         </p>
       )}
-      {cleanupMessage && <p role="status">{cleanupMessage}</p>}
-      {busy && <p role="status">Daten werden geprüft …</p>}
+      {cleanupMessage && <Notice tone="info">{cleanupMessage}</Notice>}
+      {busy && <Notice tone="info">Daten werden geprüft …</Notice>}
       {preview && (
         <div className="data-preview">
-          <button onClick={() => setPreview(undefined)}>Vorschau schliessen</button>
+          <Button onClick={() => setPreview(undefined)}>Vorschau schliessen</Button>
           <p>Vorschau · maximal 200 Zeilen. NULL und Leerstring sind unterscheidbar.</p>
           <PreviewTable preview={preview} />
         </div>
@@ -245,6 +272,22 @@ export function DataSection() {
           title="Einbindung entfernen"
           onClose={() => setRemoving(undefined)}
           showClose={false}
+          footer={
+            <>
+              <ActionGroup>
+                <Button
+                  variant="danger"
+                  onClick={() => {
+                    session.removeDataset(removing.id);
+                    setRemoving(undefined);
+                  }}
+                >
+                  Entfernen bestätigen
+                </Button>
+                <Button onClick={() => setRemoving(undefined)}>Abbrechen</Button>
+              </ActionGroup>
+            </>
+          }
         >
           <p>{removing.name} entfernen?</p>
           <p>
@@ -263,15 +306,6 @@ export function DataSection() {
               .join(', ') || 'keine'}
             . Weitere Abhängigkeiten im SQL-Code sind nicht vollständig erfasst.
           </p>
-          <button
-            onClick={() => {
-              session.removeDataset(removing.id);
-              setRemoving(undefined);
-            }}
-          >
-            Entfernen bestätigen
-          </button>
-          <button onClick={() => setRemoving(undefined)}>Abbrechen</button>
         </Modal>
       )}
     </section>
@@ -393,6 +427,25 @@ function ImportDialog({replace, onClose}: {replace?: DatasetId; onClose(): void}
         if (busy) controller.current?.abort();
         else onClose();
       }}
+      footer={
+        <>
+          <ActionGroup>
+            <ActionGroup>
+              <Button variant="primary" disabled={!preview || dirty || busy} onClick={confirm}>
+                Import bestätigen
+              </Button>
+              <Button
+                onClick={() => {
+                  if (busy) controller.current?.abort();
+                  else onClose();
+                }}
+              >
+                {busy ? 'Verarbeitung abbrechen' : 'Schliessen'}
+              </Button>
+            </ActionGroup>
+          </ActionGroup>
+        </>
+      }
     >
       <div
         className="file-drop"
@@ -405,38 +458,34 @@ function ImportDialog({replace, onClose}: {replace?: DatasetId; onClose(): void}
           }
         }}
       >
-        <label>
-          Datei (CSV oder Parquet, maximal 128 MiB)
-          <input
+        <FormField label="Datei (CSV oder Parquet, maximal 128 MiB)">
+          <FileInput
             type="file"
             accept=".csv,.parquet"
             disabled={busy}
             onChange={(e) => select(e.target.files?.[0])}
           />
-        </label>
+        </FormField>
         <span>oder eine Datei hier ablegen</span>
       </div>
       <div className="import-fields">
-        <label>
-          Anzeigename
-          <input value={name} disabled={busy} onChange={(e) => setName(e.target.value)} />
-        </label>
-        <label>
-          SQL-Name
-          <input
+        <FormField label={<>Anzeigename</>}>
+          <Input value={name} disabled={busy} onChange={(e) => setName(e.target.value)} />
+        </FormField>
+        <FormField label={<>SQL-Name</>}>
+          <Input
             value={sqlName}
             disabled={!!replace || busy}
             onChange={(e) => setSqlName(e.target.value)}
           />
-        </label>
+        </FormField>
       </div>
       {format === 'csv' && (
         <fieldset disabled={busy}>
           <legend>CSV-Vertrag · UTF-8 · Quote und Escape: doppelte Anführungszeichen</legend>
           <div className="import-fields">
-            <label>
-              Trennzeichen
-              <select
+            <FormField label={<>Trennzeichen</>}>
+              <Select
                 value={options.delimiter}
                 onChange={(e) =>
                   change({
@@ -449,11 +498,10 @@ function ImportDialog({replace, onClose}: {replace?: DatasetId; onClose(): void}
                 <option value=",">Komma</option>
                 <option value={'\t'}>Tab</option>
                 <option value="|">Pipe</option>
-              </select>
-            </label>
-            <label>
-              Dezimalzeichen
-              <select
+              </Select>
+            </FormField>
+            <FormField label={<>Dezimalzeichen</>}>
+              <Select
                 value={options.decimalSeparator}
                 onChange={(e) =>
                   change({decimalSeparator: e.target.value as '.' | ',', columns: []})
@@ -461,47 +509,46 @@ function ImportDialog({replace, onClose}: {replace?: DatasetId; onClose(): void}
               >
                 <option value=".">Punkt</option>
                 <option value=",">Komma</option>
-              </select>
-            </label>
-            <label>
-              <input
+              </Select>
+            </FormField>
+            <FormField label={<>Kopfzeile</>}>
+              <Input
                 type="checkbox"
                 checked={options.header}
                 onChange={(e) => change({header: e.target.checked, columns: []})}
               />
-              Kopfzeile
-            </label>
-            <label>
-              <input
+            </FormField>
+            <FormField label={<>Ungequotetes leeres Feld ist NULL</>}>
+              <Input
                 type="checkbox"
                 checked={options.emptyStringIsNull}
                 onChange={(e) => change({emptyStringIsNull: e.target.checked})}
               />
-              Ungequotetes leeres Feld ist NULL
-            </label>
-            <label>
-              Zusätzlicher NULL-Marker
-              <input
+            </FormField>
+            <FormField label={<>Zusätzlicher NULL-Marker</>}>
+              <Input
                 value={options.nullStrings[0] ?? ''}
                 onChange={(e) => change({nullStrings: e.target.value ? [e.target.value] : []})}
               />
-            </label>
-            <label>
-              <input
+            </FormField>
+            <FormField
+              label={
+                <>Original behalten {file ? `(+${file.size.toLocaleString('de-CH')} Bytes)` : ''}</>
+              }
+            >
+              <Input
                 type="checkbox"
                 checked={original}
                 onChange={(e) => setOriginal(e.target.checked)}
               />
-              Original behalten {file ? `(+${file.size.toLocaleString('de-CH')} Bytes)` : ''}
-            </label>
+            </FormField>
           </div>
           {options.columns.length > 0 && (
             <div className="column-options">
               {options.columns.map((column, i) => (
                 <div key={i}>
-                  <label>
-                    Spalte {i + 1}
-                    <input
+                  <FormField label={<>Spalte {i + 1}</>}>
+                    <Input
                       value={column.name}
                       onChange={(e) =>
                         change({
@@ -511,10 +558,9 @@ function ImportDialog({replace, onClose}: {replace?: DatasetId; onClose(): void}
                         })
                       }
                     />
-                  </label>
-                  <label>
-                    Typ {i + 1}
-                    <select
+                  </FormField>
+                  <FormField label={<>Typ {i + 1}</>}>
+                    <Select
                       aria-label={`Typ ${i + 1}`}
                       value={column.logicalType}
                       onChange={(e) =>
@@ -528,17 +574,17 @@ function ImportDialog({replace, onClose}: {replace?: DatasetId; onClose(): void}
                       {[...new Set([column.logicalType, ...types])].map((type) => (
                         <option key={type}>{type}</option>
                       ))}
-                    </select>
-                  </label>
+                    </Select>
+                  </FormField>
                 </div>
               ))}
             </div>
           )}
         </fieldset>
       )}
-      <button disabled={!file || busy} onClick={load}>
+      <Button disabled={!file || busy} onClick={load}>
         Vorschau laden
-      </button>
+      </Button>
       {preview && (
         <>
           <p>
@@ -558,24 +604,11 @@ function ImportDialog({replace, onClose}: {replace?: DatasetId; onClose(): void}
         </>
       )}
       {error && (
-        <p role="alert" className="error">
+        <Notice tone="danger" className="error">
           {error}
-        </p>
+        </Notice>
       )}
-      {busy && <p role="status">Datei wird verarbeitet …</p>}
-      <div className="dialog-actions">
-        <button className="primary" disabled={!preview || dirty || busy} onClick={confirm}>
-          Import bestätigen
-        </button>
-        <button
-          onClick={() => {
-            if (busy) controller.current?.abort();
-            else onClose();
-          }}
-        >
-          {busy ? 'Verarbeitung abbrechen' : 'Schliessen'}
-        </button>
-      </div>
+      {busy && <Notice tone="info">Datei wird verarbeitet …</Notice>}
     </Modal>
   );
 }

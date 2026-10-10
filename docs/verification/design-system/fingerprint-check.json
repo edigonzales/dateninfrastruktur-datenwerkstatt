@@ -1,0 +1,6 @@
+{
+  "baseline": "c1d4bc0ee38eafb182d736e5f606d1650bb8e7f6",
+  "checkedFiles": 196,
+  "changedFiles": [],
+  "verifiedAfter": "npm run verify and 38 Firefox/WebKit regression tests, exit 0"
+}

@@ -1,0 +1,128 @@
+{
+  "bootstrapIcons": {
+    "version": "1.13.1",
+    "source": "https://github.com/twbs/icons/tree/v1.13.1",
+    "icons": [
+      {
+        "name": "layout-sidebar",
+        "sha256": "9b80b1d3e476092b876d0b23d6d7f23eb9caa010653bf0a0cc3be0169f9c3178"
+      },
+      {
+        "name": "collection",
+        "sha256": "30c39a2a01c25300ff56e7533a78770dda1f312af19fddb4da775fd75a022ae5"
+      },
+      {
+        "name": "folder2-open",
+        "sha256": "0cc38b0197cb7f3c1e8dc08027528cafef4100b5eb2bc508ae69653ff2837556"
+      },
+      {
+        "name": "table",
+        "sha256": "16f4839707f49e01d2079460b6519185037db6283b4bcd41b4b270b56944d299"
+      },
+      {
+        "name": "database",
+        "sha256": "04eb5277416801de727ebb4d28986797276ed96f0ce11d16ef95111360b7a11d"
+      },
+      {
+        "name": "bar-chart-line",
+        "sha256": "31c6fbadf72a55ec30e9aff705769135e92662db798b555ccebab494d8ae4b3a"
+      },
+      {
+        "name": "gear",
+        "sha256": "0f480fcb1400c05fe3eb44006e3effd5d4c6c35402b045f8fa5529afc033b62a"
+      },
+      {
+        "name": "play-fill",
+        "sha256": "ae8baa815c8aa11eed60d41beb8e62b9a51cab620d3264707979e118ca576498"
+      },
+      {
+        "name": "stop-fill",
+        "sha256": "b7099bb280463c41c9add1e1013b8f5971110cd5afa9cede112a153fc6a54828"
+      },
+      {
+        "name": "floppy",
+        "sha256": "ed367911d2b6318d540aa51e77fb2b88f5b849a6d014908ef651277663611258"
+      },
+      {
+        "name": "three-dots",
+        "sha256": "0c3f46817554f31f9cf386f68834d1a9d8fea2041676599a0f7a3e9c980adb7d"
+      },
+      {
+        "name": "chevron-down",
+        "sha256": "6c98af73d9cd64d0f4ae890c40566a436a1cc904af93c283e52111af2d4ba44c"
+      },
+      {
+        "name": "x-lg",
+        "sha256": "5ac6965c9989afaad195dc0fe739bd7443a7e94e52f8530b9b7d664d20c5d9e5"
+      },
+      {
+        "name": "download",
+        "sha256": "ef82782835351c43f0e41025888b00459268a767113d33524d4f8fbfe8008c16"
+      },
+      {
+        "name": "upload",
+        "sha256": "7f04ead066f567749d3d67a2f69dbcc8aef6051dae86c38659e6a74f1ca9fdba"
+      },
+      {
+        "name": "plus-lg",
+        "sha256": "8c2ae396e9510c8ec02dcd0d3fae301e6ea93eddf87d7576bf77c1b9825b8340"
+      },
+      {
+        "name": "trash",
+        "sha256": "f98873b3700113e8cbf775d0c812d124fdf7cb06a355a82dd4206c51479f3462"
+      },
+      {
+        "name": "arrow-repeat",
+        "sha256": "2705f6572d27f2330329a5f87e6d861065d221ee56d60870f60486d2ab747c85"
+      },
+      {
+        "name": "arrows-fullscreen",
+        "sha256": "2d67bc427f2e766795ec029cd2ef24b3ebbd306ff76ae7297508da7b6a6081bf"
+      },
+      {
+        "name": "info-circle",
+        "sha256": "94836458bf63431ff37c41dedc6818270fd7ec72a9fb2da917ef2d00968f97ca"
+      },
+      {
+        "name": "exclamation-triangle",
+        "sha256": "acf2f83808131b92632e6d57aad39c02cd6e3ade54fcfdead346dc7af22a6a47"
+      },
+      {
+        "name": "check-circle",
+        "sha256": "ddad2cb113b8e3c21deea3ae876e7790982b246df345f8f03451218e1ea3a711"
+      }
+    ]
+  },
+  "jetbrainsMono": {
+    "version": "2.304",
+    "source": "https://github.com/JetBrains/JetBrainsMono",
+    "sha256": "a9cb1cd82332b23a47e3a1239d25d13c86d16c4220695e34b243effa999f45f2"
+  },
+  "frutiger": {
+    "status": "licensed-for-cantonal-use",
+    "sourceRepository": "datenportal-sodata",
+    "sourceRevision": "a742dee42a26c4739e1966b86bae0d37d76ca2f6",
+    "sourceDirectory": "src/main/resources/static/vendor/so-web-components/0.1.10/styles",
+    "usageConfirmation": {
+      "date": "2026-10-10",
+      "scope": "Use and local delivery in the cantonal Datenwerkstatt; confirmed by the project owner.",
+      "record": "docs/FONT_PROVENANCE.md"
+    },
+    "files": [
+      {
+        "file": "FrutigerLTW05-55Roman.woff2",
+        "weight": 400,
+        "internalWeight": 400,
+        "version": "Version 1.00",
+        "sha256": "55cb206a77ff71092c309352fcb5927a389382ae678bab55f85ab13ed6239d31"
+      },
+      {
+        "file": "FrutigerLTW05-75Black.woff2",
+        "weight": 700,
+        "internalWeight": 800,
+        "version": "Version 1.10",
+        "sha256": "f51c803f1c9974bb9a76130d4b0ab2dcfd59ad6b27fc7851f030d5750a56f0b1"
+      }
+    ]
+  }
+}

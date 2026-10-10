@@ -36,10 +36,15 @@ export function CodeEditor(props: CodeEditorProps) {
       ariaLabel: 'Analysecode',
       readOnly: props.readOnly,
       fontSize: props.fontSize,
+      fontFamily: "'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Consolas, monospace",
       lineNumbers: props.lineNumbers ? 'on' : 'off',
       wordWrap: props.wordWrap ? 'on' : 'off',
     });
     editor.current = instance;
+    // Monaco caches glyph widths; refresh after the local font settles, including fallback.
+    void document.fonts.ready.then(() => {
+      if (editor.current === instance) monaco.editor.remeasureFonts();
+    });
     const view = props.models.view(props.id);
     if (view) instance.restoreViewState(view);
     instance.focus();

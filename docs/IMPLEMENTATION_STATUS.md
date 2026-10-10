@@ -356,3 +356,111 @@ Serverprozessenden: Fixtureportal nach beabsichtigtem SIGINT **Exit 130**, Safar
 Am 4. Oktober 2026 hat der Nutzer Commit und Push ausdrücklich beauftragt. Ziel ist der vorhandene Branch `main` auf `origin` (`edigonzales/dateninfrastruktur-datenwerkstatt`); `git fetch origin` **Exit 0**, vor dem Commit keine Divergenz. Veralteten Safari-Zwischenstand in der README korrigiert. `python3 tools/verify-package.py`, `git diff --check` und gemeinsame Safari-Berichtprüfung erneut **Exit 0**. Hashvergleich bestätigt sämtliche **193** verifizierten Kandidatendateien plus **4** Safari-Testdateien unverändert. Deshalb kein erneuter vollständiger Engine-/Deploymentlauf behauptet. Commit enthält die Implementierung und ihre Prüfbelege; generierte Runtimeassets, Buildausgaben und Dependencies bleiben ignoriert. Ein Push ist keine Produktivbereitstellung; die oben dokumentierten externen Schritte und der Clipboard-Diagnosebefund bleiben bestehen.
 
 Nach erstmaligem Staging aller neuen Dateien meldet `git diff --cached --check` **Exit 2**: 746 Whitespacehinweise in unveränderten Rohlogs und eine abschliessende Leerzeile im übernommenen webR-Lizenztext. Diese Originalbelege werden nicht nachträglich umgeschrieben. Derselbe Check mit ausschliesslich diesen Rohlogs/Lizenzdateien ausgeschlossen (`git diff --cached --check -- . ':!docs/verification/*.log' ':!licenses/*'`) **Exit 0**; keine übrigen Dateien betroffen. Der vorherige unstaged Check umfasste die damals ungetrackten Dateien noch nicht.
+
+## UI — Designsystem (10. Oktober 2026)
+
+Basisrevision **c1d4bc0**, vor Beginn sauberer Arbeitsbaum. Die historischen
+P0–P8-Berichte oberhalb bleiben unverändert. Der neue Kandidat ist über
+[Dateifingerprint](verification/design-system/code-fingerprint.json) identifiziert.
+
+### Abschnitt A — Grundlage geliefert
+
+REQ-061–067 / AT-054–058: [Gestaltungsvertrag](DESIGN_SYSTEM.md), README-Verweis,
+UI-Folgeabschnitt im Implementierungsplan, Tokens und getrennte Grundlagen-/Komponenten-/Layout-CSS.
+Lokale UI-Bausteine in `src/ui/`: Buttons, FormField/Controls, ActionGroup/Toolbar,
+SVGs/Tooltips, ActionMenu, Navigation, Modal, Status/Notice, Panelkopf/Leerzustand.
+Enginefreie Entwicklungsreferenz unter `/tests/design-system/`; nicht im Produktbuild.
+
+Bootstrap Icons 1.13.1 (MIT), JetBrains Mono 2.304 (OFL) und Originalhinweise lokal.
+Frutiger war zunächst mangels dokumentiertem Nutzungskontext zurückgestellt.
+Der Projektverantwortliche hat am 10. Oktober die kantonalen Lizenzen und die
+Verwendung/Auslieferung bestätigt. Anschliessend hat er ausdrücklich den Bestand
+**aus sodata** gewählt: 55Roman/75Black mit CSS-Gewichten 400/700 wie im Portal.
+LTCom-Zwischenstand entfernt. [Herkunft und Bestätigung](FONT_PROVENANCE.md),
+[bytegenauer Abgleich](verification/design-system/font-source-check.json).
+
+### Abschnitt B — Formulare und Dialoge geliefert
+
+REQ-061/063/064/065/067, AT-055–058: Einstieg, Arbeitsbereichsliste/-details,
+Daten-/Portalimport, Archive/Transfers, Einstellungen sowie Start-/Fehler-/Nur-Lesen-
+und Sitzungsansichten verwenden gemeinsame Controls und Abstände. Sichtbare Labels,
+Hilfen/Fehler, native Pflichtfelder und anklickbare Checkbox-/Radiolabels.
+„Neuer Arbeitsbereich“ primär, „Projekt öffnen“ gemeinsamer sekundärer Dateiauslöser;
+Wartung getrennt. Dialogfüsse mit 8px-Aktionsgruppen, bestehende Schliessregeln erhalten.
+
+### Abschnitt C — Navigation und Arbeitsflächen geliefert
+
+REQ-061–067 / AT-054–058: Sidebar mit lokalen Bootstrap-SVGs, Tooltip, Marker und
+`aria-current`; Breiten 52/212 px. SQL/R: Analysename → Ausführen/Abbrechen → Speichern
+→ Ansicht → Weitere Aktionen. Layout-/R-Reset im Tastaturmenü. Kompakte Ergebnis-/Paging-/
+Plotaktionen, tatsächliche Layoutmessung, einblendbare Parameter. Vollbildgrafiken
+halten die Grafik und ihre Aktionen gemeinsam sichtbar. Weisser Hintergrund,
+Frutiger-Labels und JetBrains Mono auch in Monaco; keine globalen Control-Regeln in Monaco.
+Domain, Engine-Lebenszyklen, Speicherformate, Contracts und Goldenwerte unverändert.
+
+### Abschnitt D — Bereinigung und Abnahme geliefert
+
+REQ-061–067, REQ-078 / AT-054–058 sowie fachliche Regressionen: abgelöste globale
+Control-Regeln entfernt, lokale Font-/SVG-Dateien mit Originalhinweisen und
+Inventar ausgeliefert. Bootstrap-Pfade und Frutiger-Dateien sind mit ihren
+Originalen abgeglichen. Keine Buildabhängigkeit auf Nachbarrepositories.
+
+Abschliessender Kandidat: Basis **c1d4bc0**, uncommittierter Arbeitsbaum mit
+[196 Dateihashes](verification/design-system/code-fingerprint.json);
+[Abgleich nach Testende](verification/design-system/fingerprint-check.json)
+**Exit 0, alle Dateien unverändert**. Ausgeführte Befehle:
+
+- `npm run verify` **Exit 0**: Types, Lint, Build, **40 Unit-, 43 Integrations-
+  und 26 Chromium-E2E-Tests**. [Log](verification/design-system/verify-complete.log).
+- `npx playwright test --project=firefox --project=webkit tests/e2e/design-system.spec.ts tests/e2e/p7-ui.spec.ts`
+  **Exit 0, 14 bestanden**; übrige neun E2E-Dateien mit denselben Browserprojekten
+  **Exit 0, 38 bestanden**. Damit vollständige Suite **26/26 je Browser**.
+  [UI-Log](verification/design-system/cross-browser-ui-complete.log),
+  [Regressionslog](verification/design-system/e2e-regression-matrix.log),
+  [vollständige Befehle](verification/design-system/README.md#ausgeführte-prüfungen).
+- `DW_REUSE_TEST_PORTAL=1 npx playwright test -c playwright.deploy.config.ts tests/deployment/static.spec.ts`
+  **Exit 0, 27 bestanden**: drei Browser × drei Profile, `/` und `/lab/`,
+  echte SQL/R-Engines, CSP/MIME/Cache, lokale SVGs/Fonts, absichtlicher
+  Fontladefehler mit Systemfont-Fallback, Lizenzinventar und keine externen
+  Font-/Iconabrufe. [Log](verification/design-system/deployment-final.log).
+- `python3 tools/verify-package.py --report docs/verification/design-system/package-check.json`
+  **Exit 0**: Dokumentlinks, Beispiele, Requirement-/Testabdeckung und dokumentierte
+  Fonts. [Bericht](verification/design-system/package-check.json).
+- Prettier auf allen geänderten UI-/Testdateien und `git diff --check` jeweils
+  **Exit 0**. [Formatlog](verification/design-system/format-final.log).
+- Nativer Safari 27.0.1: Fonts, Fokusfang/-rückgabe, Menüs, echter 200-%-Zoom
+  und Plot-Vollbild manuell geprüft; [Scope und Befunde](verification/design-system/safari-smoke.md).
+
+Gemessene Geometrie in den drei Browsern: Header 56 px, Sidebar 52/212 px,
+Analysebedienung SQL 81 px / R 88 px, Arbeitsflächen über 75 % Viewporthöhe
+und volle verfügbare Breite. 8 px Aktions-/Labelabstände einschliesslich Umbruch;
+SQL bei 900 px Höhe mit rund 328 px Editor und 400 px Resultat. Neue PNG-/JSON-
+Belege liegen ausschliesslich unter `docs/verification/design-system/`.
+
+Der [UI-Abnahmebericht](verification/design-system/README.md) dokumentiert auch
+fehlgeschlagene Zwischenversuche und ihre Korrekturen: DOMRect-Rundung und
+FontFace-Verhalten zwischen Browsern, fehlendes Speichern im neuen Deploymenttest,
+Firefox-Umbruch des R-Lauf-Labels sowie deaktivierte SQL-Revisions-Live-Ansagen.
+Der statische Assetlauf liegt vor den letzten beiden rein lokalen UI-Korrekturen;
+Assets/Buildpfade blieben unverändert. Verify und vollständige E2E-Matrix liefen danach.
+Historische P0–P8-Berichte, Goldenwerte und beide Referenzrepositories sind unverändert.
+
+Offene Grenzen: kein neuer vollständiger nativer Safari-Engine-/Persistenzlauf und
+keine erneute Ressourcenbenchmark-Abnahme in diesem UI-Auftrag; der bereits
+bekannte Monaco-/Safari-Clipboard-Diagnosebefund bleibt ausdrücklich offen.
+Der zusätzliche breite Prettier-Check über ganz `src` fand eine schon vorhandene
+Abweichung in `src/infrastructure/catalog/ExploreContext.ts` (Exit 1, Datei unverändert).
+Keine offenen Implementierungspunkte im vereinbarten Designsystem-Umfang.
+Nächster konkreter Schritt ist die gestalterische Durchsicht anhand des neuen
+Abnahmeberichts; Commit, Push und Veröffentlichung wurden nicht ausgeführt.
+
+### UI-Commit und Push
+
+Am 10. Oktober 2026 hat der Nutzer Commit und Push ausdrücklich beauftragt.
+Ziel: bestehender Branch `main`, Remote `origin`
+(`edigonzales/dateninfrastruktur-datenwerkstatt`). `git fetch origin` und
+`git diff --check` Exit 0; vor dem Commit keine Divergenz (0/0).
+Erneuter Hashabgleich: alle 196 geprüften Code-/Test-/Fixture-Dateien unverändert.
+Die oben dokumentierten erfolgreichen Tests gelten damit weiterhin; kein
+zusätzlicher Testlauf behauptet. Commit umfasst Designsystem, UI-Migration,
+Originalassets, Herkunfts-/Lizenzdokumentation und getrennte Prüfbelege.

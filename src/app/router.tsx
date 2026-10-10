@@ -1,3 +1,5 @@
+import {Button, Input, Select, FormField, Notice} from '../ui/Controls';
+import {NavigationItem} from '../ui/NavigationItem';
 import {StorageSettings} from '../features/workspaces/StorageSettings';
 import {WorkspaceViewController} from '../state/workspaceView';
 import {failureMessage} from '../application/errors';
@@ -131,7 +133,7 @@ function Shell() {
   }, []);
   return (
     <>
-      <header>
+      <header className="app-header">
         <img src={logo} alt="Kanton Solothurn" />
         <Link to="/workspaces" className="brand">
           Datenwerkstatt
@@ -146,7 +148,7 @@ function Shell() {
       {error && (
         <div role="alert" className="error">
           <strong>{error}</strong>
-          <button onClick={() => appStore.setState({error: null})}>Hinweis schliessen</button>
+          <Button onClick={() => appStore.setState({error: null})}>Hinweis schliessen</Button>
         </div>
       )}
       <Outlet />
@@ -234,38 +236,58 @@ function WorkspaceProvider() {
     <workspaceContext.Provider value={ctx}>
       <div className="workspace-layout">
         <nav className={expanded ? 'sidebar expanded' : 'sidebar'} aria-label="Arbeitsbereich">
-          <button
-            aria-label={expanded ? 'Navigation einklappen' : 'Navigation ausklappen'}
-            title="Navigation umschalten"
-            onClick={() => ctx.view.patch({sidebarCollapsed: expanded})}
+          <NavigationItem
+            icon="layout-sidebar"
+            label={expanded ? 'Navigation einklappen' : 'Navigation ausklappen'}
+            expanded={expanded}
           >
-            ☰
-          </button>
-          <Link to="/workspaces" title="Arbeitsbereiche" aria-label="Arbeitsbereiche">
-            ▤{expanded && ' Arbeitsbereiche'}
-          </Link>
-          <Link
-            to="/workspaces/$workspaceId"
-            params={{workspaceId: session.document.workspace.id}}
-            title="Projektübersicht"
-            aria-label="Projektübersicht"
+            <Button onClick={() => ctx.view.patch({sidebarCollapsed: expanded})} />
+          </NavigationItem>
+          <NavigationItem icon="collection" label="Arbeitsbereiche" expanded={expanded}>
+            <Link to="/workspaces" activeOptions={{exact: true}} />
+          </NavigationItem>
+          <NavigationItem
+            icon="folder2-open"
+            label="Projektübersicht"
+            expanded={expanded}
+            current={!/\/(data|sql|r)(\/|$)/.test(path)}
           >
-            ⌂{expanded && ' Projektübersicht'}
-          </Link>
-          <Link
-            to="/workspaces/$workspaceId/data"
-            params={{workspaceId: session.document.workspace.id}}
-            title="Daten"
-            aria-label="Daten"
+            <Link
+              to="/workspaces/$workspaceId"
+              activeOptions={{exact: true}}
+              params={{workspaceId: session.document.workspace.id}}
+            />
+          </NavigationItem>
+          <NavigationItem
+            icon="table"
+            label="Daten"
+            expanded={expanded}
+            current={path.endsWith('/data')}
           >
-            ▦{expanded && ' Daten'}
-          </Link>
-          <button title="SQL" aria-label="SQL" onClick={() => openAnalysis('sql')}>
-            SQL
-          </button>
-          <button title="R" aria-label="R" onClick={() => openAnalysis('r')}>
-            R
-          </button>
+            <Link
+              to="/workspaces/$workspaceId/data"
+              activeOptions={{exact: true}}
+              params={{workspaceId: session.document.workspace.id}}
+            />
+          </NavigationItem>
+          <NavigationItem
+            icon="database"
+            label="SQL"
+            tooltip="SQL · DuckDB"
+            expanded={expanded}
+            current={path.includes('/sql/')}
+          >
+            <Button onClick={() => openAnalysis('sql')} />
+          </NavigationItem>
+          <NavigationItem
+            icon="bar-chart-line"
+            label="R"
+            tooltip="R · webR"
+            expanded={expanded}
+            current={path.includes('/r/')}
+          >
+            <Button onClick={() => openAnalysis('r')} />
+          </NavigationItem>
         </nav>
         <section className="workspace-content" data-analysis={/\/(sql|r)\//.test(path)}>
           <div className="save-status" aria-live="polite">
@@ -281,7 +303,7 @@ function WorkspaceProvider() {
                     ? 'Speichern fehlgeschlagen'
                     : 'Nicht gespeichert'}
             {session.readOnly && (
-              <button
+              <Button
                 onClick={() => {
                   void services.workspaces
                     .reacquire(session.document.workspace.id)
@@ -290,13 +312,13 @@ function WorkspaceProvider() {
                 }}
               >
                 Schreibrecht erneut anfordern
-              </button>
+              </Button>
             )}
           </div>
           {error !== undefined && (
             <div className="error" role="alert">
               {message(error)}{' '}
-              <button
+              <Button
                 onClick={() => {
                   if (session.persistence.generation === session.persistence.savedGeneration)
                     session.persistence.acknowledgeUnpublishedFailure();
@@ -306,7 +328,7 @@ function WorkspaceProvider() {
                 {session.persistence.generation === session.persistence.savedGeneration
                   ? 'Vorherigen Projektstand beibehalten'
                   : 'Speichern erneut versuchen'}
-              </button>
+              </Button>
             </div>
           )}
           <Outlet />
@@ -338,7 +360,7 @@ function AnalysisPage({kind, analysisId}: {kind: 'sql' | 'r'; analysisId: string
   const analysis = doc.analyses[id];
   if (!analysis || analysis.kind !== kind || analysis.archivedAt)
     return <h1>Analyse nicht gefunden</h1>;
-  if (!ready) return <p role="status">Arbeitsfläche wird geladen …</p>;
+  if (!ready) return <Notice tone="info">Arbeitsfläche wird geladen …</Notice>;
   return <AnalysisEditor key={id} analysisId={id} models={models} session={session} />;
 }
 function AnalysisEditor({
@@ -377,12 +399,11 @@ function SettingsPage() {
       });
   };
   return (
-    <main>
+    <main className="settings-page">
       <h1>Einstellungen</h1>
       <div className="form-fields">
-        <label>
-          Editor-Schriftgrösse
-          <select
+        <FormField label={<>Editor-Schriftgrösse</>}>
+          <Select
             value={settings.editorFontSize}
             onChange={(e) => save({...settings, editorFontSize: Number(e.target.value)})}
           >
@@ -391,34 +412,31 @@ function SettingsPage() {
                 {n} px
               </option>
             ))}
-          </select>
-        </label>
-        <label>
-          <input
+          </Select>
+        </FormField>
+        <FormField label={<>Zeilennummern</>}>
+          <Input
             type="checkbox"
             checked={settings.showLineNumbers}
             onChange={(e) => save({...settings, showLineNumbers: e.target.checked})}
           />
-          Zeilennummern
-        </label>
-        <label>
-          <input
+        </FormField>
+        <FormField label={<>Zeilenumbruch</>}>
+          <Input
             type="checkbox"
             checked={settings.wordWrap}
             onChange={(e) => save({...settings, wordWrap: e.target.checked})}
           />
-          Zeilenumbruch
-        </label>
+        </FormField>
       </div>
-      <p role="status">{saveState}</p>
-      <label>
-        <input
+      <Notice tone="info">{saveState}</Notice>
+      <FormField label={<>Seitenleiste standardmässig eingeklappt</>}>
+        <Input
           type="checkbox"
           checked={settings.sidebarCollapsed}
           onChange={(e) => save({...settings, sidebarCollapsed: e.target.checked})}
         />
-        Seitenleiste standardmässig eingeklappt
-      </label>
+      </FormField>
       <StorageSettings />
     </main>
   );

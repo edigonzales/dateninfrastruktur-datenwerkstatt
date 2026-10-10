@@ -3,6 +3,7 @@ import {execFileSync} from 'node:child_process';
 const root = 'dist/licenses';
 await mkdir(root, {recursive: true});
 await cp('licenses', `${root}/original-notices`, {recursive: true});
+await copyFile('src/assets/ui-assets.json', `${root}/ui-assets.json`);
 const lock = JSON.parse(await readFile('package-lock.json', 'utf8'));
 const npm = [];
 for (const [path, record] of Object.entries(lock.packages)) {

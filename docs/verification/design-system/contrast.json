@@ -1,0 +1,58 @@
+[
+  {
+    "role": "text",
+    "foreground": "#2F4858",
+    "background": "#FFFFFF",
+    "contrastRatio": 9.59,
+    "meets4_5": true
+  },
+  {
+    "role": "muted",
+    "foreground": "#536779",
+    "background": "#FFFFFF",
+    "contrastRatio": 5.86,
+    "meets4_5": true
+  },
+  {
+    "role": "muted-on-toolbar",
+    "foreground": "#536779",
+    "background": "#F4F7F9",
+    "contrastRatio": 5.45,
+    "meets4_5": true
+  },
+  {
+    "role": "primary",
+    "foreground": "#FFFFFF",
+    "background": "#D20A11",
+    "contrastRatio": 5.54,
+    "meets4_5": true
+  },
+  {
+    "role": "info",
+    "foreground": "#2D5F87",
+    "background": "#E8F2FB",
+    "contrastRatio": 5.98,
+    "meets4_5": true
+  },
+  {
+    "role": "success",
+    "foreground": "#2F7D4E",
+    "background": "#E7F6EC",
+    "contrastRatio": 4.51,
+    "meets4_5": true
+  },
+  {
+    "role": "warning",
+    "foreground": "#8A5A00",
+    "background": "#FFF3E0",
+    "contrastRatio": 5.4,
+    "meets4_5": true
+  },
+  {
+    "role": "danger",
+    "foreground": "#B80F17",
+    "background": "#FDEBEC",
+    "contrastRatio": 5.86,
+    "meets4_5": true
+  }
+]

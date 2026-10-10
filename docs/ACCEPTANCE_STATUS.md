@@ -76,3 +76,17 @@ Diese Matrix bewertet Szenarien, nicht lediglich Testdateinamen. **P0–P8 sind 
 | AT-070 | REQ-007, REQ-077, REQ-078, REQ-079, REQ-080 | Bestanden | P8 frischer Git-Tree: npm ci/verify/voller Linux-Dockerbuild Exit 0. 40 Unit, 198 Funktions- und 45 Deploymentfälle nachgewiesen; Ersttimeouts und unveränderte gezielte Wiederholungen dokumentiert. Tatsächlicher Safari-Pilot inklusive Prozessneustart bestanden (SAFARI_PILOT.md); Remote-CI nicht ausgeführt. |
 | AT-071 | REQ-038, REQ-055, REQ-056, REQ-059, REQ-073, REQ-076, REQ-078, REQ-080 | Bestanden | P7: 20 echte persistente Workspace-/SQL-/R-Resetzyklen; jeder Close 0 Worker/0 Handles, Reset 0 R-Objekte; vollständige 10k/100k-Transfers und exakte Summen. Gemessene Umgebung/Zeiten dokumentiert, kein RAM-Peakversprechen. |
 | AT-072 | REQ-001, REQ-003, REQ-017, REQ-029, REQ-041, REQ-045, REQ-048, REQ-052, REQ-053, REQ-068, REQ-069, REQ-077, REQ-078, REQ-079, REQ-080 | Bestanden | P8: gemischter öffentlicher/lokaler Golden-UI-Pfad mit unveränderten SQL/R-Sollwerten, PNG/Chart, echtem Browserprozessneustart und Archivimport im zweiten frischen Profil in Chromium/Firefox/WebKit bestanden. Nativer Safari-Pilot zusätzlich: gleiche Goldenwerte, PNG, Archivimport, Cancel und vollständiger Safari-Prozessneustart bestanden. Safari-Umfang separat in SAFARI_PILOT.md; keine zweite frische Safari-Profilprüfung behauptet. |
+
+## Ergänzende UI-Abnahme — 10. Oktober 2026
+
+Die Tabelle oben beschreibt die historische P0–P8-Abnahme. Die neue Oberfläche
+nach [Designsystem](DESIGN_SYSTEM.md) ist separat geprüft: insbesondere AT-054–058
+mit Formularlabels, Abständen, SVG-Navigation, Tastatur-/Dialogbedienung und
+SQL-/R-Geometrie. Die bisherige Systemfont-Angabe in AT-057 gehört zur damaligen
+Baseline; jetzt werden die kantonal freigegebenen Frutiger-Dateien aus sodata und
+JetBrains Mono lokal ausgeliefert, mit Systemfonts als Ladefehler-Fallback.
+
+`npm run verify` Exit 0: 40 Unit-, 43 Integrations- und 26 Chromium-E2E-Tests.
+Vollständige E2E-Suite zusätzlich 26/26 in Firefox und 26/26 in WebKit; 27 statische
+Deploymentprüfungen bestanden. Nativer Safari-UI-Smoke separat dokumentiert.
+[Aktueller Kandidat, Befehle, Screenshots, Messwerte und Grenzen](verification/design-system/README.md).

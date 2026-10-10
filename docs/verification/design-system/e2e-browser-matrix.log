@@ -1,0 +1,92 @@
+[WebServer] (node:4412) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] (node:4417) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 52 tests using 1 worker
+
+(node:4433) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] 8:39:38 PM [vite] (client) [console.warn] WebR is using `PostMessage` communication channel, nested R REPLs are not available.
+  ✓   1 [firefox] › tests/e2e/archive.spec.ts:6:1 › P6 AT-051 AT-053 AT-063: Golden archive in fresh profile, graph remap, real SQL/PNG, duplicate and independent deletion (1.4m)
+  ✓   2 [firefox] › tests/e2e/archive.spec.ts:141:1 › P6 AT-059: recipe inspection/confirmation without engine or empty fake tables (5.3s)
+  ✘   3 [firefox] › tests/e2e/design-system.spec.ts:17:1 › UI components: labels, native submit, checkbox, errors, busy state, menu and dialog keyboard (5.2s)
+(node:4721) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓   4 [firefox] › tests/e2e/design-system.spec.ts:105:1 › UI geometry: 8 px wrapped actions, form labels, narrow/zoom equivalent and failed local font (6.5s)
+  ✘   5 [firefox] › tests/e2e/design-system.spec.ts:172:1 › UI screens: project actions, forms, navigation and settings at target viewports (8.0s)
+(node:4858) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓   6 [firefox] › tests/e2e/imports.spec.ts:20:1 › P2 / AT-008 AT-010 AT-018: confirmed import, reload, data preview, independent alias and complete Parquet download (15.0s)
+  ✓   7 [firefox] › tests/e2e/imports.spec.ts:53:1 › P2 / AT-016: denied OPFS requires explicit temporary mode and never claims local persistence (4.8s)
+  ✓   8 [firefox] › tests/e2e/imports.spec.ts:79:1 › P2 / AT-013: real import surfaces OPFS quota failure without publishing partial metadata (6.3s)
+  ✘   9 [firefox] › tests/e2e/imports.spec.ts:105:1 › P2 / AT-002 AT-024 partial: one import worker survives routes and closes before another workspace opens (4.7s)
+
+
+  1) [firefox] › tests/e2e/design-system.spec.ts:17:1 › UI components: labels, native submit, checkbox, errors, busy state, menu and dialog keyboard 
+
+    Error: expect(received).toBe(expected) // Object.is equality
+
+    Expected: 8
+    Received: 8.000045776367188
+
+      66 |   }
+      67 |   const buttons = await gaps(dialog.locator('.dw-dialog-footer'));
+    > 68 |   expect(buttons[1]!.left - buttons[0]!.right).toBe(8);
+         |                                                ^
+      69 |   await page.keyboard.press('Escape');
+      70 |   await expect(open).toBeFocused();
+      71 |   const sql = page.getByRole('button', {name: 'SQL', exact: true});
+        at /Users/stefan/sources/dateninfrastruktur-datenwerkstatt/tests/e2e/design-system.spec.ts:68:48
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/e2e-design-system-UI-compo-a67a0-te-menu-and-dialog-keyboard-firefox/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/e2e-design-system-UI-compo-a67a0-te-menu-and-dialog-keyboard-firefox/error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/e2e-design-system-UI-compo-a67a0-te-menu-and-dialog-keyboard-firefox/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/e2e-design-system-UI-compo-a67a0-te-menu-and-dialog-keyboard-firefox/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  2) [firefox] › tests/e2e/design-system.spec.ts:172:1 › UI screens: project actions, forms, navigation and settings at target viewports 
+
+    Error: expect(received).toBe(expected) // Object.is equality
+
+    Expected: 8
+    Received: 8.000015258789062
+
+      194 |     for (let i = 1; i < actions.length; i++)
+      195 |       if (actions[i]!.top === actions[i - 1]!.top)
+    > 196 |         expect(actions[i]!.left - actions[i - 1]!.right).toBe(8);
+          |                                                          ^
+      197 |     await capture(page, `project-${info.project.name}-${size.width}`);
+      198 |     await page.getByRole('button', {name: 'Datei hinzufügen', exact: true}).click();
+      199 |     await expect(page.getByRole('dialog')).toBeVisible();
+        at /Users/stefan/sources/dateninfrastruktur-datenwerkstatt/tests/e2e/design-system.spec.ts:196:58
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/e2e-design-system-UI-scree-28b60-ettings-at-target-viewports-firefox/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/e2e-design-system-UI-scree-28b60-ettings-at-target-viewports-firefox/error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/e2e-design-system-UI-scree-28b60-ettings-at-target-viewports-firefox/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/e2e-design-system-UI-scree-28b60-ettings-at-target-viewports-firefox/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  2 failed
+    [firefox] › tests/e2e/design-system.spec.ts:17:1 › UI components: labels, native submit, checkbox, errors, busy state, menu and dialog keyboard 
+    [firefox] › tests/e2e/design-system.spec.ts:172:1 › UI screens: project actions, forms, navigation and settings at target viewports 
+  1 interrupted
+    [firefox] › tests/e2e/imports.spec.ts:105:1 › P2 / AT-002 AT-024 partial: one import worker survives routes and closes before another workspace opens 
+  43 did not run
+  6 passed (2.4m)

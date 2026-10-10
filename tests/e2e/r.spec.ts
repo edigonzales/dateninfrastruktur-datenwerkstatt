@@ -61,7 +61,8 @@ test('P5 AT-040 AT-042 AT-046 AT-048: complete UI transfer, lazy worker survives
   await page.locator(`a[href="${new URL(rUrl).pathname}"]`).click();
   await expect(page.getByRole('button', {name: /x · numeric/})).toBeVisible();
   expect(workers.filter((w) => w.url.includes('webr'))).toHaveLength(1);
-  await page.getByRole('button', {name: 'R zurücksetzen', exact: true}).click();
+  await page.getByRole('button', {name: 'Weitere Aktionen', exact: true}).click();
+  await page.getByRole('menuitem', {name: 'R zurücksetzen', exact: true}).click();
   await page.getByRole('button', {name: 'Reset bestätigen', exact: true}).click();
   await expect.poll(() => workers.filter((w) => w.url.includes('webr') && w.closed).length).toBe(1);
   await expect(page.getByRole('button', {name: /x · numeric/})).toHaveCount(0);

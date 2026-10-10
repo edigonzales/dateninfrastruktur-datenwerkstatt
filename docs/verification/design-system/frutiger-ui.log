@@ -1,0 +1,19 @@
+[WebServer] (node:82857) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] (node:82858) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 7 tests using 1 worker
+
+(node:82859) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  1 [chromium] › tests/e2e/design-system.spec.ts:17:1 › UI components: labels, native submit, checkbox, errors, busy state, menu and dialog keyboard (1.0s)
+  ✓  2 [chromium] › tests/e2e/design-system.spec.ts:105:1 › UI geometry: 8 px wrapped actions, form labels, narrow/zoom equivalent and failed local font (633ms)
+  ✓  3 [chromium] › tests/e2e/design-system.spec.ts:172:1 › UI screens: project actions, forms, navigation and settings at target viewports (1.2s)
+[WebServer] 8:23:02 PM [vite] (client) [console.warn] WebR is using `PostMessage` communication channel, nested R REPLs are not available.
+  ✓  4 [chromium] › tests/e2e/p7-ui.spec.ts:16:1 › P7 AT-054–055 AT-058: measured SQL/R geometry, keyboard splitters, layout reset and reload (20.8s)
+  ✓  5 [chromium] › tests/e2e/p7-ui.spec.ts:137:1 › P7 AT-055–057: native focus trap/return, settings, storage cleanup and data-free diagnostics (3.3s)
+  ✓  6 [chromium] › tests/e2e/p7-ui.spec.ts:183:1 › P7 AT-025 AT-055 AT-056: selected SQL is snapshotted and cell markup remains text (4.2s)
+  ✓  7 [chromium] › tests/e2e/p7-ui.spec.ts:210:1 › P7 AT-058: browser history restores the analysis cursor and layout does not edit the domain (3.0s)
+
+  7 passed (35.0s)

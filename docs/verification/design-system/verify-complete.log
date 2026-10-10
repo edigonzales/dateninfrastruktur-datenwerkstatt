@@ -1,0 +1,197 @@
+
+> datenwerkstatt@0.1.0 verify
+> npm run typecheck && npm run lint && npm run test:unit && npm run build && npm run test:integration && npm run test:e2e
+
+
+> datenwerkstatt@0.1.0 typecheck
+> tsc --noEmit
+
+
+> datenwerkstatt@0.1.0 lint
+> eslint . && node scripts/check-boundaries.mjs
+
+Module boundaries checked.
+
+> datenwerkstatt@0.1.0 test:unit
+> vitest run
+
+
+ RUN  v4.1.11 /Users/stefan/sources/dateninfrastruktur-datenwerkstatt
+
+
+ Test Files  9 passed (9)
+      Tests  40 passed (40)
+   Start at  20:49:14
+   Duration  1.60s (transform 2.15s, setup 0ms, import 4.06s, tests 617ms, environment 1ms)
+
+
+> datenwerkstatt@0.1.0 build
+> npm run assets:prepare && vite build && node scripts/license-inventory.mjs
+
+
+> datenwerkstatt@0.1.0 assets:prepare
+> node scripts/prepare-assets.mjs
+
+Local webR 0.6.0 and 4 DuckDB extensions prepared.
+Pinned local R package mirror verified.
+vite v8.1.2 building client environment for production...
+[2Ktransforming...✓ 1413 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/index.html                                       0.35 kB │ gzip:   0.26 kB
+dist/.vite/manifest.json                              2.04 kB │ gzip:   0.54 kB
+dist/assets/kanton-solothurn-DOpJ_x8i.svg             4.52 kB │ gzip:   1.75 kB
+dist/assets/FrutigerLTW05-75Black-DMqR_y8m.woff2     25.68 kB
+dist/assets/FrutigerLTW05-55Roman-Cg8J5uP1.woff2     25.76 kB
+dist/assets/JetBrainsMono-Regular-BQaDgvhP.woff2     92.16 kB
+dist/assets/codicon-ngg6Pgfi.ttf                    121.97 kB
+dist/licenses/npm-bundle.json                       161.40 kB │ gzip:  25.79 kB
+dist/assets/editor.worker-Cn2oRESe.js               279.94 kB
+dist/assets/index-1xz7dCOf.css                       18.83 kB │ gzip:   4.63 kB
+dist/assets/CodeEditorImpl-v5rfKcVs.css             145.98 kB │ gzip:  22.62 kB
+dist/assets/sql-NEE52Syq.js                           8.84 kB │ gzip:   3.73 kB
+dist/assets/index-Dn2S17Ho.js                       931.80 kB │ gzip: 274.93 kB
+dist/assets/CodeEditorImpl-BYFB6V7B.js            3,629.73 kB │ gzip: 925.19 kB
+
+✓ built in 2.48s
+[plugin builtin:vite-reporter] 
+(!) Some chunks are larger than 500 kB after minification. Consider:
+- Using dynamic import() to code-split the application
+- Use build.rolldownOptions.output.codeSplitting to improve chunking: https://rolldown.rs/reference/OutputOptions.codeSplitting
+- Adjust chunk size limit for this warning via build.chunkSizeWarningLimit.
+License inventory: 400 npm entries, 40 pinned R packages; original notices copied.
+
+> datenwerkstatt@0.1.0 test:integration
+> playwright test --project=chromium tests/integration
+
+[WebServer] (node:10512) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] (node:10530) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 43 tests using 1 worker
+
+(node:10539) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓   1 [chromium] › tests/integration/archive-portal.spec.ts:3:1 › P6 AT-051: external inclusion is opt-in, immutable public origin and IDs survive offline archive import (8.3s)
+  ✓   2 [chromium] › tests/integration/imports.spec.ts:7:1 › P2 / AT-008 AT-010: strict CSV → hashed OPFS → fresh DuckDB retains values, NULL and empty strings (4.8s)
+  ✓   3 [chromium] › tests/integration/imports.spec.ts:63:1 › P2 / AT-009 AT-020: late conversion error, header-only CSV and invalid bytes (3.9s)
+  ✓   4 [chromium] › tests/integration/imports.spec.ts:123:1 › P2 / AT-014 AT-017: reload finds true orphans, writer cleanup preserves referenced and foreign bytes (3.6s)
+  ✓   5 [chromium] › tests/integration/imports.spec.ts:193:1 › P2 / AT-010: imported file survives browser process restart and removal of input file (10.1s)
+  ✓   6 [chromium] › tests/integration/imports.spec.ts:262:1 › P2 / AT-061 partial: changed byte is rejected as ARTIFACT_CORRUPT before use (1.1s)
+  ✓   7 [chromium] › tests/integration/init-failure.spec.ts:3:1 › AT-069: corrupt DuckDB WASM frees its actual worker before retry (9.6s)
+  ✓   8 [chromium] › tests/integration/p0.spec.ts:6:1 › P0 / AT-001 AT-002: one connector, Arrow, CSV → Parquet and stable materialization (2.8s)
+  ✓   9 [chromium] › tests/integration/p0.spec.ts:33:1 › P0: DuckDB parser returns SELECT AST and rejects non-SELECT serialization (2.3s)
+  ✓  10 [chromium] › tests/integration/p0.spec.ts:73:1 › P0 / AT-030: running SQL ends or worker terminates, fresh query works (4.6s)
+[WebServer] 8:50:22 PM [vite] (client) [console.warn] WebR is using `PostMessage` communication channel, nested R REPLs are not available.
+[WebServer] 8:50:23 PM [vite] (client) [console.warn] WebR is using `PostMessage` communication channel, nested R REPLs are not available.
+  ✓  11 [chromium] › tests/integration/p0.spec.ts:102:1 › P0 / AT-046: local webR dataframe, real plot, PostMessage worker reset (3.8s)
+  ✓  12 [chromium] › tests/integration/p0.spec.ts:136:1 › P0: real OPFS read/write/delete and IndexedDB transaction (872ms)
+  ✓  13 [chromium] › tests/integration/p0.spec.ts:144:1 › P0 / AT-012: Web Lock callback holds writer lease across tabs (1.2s)
+  ✓  14 [chromium] › tests/integration/p0.spec.ts:160:1 › P0 / AT-023: guard allows analysis and blocks external/dynamic SQL without execution (2.4s)
+  ✓  15 [chromium] › tests/integration/p8-acceptance.spec.ts:4:1 › P8 AT-007: separate predecessor upgrade rolls back schema and data, then migrates atomically (998ms)
+  ✓  16 [chromium] › tests/integration/p8-acceptance.spec.ts:21:1 › P8 AT-019: replacement is rejected during real SQL; old snapshot stays v1, next run reads v2 (3.0s)
+  ✓  17 [chromium] › tests/integration/p8-acceptance.spec.ts:128:3 › P8 AT-024: delayed real sql response is discarded on workspace switch and resources close (4.5s)
+[WebServer] 8:50:40 PM [vite] (client) [console.warn] WebR is using `PostMessage` communication channel, nested R REPLs are not available.
+  ✓  18 [chromium] › tests/integration/p8-acceptance.spec.ts:128:3 › P8 AT-024: delayed real r response is discarded on workspace switch and resources close (33.4s)
+  ✓  19 [chromium] › tests/integration/portal.spec.ts:4:1 › P4 AT-033–037: real v4, concrete issue, public/local join, changed ETag, kept snapshot (4.8s)
+  ✓  20 [chromium] › tests/integration/portal.spec.ts:115:1 › P4 AT-035–036 AT-039 AT-056: errors, URL security, optional index and no foreign configuration (2.7s)
+  ✓  21 [chromium] › tests/integration/profile-isolation.spec.ts:6:1 › P6 test storage: fresh native OPFS scopes are disjoint across profiles and survive reload (1.2s)
+browser: [vite] connecting...
+browser: [vite] connected.
+browser: WebR is using `PostMessage` communication channel, nested R REPLs are not available.
+[WebServer] 8:51:20 PM [vite] (client) [console.warn] WebR is using `PostMessage` communication channel, nested R REPLs are not available.
+{"encoded":["NA","NaN","Infinity","-Infinity","-2147483648"],"missing":[true,false,false,false,false],"outputs":[{"type":"stdout","text":"out"},{"type":"warning","text":"warn"},{"type":"message","text":"msg\n"}],"classes":["data.frame"],"nativeMissing":[true,false,false,false,false]}
+  ✓  22 [chromium] › tests/integration/r-api.spec.ts:2:1 › P5 native webR vectors, NA/NaN, Date, attributes and captured conditions (1.4s)
+[WebServer] 8:51:22 PM [vite] (client) [console.warn] WebR is using `PostMessage` communication channel, nested R REPLs are not available.
+  ✓  23 [chromium] › tests/integration/r-date-proof.spec.ts:2:1 › P5 runtime gzip files stay opaque and native R Date parser works (1.5s)
+[WebServer] 8:51:24 PM [vite] (client) [console.warn] WebR is using `PostMessage` communication channel, nested R REPLs are not available.
+  ✓  24 [chromium] › tests/integration/r-faults.spec.ts:3:1 › P5 AT-045 AT-052 AT-062: approvals, unsupported columns, stale edits, write/commit failure, console and plot limits (17.7s)
+[WebServer] 8:51:42 PM [vite] (client) [console.warn] WebR is using `PostMessage` communication channel, nested R REPLs are not available.
+  ✓  25 [chromium] › tests/integration/r-golden.spec.ts:4:1 › P5 AT-041 AT-048: unchanged Golden SQL → R script → explicit capture → Golden SQL, real plot and reopen (16.2s)
+[WebServer] 8:51:57 PM [vite] (client) [console.warn] WebR is using `PostMessage` communication channel, nested R REPLs are not available.
+  ✓  26 [chromium] › tests/integration/r-packages.spec.ts:3:1 › P5 pinned local R packages installed and used (18.0s)
+[WebServer] 8:52:15 PM [vite] (client) [console.warn] WebR is using `PostMessage` communication channel, nested R REPLs are not available.
+  ✓  27 [chromium] › tests/integration/r-snapshots.spec.ts:3:1 › P5/P6 AT-025 AT-048: native R parameters, selection snapshot, seed and capture of a later object mutation (14.9s)
+[WebServer] 8:52:31 PM [vite] (client) [console.warn] WebR is using `PostMessage` communication channel, nested R REPLs are not available.
+  ✓  28 [chromium] › tests/integration/r.spec.ts:4:1 › P5 AT-042–045: full typed SQL → R → SQL including NA/NaN, exact decimals, dates, factor and rejected casts (12.5s)
+[WebServer] 8:52:43 PM [vite] (client) [console.warn] WebR is using `PostMessage` communication channel, nested R REPLs are not available.
+[WebServer] 8:52:53 PM [vite] (client) [console.warn] WebR is using `PostMessage` communication channel, nested R REPLs are not available.
+[WebServer] 8:53:03 PM [vite] (client) [console.warn] WebR is using `PostMessage` communication channel, nested R REPLs are not available.
+  ✓  29 [chromium] › tests/integration/r.spec.ts:91:1 › P5 AT-040 AT-042 AT-047 AT-052: 350 rows, stale plans, five inactive fresh scopes and genuine R worker stop (33.2s)
+  ✓  30 [chromium] › tests/integration/recovery.spec.ts:3:1 › P6 AT-060: native browser decompressor enforces actual expansion with forged ZIP sizes (508ms)
+  ✓  31 [chromium] › tests/integration/recovery.spec.ts:30:1 › P6 AT-014 AT-064: failed import leaves recoverable OPFS staging; cleanup preserves another project and foreign files (1.6s)
+  ✓  32 [chromium] › tests/integration/recovery.spec.ts:132:1 › P6 AT-012 AT-015 AT-017 AT-061: tab death interrupts real query, saved results remain, missing/corrupt bytes preserve code (6.7s)
+  ✓  33 [chromium] › tests/integration/repository.spec.ts:6:1 › AT-007 AT-012: actual IndexedDB CAS, invalid load, transaction rollback (231ms)
+  ✓  34 [chromium] › tests/integration/repository.spec.ts:76:1 › P0: persistent browser profile OPFS read/write/delete (483ms)
+  ✓  35 [chromium] › tests/integration/sql-lifecycle.spec.ts:2:1 › P3 / AT-031 AT-032: 350-row user Parquet export and a nonresponding cancel API (2.8s)
+  ✓  36 [chromium] › tests/integration/sql-lifecycle.spec.ts:149:1 › P3 / AT-030: cancellation after CTAS settling releases unpublished private relation (1.4s)
+{"ast":{"error":false,"statements":[{"node":{"type":"SELECT_NODE","modifiers":[],"cte_map":{"map":[]},"select_list":[{"class":"PARAMETER","type":"VALUE_PARAMETER","alias":"a","query_location":18446744073709552000,"identifier":"text"},{"class":"CAST","type":"OPERATOR_CAST","alias":"b","query_location":19,"child":{"class":"PARAMETER","type":"VALUE_PARAMETER","alias":"","query_location":18446744073709552000,"identifier":"exact"},"cast_type":{"id":"BIGINT","type_info":null},"try_cast":false},{"class":"PARAMETER","type":"VALUE_PARAMETER","alias":"c","query_location":18446744073709552000,"identifier":"text"}],"from_table":{"type":"EMPTY","alias":"","sample":null,"query_location":18446744073709552000},"where_clause":null,"group_expressions":[],"group_sets":[],"aggregate_handling":"STANDARD_HANDLING","having":null,"sample":null,"qualify":null},"named_param_map":[{"key":"text","value":1},{"key":"exact","value":2}]}]},"bound":{"code":"SELECT $1 AS a, CAST($2 AS BIGINT) AS b, $1 AS c","values":["x'; SELECT 9; --","9007199254740993"]},"rows":[{"a":"x'; SELECT 9; --","b":"9007199254740993","c":"x'; SELECT 9; --"}]}
+  ✓  37 [chromium] › tests/integration/sql.spec.ts:3:1 › P3 installed prepared CTAS and AST parameter mapping (1.4s)
+  ✓  38 [chromium] › tests/integration/sql.spec.ts:58:1 › P3 / AT-022 AT-025 AT-027 AT-028 AT-029: real SQL result limits, bindings, stability and exact display (1.7s)
+  ✓  39 [chromium] › tests/integration/sql.spec.ts:181:1 › P3 / AT-021 AT-026 AT-032: CSV datasets → frozen Golden SQL → kept result → reopen/export (2.8s)
+  ✓  40 [chromium] › tests/integration/sql.spec.ts:280:1 › P3 / AT-030 AT-031: actual worker termination, epoch invalidation, no late success and fresh small query (5.2s)
+  ✓  41 [chromium] › tests/integration/sql.spec.ts:338:1 › P3 / AT-023: analytic syntax allowed, indirect external/internal sources rejected before execution (1.4s)
+  ✓  42 [chromium] › tests/integration/sql.spec.ts:403:1 › P3 / AT-049 AT-050: chart boundaries and atomic keep failure with real result (1.6s)
+[WebServer] 8:53:45 PM [vite] (client) [console.warn] WebR is using `PostMessage` communication channel, nested R REPLs are not available.
+  ✓  43 [chromium] › tests/integration/transfer-recovery.spec.ts:3:1 › P6 AT-013 AT-050 AT-052: quota blocks persistent R input; workspace change aborts real capture after OPFS write without late publication (21.1s)
+
+  43 passed (4.7m)
+
+> datenwerkstatt@0.1.0 test:e2e
+> playwright test --project=chromium tests/e2e
+
+[WebServer] (node:12552) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] (node:12562) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 26 tests using 1 worker
+
+(node:12563) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] 8:54:08 PM [vite] (client) [console.warn] WebR is using `PostMessage` communication channel, nested R REPLs are not available.
+  ✓   1 [chromium] › tests/e2e/archive.spec.ts:6:1 › P6 AT-051 AT-053 AT-063: Golden archive in fresh profile, graph remap, real SQL/PNG, duplicate and independent deletion (25.9s)
+  ✓   2 [chromium] › tests/e2e/archive.spec.ts:141:1 › P6 AT-059: recipe inspection/confirmation without engine or empty fake tables (941ms)
+  ✓   3 [chromium] › tests/e2e/design-system.spec.ts:19:1 › UI components: labels, native submit, checkbox, errors, busy state, menu and dialog keyboard (991ms)
+  ✓   4 [chromium] › tests/e2e/design-system.spec.ts:109:1 › UI geometry: 8 px wrapped actions, form labels, narrow/zoom equivalent and failed local font (791ms)
+  ✓   5 [chromium] › tests/e2e/design-system.spec.ts:187:1 › UI screens: project actions, forms, navigation and settings at target viewports (1.3s)
+  ✓   6 [chromium] › tests/e2e/imports.spec.ts:20:1 › P2 / AT-008 AT-010 AT-018: confirmed import, reload, data preview, independent alias and complete Parquet download (4.4s)
+  ✓   7 [chromium] › tests/e2e/imports.spec.ts:53:1 › P2 / AT-016: denied OPFS requires explicit temporary mode and never claims local persistence (2.7s)
+  ✓   8 [chromium] › tests/e2e/imports.spec.ts:79:1 › P2 / AT-013: real import surfaces OPFS quota failure without publishing partial metadata (4.4s)
+  ✓   9 [chromium] › tests/e2e/imports.spec.ts:105:1 › P2 / AT-002 AT-024 partial: one import worker survives routes and closes before another workspace opens (3.7s)
+  ✓  10 [chromium] › tests/e2e/multitab.spec.ts:2:1 › P6 AT-065: absent Web Locks permits existing project only as reader, archive export remains possible (2.0s)
+[WebServer] 8:55:00 PM [vite] (client) [console.warn] WebR is using `PostMessage` communication channel, nested R REPLs are not available.
+  ✓  11 [chromium] › tests/e2e/p7-ui.spec.ts:16:1 › P7 AT-054–055 AT-058: measured SQL/R geometry, keyboard splitters, layout reset and reload (29.6s)
+  ✓  12 [chromium] › tests/e2e/p7-ui.spec.ts:142:1 › P7 AT-055–057: native focus trap/return, settings, storage cleanup and data-free diagnostics (3.6s)
+  ✓  13 [chromium] › tests/e2e/p7-ui.spec.ts:188:1 › P7 AT-025 AT-055 AT-056: selected SQL is snapshotted and cell markup remains text (4.2s)
+  ✓  14 [chromium] › tests/e2e/p7-ui.spec.ts:215:1 › P7 AT-058: browser history restores the analysis cursor and layout does not edit the domain (3.3s)
+[WebServer] 8:55:42 PM [vite] (client) [console.warn] WebR is using `PostMessage` communication channel, nested R REPLs are not available.
+  ✓  15 [chromium] › tests/e2e/p8-golden.spec.ts:63:1 › P8 AT-072: portal population + local CSV, unchanged Golden SQL/R, process restart and second fresh archive profile (39.7s)
+  ✓  16 [chromium] › tests/e2e/p8-imports.spec.ts:7:1 › P8 AT-019 AT-020: XLSX invalidates old preview, real over-limit file and visible replacement schema (4.9s)
+  ✓  17 [chromium] › tests/e2e/portal.spec.ts:3:1 › P4 AT-038 AT-056: explicit deep-link preview, replacement history and no autorun (9.4s)
+[WebServer] 8:56:32 PM [vite] (client) [console.warn] WebR is using `PostMessage` communication channel, nested R REPLs are not available.
+[WebServer] 8:56:52 PM [vite] (client) [console.warn] WebR is using `PostMessage` communication channel, nested R REPLs are not available.
+  ✓  18 [chromium] › tests/e2e/r.spec.ts:10:1 › P5 AT-040 AT-042 AT-046 AT-048: complete UI transfer, lazy worker survives routes, capture, reset and cancel (40.5s)
+  ✓  19 [chromium] › tests/e2e/sql.spec.ts:18:1 › P3 / AT-022 AT-027 AT-032 AT-049 AT-055 AT-058: SQL, paging, keep, exports, chart, resize and reload (5.9s)
+  ✓  20 [chromium] › tests/e2e/sql.spec.ts:77:1 › P3 / AT-025 AT-030: parameters, explicit cancel and failed runs never show a previous output (6.4s)
+  ✓  21 [chromium] › tests/e2e/sql.spec.ts:109:1 › P3 / AT-049: rendered bars and line gaps preserve NULL, PNG contains actual pixels (3.1s)
+  ✓  22 [chromium] › tests/e2e/workspaces.spec.ts:9:1 › AT-003: workspace metadata persists across reload without engine startup (769ms)
+  ✓  23 [chromium] › tests/e2e/workspaces.spec.ts:28:1 › AT-005 AT-058: saved SQL and R, separate models, duplicate, archive, no code auto-run (5.3s)
+  ✓  24 [chromium] › tests/e2e/workspaces.spec.ts:90:1 › AT-012: another tab opens read-only and explicitly reacquires after writer closes (1.3s)
+  ✓  25 [chromium] › tests/e2e/workspaces.spec.ts:109:1 › AT-054 AT-057 partial: compact chrome and implemented settings persist (2.4s)
+[WebServer] 8:57:34 PM [vite] (client) [console.error] ZodError
+[WebServer]     at checkedId (http://127.0.0.1:4173/src/domain/workspace.ts:4:20)
+[WebServer]     at WorkspaceService.open (http://127.0.0.1:4173/src/application/workspaceService.ts:386:14)
+[WebServer]     at loader (http://127.0.0.1:4173/src/app/router.tsx:93:46)
+[WebServer]     at http://127.0.0.1:4173/node_modules/.vite/deps/@tanstack_react-router.js?v=e9127557:3174:34
+[WebServer]     at async loadResource (http://127.0.0.1:4173/node_modules/.vite/deps/@tanstack_react-router.js?v=e9127557:3188:53)
+[WebServer] 
+[WebServer] The above error occurred in the <MatchInnerImpl> component.
+[WebServer] 
+[WebServer] React will try to recreate this component tree from scratch using the error boundary you provided, CatchBoundary.
+[WebServer] 
+[WebServer] 8:57:34 PM [vite] (client) [console.warn] Warning: Error in route match: __root__/
+  ✓  26 [chromium] › tests/e2e/workspaces.spec.ts:142:1 › AT-058 / REQ-060: invalid workspace/analysis route is controlled (1.2s)
+
+  26 passed (3.5m)

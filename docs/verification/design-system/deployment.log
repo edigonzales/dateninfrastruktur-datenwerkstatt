@@ -1,0 +1,299 @@
+[WebServer] (node:90882) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] (node:90910) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] [plugin builtin:vite-reporter] 
+[WebServer] (!) Some chunks are larger than 500 kB after minification. Consider:
+[WebServer] - Using dynamic import() to code-split the application
+[WebServer] - Use build.rolldownOptions.output.codeSplitting to improve chunking: https://rolldown.rs/reference/OutputOptions.codeSplitting
+[WebServer] - Adjust chunk size limit for this warning via build.chunkSizeWarningLimit.
+[WebServer] #0 building with "desktop-linux" instance using docker driver
+[WebServer] 
+[WebServer] #1 [internal] load build definition from Dockerfile
+[WebServer] #1 transferring dockerfile: 491B done
+[WebServer] #1 DONE 0.1s
+[WebServer] 
+[WebServer] #2 [internal] load metadata for docker.io/library/caddy:2.11.4-alpine@sha256:5f5c8640aae01df9654968d946d8f1a56c497f1dd5c5cda4cf95ab7c14d58648
+[WebServer] #2 DONE 0.9s
+[WebServer] 
+[WebServer] #3 [internal] load .dockerignore
+[WebServer] #3 transferring context:
+[WebServer] #3 transferring context: 2B done
+[WebServer] #3 DONE 0.3s
+[WebServer] 
+[WebServer] #4 [internal] load build context
+[WebServer] #4 DONE 0.0s
+[WebServer] 
+[WebServer] #5 [1/4] FROM docker.io/library/caddy:2.11.4-alpine@sha256:5f5c8640aae01df9654968d946d8f1a56c497f1dd5c5cda4cf95ab7c14d58648
+[WebServer] #5 resolve docker.io/library/caddy:2.11.4-alpine@sha256:5f5c8640aae01df9654968d946d8f1a56c497f1dd5c5cda4cf95ab7c14d58648 0.1s done
+[WebServer] #5 DONE 0.1s
+[WebServer] 
+[WebServer] #4 [internal] load build context
+[WebServer] #4 transferring context: 245.31MB 4.9s
+[WebServer] #4 transferring context: 280.48MB 5.4s done
+[WebServer] #4 DONE 5.4s
+[WebServer] 
+[WebServer] #5 [1/4] FROM docker.io/library/caddy:2.11.4-alpine@sha256:5f5c8640aae01df9654968d946d8f1a56c497f1dd5c5cda4cf95ab7c14d58648
+[WebServer] #5 CACHED
+[WebServer] 
+[WebServer] #6 [2/4] COPY dist /srv
+[WebServer] #6 DONE 0.9s
+[WebServer] 
+[WebServer] #7 [3/4] COPY Caddyfile /etc/caddy/Caddyfile
+[WebServer] #7 DONE 0.1s
+[WebServer] 
+[WebServer] #8 [4/4] RUN setcap -r /usr/bin/caddy
+[WebServer] #8 DONE 0.2s
+[WebServer] 
+[WebServer] #9 exporting to image
+[WebServer] #9 exporting layers
+[WebServer] #9 exporting layers 10.2s done
+[WebServer] #9 exporting manifest sha256:c322df4f09cc5be17dd4d3fe8ab517e4acb9a25e560ec9680bdda3aaa9719c77 0.0s done
+[WebServer] #9 exporting config sha256:dbb8d0e9364e522ed722df3b2b878039c385ad54f209150fa3c3f38304ab942d done
+[WebServer] #9 exporting attestation manifest sha256:74448e5461c07a544dc523ff7b83901de3a5e3c4359a6621f1847e6eff50ecdf 0.0s done
+[WebServer] #9 exporting manifest list sha256:d599211b6ee98684812576c94446d59604ee15c03ddee377fd001da2b728773a done
+[WebServer] #9 naming to docker.io/library/datenwerkstatt-p7-test:0 done
+[WebServer] #9 unpacking to docker.io/library/datenwerkstatt-p7-test:0
+[WebServer] #9 unpacking to docker.io/library/datenwerkstatt-p7-test:0 2.2s done
+[WebServer] #9 DONE 12.4s
+[WebServer] (node:93465) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] (node:93497) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] [plugin builtin:vite-reporter] 
+[WebServer] (!) Some chunks are larger than 500 kB after minification. Consider:
+[WebServer] - Using dynamic import() to code-split the application
+[WebServer] - Use build.rolldownOptions.output.codeSplitting to improve chunking: https://rolldown.rs/reference/OutputOptions.codeSplitting
+[WebServer] - Adjust chunk size limit for this warning via build.chunkSizeWarningLimit.
+[WebServer] #0 building with "desktop-linux" instance using docker driver
+[WebServer] 
+[WebServer] #1 [internal] load build definition from Dockerfile
+[WebServer] #1 transferring dockerfile: 491B done
+[WebServer] #1 DONE 0.0s
+[WebServer] 
+[WebServer] #2 [internal] load metadata for docker.io/library/caddy:2.11.4-alpine@sha256:5f5c8640aae01df9654968d946d8f1a56c497f1dd5c5cda4cf95ab7c14d58648
+[WebServer] #2 DONE 0.0s
+[WebServer] 
+[WebServer] #3 [internal] load .dockerignore
+[WebServer] #3 transferring context: 2B done
+[WebServer] #3 DONE 0.0s
+[WebServer] 
+[WebServer] #4 [1/4] FROM docker.io/library/caddy:2.11.4-alpine@sha256:5f5c8640aae01df9654968d946d8f1a56c497f1dd5c5cda4cf95ab7c14d58648
+[WebServer] #4 resolve docker.io/library/caddy:2.11.4-alpine@sha256:5f5c8640aae01df9654968d946d8f1a56c497f1dd5c5cda4cf95ab7c14d58648 0.0s done
+[WebServer] #4 DONE 0.0s
+[WebServer] 
+[WebServer] #5 [internal] load build context
+[WebServer] #5 transferring context: 257.31MB 5.0s
+[WebServer] #5 transferring context: 280.48MB 5.4s done
+[WebServer] #5 DONE 5.4s
+[WebServer] 
+[WebServer] #4 [1/4] FROM docker.io/library/caddy:2.11.4-alpine@sha256:5f5c8640aae01df9654968d946d8f1a56c497f1dd5c5cda4cf95ab7c14d58648
+[WebServer] #4 CACHED
+[WebServer] 
+[WebServer] #6 [2/4] COPY dist /srv
+[WebServer] #6 DONE 1.5s
+[WebServer] 
+[WebServer] #7 [3/4] COPY Caddyfile /etc/caddy/Caddyfile
+[WebServer] #7 DONE 0.1s
+[WebServer] 
+[WebServer] #8 [4/4] RUN setcap -r /usr/bin/caddy
+[WebServer] #8 DONE 0.6s
+[WebServer] 
+[WebServer] #9 exporting to image
+[WebServer] #9 exporting layers
+[WebServer] #9 exporting layers 9.8s done
+[WebServer] #9 exporting manifest sha256:cca0706e10a1a702f7821f796c9ef2edcecece4e98d83f69c4402888130d8ea5 0.0s done
+[WebServer] #9 exporting config sha256:0b72004d45ce66253cc258060a1cb0c1c23a2c22f1564f1207c2aa8cd06abb99 done
+[WebServer] #9 exporting attestation manifest sha256:70835f9ed0cc5bbbb93dd567c9c359c9f864dc1a20463bdbc5852a6970a5f136 done
+[WebServer] #9 exporting manifest list sha256:ef1349611fa09c08c6f99078360f25cacfc4706124e4b591d9752a2523a2bd1a done
+[WebServer] #9 naming to docker.io/library/datenwerkstatt-p7-test:1 done
+[WebServer] #9 unpacking to docker.io/library/datenwerkstatt-p7-test:1
+[WebServer] #9 unpacking to docker.io/library/datenwerkstatt-p7-test:1 2.5s done
+[WebServer] #9 DONE 12.4s
+[WebServer] #0 building with "desktop-linux" instance using docker driver
+[WebServer] 
+[WebServer] #1 [internal] load build definition from Dockerfile
+[WebServer] #1 transferring dockerfile: 491B 0.0s done
+[WebServer] #1 DONE 0.0s
+[WebServer] 
+[WebServer] #2 [internal] load metadata for docker.io/library/caddy:2.11.4-alpine@sha256:5f5c8640aae01df9654968d946d8f1a56c497f1dd5c5cda4cf95ab7c14d58648
+[WebServer] #2 DONE 0.0s
+[WebServer] 
+[WebServer] #3 [internal] load .dockerignore
+[WebServer] #3 transferring context:
+[WebServer] #3 transferring context: 2B done
+[WebServer] #3 DONE 0.0s
+[WebServer] 
+[WebServer] #4 [1/4] FROM docker.io/library/caddy:2.11.4-alpine@sha256:5f5c8640aae01df9654968d946d8f1a56c497f1dd5c5cda4cf95ab7c14d58648
+[WebServer] #4 resolve docker.io/library/caddy:2.11.4-alpine@sha256:5f5c8640aae01df9654968d946d8f1a56c497f1dd5c5cda4cf95ab7c14d58648 0.0s done
+[WebServer] #4 DONE 0.0s
+[WebServer] 
+[WebServer] #5 [internal] load build context
+[WebServer] #5 transferring context: 76.37MB 4.9s
+[WebServer] #5 transferring context: 165.81MB 10.0s
+[WebServer] #5 transferring context: 280.48MB 13.0s done
+[WebServer] #5 DONE 13.0s
+[WebServer] 
+[WebServer] #4 [1/4] FROM docker.io/library/caddy:2.11.4-alpine@sha256:5f5c8640aae01df9654968d946d8f1a56c497f1dd5c5cda4cf95ab7c14d58648
+[WebServer] #4 CACHED
+[WebServer] 
+[WebServer] #6 [2/4] COPY dist /srv
+[WebServer] #6 DONE 1.7s
+[WebServer] 
+[WebServer] #7 [3/4] COPY Caddyfile /etc/caddy/Caddyfile
+[WebServer] #7 DONE 0.1s
+[WebServer] 
+[WebServer] #8 [4/4] RUN setcap -r /usr/bin/caddy
+[WebServer] #8 DONE 0.7s
+[WebServer] 
+[WebServer] #9 exporting to image
+[WebServer] #9 exporting layers
+[WebServer] #9 exporting layers 19.8s done
+[WebServer] #9 exporting manifest sha256:9c92ae071164af75e8b015992f780af3f8bea403fea7108f44461d968f2361e5 0.0s done
+[WebServer] #9 exporting config sha256:297b630958b04b0d764a1cd856c718aab4404431c4b44dad5ee68cc1b5c96f3c 0.0s done
+[WebServer] #9 exporting attestation manifest sha256:ee96edb4baff15f44c00599f42ee1d061e24f11b293f83b52d2f6ee0057addd3 0.0s done
+[WebServer] #9 exporting manifest list sha256:dbdd014393fd8132bc3c35ee9655cb7de5c12a50dcf261e5dc72aafe15d175de 0.0s done
+[WebServer] #9 naming to docker.io/library/datenwerkstatt-p7-test:2 done
+[WebServer] #9 unpacking to docker.io/library/datenwerkstatt-p7-test:2
+[WebServer] #9 unpacking to docker.io/library/datenwerkstatt-p7-test:2 4.8s done
+[WebServer] #9 DONE 24.7s
+
+Running 27 tests using 1 worker
+
+(node:96552) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓   1 [chromium-0] › tests/deployment/static.spec.ts:9:1 › P7 AT-066–068: arbitrary UID static container, deep routes, MIME/cache/CSP and real SQL/R (36.3s)
+  ✓   2 [chromium-0] › tests/deployment/static.spec.ts:94:1 › P7 AT-067: invalid operator config fails closed before any runtime (402ms)
+  ✘   3 [chromium-0] › tests/deployment/static.spec.ts:111:1 › UI assets: local SVGs, Frutiger, JetBrains Mono, fallback and notices under each deployment base (16.1s)
+(node:96748) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓   4 [chromium-1] › tests/deployment/static.spec.ts:9:1 › P7 AT-066–068: arbitrary UID static container, deep routes, MIME/cache/CSP and real SQL/R (19.8s)
+  ✓   5 [chromium-1] › tests/deployment/static.spec.ts:94:1 › P7 AT-067: invalid operator config fails closed before any runtime (389ms)
+  ✘   6 [chromium-1] › tests/deployment/static.spec.ts:111:1 › UI assets: local SVGs, Frutiger, JetBrains Mono, fallback and notices under each deployment base (16.2s)
+(node:96868) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘   7 [chromium-2] › tests/deployment/static.spec.ts:9:1 › P7 AT-066–068: arbitrary UID static container, deep routes, MIME/cache/CSP and real SQL/R (19.6s)
+
+
+  1) [chromium-0] › tests/deployment/static.spec.ts:111:1 › UI assets: local SVGs, Frutiger, JetBrains Mono, fallback and notices under each deployment base 
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator: locator('.monaco-editor')
+    Expected: visible
+    Timeout: 15000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toBeVisible" locator('.monaco-editor') with timeout 15000ms
+      - waiting for locator('.monaco-editor')
+
+
+      160 |   await page.route('**/*.woff2', (route) => route.abort());
+      161 |   await page.reload();
+    > 162 |   await expect(page.locator('.monaco-editor')).toBeVisible();
+          |                                                ^
+      163 |   await code(page, 'SELECT 5 AS fallback');
+      164 |   await page.getByRole('button', {name: 'Ausführen', exact: true}).click();
+      165 |   await expect(page.locator('.result-grid tbody td')).toHaveText(['5']);
+        at /Users/stefan/sources/dateninfrastruktur-datenwerkstatt/tests/deployment/static.spec.ts:162:48
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results-deployment/static-UI-assets-local-SVG-af376--under-each-deployment-base-chromium-0/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results-deployment/static-UI-assets-local-SVG-af376--under-each-deployment-base-chromium-0/error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results-deployment/static-UI-assets-local-SVG-af376--under-each-deployment-base-chromium-0/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results-deployment/static-UI-assets-local-SVG-af376--under-each-deployment-base-chromium-0/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  2) [chromium-1] › tests/deployment/static.spec.ts:111:1 › UI assets: local SVGs, Frutiger, JetBrains Mono, fallback and notices under each deployment base 
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator: locator('.monaco-editor')
+    Expected: visible
+    Timeout: 15000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toBeVisible" locator('.monaco-editor') with timeout 15000ms
+      - waiting for locator('.monaco-editor')
+
+
+      160 |   await page.route('**/*.woff2', (route) => route.abort());
+      161 |   await page.reload();
+    > 162 |   await expect(page.locator('.monaco-editor')).toBeVisible();
+          |                                                ^
+      163 |   await code(page, 'SELECT 5 AS fallback');
+      164 |   await page.getByRole('button', {name: 'Ausführen', exact: true}).click();
+      165 |   await expect(page.locator('.result-grid tbody td')).toHaveText(['5']);
+        at /Users/stefan/sources/dateninfrastruktur-datenwerkstatt/tests/deployment/static.spec.ts:162:48
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results-deployment/static-UI-assets-local-SVG-af376--under-each-deployment-base-chromium-1/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results-deployment/static-UI-assets-local-SVG-af376--under-each-deployment-base-chromium-1/error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results-deployment/static-UI-assets-local-SVG-af376--under-each-deployment-base-chromium-1/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results-deployment/static-UI-assets-local-SVG-af376--under-each-deployment-base-chromium-1/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  3) [chromium-2] › tests/deployment/static.spec.ts:9:1 › P7 AT-066–068: arbitrary UID static container, deep routes, MIME/cache/CSP and real SQL/R 
+
+    Test was interrupted.
+
+    Error: expect(locator).toContainText(expected) failed
+
+    Locator: locator('.run-status')
+    Expected substring: "Bereit"
+    Received string:    "Parameter (0)NameTypWertParameter hinzufügenParameter übernehmenR-LaufLetzter LaufR initialisieren · R-Epoche 0"
+
+    Call log:
+      - Expect "toContainText" locator('.run-status') with timeout 90000ms
+      - waiting for locator('.run-status')
+        27 × locator resolved to <div class="run-status dw-compact">…</div>
+           - unexpected value "Parameter (0)NameTypWertParameter hinzufügenParameter übernehmenR-LaufLetzter LaufR initialisieren · R-Epoche 0"
+      - Target page, context or browser has been closed
+
+
+      72 |     'x <- data.frame(n=42L); stopifnot(as.Date("2024-01-01")==as.Date(19723,origin="1970-01-01")); plot(1:4); cat("R bereit")',
+      73 |   );
+    > 74 |   await expect(page.locator('.run-status')).toContainText('Bereit', {timeout: 90000});
+         |                                             ^
+      75 |   await page.getByRole('button', {name: 'Ausführen', exact: true}).click();
+      76 |   await expect(page.locator('.r-plot img')).toBeVisible({timeout: 90000});
+      77 |   await expect(page.getByRole('log')).toContainText('R bereit');
+        at /Users/stefan/sources/dateninfrastruktur-datenwerkstatt/tests/deployment/static.spec.ts:74:45
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results-deployment/static-P7-AT-066–068-arbit-5dac8-ME-cache-CSP-and-real-SQL-R-chromium-2/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results-deployment/static-P7-AT-066–068-arbit-5dac8-ME-cache-CSP-and-real-SQL-R-chromium-2/error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results-deployment/static-P7-AT-066–068-arbit-5dac8-ME-cache-CSP-and-real-SQL-R-chromium-2/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results-deployment/static-P7-AT-066–068-arbit-5dac8-ME-cache-CSP-and-real-SQL-R-chromium-2/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  2 failed
+    [chromium-0] › tests/deployment/static.spec.ts:111:1 › UI assets: local SVGs, Frutiger, JetBrains Mono, fallback and notices under each deployment base 
+    [chromium-1] › tests/deployment/static.spec.ts:111:1 › UI assets: local SVGs, Frutiger, JetBrains Mono, fallback and notices under each deployment base 
+  1 interrupted
+    [chromium-2] › tests/deployment/static.spec.ts:9:1 › P7 AT-066–068: arbitrary UID static container, deep routes, MIME/cache/CSP and real SQL/R 
+  20 did not run
+  4 passed (3.7m)
